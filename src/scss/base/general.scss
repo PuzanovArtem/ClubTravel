@@ -1,0 +1,37 @@
+@import "/src/scss/base/vars.scss";
+@import "/src/scss/base/fonts.scss";
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: $fontFamilyBase;
+  font-weight: $fontWeightBase;
+  font-size: $fontSizeBase;
+  background: $white;
+  color: $text-primary;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+body {
+  font-family: $fontFamilyBase;
+  font-weight: $fontWeightBase;
+  font-size: $fontSizeBase;
+  background: $white;
+  color: $text-primary;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: $maxWidthContainer;
+  padding: 0 15px;
+  position: relative;
+}
