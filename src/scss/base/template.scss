@@ -1,0 +1,86 @@
+.main-btn {
+  border: 1px solid $primary;
+  border-radius: 6px;
+  background: $primary;
+  transition: background 0.3s, color 0.3s;
+  color: $white;
+  text-transform: uppercase;
+
+
+  @media (hover: hover) {
+    &:hover {
+      background: $white;
+     color: $text;
+    }
+  }
+
+  &:active {
+    background: $white;
+    color: $text;
+  }
+
+  &.active {
+       background: $white;
+    color: $text;
+  }
+   
+}
+
+
+.small-btn {
+  border: 1px solid $primary;
+  border-radius: 4px;
+  background: $primary;
+ padding: 4px 10px;
+  transition: background 0.3s, color 0.3s;
+  color: $white;
+
+
+  @media (hover: hover) {
+    &:hover {
+      background: $white;
+     color: $text;
+    }
+  }
+
+  &:active {
+    background: $white;
+    color: $text;
+  }
+
+  &.active {
+       background: $white;
+    color: $text;
+  }
+   
+}
+
+.input-btn {
+  border: 1px solid $primary;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  background: $primary;
+ padding: 12px 31px;
+  transition: background 0.3s, color 0.3s;
+  color: $white;
+  text-transform: uppercase;
+
+
+  @media (hover: hover) {
+    &:hover {
+      background: $white;
+     color: $text;
+    }
+  }
+
+  &:active {
+    background: $white;
+    color: $text;
+  }
+
+  &.active {
+       background: $white;
+    color: $text;
+  }
+   
+}

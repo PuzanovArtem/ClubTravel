@@ -9,20 +9,13 @@ html {
   font-weight: $fontWeightBase;
   font-size: $fontSizeBase;
   background: $white;
-  color: $text-primary;
+  color: $text;
 }
 
 body.no-scroll {
   overflow: hidden;
 }
 
-body {
-  font-family: $fontFamilyBase;
-  font-weight: $fontWeightBase;
-  font-size: $fontSizeBase;
-  background: $white;
-  color: $text-primary;
-}
 
 .wrapper {
   display: flex;
