@@ -7,6 +7,16 @@
     padding: 0 0 80px;
   }
 
+  .icon__clock,
+  .icon__message,
+  .icon__phone,
+  .icon__location {
+    fill: $green;
+    width: 20px;
+    height: 20px;
+margin: 0 12px 0 0;
+  }
+
   &__info {
     display: flex;
   }
@@ -50,6 +60,10 @@
 
   &__contact-item:not(:last-child) {
     margin: 0 0 23px;
+  }
+
+  &__contact-item {
+    @extend %display-flex;
   }
 
   &__contact-text {
