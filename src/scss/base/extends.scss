@@ -31,3 +31,13 @@
 %position-abs {
   position: absolute;
 }
+
+%gray-line {
+  content: '';
+            position: absolute;
+            width: 1px;
+            height: 100%;
+            top: 0;
+            right: 0;
+            background-color: $gray;
+}
