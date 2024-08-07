@@ -5,7 +5,8 @@
   transition: background 0.3s, color 0.3s;
   color: $white;
   text-transform: uppercase;
-
+display: inline-block;
+text-align: center;
 
   @media (hover: hover) {
     &:hover {
@@ -25,7 +26,6 @@
   }
    
 }
-
 
 .small-btn {
   border: 1px solid $primary;
@@ -83,4 +83,101 @@
     color: $text;
   }
    
+}
+
+/////select
+
+.select {
+  position: relative;
+
+  &__custom {
+    position: relative;
+    display: inline-block;
+    width: 258px;
+    background-color: white;
+    border: 1px solid $light-gray;
+    border-radius: 71px;
+    padding: 29px 26px 9px 26px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  &__selected {
+    position: relative;
+    z-index: 3;
+  }
+
+  &__sort {
+    color: $text;
+    position: absolute;
+    z-index: 3;
+    padding: 9px 20px;
+  }
+
+  &__custom.is-active .select__items {
+    display: block;
+  }
+
+  &__items {
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid $light-gray;
+    border-top: none;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    width: 100%;
+    z-index: 1;
+    display: none;
+    background: rgb(255,255,255, 1);
+    padding: 25px 26px 12px 20px;
+
+     &::before {
+      content: "";
+      width: 100%;
+      height: 1px;
+     background: $light-gray;
+      position: absolute;
+      top: 15px;
+      left: 0;
+    }
+  }
+
+  &__items div {
+    padding: 8px 0;
+    cursor: pointer;
+    position: relative;
+
+
+    &::after {
+      content: "";
+      width: 100%;
+      height: 1px;
+      background: $light-gray;
+      opacity: 6%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  &__items div:hover {
+    color: $primary;
+  }
+
+  &__arrow {
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    width: 24px;
+    height: 24px;
+    fill: $gray;
+  }
+
+  @include respond-to($mobile) {}
 }

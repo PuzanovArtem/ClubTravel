@@ -1,0 +1,26 @@
+.banner {
+  &__img {
+    background-image: url(/public/assets/images/banner-img.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 320px;
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    clip-path: polygon(100% 0, 100% 100%, 53% 90%, 33% 91%, 0 100%, 0 0);
+  }
+
+  @include respond-to($l-tablet) {
+    &__img {
+      background-image: url(/public/assets/images/banner-img-mob.png);
+    }
+  }
+
+  @include respond-to($mobile) {
+    &__img {
+      height: 191px;
+      clip-path: none;
+    }
+  }
+}
