@@ -1,3 +1,2 @@
+import '/src/js/components/header.js';
 
-
-console.log('main')
