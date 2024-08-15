@@ -53,7 +53,8 @@ export default defineConfig({
     handlebars({
       partialDirectory: [
         resolve(__dirname, "src/html/components"),
-        resolve(__dirname, "src/html/pages/main/"),
+        resolve(__dirname, "src/html/pages/main"),
+        resolve(__dirname, "src/html/modules"),
       ],
     }),
   ],
