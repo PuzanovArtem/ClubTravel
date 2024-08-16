@@ -1,97 +1,103 @@
-<!-- 
+
   <svg class="icon icon__airplane-takeoff">
-  <use xlink:href="sprite.svg#airplane-takeoff"></use>
+  <use xlink:href="/assets/sprites/sprite.svg#airplane-takeoff"></use>
 </svg>
 <svg class="icon icon__arrow-down">
-  <use xlink:href="sprite.svg#arrow-down"></use>
+  <use xlink:href="/assets/sprites/sprite.svg#arrow-down"></use>
 </svg>
 <svg class="icon icon__arrow-right">
-  <use xlink:href="sprite.svg#arrow-right"></use>
+  <use xlink:href="/assets/sprites/sprite.svg#arrow-right"></use>
 </svg>
 <svg class="icon icon__calendar">
-  <use xlink:href="sprite.svg#calendar"></use>
+  <use xlink:href="/assets/sprites/sprite.svg#calendar"></use>
 </svg>
 <svg class="icon icon__calendar-euro">
-  <use xlink:href="sprite.svg#calendar-euro"></use>
+  <use xlink:href="/assets/sprites/sprite.svg#calendar-euro"></use>
 </svg>
 <svg class="icon icon__checkmark">
-  <use xlink:href="sprite.svg#checkmark"></use>
+  <use xlink:href="/assets/sprites/sprite.svg#checkmark"></use>
 </svg>
 <svg class="icon icon__checkmark-circle">
-  <use xlink:href="sprite.svg#checkmark-circle"></use>
+  <use xlink:href="/assets/sprites/sprite.svg#checkmark-circle"></use>
 </svg>
 <svg class="icon icon__clock">
-  <use xlink:href="sprite.svg#clock"></use>
+  <use xlink:href="/assets/sprites/sprite.svg#clock"></use>
 </svg>
 <svg class="icon icon__credit-card">
-  <use xlink:href="sprite.svg#credit-card"></use>
+  <use xlink:href="/assets/sprites/sprite.svg#credit-card"></use>
 </svg>
 <svg class="icon icon__cross">
-  <use xlink:href="sprite.svg#cross"></use>
+  <use xlink:href="/assets/sprites/sprite.svg#cross"></use>
 </svg>
 <svg class="icon icon__cutlery">
-  <use xlink:href="sprite.svg#cutlery"></use>
+  <use xlink:href="/assets/sprites/sprite.svg#cutlery"></use>
 </svg>
 <svg class="icon icon__envelope">
-  <use xlink:href="sprite.svg#envelope"></use>
+  <use xlink:href="/assets/sprites/sprite.svg#envelope"></use>
 </svg>
 <svg class="icon icon__gear">
-  <use xlink:href="sprite.svg#gear"></use>
+  <use xlink:href="/assets/sprites/sprite.svg#gear"></use>
 </svg>
 <svg class="icon icon__house">
-  <use xlink:href="sprite.svg#house"></use>
+  <use xlink:href="/assets/sprites/sprite.svg#house"></use>
 </svg>
 <svg class="icon icon__list">
-  <use xlink:href="sprite.svg#list"></use>
+  <use xlink:href="/assets/sprites/sprite.svg#list"></use>
 </svg>
 <svg class="icon icon__list-horizontal">
-  <use xlink:href="sprite.svg#list-horizontal"></use>
+  <use xlink:href="/assets/sprites/sprite.svg#list-horizontal"></use>
 </svg>
 <svg class="icon icon__location">
-  <use xlink:href="sprite.svg#location"></use>
+  <use xlink:href="/assets/sprites/sprite.svg#location"></use>
 </svg>
 <svg class="icon icon__magnifying-glass">
-  <use xlink:href="sprite.svg#magnifying-glass"></use>
+  <use xlink:href="/assets/sprites/sprite.svg#magnifying-glass"></use>
 </svg>
 <svg class="icon icon__message">
-  <use xlink:href="sprite.svg#message"></use>
+  <use xlink:href="/assets/sprites/sprite.svg#message"></use>
 </svg>
 <svg class="icon icon__minus">
-  <use xlink:href="sprite.svg#minus"></use>
+  <use xlink:href="/assets/sprites/sprite.svg#minus"></use>
 </svg>
 <svg class="icon icon__padlock">
-  <use xlink:href="sprite.svg#padlock"></use>
+  <use xlink:href="/assets/sprites/sprite.svg#padlock"></use>
 </svg>
 <svg class="icon icon__percent">
-  <use xlink:href="sprite.svg#percent"></use>
+  <use xlink:href="/assets/sprites/sprite.svg#percent"></use>
 </svg>
 <svg class="icon icon__percent-circle">
-  <use xlink:href="sprite.svg#percent-circle"></use>
+  <use xlink:href="/assets/sprites/sprite.svg#percent-circle"></use>
 </svg>
 <svg class="icon icon__phone">
-  <use xlink:href="sprite.svg#phone"></use>
+  <use xlink:href="/assets/sprites/sprite.svg#phone"></use>
 </svg>
 <svg class="icon icon__plus">
-  <use xlink:href="sprite.svg#plus"></use>
+  <use xlink:href="/assets/sprites/sprite.svg#plus"></use>
 </svg>
 <svg class="icon icon__search-plus">
-  <use xlink:href="sprite.svg#search-plus"></use>
+  <use xlink:href="/assets/sprites/sprite.svg#search-plus"></use>
 </svg>
 <svg class="icon icon__square-right">
-  <use xlink:href="sprite.svg#square-right"></use>
+  <use xlink:href="/assets/sprites/sprite.svg#square-right"></use>
 </svg>
 <svg class="icon icon__star">
-  <use xlink:href="sprite.svg#star"></use>
+  <use xlink:href="/assets/sprites/sprite.svg#star"></use>
 </svg>
 <svg class="icon icon__stopwatch">
-  <use xlink:href="sprite.svg#stopwatch"></use>
+  <use xlink:href="/assets/sprites/sprite.svg#stopwatch"></use>
 </svg>
 <svg class="icon icon__sun">
-  <use xlink:href="sprite.svg#sun"></use>
+  <use xlink:href="/assets/sprites/sprite.svg#sun"></use>
 </svg>
 <svg class="icon icon__triangle-down">
-  <use xlink:href="sprite.svg#triangle-down"></use>
+  <use xlink:href="/assets/sprites/sprite.svg#triangle-down"></use>
 </svg>
 <svg class="icon icon__user">
-  <use xlink:href="sprite.svg#user"></use>
-</svg> -->
+  <use xlink:href="/assets/sprites/sprite.svg#user"></use>
+</svg> 
+<svg class="icon icon__chevron">
+  <use xlink:href="/assets/sprites/sprite.svg#mdi_chevron-right"></use>
+</svg>
+<svg class="icon icon__chevron">
+  <use xlink:href="/assets/sprites/sprite.svg#mdi_chevron-left"></use>
+</svg>
