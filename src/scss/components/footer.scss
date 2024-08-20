@@ -1,10 +1,10 @@
 .footer {
-  padding: 80px 0 0;
+  padding: 84px 0 0;
 
   &__wrapper {
     @extend %display-jc-sb;
     align-items: start;
-    padding: 0 0 80px;
+    padding: 0 0 110px;
   }
 
   .icon__clock,
@@ -22,7 +22,7 @@ margin: 0 12px 0 0;
   }
 
   &__popular-country {
-    margin: 0 66px 0 0;
+    margin: 0 60px 0 0;
   }
 
   &__title {
@@ -41,7 +41,7 @@ margin: 0 12px 0 0;
   &__popular-country-item {
     font-size: 18px;
     line-height: 1.4;
-    margin: 0 0 5px;
+    margin: 0 0 10px;
     transition: color 0.3s ease;
 
     @media (hover: hover) {
@@ -114,7 +114,7 @@ margin: 0 12px 0 0;
 
   &__social {
     position: relative;
-    padding: 0 0 0 54px;
+    padding: 0 0 0 40px;
 
     &::after {
       @extend %gray-line;

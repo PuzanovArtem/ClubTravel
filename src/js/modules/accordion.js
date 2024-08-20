@@ -16,3 +16,4 @@ document.querySelectorAll('.search-content__hotel-offer-btn').forEach(button => 
         }
     });
 });
+

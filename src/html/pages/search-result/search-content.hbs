@@ -4,9 +4,9 @@
       <p class="search-content__filter-text">Найдено 64 предложения в 24 отелях</p>
 
       <div class="search-content__filter-wrapper">
-        <button class="search-content__filter-btn">
+        <button class="search-content__filter-btn" id="showCalendarBtn">
           <svg class="icon icon__calendar-euro">
-            <use xlink:href="/public/sprite.svg#calendar-euro"></use>
+            <use xlink:href="/public/assets/sprites/sprite.svg#calendar-euro"></use>
           </svg>
           <p>Цены на календаре</p>
         </button>
@@ -23,7 +23,7 @@
                   <div data-value="nut3" class="select__item">выше 700€</div>
                 </div>
                 <svg class="icon icon__arrow-down select__arrow">
-                  <use xlink:href="/public/sprite.svg#arrow-down"></use>
+                  <use xlink:href="/public/assets/sprites/sprite.svg#arrow-down"></use>
                 </svg>
               </div>
             </div>
@@ -37,14 +37,44 @@
                   <div data-value="nut3" class="select__item">Популярный</div>
                 </div>
                 <svg class="icon icon__arrow-down select__arrow">
-                  <use xlink:href="/public/sprite.svg#arrow-down"></use>
+                  <use xlink:href="/public/assets/sprites/sprite.svg#arrow-down"></use>
                 </svg>
               </div>
             </div>
           </div>
         </div>
       </div>
+
+<div class="search-content__filter-wrapper-cal">
+    <div class="search-content__filter-cal-block">
+        <svg class="icon icon__calendar-euro icon__calendar-euro-green">
+            <use xlink:href="/public/assets/sprites/sprite.svg#calendar-euro"></use>
+        </svg>
+        <p class="search-content__filter-cal-text">Сравнение цен на календаре</p>
     </div>
+    <button class="main-btn search-content__filter-cal-btn">
+        <svg class="icon icon__list">
+            <use xlink:href="/public/assets/sprites/sprite.svg#list"></use>
+        </svg>
+        <p>Список отелей</p>
+        </button>
+</div>
+
+    </div>
+
+</div>
+
+<div class="container calendar-container">
+<div id="calendar"></div>
+</div>
+    
+
+   
+
+<div class="container">
+<p class="search-content__calendar-subtitle">
+    Предложения на <span>24.06.2020</span> от <span>455€</span>
+</p>
 
     <div class="search-content__wrapper">
       <ul class="search-content__hotel-list">
@@ -78,19 +108,19 @@
               </div>
               <div class="search-content__hotel-location-mob">
                 <svg class="icon icon__location">
-                  <use xlink:href="/public/sprite.svg#location"></use>
+                  <use xlink:href="/public/assets/sprites/sprite.svg#location"></use>
                 </svg>
                 <p class="search-content__hotel-location">Болгария, Золотые
                   Пески</p>
               </div>
               <div class="swiper-button-next">
                 <svg class="icon icon__arrow-down search-content__arow-r">
-                  <use xlink:href="/public/sprite.svg#arrow-down"></use>
+                  <use xlink:href="/public/assets/sprites/sprite.svg#arrow-down"></use>
                 </svg>
               </div>
               <div class="swiper-button-prev">
                 <svg class="icon icon__arrow-down search-content__arow-l">
-                  <use xlink:href="/public/sprite.svg#arrow-down"></use>
+                  <use xlink:href="/public/assets/sprites/sprite.svg#arrow-down"></use>
                 </svg>
               </div>
             </div>
@@ -98,7 +128,7 @@
             <div class="search-content__title-mob">
               <h2 class="search-content__hotel-title">Название Отеля здесь</h2>
               <svg class="icon icon__arrow-right">
-                <use xlink:href="/public/sprite.svg#arrow-right"></use>
+                <use xlink:href="/public/assets/sprites/sprite.svg#arrow-right"></use>
               </svg>
             </div>
 
@@ -109,7 +139,7 @@
 
               <div class="search-content__hotel-location-block">
                 <svg class="icon icon__location">
-                  <use xlink:href="/public/sprite.svg#location"></use>
+                  <use xlink:href="/public/assets/sprites/sprite.svg#location"></use>
                 </svg>
                 <p class="search-content__hotel-location">Болгария, Золотые
                   Пески</p>
@@ -121,7 +151,7 @@
               <a href="" class="search-content__hotel-link">
                 <p>Подробнее об отеле</p>
                 <svg class="icon icon__arrow-right">
-                  <use xlink:href="/public/sprite.svg#arrow-right"></use>
+                  <use xlink:href="/public/assets/sprites/sprite.svg#arrow-right"></use>
                 </svg>
               </a>
             </div>
@@ -130,19 +160,19 @@
               <ul class="search-content__hotel-stars">
                 <li class="search-content__hotel-star">
                   <svg class="icon icon__star">
-                    <use xlink:href="/public/sprite.svg#star"></use>
+                    <use xlink:href="/public/assets/sprites/sprite.svg#star"></use>
                   </svg>
                 </li>
 
                 <li class="search-content__hotel-star">
                   <svg class="icon icon__star">
-                    <use xlink:href="/public/sprite.svg#star"></use>
+                    <use xlink:href="/public/assets/sprites/sprite.svg#star"></use>
                   </svg>
                 </li>
 
                 <li class="search-content__hotel-star">
                   <svg class="icon icon__star">
-                    <use xlink:href="/public/sprite.svg#star"></use>
+                    <use xlink:href="/public/assets/sprites/sprite.svg#star"></use>
                   </svg>
                 </li>
               </ul>
@@ -150,28 +180,28 @@
               <ul class="search-content__hotel-short-info">
                 <li class="search-content__hotel-short-info-item">
                   <svg class="icon icon__clock">
-                    <use xlink:href="/public/sprite.svg#clock"></use>
+                    <use xlink:href="/public/assets/sprites/sprite.svg#clock"></use>
                   </svg>
                   <p class="search-content__hotel-short-info-text">7 ночей</p>
                 </li>
 
                 <li class="search-content__hotel-short-info-item">
                   <svg class="icon icon__cutlery">
-                    <use xlink:href="/public/sprite.svg#cutlery"></use>
+                    <use xlink:href="/public/assets/sprites/sprite.svg#cutlery"></use>
                   </svg>
                   <p class="search-content__hotel-short-info-text">Завтрак</p>
                 </li>
 
                 <li class="search-content__hotel-short-info-item">
                   <svg class="icon icon__house">
-                    <use xlink:href="/public/sprite.svg#house"></use>
+                    <use xlink:href="/public/assets/sprites/sprite.svg#house"></use>
                   </svg>
                   <p class="search-content__hotel-short-info-text">Standard</p>
                 </li>
 
                 <li class="search-content__hotel-short-info-item">
                   <svg class="icon icon__sun">
-                    <use xlink:href="/public/sprite.svg#sun"></use>
+                    <use xlink:href="/public/assets/sprites/sprite.svg#sun"></use>
                   </svg>
                   <p class="search-content__hotel-short-info-text">Пляж: песок,
                     50 m</p>
@@ -212,7 +242,7 @@
                   <td class="search-content__td">Standard</td>
                   <td class="search-content__td">10+</td>
                   <td class="search-content__td">645€/чел</td>
-                  <td class="search-content__td"><button
+                  <td class="search-content__td search-content__td-btn"><button
                       class="main-btn search-content__choose-btn"
                     >выбрать</button></td>
                 </tr>
@@ -271,7 +301,7 @@
                         <div data-value="nut3" class="select__item">выше 700€</div>
                       </div>
                       <svg class="icon icon__arrow-down select__arrow">
-                        <use xlink:href="/public/sprite.svg#arrow-down"></use>
+                        <use xlink:href="/public/assets/sprites/sprite.svg#arrow-down"></use>
                       </svg>
                     </div>
                   </div>
@@ -294,7 +324,7 @@
                         >Популярный</div>
                       </div>
                       <svg class="icon icon__arrow-down select__arrow">
-                        <use xlink:href="/public/sprite.svg#arrow-down"></use>
+                        <use xlink:href="/public/assets/sprites/sprite.svg#arrow-down"></use>
                       </svg>
                     </div>
                   </div>
@@ -409,19 +439,19 @@
 
               <div class="search-content__hotel-location-mob">
                 <svg class="icon icon__location">
-                  <use xlink:href="/public/sprite.svg#location"></use>
+                  <use xlink:href="/public/assets/sprites/sprite.svg#location"></use>
                 </svg>
                 <p class="search-content__hotel-location">Болгария, Золотые
                   Пески</p>
               </div>
               <div class="swiper-button-next">
                 <svg class="icon icon__arrow-down search-content__arow-r">
-                  <use xlink:href="/public/sprite.svg#arrow-down"></use>
+                  <use xlink:href="/public/assets/sprites/sprite.svg#arrow-down"></use>
                 </svg>
               </div>
               <div class="swiper-button-prev">
                 <svg class="icon icon__arrow-down search-content__arow-l">
-                  <use xlink:href="/public/sprite.svg#arrow-down"></use>
+                  <use xlink:href="/public/assets/sprites/sprite.svg#arrow-down"></use>
                 </svg>
               </div>
             </div>
@@ -430,7 +460,7 @@
               <h2 class="search-content__hotel-title">Название Отеля здесь</h2>
               <div class="search-content__hotel-location-block">
                 <svg class="icon icon__location">
-                  <use xlink:href="/public/sprite.svg#location"></use>
+                  <use xlink:href="/public/assets/sprites/sprite.svg#location"></use>
                 </svg>
                 <p class="search-content__hotel-location">Болгария, Золотые
                   Пески</p>
@@ -442,7 +472,7 @@
               <a href="" class="search-content__hotel-link">
                 <p>Подробнее об отеле</p>
                 <svg class="icon icon__arrow-right">
-                  <use xlink:href="/public/sprite.svg#arrow-right"></use>
+                  <use xlink:href="/public/assets/sprites/sprite.svg#arrow-right"></use>
                 </svg>
               </a>
             </div>
@@ -451,19 +481,19 @@
               <ul class="search-content__hotel-stars">
                 <li class="search-content__hotel-star">
                   <svg class="icon icon__star">
-                    <use xlink:href="/public/sprite.svg#star"></use>
+                    <use xlink:href="/public/assets/sprites/sprite.svg#star"></use>
                   </svg>
                 </li>
 
                 <li class="search-content__hotel-star">
                   <svg class="icon icon__star">
-                    <use xlink:href="/public/sprite.svg#star"></use>
+                    <use xlink:href="/public/assets/sprites/sprite.svg#star"></use>
                   </svg>
                 </li>
 
                 <li class="search-content__hotel-star">
                   <svg class="icon icon__star">
-                    <use xlink:href="/public/sprite.svg#star"></use>
+                    <use xlink:href="/public/assets/sprites/sprite.svg#star"></use>
                   </svg>
                 </li>
               </ul>
@@ -471,28 +501,28 @@
               <ul class="search-content__hotel-short-info">
                 <li class="search-content__hotel-short-info-item">
                   <svg class="icon icon__clock">
-                    <use xlink:href="/public/sprite.svg#clock"></use>
+                    <use xlink:href="/public/assets/sprites/sprite.svg#clock"></use>
                   </svg>
                   <p class="search-content__hotel-short-info-text">7 ночей</p>
                 </li>
 
                 <li class="search-content__hotel-short-info-item">
                   <svg class="icon icon__cutlery">
-                    <use xlink:href="/public/sprite.svg#cutlery"></use>
+                    <use xlink:href="/public/assets/sprites/sprite.svg#cutlery"></use>
                   </svg>
                   <p class="search-content__hotel-short-info-text">Завтрак</p>
                 </li>
 
                 <li class="search-content__hotel-short-info-item">
                   <svg class="icon icon__house">
-                    <use xlink:href="/public/sprite.svg#house"></use>
+                    <use xlink:href="/public/assets/sprites/sprite.svg#house"></use>
                   </svg>
                   <p class="search-content__hotel-short-info-text">Standard</p>
                 </li>
 
                 <li class="search-content__hotel-short-info-item">
                   <svg class="icon icon__sun">
-                    <use xlink:href="/public/sprite.svg#sun"></use>
+                    <use xlink:href="/public/assets/sprites/sprite.svg#sun"></use>
                   </svg>
                   <p class="search-content__hotel-short-info-text">Пляж: песок,
                     50 m</p>
@@ -533,7 +563,7 @@
                   <td class="search-content__td">Standard</td>
                   <td class="search-content__td">10+</td>
                   <td class="search-content__td">645€/чел</td>
-                  <td class="search-content__td"><button
+                  <td class="search-content__td search-content__td-btn"><button
                       class="main-btn search-content__choose-btn"
                     >выбрать</button></td>
                 </tr>
@@ -586,7 +616,7 @@
                                     <div data-value="nut3" class="select__item">выше 700€</div>
                                 </div>
                                 <svg class="icon icon__arrow-down select__arrow">
-                                    <use xlink:href="/public/sprite.svg#arrow-down"></use>
+                                    <use xlink:href="/public/assets/sprites/sprite.svg#arrow-down"></use>
                                 </svg>
                             </div>
                         </div>
@@ -600,7 +630,7 @@
                                     <div data-value="nut3" class="select__item">Популярный</div>
                                 </div>
                                 <svg class="icon icon__arrow-down select__arrow">
-                                    <use xlink:href="/public/sprite.svg#arrow-down"></use>
+                                    <use xlink:href="/public/assets/sprites/sprite.svg#arrow-down"></use>
                                 </svg>
                             </div>
                         </div>
@@ -710,7 +740,7 @@
 
               <div class="search-content__hotel-location-mob">
                 <svg class="icon icon__location">
-                  <use xlink:href="/public/sprite.svg#location"></use>
+                  <use xlink:href="/public/assets/sprites/sprite.svg#location"></use>
                 </svg>
                 <p class="search-content__hotel-location">Болгария, Золотые
                   Пески</p>
@@ -718,12 +748,12 @@
 
               <div class="swiper-button-next">
                 <svg class="icon icon__arrow-down search-content__arow-r">
-                  <use xlink:href="/public/sprite.svg#arrow-down"></use>
+                  <use xlink:href="/public/assets/sprites/sprite.svg#arrow-down"></use>
                 </svg>
               </div>
               <div class="swiper-button-prev">
                 <svg class="icon icon__arrow-down search-content__arow-l">
-                  <use xlink:href="/public/sprite.svg#arrow-down"></use>
+                  <use xlink:href="/public/assets/sprites/sprite.svg#arrow-down"></use>
                 </svg>
               </div>
             </div>
@@ -732,7 +762,7 @@
               <h2 class="search-content__hotel-title">Название Отеля здесь</h2>
               <div class="search-content__hotel-location-block">
                 <svg class="icon icon__location">
-                  <use xlink:href="/public/sprite.svg#location"></use>
+                  <use xlink:href="/public/assets/sprites/sprite.svg#location"></use>
                 </svg>
                 <p class="search-content__hotel-location">Болгария, Золотые
                   Пески</p>
@@ -744,7 +774,7 @@
               <a href="" class="search-content__hotel-link">
                 <p>Подробнее об отеле</p>
                 <svg class="icon icon__arrow-right">
-                  <use xlink:href="/public/sprite.svg#arrow-right"></use>
+                  <use xlink:href="/public/assets/sprites/sprite.svg#arrow-right"></use>
                 </svg>
               </a>
             </div>
@@ -753,19 +783,19 @@
               <ul class="search-content__hotel-stars">
                 <li class="search-content__hotel-star">
                   <svg class="icon icon__star">
-                    <use xlink:href="/public/sprite.svg#star"></use>
+                    <use xlink:href="/public/assets/sprites/sprite.svg#star"></use>
                   </svg>
                 </li>
 
                 <li class="search-content__hotel-star">
                   <svg class="icon icon__star">
-                    <use xlink:href="/public/sprite.svg#star"></use>
+                    <use xlink:href="/public/assets/sprites/sprite.svg#star"></use>
                   </svg>
                 </li>
 
                 <li class="search-content__hotel-star">
                   <svg class="icon icon__star">
-                    <use xlink:href="/public/sprite.svg#star"></use>
+                    <use xlink:href="/public/assets/sprites/sprite.svg#star"></use>
                   </svg>
                 </li>
               </ul>
@@ -773,28 +803,28 @@
               <ul class="search-content__hotel-short-info">
                 <li class="search-content__hotel-short-info-item">
                   <svg class="icon icon__clock">
-                    <use xlink:href="/public/sprite.svg#clock"></use>
+                    <use xlink:href="/public/assets/sprites/sprite.svg#clock"></use>
                   </svg>
                   <p class="search-content__hotel-short-info-text">7 ночей</p>
                 </li>
 
                 <li class="search-content__hotel-short-info-item">
                   <svg class="icon icon__cutlery">
-                    <use xlink:href="/public/sprite.svg#cutlery"></use>
+                    <use xlink:href="/public/assets/sprites/sprite.svg#cutlery"></use>
                   </svg>
                   <p class="search-content__hotel-short-info-text">Завтрак</p>
                 </li>
 
                 <li class="search-content__hotel-short-info-item">
                   <svg class="icon icon__house">
-                    <use xlink:href="/public/sprite.svg#house"></use>
+                    <use xlink:href="/public/assets/sprites/sprite.svg#house"></use>
                   </svg>
                   <p class="search-content__hotel-short-info-text">Standard</p>
                 </li>
 
                 <li class="search-content__hotel-short-info-item">
                   <svg class="icon icon__sun">
-                    <use xlink:href="/public/sprite.svg#sun"></use>
+                    <use xlink:href="/public/assets/sprites/sprite.svg#sun"></use>
                   </svg>
                   <p class="search-content__hotel-short-info-text">Пляж: песок,
                     50 m</p>
@@ -835,7 +865,7 @@
                   <td class="search-content__td">Standard</td>
                   <td class="search-content__td">10+</td>
                   <td class="search-content__td">645€/чел</td>
-                  <td class="search-content__td"><button
+                  <td class="search-content__td search-content__td-btn"><button
                       class="main-btn search-content__choose-btn"
                     >выбрать</button></td>
                 </tr>
@@ -888,7 +918,7 @@
                                     <div data-value="nut3" class="select__item">выше 700€</div>
                                 </div>
                                 <svg class="icon icon__arrow-down select__arrow">
-                                    <use xlink:href="/public/sprite.svg#arrow-down"></use>
+                                    <use xlink:href="/public/assets/sprites/sprite.svg#arrow-down"></use>
                                 </svg>
                             </div>
                         </div>
@@ -902,7 +932,7 @@
                                     <div data-value="nut3" class="select__item">Популярный</div>
                                 </div>
                                 <svg class="icon icon__arrow-down select__arrow">
-                                    <use xlink:href="/public/sprite.svg#arrow-down"></use>
+                                    <use xlink:href="/public/assets/sprites/sprite.svg#arrow-down"></use>
                                 </svg>
                             </div>
                         </div>

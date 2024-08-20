@@ -1,4 +1,7 @@
 .search-content {
+margin: -80px 0 80px 0;
+
+
   &__filter {
     @extend %display-jc-sb;
   }
@@ -6,6 +9,10 @@
   &__filter-wrapper {
     @extend %display-jc-sb;
     flex: 0 0 auto;
+
+    &.nonactive {
+      display: none;
+    }
   }
 
   &__filter-text {
@@ -22,7 +29,8 @@
     transition: fill 0.3s ease;
   }
 
-  &__filter-btn {
+  &__filter-btn,
+  &__filter-cal-btn {
     @extend %display-flex;
     justify-content: center;
     border: 1px solid $primary;
@@ -30,8 +38,9 @@
     background: $white;
     color: $primary;
     padding: 11px 17px 12px 13px;
-    margin: 0 26px 0 0;
+    margin: 0 35px 0 0;
     transition: background 0.3s ease, color 0.3s ease;
+    display: flex;
 
     @media (hover: hover) {
       &:hover {
@@ -43,6 +52,44 @@
         }
       }
     }
+  }
+
+  &__filter-wrapper-cal {
+    display: none;
+
+    &.active {
+      @extend %display-jc-sb;
+      flex-grow: 1;
+    }
+  }
+
+  &__filter-cal-block {
+    @extend %display-flex;
+    padding-left: 21px;
+    position: relative;
+
+    &:after {
+        @extend %gray-line;
+        right: auto;
+        left: 0;
+    }
+  }
+
+  .icon__list {
+    width: 25px;
+    height: 21px;
+    fill: $primary;
+    margin: 0 12px 0 0;
+    transition: fill 0.3s ease;
+  }
+
+  .icon__calendar-euro-green {
+    fill: $green;
+  }
+
+  &__filter-cal-text {
+    font-size: 24px;
+
   }
 
   &__filter-select-wrapper,
@@ -77,7 +124,7 @@
 
   &__hotel-items {
     position: relative;
-    padding: 40px 0;
+    padding: 35px 0 40px;
 
     &::after {
       content: "";
@@ -101,6 +148,7 @@
 
   &__hotel-title {
     font-size: 18px;
+    font-weight: 400;
   }
 
   &__hotel-location-block {
@@ -125,14 +173,14 @@
     display: -webkit-box;
     -webkit-line-clamp: 5;
     -webkit-box-orient: vertical;
-    margin: 16px 0 0;
+    margin: 11px 0 0;
   }
 
   &__hotel-link {
     font-size: 16px;
     color: $gray;
     @extend %display-flex;
-    margin: 40px 0 0;
+    margin: 35px 0 0;
     transition: transform 0.3s ease;
 
     @media (hover: hover) {
@@ -145,7 +193,7 @@
   .icon__arrow-right {
     width: 24px;
     height: 24px;
-    margin: 0 0 0 10px;
+    margin: 0 0 0 20px;
     fill: $primary;
   }
 
@@ -192,7 +240,8 @@
 
   &__hotel-offer-card {
     width: 200px;
-    height: 271px;
+    // height: 271px;
+    height: 240px;
     box-shadow: 0px 5px 10px 0px #0000001a;
     border-radius: 6px;
     padding: 20px;
@@ -201,12 +250,14 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transition: background 0.5s ease, box-shadow 0.5s ease;
+    transition: background 0.5s ease, height 0.5s ease-in-out, box-shadow 0.5s ease;
   }
 
   &__hotel-offer-card.active {
     background: rgba(37, 82, 150, 0.059);
     box-shadow: none;
+    height: 274px;
+    padding-bottom: 40px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
   }
@@ -323,12 +374,17 @@
     border-top-right-radius: 0;
     padding: 0 21px 0 25px;
     position: relative;
+    margin-bottom: 20px;
   }
 
   &__th,
   &__td {
-    padding: 12px 23px;
+    padding: 15px 23px;
     text-align: left;
+  }
+
+  &__td-btn {
+    width: 206px;
   }
 
   &__th {
@@ -373,9 +429,191 @@
     background-color: #e67e00;
   }
 
-   &__booking-table-tab {
-        display: none;
-     }
+  &__booking-table-tab {
+    display: none;
+  }
+
+  .fc-dayGrid-view .fc-day-grid-container {
+    display: flex;
+    flex-direction: row;
+    gap: 46px;
+  }
+
+  .fc-dayGrid-view .fc-day-grid {
+    flex: 1;
+    margin: 0 5px;
+  }
+
+  .fc-dayGrid-view .fc-day {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .fc .fc-multimonth-month {
+    width: 25% !important;
+    border: 1px solid $light-gray;
+    border-radius: 6px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.1);
+
+    @include respond-to($lapTop) {
+      & {
+        width: 33.333% !important;
+      }
+    }
+
+    @media only screen and (max-width: 900px) {
+      & {
+        width: 50% !important;
+      }
+    }
+
+    @media only screen and (max-width: 650px) {
+      & {
+        width: 100% !important;
+      }
+    }
+  }
+
+  .fc .fc-multimonth {
+    gap: 46px;
+    flex-wrap: nowrap;
+    border: none;
+    padding: 9px;
+  }
+
+  .fc .fc-view-harness {
+    height: 288px !important;
+    margin: 0 88px;
+  }
+  .fc .fc-multimonth-title {
+    padding: 1em 0px 0.4em 0;
+  }
+
+  .fc .fc-col-header-cell-cushion {
+    padding: 16px 4px;
+  }
+
+  .fc-theme-standard th {
+    border-top: none;
+    border-right: none;
+    border-left: none;
+  }
+
+  .fc-multimonth-daygrid-table tr {
+    border-bottom: none;
+  }
+
+  .fc .fc-multimonth-daygrid {
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+  }
+
+  .fc-direction-ltr .fc-daygrid-more-link,
+  .fc .fc-daygrid-event-harness {
+    display: none;
+  }
+
+  .fc .fc-daygrid-body-balanced .fc-daygrid-day-events {
+    position: static;
+  }
+
+  .custom-div {
+    text-align: end;
+    margin-top: 7px;
+    margin-bottom: 4px;
+    text-align: center;
+  }
+
+  .fc-no-event {
+    background-color: #f0f0f0;
+    color: #d0d0d0;
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+  .fc .fc-daygrid-day-top {
+    justify-content: center;
+  }
+
+  .fc-multimonth-daygrid-table {
+    height: 189px !important;
+  }
+
+  .fc {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+  }
+
+  .activeCal {
+    max-height: 1000px;
+    transition: max-height 0.5s ease-in;
+  }
+
+  #calendar {
+    position: relative;
+  }
+
+  .calendar-container {
+    max-width: 1376px;
+  }
+
+  .fc .fc-button {
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+  }
+
+  .fc .fc-next-button {
+    right: -21px;
+  }
+
+  .fc .fc-prev-button {
+    left: 26px;
+  }
+
+  .fc .fc-button-primary {
+    background-color: rgba(62, 119, 57, 0.4);
+    border-color: rgba(62, 119, 57, 0.4);
+    color: rgba(62, 119, 57, 1);
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+  }
+
+  .fc .fc-toolbar.fc-header-toolbar {
+    margin: 11px 0;
+  }
+
+  .fc .fc-multimonth-title {
+    font-size: 16px;
+  }
+
+  &__calendar-subtitle {
+    font-size: 24px;
+    margin: 48px 0 10px 0;
+    position: relative;
+    padding: 0 0 8px;
+    display: none;
+    span {
+      font-weight: 700;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      bottom: 0;
+      left: 0;
+      background-color: $light-gray;
+    }
+
+    &.active {
+      display: block;
+    }
+  }
 
   @include respond-to($lapTop) {
     &__filter-text {
@@ -402,6 +640,8 @@
   }
 
   @include respond-to($l-tablet) {
+
+
     &__filter {
       display: block;
     }
@@ -433,8 +673,28 @@
     }
 
     &__td {
-    font-size: 14px;
+      font-size: 14px;
+    }
+
+    &__filter-wrapper-cal.active {
+      justify-content: space-around;
+    }
+
+    &__filter-cal-block {
+    padding-left: 0;
+
+    &:after {
+        background: transparent;
+        width: 0;
+        height: 0;
+    }
   }
+  
+  }
+
+
+  @media(max-width:875px) {
+margin: 60px 0 80px 0;
   }
 
   @include respond-to($tablet) {
@@ -482,57 +742,82 @@
       align-items: center;
     }
 
-     &__booking-table {
-        display: none;
-     }
+    &__booking-table {
+      display: none;
+    }
 
-     &__booking-tab {
-        display: block;
-        border-top-left-radius: 0;
-        width: 100%;
-    border-collapse: collapse;
-    background-color: rgba(37, 82, 150, 0.059);
-    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    border-top-right-radius: 0;
-    padding: 0 21px 18px 25px;
-    position: relative;
-     }
+    &__booking-tab {
+      display: block;
+      border-top-left-radius: 0;
+      width: 100%;
+      border-collapse: collapse;
+      background-color: rgba(37, 82, 150, 0.059);
+      box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      border-top-right-radius: 0;
+      padding: 0 21px 18px 25px;
+      position: relative;
+      margin-bottom: 15px;
+    }
 
-     &__booking-table-mob {
-        width: 100%;
-    border-collapse: collapse;
-    margin: 13px 0 16px 0;
-     }
+    &__booking-table-mob {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 13px 0 16px 0;
+    }
 
-     &__tbody-mob {
-        gap: 0 20px;
+    &__tbody-mob {
+      gap: 0 20px;
       display: grid;
-    grid-template-columns: repeat(2, 1fr);
-     }
+      grid-template-columns: repeat(2, 1fr);
+    }
 
-     &__th, &__td {
-        padding: 5px;
-     }
+    &__th,
+    &__td {
+      padding: 5px;
+    }
 
-     &__tbody-tr {
-         display: grid;
-    grid-template-columns: repeat(2, 1fr);
-     }
+    &__tbody-tr {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
 
-      &__thead-tr::after,
-  &__tbody-tr::after {
-    height: 0;
-    background-color: transparent;
-  }
+    &__thead-tr::after,
+    &__tbody-tr::after {
+      height: 0;
+      background-color: transparent;
+    }
 
-  &__td {
+    &__td {
+      font-size: 16px;
+    }
+
+    &__td-btn {
+      width: 100%;
+    }
+
+    .fc .fc-view-harness {
+      margin: 0 74px;
+    }
+
+    &__calendar-subtitle {
+      font-size: 16px;
+      margin: 38px 0 0 0;
+      display: none;
+    }
+
+    &__filter-cal-text {
     font-size: 16px;
-  }
+    
+   }
 
-  &__td-btn {
-    width: 100%;
-  }
+   &__filter-cal-block {
+margin-bottom: 12px;
+   }
+
+    &__filter-wrapper-cal.active {
+      flex-direction: column;
+    }
   }
 
   @include respond-to($mobile) {
@@ -644,9 +929,8 @@
       max-width: 100%;
     }
 
-
     &__hotel-items {
-padding: 24px 0;
+      padding: 24px 0;
 
       &::after {
         height: 0;
@@ -673,8 +957,179 @@ padding: 24px 0;
     }
 
     &__tbody-mob {
-    
-    grid-template-columns: repeat(1, 1fr);
-     }
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .fc .fc-button {
+      position: static;
+      transform: none;
+      padding: 0;
+    }
+
+    .fc .fc-view-harness {
+      margin: 0;
+    }
+
+    .fc .fc-toolbar {
+      justify-content: end;
+    }
+
+    .fc .fc-prev-button {
+      margin-right: 15px;
+    }
+
+    .fc .fc-button-primary {
+      width: 28px;
+      height: 28px;
+    }
+
+    &__filter-wrapper-cal.active {
+      align-items: start;
+    }
   }
+
+  //   .fc .fc-multimonth {
+  //     flex-wrap: nowrap;
+  //     overflow: scroll;
+  //     border: none;
+  //     height: 278px;
+  //   }
+
+  //   .fc .fc-multimonth-multicol .fc-multimonth-month {
+  //     flex: 0 0 auto;
+  //   }
+
+  //   .fc .fc-view-harness {
+  //     height: 300px !important;
+  //   }
+
+  ////////////////////////////////////////
+
+  // .fc .fc-scrollgrid-section-body table, .fc .fc-scrollgrid-section-footer table {
+  //     width: 255px !important;
+  //     height: 189px !important;
+  // }
+
+  // .fc .fc-scrollgrid-section, .fc .fc-scrollgrid-section table, .fc .fc-scrollgrid-section > td {
+  //     height: 3px !important;
+  //     width: 255px !important;
+  // }
+
+  // .fc-direction-ltr .fc-toolbar > * > :not(:first-child) {
+  //     display: none;
+  // }
+
+  // .fc .fc-toolbar-title  {
+  //     font-size: 16px;
+  //     font-weight: 400;
+  //      font-family: 'Open Sans', sans-serif;
+  // }
+
+  // .fc .fc-daygrid-body-unbalanced .fc-daygrid-day-events {
+  //     min-height: 0;
+  // }
 }
+
+// #calendar {
+//     // max-width: 255px;
+//     // height: 278px;
+
+//     max-width: 1200px;
+//     margin: 40px auto;
+// }
+
+// .fc-event {
+//     font-size: 14px;
+//     padding: 2px;
+// }
+
+// #calendar, #calendar2, #calendar3 {
+//     display: inline-block;
+//     width: 30%;
+//     margin: 0 1%;
+//     vertical-align: top;
+// }
+
+// .fc-dayGrid-view .fc-day-grid-container {
+//     display: flex;
+//     flex-direction: row;
+//     gap: 46px;
+// }
+
+// .fc-dayGrid-view .fc-day-grid {
+//     flex: 1;
+//     margin: 0 5px;
+// }
+
+// .fc-dayGrid-view .fc-day {
+//     display: flex;
+//     flex-direction: column;
+// }
+
+// .fc .fc-multimonth-month {
+//     width: 25% !important;
+//    border: 1px solid $light-gray;
+//    border-radius: 6px;
+//    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.1);
+
+// }
+
+// .fc .fc-multimonth {
+//     gap: 46px;
+//     flex-wrap: nowrap;
+//     border: none;
+//     padding: 9px;
+// }
+
+// .fc .fc-view-harness {
+//     height: 288px !important;
+// }
+// .fc .fc-multimonth-title {
+//     padding: 1em 0px 1.5em 0;
+// }
+
+// .fc .fc-col-header-cell-cushion {
+//     padding: 16px 4px;
+// }
+
+// .fc-theme-standard th {
+//     border-top: none;
+//     border-right: none;
+//     border-left: none;
+// }
+
+// .fc-multimonth-daygrid-table tr {
+//     border-bottom: none;
+// }
+
+// .fc .fc-multimonth-daygrid {
+//     border-bottom-left-radius: 6px;
+//     border-bottom-right-radius: 6px;
+// }
+
+// .fc-direction-ltr .fc-daygrid-more-link,
+// .fc .fc-daygrid-event-harness {
+//     display: none;
+// }
+
+// .fc .fc-daygrid-body-balanced .fc-daygrid-day-events {
+//     position: static;
+// }
+
+// .custom-div {
+//     text-align: end;
+//     margin-top: 7px;
+//     margin-bottom: 4px;
+//     text-align: center;
+// }
+
+// .fc-no-event {
+//     background-color: #f0f0f0;
+//     color: #d0d0d0;
+//     pointer-events: none;
+//     opacity: 0.5;
+// }
+
+// .fc .fc-daygrid-day-top {
+//     justify-content: center;
+// }
