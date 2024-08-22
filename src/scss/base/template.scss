@@ -6,11 +6,10 @@
   color: $white;
   text-transform: uppercase;
 
-
   @media (hover: hover) {
     &:hover {
       background: $white;
-     color: $text;
+      color: $text;
     }
   }
 
@@ -20,26 +19,23 @@
   }
 
   &.active {
-       background: $white;
+    background: $white;
     color: $text;
   }
-   
 }
-
 
 .small-btn {
   border: 1px solid $primary;
   border-radius: 4px;
   background: $primary;
- padding: 4px 10px;
+  padding: 4px 10px;
   transition: background 0.3s, color 0.3s;
   color: $white;
-
 
   @media (hover: hover) {
     &:hover {
       background: $white;
-     color: $text;
+      color: $text;
     }
   }
 
@@ -49,10 +45,9 @@
   }
 
   &.active {
-       background: $white;
+    background: $white;
     color: $text;
   }
-   
 }
 
 .input-btn {
@@ -60,16 +55,15 @@
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
   background: $primary;
- padding: 12px 31px;
+  padding: 12px 31px;
   transition: background 0.3s, color 0.3s;
   color: $white;
   text-transform: uppercase;
 
-
   @media (hover: hover) {
     &:hover {
       background: $white;
-     color: $text;
+      color: $text;
     }
   }
 
@@ -79,8 +73,128 @@
   }
 
   &.active {
-       background: $white;
+    background: $white;
     color: $text;
   }
-   
+}
+
+.main__tour__title {
+  @extend %display-center;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.36;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: $text;
+  gap: 7px;
+  .main__tour__title--svg {
+    fill: $primary;
+    width: 29px;
+    height: 29px;
+  }
+  .main__tour__title--span {
+    color: $primary;
+  }
+}
+
+.main-tour__swiper-button-prev,
+.main-tour__swiper-button-next {
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+  z-index: 2;
+  .main-company__swiper-round {
+    display: flex;
+    position: relative;
+  }
+  .main-tour__swiper-round::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.2s ease;
+    z-index: -1;
+    background: #3e7739;
+    opacity: 0.1;
+  }
+
+  .main-tour__button-svg {
+    width: 32px;
+    height: 32px;
+    fill: $green;
+  }
+}
+
+.main-tour__swiper-button-prev {
+  left: -5.5%;
+}
+
+.main-tour__swiper-button-next {
+  right: -5.5%;
+}
+
+@media (max-width: 1344px) {
+  .main-tour__swiper-button-prev,
+  .main-tour__swiper-button-next {
+    .main-tour__swiper-round::before {
+      background: #fff;
+      opacity: 1;
+    }
+  }
+  .main-tour__swiper-button-prev {
+    left: 4%;
+  }
+  .main-tour__swiper-button-next {
+    right: 4%;
+  }
+}
+
+@media (max-width: 1023px) {
+  .main-tour__swiper-button-prev {
+    left: 6%;
+  }
+  .main-tour__swiper-button-next {
+    right: 6%;
+  }
+}
+
+@media (max-width: 768px) {
+  //575px
+  // .main-tour__swiper-button-prev {
+  //   left: 10%;
+  // }
+  // .main-tour__swiper-button-next {
+  //     right: 10%;
+  // }
+  .main-tour__swiper-button-prev,
+  .main-tour__swiper-button-next {
+    display: none;
+  }
+}
+
+
+
+@media (max-width:525px) {
+  .main__tour__title {
+    flex-direction: column;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.36;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: $text;
+    gap: 7px;
+    .main__tour__title--svg {
+      fill: $primary;
+      width: 29px;
+      height: 29px;
+    }
+    .main__tour__title--span {
+      color: $primary;
+    }
+  }
 }

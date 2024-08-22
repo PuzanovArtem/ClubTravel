@@ -1,0 +1,195 @@
+._container {
+  max-width: 1200px;
+  padding: 0 ;
+}
+.main-company {
+  .main-company__wrapper {
+    @extend %display-flex;
+    .main-company__swiper {
+      margin-bottom: 12px;
+      margin-top: 37px;
+      padding: 0 2px 10px 2px;
+      .main-company__swiper-wrapper {
+        position: relative;
+        .main-company__swiper-slide {
+          width: 395px !important;
+          padding: 0 10px 15px;
+          box-sizing: border-box;
+        }
+      }
+    }
+  }
+}
+.main-hot{
+
+}
+
+.main-company__card {
+  border-radius: 10px;
+  width: 100%;
+  height: 330px;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+  background: #fff;
+  .main-company__card-img {
+    @extend %position-rel;
+    .card__bg-img{
+      width: 100%;
+    }
+    .main-company__card-line {
+      @extend %position-abs ;
+      right: 16px;
+      top: 29px;
+      display: flex;
+      .icon__card-line {
+        width: 3px;
+        height: 31px;
+        fill: #f68521;
+      }
+      .main-company__card-line-wrapper {
+        @extend %position-rel;
+        .main-company__card-line-price {
+          @extend %position-rel;
+          left: 67%;
+          top: 50%;
+          font-weight: 700;
+          letter-spacing: 1.5px;
+          transform: translate(-50%, -50%);
+          z-index: 1;
+          color: #fff;
+        }
+      }
+      .main-company__card-line-wrapper::after {
+        content: "";
+        @extend %position-abs ;
+        left: 0;
+        top: 0;
+        width: 128%;
+        height: 31px;
+        background: #f68521;
+      }
+    }
+    
+    .main-company__card-data-wrapper {
+      @extend %position-abs ;
+      left: 15px;
+      bottom: 14px;
+      @extend %display-flex;
+      border-radius: 6px;
+      padding: 7px 15px 7px 8px;
+      background: rgba(0, 0, 0, 0.5);
+      gap: 10px;
+
+      .icon__clock {
+        width: 16px;
+        height: 16px;
+        fill: #fff;
+      }
+      .main-company__card-data {
+        font-size: 14px;
+        color: #fff;
+      }
+    }
+    .hot-deals__card-data-wrapper {
+      position: absolute;
+      left: 15px;
+      bottom: 58px;
+      display: flex;
+      align-items: center;
+      border-radius: 6px;
+      padding: 7px 15px 7px 8px;
+      background: rgba(0, 0, 0, 0.5);
+      gap: 10px;
+  }
+    .hot-deals__card-place-wrapper{
+      position: absolute;
+    left: 15px;
+    bottom: 14px;
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    padding: 7px 15px 7px 8px;
+    background: rgba(0, 0, 0, 0.5);
+    gap: 10px;
+      .icon__location{
+        width: 14px;
+        height: 14px;
+        fill: #fff;
+      }
+      .hot-deals__card-place{
+        font-size: 14px;
+        color: #fff;
+      }
+    }
+  }
+  .main-company__card-text {
+    padding: 24px 0px 5px 21px;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 1.5px;
+  }
+}
+
+
+
+
+@media (max-width: 803px) {
+  .main-company {
+    .main-company__wrapper {
+      .main-company__swiper {
+        padding: 0 ;
+        .main-company__swiper-wrapper {
+          position: relative;
+          .main-company__swiper-slide {
+            width: 100% !important; // Full width for the slide
+            padding: 0; // Remove padding for a full-width effect
+            padding: 0px 15px;
+          }
+        }
+      }
+    }
+  }
+  
+
+
+  .main-company__card {
+    width: 100%; // Ensure the card takes up the full width of the slide
+    height: auto; // Adjust the height based on content
+    .main-company__card-img {
+      @extend %position-rel;
+      .card__bg-img{
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 425px) {
+  ._container {
+    max-width: 1200px;
+  }
+  .main-company {
+    .main-company__wrapper {
+      @extend %display-flex;
+      .main-company__swiper {
+        margin-bottom: 12px;
+        margin-top: 37px;
+        padding: 0 2px 10px 2px;
+        .main-company__swiper-wrapper {
+          position: relative;
+          .main-company__swiper-slide {
+            // width: 340px !important;
+            // padding: 0 10px 15px;
+          }
+        }
+      }
+    }
+  }
+  .main-company__card {
+    border-radius: 10px;
+    width: 100%;
+    height: 330px;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+    background: #fff;
+  }
+}
