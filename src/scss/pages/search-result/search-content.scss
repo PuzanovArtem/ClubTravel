@@ -1,0 +1,997 @@
+.search-content {
+margin: -80px 0 80px 0;
+
+
+  &__filter {
+    @extend %display-jc-sb;
+  }
+
+  &__filter-wrapper {
+    @extend %display-jc-sb;
+    flex: 0 0 auto;
+
+    &.nonactive {
+      display: none;
+    }
+  }
+
+  &__filter-text {
+    font-size: 24px;
+    line-height: 1.4;
+    margin: 0 20px 0 0;
+  }
+
+  .icon__calendar-euro {
+    width: 25px;
+    height: 21px;
+    fill: $primary;
+    margin: 0 12px 0 0;
+    transition: fill 0.3s ease;
+  }
+
+  &__filter-btn,
+  &__filter-cal-btn {
+    @extend %display-flex;
+    justify-content: center;
+    border: 1px solid $primary;
+    border-radius: 6px;
+    background: $white;
+    color: $primary;
+    padding: 11px 17px 12px 13px;
+    margin: 0 35px 0 0;
+    transition: background 0.3s ease, color 0.3s ease;
+    display: flex;
+
+    @media (hover: hover) {
+      &:hover {
+        background: $primary;
+        color: $white;
+
+        .icon__calendar-euro {
+          fill: $white;
+        }
+      }
+    }
+  }
+
+  &__filter-wrapper-cal {
+    display: none;
+
+    &.active {
+      @extend %display-jc-sb;
+      flex-grow: 1;
+    }
+  }
+
+  &__filter-cal-block {
+    @extend %display-flex;
+    padding-left: 21px;
+    position: relative;
+
+    &:after {
+        @extend %gray-line;
+        right: auto;
+        left: 0;
+    }
+  }
+
+  .icon__list {
+    width: 25px;
+    height: 21px;
+    fill: $primary;
+    margin: 0 12px 0 0;
+    transition: fill 0.3s ease;
+  }
+
+  .icon__calendar-euro-green {
+    fill: $green;
+  }
+
+  &__filter-cal-text {
+    font-size: 24px;
+
+  }
+
+  &__filter-select-wrapper,
+  &__filter-selects {
+    @extend %display-flex;
+  }
+
+  &__filter-select-title {
+    color: $gray;
+    margin: 0 12px 0 0;
+  }
+
+  &__select-custom {
+    margin: 0 0 0 10px;
+    width: 200px;
+  }
+
+  // &__hotel-list {
+  //     margin: 35px 0 0;
+  // }
+
+  &__hotel-item {
+    // display: flex;
+    // justify-content: space-between;
+
+    position: relative;
+
+    display: grid;
+    gap: 40px;
+    grid-template-columns: 380px 294px 167px 1fr;
+  }
+
+  &__hotel-items {
+    position: relative;
+    padding: 35px 0 40px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background: $light-gray;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  &__hotel-info {
+    max-width: 294px;
+  }
+
+  &__title-mob {
+    @extend %display-jc-sb;
+    display: none;
+  }
+
+  &__hotel-title {
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  &__hotel-location-block {
+    @extend %display-flex;
+    border: 1px solid $light-gray;
+    border-radius: 6px;
+    padding: 5px 11px;
+    width: 214px;
+    margin: 12px 0 0;
+  }
+
+  .icon__location {
+    width: 10px;
+    height: 14px;
+    fill: $green;
+    margin: 0 9px 0 0;
+  }
+
+  &__hotel-text {
+    color: $gray;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    margin: 11px 0 0;
+  }
+
+  &__hotel-link {
+    font-size: 16px;
+    color: $gray;
+    @extend %display-flex;
+    margin: 35px 0 0;
+    transition: transform 0.3s ease;
+
+    @media (hover: hover) {
+      &:hover {
+        transform: translateX(10px);
+      }
+    }
+  }
+
+  .icon__arrow-right {
+    width: 24px;
+    height: 24px;
+    margin: 0 0 0 20px;
+    fill: $primary;
+  }
+
+  &__hotel-static {
+    max-width: 167px;
+  }
+
+  &__hotel-stars,
+  &__hotel-short-info-item {
+    @extend %display-flex;
+  }
+
+  &__hotel-stars {
+    margin: 0 0 24px;
+  }
+
+  // &__hotel-static {
+  //  margin: 0 33px 0 40px;
+  // }
+
+  .icon__star {
+    width: 18px;
+    height: 18px;
+    fill: #f5c213;
+  }
+
+  &__hotel-short-info-item:not(:last-child) {
+    margin: 0 0 24px;
+  }
+
+  &__hotel-star:not(:last-child) {
+    margin: 0 4px 0 0;
+  }
+
+  .icon__clock,
+  .icon__cutlery,
+  .icon__house,
+  .icon__sun {
+    width: 18px;
+    height: 18px;
+    margin: 0 18px 0 0;
+    fill: $green;
+  }
+
+  &__hotel-offer-card {
+    width: 200px;
+    // height: 271px;
+    height: 240px;
+    box-shadow: 0px 5px 10px 0px #0000001a;
+    border-radius: 6px;
+    padding: 20px;
+    margin-right: 0;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: background 0.5s ease, height 0.5s ease-in-out, box-shadow 0.5s ease;
+  }
+
+  &__hotel-offer-card.active {
+    background: rgba(37, 82, 150, 0.059);
+    box-shadow: none;
+    height: 274px;
+    padding-bottom: 40px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  &__hotel-offer-title {
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: 400;
+    text-align: center;
+    margin: 32px 0 0;
+
+    span {
+      font-size: 24px;
+    }
+  }
+
+  &__span {
+    font-weight: 700;
+  }
+
+  &__hotel-offer-btn {
+    padding: 12px;
+    width: 100%;
+  }
+
+  .swiper-container {
+    max-width: 380px;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+  }
+
+  .swiper-slide img {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    content: "";
+  }
+
+  &__arow-r,
+  &__arow-l {
+    position: relative;
+  }
+
+  &__arow-r {
+    rotate: -90deg;
+  }
+
+  &__arow-l {
+    rotate: 90deg;
+  }
+
+  .swiper-button-next::before,
+  .swiper-button-prev::before {
+    content: "";
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.3);
+
+    @media (hover: hover) {
+      &:hover {
+        background: rgba(255, 255, 255, 0.6);
+      }
+    }
+  }
+
+  .swiper-button-prev svg,
+  .swiper-button-next svg {
+    width: 7px;
+    height: 12px;
+    fill: $white;
+    transition: fill 0.3s ease;
+
+    @media (hover: hover) {
+      &:hover {
+        fill: $primary;
+      }
+    }
+  }
+
+  &__hotel-location-mob {
+    display: none;
+  }
+
+  &__booking-table-container {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+
+  &__booking-tab {
+    display: none;
+  }
+
+  &__booking-table-container.active {
+    max-height: 1000px;
+    transition: max-height 0.5s ease-in;
+  }
+
+  &__booking-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgba(37, 82, 150, 0.059);
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    border-top-right-radius: 0;
+    padding: 0 21px 0 25px;
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  &__th,
+  &__td {
+    padding: 15px 23px;
+    text-align: left;
+  }
+
+  &__td-btn {
+    width: 206px;
+  }
+
+  &__th {
+    color: $table-gray;
+    font-weight: 400;
+  }
+
+  &__td {
+    font-size: 16px;
+  }
+
+  &__thead {
+    padding: 0 23px;
+  }
+
+  &__thead-tr,
+  &__tbody-tr {
+    position: relative;
+  }
+
+  &__thead-tr::after,
+  &__tbody-tr::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 23px;
+    right: 23px;
+    height: 1px;
+    background-color: $light-gray;
+  }
+
+  &__tr:hover {
+    background-color: #f1f1f1;
+  }
+
+  &__choose-btn {
+    padding: 8px 16px;
+    width: 100%;
+  }
+
+  &__choose-btn:hover {
+    background-color: #e67e00;
+  }
+
+  &__booking-table-tab {
+    display: none;
+  }
+
+  .fc-dayGrid-view .fc-day-grid-container {
+    display: flex;
+    flex-direction: row;
+    gap: 46px;
+  }
+
+  .fc-dayGrid-view .fc-day-grid {
+    flex: 1;
+    margin: 0 5px;
+  }
+
+  .fc-dayGrid-view .fc-day {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .fc .fc-multimonth-month {
+    width: 25% !important;
+    border: 1px solid $light-gray;
+    border-radius: 6px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.1);
+
+    @include respond-to($lapTop) {
+      & {
+        width: 33.333% !important;
+      }
+    }
+
+    @media only screen and (max-width: 900px) {
+      & {
+        width: 50% !important;
+      }
+    }
+
+    @media only screen and (max-width: 650px) {
+      & {
+        width: 100% !important;
+      }
+    }
+  }
+
+  .fc .fc-multimonth {
+    gap: 46px;
+    flex-wrap: nowrap;
+    border: none;
+    padding: 9px;
+  }
+
+  .fc .fc-view-harness {
+    height: 288px !important;
+    margin: 0 88px;
+  }
+  .fc .fc-multimonth-title {
+    padding: 1em 0px 0.4em 0;
+  }
+
+  .fc .fc-col-header-cell-cushion {
+    padding: 16px 4px;
+  }
+
+  .fc-theme-standard th {
+    border-top: none;
+    border-right: none;
+    border-left: none;
+  }
+
+  .fc-multimonth-daygrid-table tr {
+    border-bottom: none;
+  }
+
+  .fc .fc-multimonth-daygrid {
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+  }
+
+  .fc-direction-ltr .fc-daygrid-more-link,
+  .fc .fc-daygrid-event-harness {
+    display: none;
+  }
+
+  .fc .fc-daygrid-body-balanced .fc-daygrid-day-events {
+    position: static;
+  }
+
+  .custom-div {
+    text-align: end;
+    margin-top: 7px;
+    margin-bottom: 4px;
+    text-align: center;
+  }
+
+  .fc-no-event {
+    background-color: #f0f0f0;
+    color: #d0d0d0;
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+  .fc .fc-daygrid-day-top {
+    justify-content: center;
+  }
+
+  .fc-multimonth-daygrid-table {
+    height: 189px !important;
+  }
+
+  .fc {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+  }
+
+  .activeCal {
+    max-height: 1000px;
+    transition: max-height 0.5s ease-in;
+  }
+
+  #calendar {
+    position: relative;
+  }
+
+  .calendar-container {
+    max-width: 1376px;
+  }
+
+  .fc .fc-button {
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+  }
+
+  .fc .fc-next-button {
+    right: -21px;
+  }
+
+  .fc .fc-prev-button {
+    left: 26px;
+  }
+
+  .fc .fc-button-primary {
+    background-color: rgba(62, 119, 57, 0.4);
+    border-color: rgba(62, 119, 57, 0.4);
+    color: rgba(62, 119, 57, 1);
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+  }
+
+  .fc .fc-toolbar.fc-header-toolbar {
+    margin: 11px 0;
+  }
+
+  .fc .fc-multimonth-title {
+    font-size: 16px;
+    text-transform: capitalize;
+  }
+
+  .fc-day-selected {
+  background-color: #f68521;
+  color: white;
+}
+
+  &__calendar-subtitle {
+    font-size: 24px;
+    margin: 48px 0 10px 0;
+    position: relative;
+    padding: 0 0 8px;
+    display: none;
+    span {
+      font-weight: 700;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      bottom: 0;
+      left: 0;
+      background-color: $light-gray;
+    }
+
+    &.active {
+      display: block;
+    }
+  }
+
+  @include respond-to($lapTop) {
+    &__filter-text {
+      font-size: 18px;
+      margin: 0 10px 0 0;
+    }
+
+    &__select-custom {
+      width: 149px;
+    }
+
+    .swiper-container {
+      max-width: 320px;
+      margin: auto 0;
+    }
+
+    &__hotel-offer-card {
+      height: 220px;
+    }
+
+    &__hotel-item {
+      grid-template-columns: 315px 1fr 1fr 1fr;
+    }
+  }
+
+  @include respond-to($l-tablet) {
+
+
+    &__filter {
+      display: block;
+    }
+
+    &__filter-wrapper {
+      justify-content: center;
+    }
+
+    &__filter-text {
+      text-align: center;
+      margin: 0 0 16px;
+      font-size: 20px;
+    }
+
+    &__hotel-item {
+      grid-template-columns: 1fr 1fr 167px;
+    }
+
+    &__hotel-offer-card {
+      grid-column: span 3;
+      // max-width: 420px;
+      width: 100%;
+      margin: 0 auto;
+      height: 180px;
+    }
+
+    &__hotel-offer-btn {
+      margin: 0 auto;
+    }
+
+    &__td {
+      font-size: 14px;
+    }
+
+    &__filter-wrapper-cal.active {
+      justify-content: space-around;
+    }
+
+    &__filter-cal-block {
+    padding-left: 0;
+
+    &:after {
+        background: transparent;
+        width: 0;
+        height: 0;
+    }
+  }
+  
+  }
+
+
+  @media(max-width:875px) {
+margin: 60px 0 80px 0;
+  }
+
+  @include respond-to($tablet) {
+    &__filter-wrapper {
+      flex-direction: column;
+      max-width: 420px;
+      margin: 0 auto;
+    }
+
+    &__filter-btn {
+      order: 2;
+      margin: 19px 0 0;
+      width: 100%;
+    }
+
+    &__filter-select-wrapper {
+      order: 1;
+      width: 100%;
+    }
+
+    &__select-custom {
+      width: 161px;
+    }
+
+    &__hotel-item {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    &__hotel-offer-card,
+    &__hotel-static {
+      grid-column: span 2;
+    }
+
+    &__hotel-static {
+      max-width: 100%;
+    }
+
+    &__hotel-short-info-item:not(:last-child) {
+      margin: 0;
+    }
+
+    &__hotel-short-info {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      align-items: center;
+    }
+
+    &__booking-table {
+      display: none;
+    }
+
+    &__booking-tab {
+      display: block;
+      border-top-left-radius: 0;
+      width: 100%;
+      border-collapse: collapse;
+      background-color: rgba(37, 82, 150, 0.059);
+      box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      border-top-right-radius: 0;
+      padding: 0 21px 18px 25px;
+      position: relative;
+      margin-bottom: 15px;
+    }
+
+    &__booking-table-mob {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 13px 0 16px 0;
+    }
+
+    &__tbody-mob {
+      gap: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__th,
+    &__td {
+      padding: 5px;
+    }
+
+    &__tbody-tr {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__thead-tr::after,
+    &__tbody-tr::after {
+      height: 0;
+      background-color: transparent;
+    }
+
+    &__td {
+      font-size: 16px;
+    }
+
+    &__td-btn {
+      width: 100%;
+    }
+
+    .fc .fc-view-harness {
+      margin: 0 74px;
+    }
+
+    &__calendar-subtitle {
+      font-size: 16px;
+      margin: 38px 0 0 0;
+      display: none;
+    }
+
+    &__filter-cal-text {
+    font-size: 16px;
+    
+   }
+
+   &__filter-cal-block {
+margin-bottom: 12px;
+   }
+
+    &__filter-wrapper-cal.active {
+      flex-direction: column;
+    }
+  }
+
+  @include respond-to($mobile) {
+    &__filter-wrapper {
+      max-width: 100%;
+    }
+
+    &__filter-select-title {
+      margin: 0 0 8px;
+    }
+
+    &__filter-select-wrapper {
+      display: block;
+    }
+
+    &__filter-text {
+      text-align: start;
+      margin: 0 auto 16px auto;
+    }
+
+    &__select-custom {
+      width: 100%;
+      margin: 0 0 0 5px;
+    }
+    .select {
+      flex-grow: 1;
+    }
+
+    .select__custom {
+      width: 100%;
+    }
+
+    &__title-mob {
+      display: flex;
+    }
+
+    &__hotel-item {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+
+    &__hotel-offer-card,
+    &__hotel-static {
+      grid-column: span 1;
+    }
+
+    &__title-wrapper,
+    &__hotel-location-block {
+      display: none;
+    }
+
+    &__hotel-text {
+      margin: 0;
+    }
+
+    &__swiper-container {
+      order: 1;
+    }
+
+    &__title-mob {
+      order: 2;
+    }
+
+    &__hotel-static {
+      order: 3;
+    }
+
+    &__hotel-info {
+      order: 4;
+    }
+
+    &__hotel-offer-card {
+      order: 5;
+    }
+
+    &__hotel-short-info {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    &__hotel-info {
+      max-width: 100%;
+    }
+
+    &__hotel-link {
+      display: none;
+    }
+
+    &__hotel-offer-title {
+      font-size: 16px;
+      margin: 0;
+
+      span {
+        font-size: 16px;
+      }
+    }
+
+    &__hotel-offer-card {
+      height: 103px;
+      padding: 12px 15px 15px 15px;
+    }
+
+    &__hotel-offer-btn {
+      width: 160px;
+      margin: 12px auto 0 auto;
+    }
+
+    .swiper-container {
+      max-width: 100%;
+    }
+
+    &__hotel-items {
+      padding: 24px 0;
+
+      &::after {
+        height: 0;
+        background: transparent;
+      }
+    }
+
+    &__hotel-location-mob {
+      align-items: center;
+      display: flex;
+      padding: 6px 15px;
+      color: $white;
+      background: rgba(0, 0, 0, 0.5);
+      width: 222px;
+      border-radius: 6px;
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      z-index: 20;
+    }
+
+    .icon__location {
+      fill: $white;
+    }
+
+    &__tbody-mob {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .fc .fc-button {
+      position: static;
+      transform: none;
+      padding: 0;
+    }
+
+    .fc .fc-view-harness {
+      margin: 0;
+    }
+
+    .fc .fc-toolbar {
+      justify-content: end;
+    }
+
+    .fc .fc-prev-button {
+      margin-right: 15px;
+    }
+
+    .fc .fc-button-primary {
+      width: 28px;
+      height: 28px;
+    }
+
+    &__filter-wrapper-cal.active {
+      align-items: start;
+    }
+  }
+
+}

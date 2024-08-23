@@ -55,7 +55,8 @@ export default defineConfig({
         resolve(__dirname, "src/html/components"),
         resolve(__dirname, "src/html/pages/main"),
         resolve(__dirname, "src/html/modules"),
-      ],
+        resolve(__dirname, "src/html/pages/search-result"),
+      ]
     }),
   ],
   build: {
@@ -63,6 +64,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, "/index.html"),
+        search: resolve(__dirname, "/src/pages/search-result/search-result.html"),
       },
     },
   },

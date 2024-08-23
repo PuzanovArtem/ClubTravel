@@ -6,6 +6,8 @@
   max-width: 1170px;
   width: 100%;
   margin: 0 auto;
+  top: -97px;
+  position: relative;
   position: relative;
   top: -97px;
 
@@ -15,6 +17,7 @@
     border-radius: 10px;
     z-index: 1;
     position: relative;
+    top: -97px;
 
     .search__title {
       font-size: 18px;
@@ -669,7 +672,7 @@
 
 @media(max-width:875px){
   .search {
-
+    top: 0;
     .search__content{
       top: -4px;
 

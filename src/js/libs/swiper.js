@@ -25,6 +25,30 @@ export const headerSlider = () => {
   }
 };
 
+
+export const cardSlider = () => {
+const swiper = new Swiper('.search-content__swiper-container', {
+            loop: true, 
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+}
+
+
+
+export const cardSlider = () => {
+const swiper = new Swiper('.search-content__swiper-container', {
+            loop: true, 
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+}
+
+
 export const mainCompanySlider = () => {
   try {
     const config = {

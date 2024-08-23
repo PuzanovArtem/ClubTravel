@@ -1,0 +1,208 @@
+.offer {
+
+    &__img {
+background-image: url(/public/assets/images/offer-img.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 570px;
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    }
+
+    &__wrapper {
+color: $white;
+max-width: 1036px;
+margin: 0 auto;
+padding: 90px 15px 94px 15px;
+
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 26px;
+        text-align: center;
+        margin: 0 0 16px;
+    }
+
+    &__subtitle {
+        font-size: 16px;
+        line-height: 1.4;
+        text-align: center;
+        max-width: 552px;
+        margin: 0 auto 95px auto;
+    }
+
+    &__text {
+        font-size: 18px;
+        line-height: 1.4;
+        max-width: 380px;
+        text-align: center;
+    }
+
+    &__content-wrapper {
+        @extend %display-jc-sb;
+    }
+
+    &__btn {
+        width: 100%;
+        padding: 12px;
+        margin: 36px 0 0;
+    }
+
+    &__or-block {
+        position: relative;
+    
+
+        &::before {
+            @extend %gray-line;
+            height: 77px;
+            background-color: $white;
+            right: 50%;
+            top: -47px;
+            transform: translateY(-50%);
+        }
+
+        &::after {
+            @extend %gray-line;
+            height: 77px;
+            background-color: $white;
+            right: 50%;
+            top: 67px;
+            transform: translateY(-50%);
+        }
+    }
+
+    &__consultant-wrapper {
+        margin: 16px 0 0;
+        @extend %display-flex;
+
+    }
+
+    &__text-sec {
+        text-align: start;
+    }
+
+    &__consultant-info {
+margin: 0 0 0 32px;
+    }
+
+    &__consultant-name {
+        font-size: 22px;
+        margin: 0 0 4px;
+    }
+
+    &__consultant-prof {
+        margin: 0 0 24px;
+    }
+
+.icon__phone,
+.icon__message,
+.icon__envelope {
+    width: 18px;
+    height: 18px;
+    fill: $white;
+    margin: 0 12px 0 0; 
+}
+
+&__consultant-link {
+     @extend %display-flex;
+     transition: opacity 0.3s ease;
+
+     @media (hover: hover) {
+       &:hover {
+         opacity: 0.6;
+       }
+     }
+}
+
+&__consultant-item:not(:last-child) {
+margin: 0 0 8px;
+}
+
+&__consultant-link-text {
+    font-size: 16px;
+}
+
+@include respond-to($l-tablet) {
+     &__img {
+background-image: url(/public/assets/images/offer-img-mob.png);
+height: 723px;
+     }
+
+      &__content-wrapper {
+        flex-direction: column;
+    }
+
+    &__or-block {
+       margin: 32px 0;
+
+        &::before {
+            @extend %gray-line;
+            height: 1px;
+            width: 77px;
+            background-color: $white;
+            top: 50%;
+            right: -132px;
+           
+            transform: translateX(-50%);
+        }
+
+        &::after {
+            @extend %gray-line;
+             height: 1px;
+            width: 77px;
+            background-color: $white;
+            top: 50%;
+            right: 0;
+            transform: translateX(-50%);
+        }
+    }
+}
+
+@include respond-to($mobile) {
+     &__img {
+height: 823px;
+     }
+
+     &__consultant-wrapper {
+        display: block;
+     }
+
+     &__consultant-info  {
+        margin: 0;
+     }
+
+     &__consultant-info {
+        margin: 16px 0 0;
+     }
+
+      &__wrapper {
+padding: 30px 10px 44px 10px;
+
+    }
+
+    &__subtitle {
+        margin: 0 auto 32px auto;
+        max-width: 332px;
+    }
+
+    &__title {
+        max-width: 240px;
+        margin: 0 auto 16px auto;
+    }
+    }
+
+    @include respond-to($mobile) {
+      &__consultant-wrapper {
+       display: flex;
+       flex-direction: column;
+      }
+
+      &__text-sec {
+        text-align: center;
+      }
+    }
+    
+}
