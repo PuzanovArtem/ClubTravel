@@ -100,3 +100,69 @@ export const mainHotSlider = () => {
     console.log("Swiper initialization error:", error);
   }
 };
+
+export const mainWinterSlider = () => {
+  try {
+    const config = {
+      loop: true,
+      navigation: {
+        nextEl: ".main-winter__swiper-button-next",
+        prevEl: ".main-winter__swiper-button-prev",
+        enabled: true,
+      },
+      touchEventsTarget: 'wrapper',
+
+      breakpoints: {
+        375: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        991: {
+          slidesPerView: 3,
+        },
+        1200: {
+          slidesPerView: 4,
+        },
+      },
+    };
+
+    const mainWinterSlider = new Swiper(".main-winter__swiper", config);
+  } catch (error) {
+    console.log("Swiper initialization error:", error);
+  }
+};
+
+export const mainSummerSlider = () => {
+  try {
+    const config = {
+      loop: true,
+      navigation: {
+        nextEl: ".main-summer__swiper-button-next",
+        prevEl: ".main-summer__swiper-button-prev",
+        enabled: true,
+      },
+      touchEventsTarget: 'wrapper',
+
+      breakpoints: {
+        375: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        991: {
+          slidesPerView: 3,
+        },
+        1200: {
+          slidesPerView: 4,
+        },
+      },
+    };
+
+    const mainSummerSlider = new Swiper(".main-summer__swiper", config);
+  } catch (error) {
+    console.log("Swiper initialization error:", error);
+  }
+};
