@@ -95,7 +95,7 @@ export const mainHotSlider = () => {
       },
     };
 
-    const mainCompanySwiper = new Swiper(".main-company__swiper", config);
+    const mainHotSlider = new Swiper(".main-hot__swiper", config);
   } catch (error) {
     console.log("Swiper initialization error:", error);
   }

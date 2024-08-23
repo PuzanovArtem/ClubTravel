@@ -1,20 +1,37 @@
-<section class="main-company main-hot">
+<section class="main-hot main-tour">
   <div class="container _container">
-    <div class="main-company__content">
-      <h1 class="main-company__title main__tour__title">
+    <div class="main-tour__content">
+      <h1 class="main-tour__title main__tour__title">
         <svg class="icon icon__stopwatch main__tour__title--svg">
-  <use xlink:href="/assets/sprites/sprite.svg#stopwatch"></use>
-</svg>
-         <span class="main__tour__title--span">
-          горящие 
+          <use xlink:href="/assets/sprites/sprite.svg#stopwatch"></use>
+        </svg>
+        <span class="main__tour__title--span hot__span-title">
+          горящие
         </span>
-        <span class="main__tour__title--span">
+        <span class="main__tour__title--span hot__span-title">
           предложения
         </span>
-        
+
       </h1>
 
-      <div class="main-company__wrapper">
+      <p class="hot-deals__text">
+        Кто действует быстро - получает самые вкусные цены <span>
+          <picture>
+          <source
+            srcset="/assets/images/sub-title_emoji.webp"
+            type="image/webp"
+          />
+          <img
+            src="/assets/images/sub-title_emoji.png"
+            alt="bg"
+            class="hot-deals__img"
+          />
+        </picture>
+        </span>
+        
+      </p>
+
+      <div class="main-tour__wrapper main-hot__wrapper">
 
         <div class="main-tour__swiper-button-prev main-hot__swiper-button-prev">
           <div class="main-tour__swiper-round">
@@ -26,13 +43,17 @@
           </div>
         </div>
 
-        <div class="swiper main-company__swiper ">
+        <div class="swiper main-tour__swiper main-hot__swiper">
 
-          <div class="swiper-wrapper main-company__swiper-wrapper">
+          <div
+            class="swiper-wrapper main-tour__swiper-wrapper main-hot__swiper-wrapper"
+          >
 
-            <div class="swiper-slide main-company__swiper-slide">
-              <div class="main-company__card">
-                <div class="main-company__card-img">
+            <div
+              class="swiper-slide main-tour__swiper-slide main-hot__swiper-slide"
+            >
+              <div class="main-tour__card hot-deal__card">
+                <div class="main-tour__card-img">
 
                   <picture class="card__bg-img">
                     <source
@@ -43,15 +64,18 @@
                       src="/assets/images/hot-1.png"
                       alt="bg"
                       loading="lazy"
+                      class="card__bg-img"
                     />
                   </picture>
 
-                  <div class="main-company__card-data-wrapper hot-deals__card-data-wrapper">
+                  <div
+                    class="main-tour__card-data-wrapper hot-deals__card-data-wrapper"
+                  >
                     <svg class="icon icon__clock">
                       <use xlink:href="/assets/sprites/sprite.svg#clock"></use>
                     </svg>
 
-                    <p class="main-company__card-data">25 июня 2020</p>
+                    <p class="main-tour__card-data">29 октября 2020</p>
                   </div>
 
                   <div class="hot-deals__card-place-wrapper">
@@ -60,17 +84,60 @@
                         xlink:href="/assets/sprites/sprite.svg#location"
                       ></use>
                     </svg>
-                    <p class="hot-deals__card-place">Кипр, Пафос</p>
+                    <p class="hot-deals__card-place">Болгария, Золотые Пески</p>
                   </div>
                 </div>
 
-                <p class="main-company__card-text">Бархатный сезон в Греции!</p>
+                <div class="hot-deals__card-wrappers">
+                  <div class="hot-deals__card-text-wrapper">
+                    <p class="hot-deals__card-text">Название Отеля здесь</p>
+                    <div class="hot-deals__card-stars-wrapper">
+
+                      <svg class="icon icon__star">
+                        <use xlink:href="/assets/sprites/sprite.svg#star"></use>
+                      </svg>
+
+                      <svg class="icon icon__star">
+                        <use xlink:href="/assets/sprites/sprite.svg#star"></use>
+                      </svg>
+
+                      <svg class="icon icon__star">
+                        <use xlink:href="/assets/sprites/sprite.svg#star"></use>
+                      </svg>
+
+                      <svg class="icon icon__star">
+                        <use xlink:href="/assets/sprites/sprite.svg#star"></use>
+                      </svg>
+
+                    </div>
+                  </div>
+                  <div class="hot-deals__card-prices-wrapper">
+                    <div class="hot-deals__card-price-wrapper">
+                      <p class="hot-deals__card-price-new"><span
+                        >509€</span>/чел</p>
+                      <p class="hot-deals__card-price-old">779 €/чел</p>
+                    </div>
+
+                    <div class="hot-deals__card-line">
+                     <svg class="icon icon__card-line">
+                      <use
+                        xlink:href="/assets/sprites/sprite.svg#card-line"
+                      ></use>
+                    </svg>
+                      <div class="hot-deals__card-line-wrapper">
+                        <p class="hot-deals__card-line-price">-30%</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div class="swiper-slide main-company__swiper-slide">
-              <div class="main-company__card">
-                <div class="main-company__card-img">
+            <div
+              class="swiper-slide main-tour__swiper-slide main-hot__swiper-slide"
+            >
+              <div class="main-tour__card hot-deal__card">
+                <div class="main-tour__card-img">
 
                   <picture class="card__bg-img">
                     <source
@@ -81,36 +148,81 @@
                       src="/assets/images/hot-2.png"
                       alt="bg"
                       loading="lazy"
+                      class="card__bg-img"
                     />
                   </picture>
 
-                  <div class="main-company__card-data-wrapper hot-deals__card-data-wrapper">
+                 <div
+                    class="main-tour__card-data-wrapper hot-deals__card-data-wrapper"
+                  >
                     <svg class="icon icon__clock">
                       <use xlink:href="/assets/sprites/sprite.svg#clock"></use>
                     </svg>
 
-                    <p class="main-company__card-data">25 июня 2020</p>
+                    <p class="main-tour__card-data">29 октября 2020</p>
                   </div>
 
-                <div class="hot-deals__card-place-wrapper">
+                  <div class="hot-deals__card-place-wrapper">
                     <svg class="icon icon__location">
                       <use
                         xlink:href="/assets/sprites/sprite.svg#location"
                       ></use>
                     </svg>
-                    <p class="hot-deals__card-place">Кипр, Пафос</p>
+                    <p class="hot-deals__card-place">Болгария, Золотые Пески</p>
                   </div>
 
                 </div>
 
-                <p class="main-company__card-text">Туры в Турцию на осень и в
-                  Египет на 2020 и 21 год!</p>
+                 <div class="hot-deals__card-wrappers">
+                  <div class="hot-deals__card-text-wrapper">
+                    <p class="hot-deals__card-text">Название Отеля здесь</p>
+                    <div class="hot-deals__card-stars-wrapper">
+
+                      <svg class="icon icon__star">
+                        <use xlink:href="/assets/sprites/sprite.svg#star"></use>
+                      </svg>
+
+                      <svg class="icon icon__star">
+                        <use xlink:href="/assets/sprites/sprite.svg#star"></use>
+                      </svg>
+
+                      <svg class="icon icon__star">
+                        <use xlink:href="/assets/sprites/sprite.svg#star"></use>
+                      </svg>
+
+                      <svg class="icon icon__star">
+                        <use xlink:href="/assets/sprites/sprite.svg#star"></use>
+                      </svg>
+
+                    </div>
+                  </div>
+                  <div class="hot-deals__card-prices-wrapper">
+                    <div class="hot-deals__card-price-wrapper">
+                      <p class="hot-deals__card-price-new"><span
+                        >509€</span>/чел</p>
+                      <p class="hot-deals__card-price-old">779 €/чел</p>
+                    </div>
+
+                    <div class="hot-deals__card-line">
+                     <svg class="icon icon__card-line">
+                      <use
+                        xlink:href="/assets/sprites/sprite.svg#card-line"
+                      ></use>
+                    </svg>
+                      <div class="hot-deals__card-line-wrapper">
+                        <p class="hot-deals__card-line-price">-30%</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div class="swiper-slide main-company__swiper-slide">
-              <div class="main-company__card">
-                <div class="main-company__card-img">
+            <div
+              class="swiper-slide main-tour__swiper-slide main-hot__swiper-slide"
+            >
+              <div class="main-tour__card hot-deal__card">
+                <div class="main-tour__card-img">
 
                   <picture class="card__bg-img">
                     <source
@@ -121,15 +233,18 @@
                       src="/assets/images/hot-3.png"
                       alt="bg"
                       loading="lazy"
+                      class="card__bg-img"
                     />
                   </picture>
 
-                  <div class="main-company__card-data-wrapper hot-deals__card-data-wrapper">
+                 <div
+                    class="main-tour__card-data-wrapper hot-deals__card-data-wrapper"
+                  >
                     <svg class="icon icon__clock">
                       <use xlink:href="/assets/sprites/sprite.svg#clock"></use>
                     </svg>
 
-                    <p class="main-company__card-data">25 июня 2020</p>
+                    <p class="main-tour__card-data">29 октября 2020</p>
                   </div>
 
                   <div class="hot-deals__card-place-wrapper">
@@ -138,17 +253,60 @@
                         xlink:href="/assets/sprites/sprite.svg#location"
                       ></use>
                     </svg>
-                    <p class="hot-deals__card-place">Кипр, Пафос</p>
+                    <p class="hot-deals__card-place">Болгария, Золотые Пески</p>
                   </div>
                 </div>
 
-                <p class="main-company__card-text">Бархатный сезон в Греции!</p>
+                <div class="hot-deals__card-wrappers">
+                  <div class="hot-deals__card-text-wrapper">
+                    <p class="hot-deals__card-text">Название Отеля здесь</p>
+                    <div class="hot-deals__card-stars-wrapper">
+
+                      <svg class="icon icon__star">
+                        <use xlink:href="/assets/sprites/sprite.svg#star"></use>
+                      </svg>
+
+                      <svg class="icon icon__star">
+                        <use xlink:href="/assets/sprites/sprite.svg#star"></use>
+                      </svg>
+
+                      <svg class="icon icon__star">
+                        <use xlink:href="/assets/sprites/sprite.svg#star"></use>
+                      </svg>
+
+                      <svg class="icon icon__star">
+                        <use xlink:href="/assets/sprites/sprite.svg#star"></use>
+                      </svg>
+
+                    </div>
+                  </div>
+                  <div class="hot-deals__card-prices-wrapper">
+                    <div class="hot-deals__card-price-wrapper">
+                      <p class="hot-deals__card-price-new"><span
+                        >509€</span>/чел</p>
+                      <p class="hot-deals__card-price-old">779 €/чел</p>
+                    </div>
+
+                    <div class="hot-deals__card-line">
+                     <svg class="icon icon__card-line">
+                      <use
+                        xlink:href="/assets/sprites/sprite.svg#card-line"
+                      ></use>
+                    </svg>
+                      <div class="hot-deals__card-line-wrapper">
+                        <p class="hot-deals__card-line-price">-30%</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div class="swiper-slide main-company__swiper-slide">
-              <div class="main-company__card">
-                <div class="main-company__card-img">
+            <div
+              class="swiper-slide main-tour__swiper-slide main-hot__swiper-slide"
+            >
+              <div class="main-tour__card hot-deal__card">
+                <div class="main-tour__card-img">
 
                   <picture class="card__bg-img">
                     <source
@@ -159,15 +317,18 @@
                       src="/assets/images/company-1.png"
                       alt="bg"
                       loading="lazy"
+                      class="card__bg-img"
                     />
                   </picture>
 
-                  <div class="main-company__card-data-wrapper hot-deals__card-data-wrapper">
+                  <div
+                    class="main-tour__card-data-wrapper hot-deals__card-data-wrapper"
+                  >
                     <svg class="icon icon__clock">
                       <use xlink:href="/assets/sprites/sprite.svg#clock"></use>
                     </svg>
 
-                    <p class="main-company__card-data">25 июня 2020</p>
+                    <p class="main-tour__card-data">25 июня 2020</p>
                   </div>
 
                   <div class="hot-deals__card-place-wrapper">
@@ -181,13 +342,56 @@
 
                 </div>
 
-                <p class="main-company__card-text">Бархатный сезон в Греции!</p>
+                 <div class="hot-deals__card-wrappers">
+                  <div class="hot-deals__card-text-wrapper">
+                    <p class="hot-deals__card-text">Название Отеля здесь</p>
+                    <div class="hot-deals__card-stars-wrapper">
+
+                      <svg class="icon icon__star">
+                        <use xlink:href="/assets/sprites/sprite.svg#star"></use>
+                      </svg>
+
+                      <svg class="icon icon__star">
+                        <use xlink:href="/assets/sprites/sprite.svg#star"></use>
+                      </svg>
+
+                      <svg class="icon icon__star">
+                        <use xlink:href="/assets/sprites/sprite.svg#star"></use>
+                      </svg>
+
+                      <svg class="icon icon__star">
+                        <use xlink:href="/assets/sprites/sprite.svg#star"></use>
+                      </svg>
+
+                    </div>
+                  </div>
+                  <div class="hot-deals__card-prices-wrapper">
+                    <div class="hot-deals__card-price-wrapper">
+                      <p class="hot-deals__card-price-new"><span
+                        >509€</span>/чел</p>
+                      <p class="hot-deals__card-price-old">779 €/чел</p>
+                    </div>
+
+                    <div class="hot-deals__card-line">
+                     <svg class="icon icon__card-line">
+                      <use
+                        xlink:href="/assets/sprites/sprite.svg#card-line"
+                      ></use>
+                    </svg>
+                      <div class="hot-deals__card-line-wrapper">
+                        <p class="hot-deals__card-line-price">-30%</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div class="swiper-slide main-company__swiper-slide">
-              <div class="main-company__card">
-                <div class="main-company__card-img">
+            <div
+              class="swiper-slide main-tour__swiper-slide main-hot__swiper-slide"
+            >
+              <div class="main-tour__card hot-deal__card">
+                <div class="main-tour__card-img">
 
                   <picture class="card__bg-img">
                     <source
@@ -198,26 +402,80 @@
                       src="/assets/images/company-2.png"
                       alt="bg"
                       loading="lazy"
+                      class="card__bg-img"
                     />
                   </picture>
 
-                  <div class="main-company__card-data-wrapper hot-deals__card-data-wrapper">
+                  <div
+                    class="main-tour__card-data-wrapper hot-deals__card-data-wrapper"
+                  >
                     <svg class="icon icon__clock">
                       <use xlink:href="/assets/sprites/sprite.svg#clock"></use>
                     </svg>
 
-                    <p class="main-company__card-data">25 июня 2020</p>
+                    <p class="main-tour__card-data">29 октября 2020</p>
+                  </div>
+
+                  <div class="hot-deals__card-place-wrapper">
+                    <svg class="icon icon__location">
+                      <use
+                        xlink:href="/assets/sprites/sprite.svg#location"
+                      ></use>
+                    </svg>
+                    <p class="hot-deals__card-place">Болгария, Золотые Пески</p>
                   </div>
                 </div>
 
-                <p class="main-company__card-text">Туры в Турцию на осень и в
-                  Египет на 2020 и 21 год!</p>
+                 <div class="hot-deals__card-wrappers">
+                  <div class="hot-deals__card-text-wrapper">
+                    <p class="hot-deals__card-text">Название Отеля здесь</p>
+                    <div class="hot-deals__card-stars-wrapper">
+
+                      <svg class="icon icon__star">
+                        <use xlink:href="/assets/sprites/sprite.svg#star"></use>
+                      </svg>
+
+                      <svg class="icon icon__star">
+                        <use xlink:href="/assets/sprites/sprite.svg#star"></use>
+                      </svg>
+
+                      <svg class="icon icon__star">
+                        <use xlink:href="/assets/sprites/sprite.svg#star"></use>
+                      </svg>
+
+                      <svg class="icon icon__star">
+                        <use xlink:href="/assets/sprites/sprite.svg#star"></use>
+                      </svg>
+
+                    </div>
+                  </div>
+                  <div class="hot-deals__card-prices-wrapper">
+                    <div class="hot-deals__card-price-wrapper">
+                      <p class="hot-deals__card-price-new"><span
+                        >509€</span>/чел</p>
+                      <p class="hot-deals__card-price-old">779 €/чел</p>
+                    </div>
+
+                    <div class="hot-deals__card-line">
+                     <svg class="icon icon__card-line">
+                      <use
+                        xlink:href="/assets/sprites/sprite.svg#card-line"
+                      ></use>
+                    </svg>
+                      <div class="hot-deals__card-line-wrapper">
+                        <p class="hot-deals__card-line-price">-30%</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div class="swiper-slide main-company__swiper-slide">
-              <div class="main-company__card">
-                <div class="main-company__card-img">
+            <div
+              class="swiper-slide main-tour__swiper-slide main-hot__swiper-slide"
+            >
+              <div class="main-tour__card hot-deal__card">
+                <div class="main-tour__card-img">
 
                   <picture class="card__bg-img">
                     <source
@@ -228,19 +486,72 @@
                       src="/assets/images/company-3.png"
                       alt="bg"
                       loading="lazy"
+                      class="card__bg-img"
                     />
                   </picture>
 
-                  <div class="main-company__card-data-wrapper hot-deals__card-data-wrapper">
+                 <div
+                    class="main-tour__card-data-wrapper hot-deals__card-data-wrapper"
+                  >
                     <svg class="icon icon__clock">
                       <use xlink:href="/assets/sprites/sprite.svg#clock"></use>
                     </svg>
 
-                    <p class="main-company__card-data">25 июня 2020</p>
+                    <p class="main-tour__card-data">29 октября 2020</p>
+                  </div>
+
+                  <div class="hot-deals__card-place-wrapper">
+                    <svg class="icon icon__location">
+                      <use
+                        xlink:href="/assets/sprites/sprite.svg#location"
+                      ></use>
+                    </svg>
+                    <p class="hot-deals__card-place">Болгария, Золотые Пески</p>
                   </div>
                 </div>
 
-                <p class="main-company__card-text">Бархатный сезон в Греции!</p>
+                <div class="hot-deals__card-wrappers">
+                  <div class="hot-deals__card-text-wrapper">
+                    <p class="hot-deals__card-text">Название Отеля здесь</p>
+                    <div class="hot-deals__card-stars-wrapper">
+
+                      <svg class="icon icon__star">
+                        <use xlink:href="/assets/sprites/sprite.svg#star"></use>
+                      </svg>
+
+                      <svg class="icon icon__star">
+                        <use xlink:href="/assets/sprites/sprite.svg#star"></use>
+                      </svg>
+
+                      <svg class="icon icon__star">
+                        <use xlink:href="/assets/sprites/sprite.svg#star"></use>
+                      </svg>
+
+                      <svg class="icon icon__star">
+                        <use xlink:href="/assets/sprites/sprite.svg#star"></use>
+                      </svg>
+
+                    </div>
+                  </div>
+                  <div class="hot-deals__card-prices-wrapper">
+                    <div class="hot-deals__card-price-wrapper">
+                      <p class="hot-deals__card-price-new"><span
+                        >509€</span>/чел</p>
+                      <p class="hot-deals__card-price-old">779 €/чел</p>
+                    </div>
+
+                    <div class="hot-deals__card-line">
+                     <svg class="icon icon__card-line">
+                      <use
+                        xlink:href="/assets/sprites/sprite.svg#card-line"
+                      ></use>
+                    </svg>
+                      <div class="hot-deals__card-line-wrapper">
+                        <p class="hot-deals__card-line-price">-30%</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -256,6 +567,13 @@
             </svg>
           </div>
         </div>
+      </div>
+
+      <div class="main-tour__button-wrapper">
+        <a href="#" class="main-tour__button">Все горящие предложения</a>
+        <svg class="icon icon__arrow-right main-tour__button-icon">
+          <use xlink:href="/assets/sprites/sprite.svg#arrow-right"></use>
+        </svg>
       </div>
 
     </div>
