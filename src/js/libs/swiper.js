@@ -2,7 +2,6 @@ import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
 import { Autoplay } from "swiper/modules";
 
-
 export const headerSlider = () => {
   try {
     const config = {
@@ -35,19 +34,6 @@ const swiper = new Swiper('.search-content__swiper-container', {
             },
         });
 }
-
-
-
-export const cardSlider = () => {
-const swiper = new Swiper('.search-content__swiper-container', {
-            loop: true, 
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-        });
-}
-
 
 export const mainCompanySlider = () => {
   try {
