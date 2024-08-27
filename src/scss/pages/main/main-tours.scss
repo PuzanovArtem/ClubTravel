@@ -2,15 +2,19 @@
   max-width: 1200px;
   padding: 0;
 }
+
 .main-tour {
   margin: 0px 0 0 0;
+
   .main-tour__wrapper {
     @extend %display-flex;
+
     .main-tour__swiper {
-      
-      padding: 0 2px 10px 2px;
+      padding: 0 2px 10px;
+
       .main-tour__swiper-wrapper {
         position: relative;
+
         .main-tour__swiper-slide {
           width: 395px !important;
           padding: 0 10px 15px;
@@ -18,16 +22,19 @@
         }
       }
     }
-    .main-company__swiper{
-      margin:  37px 0 12px 0;
+
+    .main-company__swiper {
+      margin: 37px 0 12px 0;
     }
-    .main-hot__swiper{
-      margin: 38px 0 22px 0 ;
+
+    .main-hot__swiper {
+      margin: 38px 0 22px ;
     }
   }
 }
+
 .main-hot {
-  margin: 100px 0 0 0;
+  margin: 100px 0 0 
 }
 
 .main-tour__card {
@@ -36,24 +43,30 @@
   height: 330px;
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
   background: #fff;
+
   .main-tour__card-img {
     @extend %position-rel;
+
     .card__bg-img {
       width: 100%;
       border-radius: 10px 10px 0 0;
     }
+
     .main-tour__card-line {
       @extend %position-abs;
       right: 16px;
       top: 29px;
       display: flex;
+
       .icon__card-line {
         width: 3px;
         height: 31px;
         fill: #f68521;
       }
+
       .main-tour__card-line-wrapper {
         @extend %position-rel;
+
         .main-tour__card-line-price {
           @extend %position-rel;
           left: 67%;
@@ -65,8 +78,10 @@
           color: #fff;
         }
       }
+
       .main-tour__card-line-wrapper::after {
-        content: "";
+        content: '';
+
         @extend %position-abs;
         left: 0;
         top: 0;
@@ -80,6 +95,7 @@
       @extend %position-abs;
       left: 15px;
       bottom: 14px;
+
       @extend %display-flex;
       border-radius: 6px;
       padding: 7px 15px 7px 8px;
@@ -91,11 +107,13 @@
         height: 16px;
         fill: #fff;
       }
+
       .main-tour__card-data {
         font-size: 14px;
         color: #fff;
       }
     }
+
     .hot-deals__card-data-wrapper {
       position: absolute;
       left: 15px;
@@ -107,6 +125,7 @@
       background: rgba(0, 0, 0, 0.5);
       gap: 10px;
     }
+
     .hot-deals__card-place-wrapper {
       position: absolute;
       left: 15px;
@@ -117,40 +136,48 @@
       padding: 7px 15px 7px 8px;
       background: rgba(0, 0, 0, 0.5);
       gap: 10px;
+
       .icon__location {
         width: 14px;
         height: 14px;
         fill: #fff;
       }
+
       .hot-deals__card-place {
         font-size: 14px;
         color: #fff;
       }
     }
   }
+
   .main-tour__card-text {
-    padding: 19px 0px 5px 21px;
+    padding: 19px 0 5px 21px;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 1.5px;
   }
+
   .hot-deals__card-wrappers {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
     max-height: 85px;
+
     .hot-deals__card-text-wrapper {
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 18px 16px 0;
+
       .hot-deals__card-text {
         letter-spacing: 1.5px;
       }
     }
+
     .hot-deals__card-stars-wrapper {
       display: flex;
+
       .icon__star {
         width: 18px;
         height: 18px;
@@ -158,9 +185,11 @@
       }
     }
   }
+
   .hot-deals__card-prices-wrapper {
     display: flex;
     justify-content: space-between;
+
     .hot-deals__card-price-wrapper {
       display: flex;
       align-items: center;
@@ -172,16 +201,19 @@
         font-weight: 700;
         color: #000;
       }
+
       .hot-deals__card-price-old {
         text-decoration: line-through;
         color: #bfbfbf;
       }
     }
+
     .hot-deals__card-line {
       position: relative;
       left: -43px;
       display: flex;
-      .icon__card-line{
+
+      .icon__card-line {
         top: -5px;
         left: 3px;
         width: 3px;
@@ -189,8 +221,10 @@
         fill: #f68521;
         position: relative;
       }
+
       .hot-deals__card-line-wrapper {
         position: relative;
+
         .hot-deals__card-line-price {
           position: relative;
           left: 102%;
@@ -203,8 +237,9 @@
           color: #fff;
         }
       }
+
       .hot-deals__card-line-wrapper::after {
-        content: "";
+        content: '';
         position: absolute;
         left: 3px;
         top: -4px;
@@ -215,18 +250,21 @@
     }
   }
 }
+
 .hot-deal__card {
   height: 349px;
 }
+
 .hot-deals__text {
   display: flex;
   justify-content: center;
   align-items: center;
   letter-spacing: 0.5px;
-  padding: 18px 0px 4px 0;
+  padding: 18px 0 4px;
   line-height: 1.18;
   color: #888;
   gap: 6px;
+
   .hot-deals__img {
     width: 20px;
     height: 20px;
@@ -245,9 +283,11 @@
     line-height: 1.36;
     letter-spacing: 1px;
   }
+
   .main-tour__button:hover {
     color: $primary;
   }
+
   .main-tour__button-icon {
     width: 24px;
     height: 24px;
@@ -260,21 +300,30 @@
     .main-tour__wrapper {
       .main-tour__swiper {
         padding: 0;
+
         .main-tour__swiper-wrapper {
           position: relative;
+
           .main-tour__swiper-slide {
-            width: 100% !important; 
-            padding: 0; 
-            padding: 0px 15px;
+            width: 50% !important;
+            padding: 0 15px;
+            margin-right: 0 !important;
+            
           }
+          
+          .main-company__swiper-slide:nth-child(even){
+             margin-right: 20px !important;
+          }
+          
         }
       }
     }
   }
 
   .main-tour__card {
-    width: 100%; 
-    height: auto; 
+    width: 100%;
+    
+
     .main-tour__card-img {
       .card__bg-img {
         width: 100%;
@@ -285,31 +334,57 @@
   }
 }
 
-@media (max-width: 525px) {
+@media (max-width: 578px) {
   .main-tour {
-    margin: 75px 0 0 0;
     .main-tour__wrapper {
-      .main-company__swiper{
-        margin:  103px 0 12px 0;
-      }
-      .main-hot__swiper{
-        margin: 38px 0 0 0 ;
-      }
       .main-tour__swiper {
-        
-        padding: 0 2px 10px 2px;
+        padding: 0;
+
         .main-tour__swiper-wrapper {
           position: relative;
+
           .main-tour__swiper-slide {
+            width: 100% !important;
+            padding: 0 15px;
+            margin-right: 20px !important;
+            
           }
         }
       }
     }
   }
-  .main-hot {
-    margin: 83px 0 0 0;
+
+}
+
+@media (max-width: 525px) {
+  .main-tour {
+    margin: 75px 0 0;
+
+    .main-tour__wrapper {
+      .main-company__swiper {
+        margin: 103px 0 12px;
+      }
+
+      .main-hot__swiper {
+        margin: 38px 0 0;
+      }
+
+      .main-tour__swiper {
+        padding: 0 2px 10px;
+
+        .main-tour__swiper-wrapper {
+          position: relative;
+
+          
+        }
+      }
+    }
   }
-  
+
+  .main-hot {
+    margin: 83px 0 0 ;
+  }
+
   .main-tour__card {
     border-radius: 10px;
     width: 100%;
@@ -325,19 +400,21 @@
       }
     }
   }
-  .hot-deal__card{
+
+  .hot-deal__card {
     height: 349px;
   }
-    
-  
-  .main-tour__button-wrapper{
-    margin: 27px 0 0  0;
+
+  .main-tour__button-wrapper {
+    margin: 27px 0 0;
   }
+
   .hot-deals__text {
     margin: 0 auto;
     text-align: center;
     width: 316px;
     gap: 6px;
+
     .hot-deals__img {
       width: 20px;
       height: 20px;
@@ -345,13 +422,11 @@
   }
 }
 
-
-
 @media (max-width: 425px) {
   ._container {
     max-width: 1200px;
   }
-  
+
   .main-tour__card {
     border-radius: 10px;
     width: 100%;
@@ -359,7 +434,8 @@
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
     background: #fff;
   }
-  .hot-deal__card{
+  
+  .hot-deal__card {
     height: 349px;
   }
 }
