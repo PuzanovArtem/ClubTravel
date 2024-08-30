@@ -1,6 +1,8 @@
 // import Swiper from 'swiper/bundle';
 // import 'swiper/css/bundle';
 
+
+ 
 //  const swiper = new Swiper('.search-content__swiper-container', {
 //             loop: true, 
 //             navigation: {

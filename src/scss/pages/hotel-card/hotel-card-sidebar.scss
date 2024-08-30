@@ -1,0 +1,400 @@
+.hotel-card-sidebar {
+    &__wrapper {
+        max-width: 371px;
+    }
+
+    &__first-block {
+        box-shadow: 0px 5px 10px 0px #0000001A;
+        background: $white;
+        padding: 24px;
+        margin-bottom: 48px;
+    }
+
+    &__first-block-top {
+        @extend %display-jc-sb;
+        margin-bottom: 24px;
+    }
+
+    &__first-block-title {
+        font-size: 20px;
+    }
+
+    &__first-block-link {
+        color: $primary;
+        transition: text-decoration 0.3 ease;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__first-block-price {
+        font-size: 24px;
+        margin-top: 24px;
+        margin-bottom: 8px;
+
+        span {
+            font-weight: 700;
+        }
+    }
+
+    &__first-block-text {
+        font-size: 12px;
+        color: $gray-text;
+
+        span {
+            font-weight: 700;
+        }
+    }
+
+    &__first-block-btn {
+        padding: 12px;
+        width: 100%;
+    }
+
+    &__first-block-private-block {
+        display: flex;
+        margin-top: 17px;
+    }
+
+    .icon__padlock {
+        width: 18px;
+        height: 18px;
+        fill: $gray-text;
+        margin-right: 7px;
+    }
+
+    
+
+    &__first-block-total-price {
+        font-size: 16px;
+        margin: 24px 0 16px 0;
+
+        span {
+            font-weight: 700;
+            font-size: 24px;
+            color: $green;
+        }
+    }
+
+    &__second-block {
+        width: 100%;
+        padding: 21px 25px 28px 25px;
+        border: 3px solid $primary;
+        border-radius: 8px;
+        background: $white;
+    }
+
+    &__block-title {
+        font-size: 17px;
+        line-height: 1.4;
+
+        span {
+            font-weight: 700;
+        }
+    }
+
+    &__second-block-list {
+       margin-top: 24px;
+    }
+
+    &__second-block-item {
+        @extend %display-flex;  
+    }
+
+    &__second-block-item:not(:last-child) {
+        margin-bottom: 14px;
+    }
+
+    .icon__checkmark {
+        width: 16px;
+        height: 16px;
+        fill: $green;
+        position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+    }
+
+    &__svg-wrapper {
+          position: relative;
+            border: 1px solid $green;
+            width: 24px;
+            height: 24px;
+            border-radius: 5px;
+            margin-right: 12px;
+
+}
+
+&__second-block-text {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.icon__phone,
+.icon__envelope,
+.icon__message,
+.icon__clock,
+.icon__calendar,
+.icon__airplane-takeoff,
+.icon__cutlery,
+.icon__house {
+    width: 24px;
+    height: 24px;
+    fill: $green;
+    padding: 0;
+}
+
+&__third-block {
+    background: $white;
+    box-shadow: 0px 5px 10px 0px #0000001A;
+    padding: 24px;
+    border-radius: 8px;
+    margin-top: 48px;
+
+}
+
+&__block-subtitle {
+    margin: 18px 0 16px 0;
+    font-size: 16px;
+
+    span {
+        font-size: 18px;
+        font-weight: 700;
+    }
+}
+
+&__third-block-list {
+    margin-top: 16px;
+}
+
+&__consultant-link {
+    @extend %display-flex;
+
+}
+
+&__third-block-item:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+&__consultant-link-text {
+    font-size: 16px;
+    margin-left: 12px;
+
+    span {
+        font-weight: 700;
+    }
+}
+
+@include respond-to($l-tablet) {
+    margin-top: 40px;
+
+
+}
+
+@include respond-to($tablet) {
+
+    &__first-block-mob {
+        display: none;
+    }
+
+    &__first-block {
+       margin: 0 -15px 32px -15px;
+        box-shadow: 0px 5px 5px 0px #0000001A;
+    }
+
+    &__wrapper {
+        max-width: 100%;
+    }
+
+    &__third-block {
+        img {
+            width: 100%;
+            
+        }
+    }
+
+    &__second-block-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+}
+
+@include respond-to($mobile) {
+     &__second-block-list {
+        grid-template-columns: 1fr;
+     }
+}
+
+}
+
+// .search-bar {
+//         height: 60px;
+//         background: $white;
+//         display: flex;
+//         border-radius: 10px;
+
+//         .search-bar__destination {
+//           position: relative;
+//           display: inline-block;
+//           width: 258px;
+//           height: 60px;
+//           border-right: 1px solid #e2e2e2;
+//         }
+//         .search-bar__duration,
+//         .search-bar__date {
+//           width: 180px;
+//           height: 60px;
+//           border-right: 1px solid #e2e2e2;
+//         }
+//         .search-bar__title {
+//           margin: 7px 0 0px 16px;
+//           color: #888888;
+//         }
+//         .icon__calendar {
+//           fill: #a9a9a9;
+//         }
+//         // dropdown styles
+
+//         .dropdown {
+//           position: relative;
+//           cursor: pointer;
+//           user-select: none;
+          
+//         }
+        
+//         .dropdown__row {
+//           display: flex;
+//           align-items: center;
+//           justify-content: space-between;
+//           padding: 8px 13px 8px 8px;
+//           background-color: #fff;
+//           border-radius: 4px;
+//         }
+//         .dropdown__current {
+//           font-family: "Roboto", sans-serif;
+//           font-size: 16px;
+//           margin: 0 0 0 7px;
+//           letter-spacing: 0px;
+//         }
+//         .search-bar__guests {
+//           width: 316px;
+//           height: 60px;
+//         }
+
+//         .icon__arrow-down {
+//           transition: transform 0.3s ease;
+//         }
+//         .dropdown__list {
+//           position: absolute;
+//           top: 100%;
+//           left: 0;
+//           width: 100%;
+//           background-color: $white;
+//           border: 1px solid #ccc;
+//           border-radius: 4px;
+//           max-height: 0;
+//           overflow-y: scroll;
+//           z-index: 1000;
+//           padding: 0 0 0 6px;
+//           margin: 12px 0 0 0;
+//           transition: max-height 0.3s ease;
+//         }
+
+//         .dropdown--open .dropdown__list {
+//           max-height: 206px;
+//         }
+//         .dropdown--open:last-child .dropdown__list:last-child {
+//           max-height: 230px;
+//         }
+//         .icon__arrow-down {
+//           transition: transform 0.3s ease;
+//         }
+
+//         .dropdown__item {
+//           padding: 8px;
+//           font-family: "Roboto", sans-serif;
+//           font-size: 16px;
+//           cursor: pointer;
+//           list-style: none;
+//           transition: background-color 0.3s;
+//         }
+
+//         .dropdown__item:hover {
+//           background-color: #f0f0f0;
+//         }
+
+//         .dropdown__list::-webkit-scrollbar {
+//           display: none;
+//         }
+
+//         .dropdown--open .icon__arrow-down {
+//           transform: rotate(180deg);
+//         }
+
+//         // dropdown styles end
+//         .dropdown__item__guests {
+//           margin-bottom: 16px;
+
+//           display: flex;
+//           padding: 0 10px 0 4px;
+//           .item__guests--text {
+//             color: #888;
+//           }
+//           .search-bar__subitem {
+//             @extend %display-jc-sb;
+//             border: 1px solid #e2e2e2;
+//             border-radius: 6px;
+//             padding: 12px;
+//             width: 100%;
+//             font-family: "Roboto";
+//             font-size: 16px;
+//             color: #222;
+//             .search-bar__subitem-subrow {
+//               @extend %display-jc-sb;
+//               width: 100%;
+//               max-width: 71px;
+//             }
+//           }
+//           .search-bar__guests-add {
+//             border: 1px solid #f68521;
+//             width: 100%;
+//             height: 42px;
+//             font-family: "Roboto";
+//             font-size: 16px;
+//             color: #222;
+//           }
+//           .search-bar__guests-add:hover {
+//             background: #f68521;
+//           }
+//         }
+//         .dropdown__item__guests:last-child {
+//           margin-bottom: 10px;
+//         }
+//         .dropdown__item__guests:first-child {
+//           margin-top: 5px;
+//         }
+
+//         .search-bar-btn {
+//           display: flex;
+//           align-items: center;
+//           justify-content: center;
+//           border-radius: 0 6px 6px 0;
+//           width: 100%;
+//           height: 60px;
+//           max-width: 172px;
+//           font-weight: 400;
+//           text-transform: uppercase;
+//           letter-spacing: 0.7px;
+//           font-size: 14px;
+//           color: #fff;
+//           background: #13882d;
+//           .icon__magnifying-glass {
+//             fill: $white;
+//             width: 16px;
+//             height: 16px;
+//             margin-right: 5px;
+//           }
+//         }
+//       }
