@@ -30,6 +30,10 @@ margin: 40px 30px 0 0;
     padding: 0;
 }
 
+&__content-wrapper {
+  margin-top: 15px;
+}
+
     &__title {
         font-size: 18px;
         margin-bottom: 16px;
@@ -38,7 +42,7 @@ margin: 40px 30px 0 0;
 
     &__text {
         line-height: 1.5;
-        margin-bottom: 47px;
+        margin-bottom: 66px;
         font-size: 14px;
     }
 
@@ -48,14 +52,11 @@ margin: 40px 30px 0 0;
     }
 
     &__item {
-        margin-bottom: 32px;
+        margin-bottom: 30px;
         max-width: 292px;
         break-inside: avoid;
     }
 
-    &__short-item:not(:last-child) {
-margin-bottom: 4px;
-    }
 
     &__short-item {
         position: relative;
@@ -129,7 +130,7 @@ flex-direction: column;
 
     &__short-list {
       display: grid;
-      gap: 15px;
+      gap: 0 15px;
       grid-template-columns: 1fr 1fr;
     }
 

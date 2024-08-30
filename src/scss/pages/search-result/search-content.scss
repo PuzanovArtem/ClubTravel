@@ -1,5 +1,5 @@
 .search-content {
-margin: -80px 0 80px 0;
+margin: -70px 0 80px 0;
 
 
   &__filter {
@@ -288,6 +288,10 @@ margin: -80px 0 80px 0;
     overflow: hidden;
     border-radius: 10px;
     position: relative;
+  }
+
+  .swiper-wrapper {
+    z-index: 0;
   }
 
   .swiper-slide img {

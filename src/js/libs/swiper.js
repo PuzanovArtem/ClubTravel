@@ -177,7 +177,7 @@ export const mainSummerSlider = () => {
   } catch (error) {
     console.log('Swiper initialization error:', error)
   }
-}
+
   const swiper = new Swiper('.search-content__swiper-container', {
     loop: true,
     navigation: {
@@ -186,7 +186,6 @@ export const mainSummerSlider = () => {
     },
   });
 };
-
 
 export const hotelCardSlider = () => {
   var galleryThumbs = new Swiper('.gallery-thumbs', {
