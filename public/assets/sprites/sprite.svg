@@ -225,5 +225,12 @@
   <symbol  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="mdi_chevron-left">
     <path d="M20.5465 22.1067L14.4398 16L20.5465 9.88L18.6665 8L10.6665 16L18.6665 24L20.5465 22.1067Z" ></path>
   </symbol>
-
+  
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 31" id="card-line">
+    <path d="M0 3.09998L3 0L3 6.19998L0 3.09998Z" fill="#F68521"></path>
+    <path d="M0 15.5L3 12.4V18.6L0 15.5Z" fill="#F68521"></path>
+    <path d="M0 21.7L3 18.6V24.8L0 21.7Z" fill="#F68521"></path>
+    <path d="M0 9.29998L3 6.19998V12.4L0 9.29998Z" fill="#F68521"></path>
+    <path d="M0 27.9L3 24.8V31L0 27.9Z" fill="#F68521"></path>
+  </symbol>
 </svg>

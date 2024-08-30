@@ -62,21 +62,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // calendar
-// document.addEventListener('DOMContentLoaded', function() {
-//   var datePicker = flatpickr("#date-picker", {
-//     dateFormat: "d.m.Y",
-//     defaultDate: "16.08.2024",
-//     onChange: function(selectedDates, dateStr, instance) {
-//       document.getElementById("selected-date").innerText = dateStr;
-//     },
-//     locale: "ru", 
-//   });
+document.addEventListener('DOMContentLoaded', function() {
+  var datePicker = flatpickr("#date-picker", {
+    dateFormat: "d.m.Y",
+    defaultDate: "16.08.2024",
+    onChange: function(selectedDates, dateStr, instance) {
+      document.getElementById("selected-date").innerText = dateStr;
+    },
+    locale: "ru", 
+  });
 
+  document.getElementById('date-picker').addEventListener('click', function() {
+    datePicker.open(); 
+  });
+});
 
-//   document.querySelector('.dropdown__row').addEventListener('click', function() {
-//     datePicker.open(); 
-//   });
-// });
 
 //Расширеный поиск
 
@@ -156,3 +156,8 @@ function priceSlider() {
 
 
 
+document.querySelectorAll('.category__btns--svg').forEach(function(button) {
+  button.addEventListener('click', function() {
+    this.classList.toggle('clicked');
+  });
+});
