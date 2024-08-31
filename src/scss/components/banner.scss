@@ -1,4 +1,8 @@
 .banner {
+max-width: 1920px;
+margin: 0 auto;
+  position: relative;
+
   &__img {
     background-image: url(/public/assets/images/banner-img.png);
     background-position: center;
@@ -11,16 +15,127 @@
     clip-path: polygon(100% 0, 100% 100%, 53% 90%, 33% 91%, 0 100%, 0 0);
   }
 
+  &__card-img {
+clip-path: polygon(50% 0%, 100% 0, 100% 100%, 94% 90%, 89% 85%, 84% 83%, 64% 85%, 38% 94%, 0 100%, 0 0);
+  }
+
+  &__block {
+    width: 304px;
+    height: 85px;
+    border-radius: 8px;
+    background: $white;
+    padding: 12px 19px;
+    position: absolute;
+    left: 98px;
+    bottom: 35px;
+    display: none;
+
+    &.active {
+    display: block;
+  }
+  }
+
+ 
+
+  &__block-title {
+    font-weight: 700;
+    font-size: 26px;
+    text-transform: uppercase;
+    margin-right: 15px;
+  }
+
+  &__stars-list {
+    display: flex;
+    align-items: start;
+  }
+
+  &__star-item:not(:last-child) {
+    margin-right: 4px;
+  }
+
+  .icon__star {
+    width: 18px;
+    height: 18px;
+    fill: $yellow;
+  }
+
+  .icon__cross {
+    width: 10px;
+    height: 10px;
+    fill: $yellow;
+    rotate: 45deg;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .icon__location {
+    width: 10px;
+    height: 15px;
+    fill: $green;
+    margin-right: 9px;
+  }
+
+  &__block-location-wrapper {
+    @extend %display-flex;
+    margin-top: 8px;
+  }
+
+  
+
+  &__block-title-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
   @include respond-to($l-tablet) {
-    &__img {
+    &__img, &__card-img {
       background-image: url(/public/assets/images/banner-img-mob.png);
     }
+
+&__card-img {
+  clip-path: none;
+}
+
+&__block {
+  left: 35px;
+  bottom: 35px;
+}
   }
 
   @include respond-to($mobile) {
-    &__img {
+    &__img, &__card-img {
       height: 191px;
       clip-path: none;
     }
+
+    &__block {
+  left: 18px;
+  bottom: 18px;
+}
+  }
+
+  @include respond-to($s-mobile) {
+&__block {
+    width: 240px;
+    height: 65px;
+    left: 14px;
+  bottom: 14px;
+  }
+
+  &__block-title {
+    font-size: 20px;
+  }
+
+  .icon__star {
+    width: 12px;
+    height: 12px;
+   
+  }
+
+  .icon__cross {
+    width: 6px;
+    height: 6px;
+
+  }
   }
 }

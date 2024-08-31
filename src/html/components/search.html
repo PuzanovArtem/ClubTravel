@@ -1,0 +1,469 @@
+<section class="search">
+  <div class="_container">
+    <div class="search__content">
+      <h1 class="search__title">Найти тур</h1>
+
+      <div class="search__wrapper">
+        <div class="search-bar">
+          <div class="search-bar__destination">
+            <p class="search-bar__title">Направление</p>
+
+            <div class="dropdown">
+              <div class="dropdown__row">
+                <p class="dropdown__current">Все направления</p>
+
+                <img src="/assets/images/icons/select-arrow.svg" class="icon__arrow-down" alt="" />
+              </div>
+
+              <ul class="dropdown__list">
+                <li class="dropdown__item">Все направления</li>
+                <li class="dropdown__item">Египет</li>
+                <li class="dropdown__item">АОЭ</li>
+                <li class="dropdown__item">Таиланд</li>
+                <li class="dropdown__item">Болгария</li>
+                <li class="dropdown__item">Чорногория</li>
+                <li class="dropdown__item">Индонезия</li>
+                <li class="dropdown__item">Грузия</li>
+                <li class="dropdown__item">Греция</li>
+                <li class="dropdown__item">Турция</li>
+                <li class="dropdown__item">Кипр</li>
+                <li class="dropdown__item">Тунис</li>
+                <li class="dropdown__item">Испания</li>
+                <li class="dropdown__item">Украина</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="search-bar__duration">
+            <p class="search-bar__title">Длительность тура</p>
+
+            <div class="dropdown">
+              <div class="dropdown__row">
+                <p class="dropdown__current">Длительность</p>
+
+                <img src="/assets/images/icons/select-arrow.svg" class="icon__arrow-down" alt="" />
+              </div>
+
+              <ul class="dropdown__list">
+                <li class="dropdown__item">1 неделя</li>
+                <li class="dropdown__item">10 дней</li>
+                <li class="dropdown__item">14 дней</li>
+                <li class="dropdown__item">21 дней</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="search-bar__date">
+            <p class="search-bar__title">Дата вылета</p>
+
+            <div class="dropdown">
+              <div class="dropdown__row" id="date-picker">
+                <p class="dropdown__current" id="selected-date">16.08.2024</p>
+
+                <svg class="icon icon__calendar" width="22" height="22">
+                  <use xlink:href="/assets/sprites/sprite.svg#calendar"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="search-bar__guests">
+            <p class="search-bar__title">Гости</p>
+
+            <div class="dropdown">
+              <div class="dropdown__row">
+                <p class="dropdown__current">
+                  <span class="search-bar__guests-adults">Взрослых:</span>
+                  <span id="adults-display" class="search-bar__guests-counter"> 0 </span>
+                  <span class="search-bar__guests-kids">Детей:</span>
+                  <span id="kids-display" class="search-bar__guests-sub-counter"> 0 </span>
+                </p>
+                <img src="/assets/images/icons/select-arrow.svg" class="icon__arrow-down" alt="" />
+              </div>
+
+              <ul class="dropdown__list">
+                <li class="dropdown__item__guests">
+                  <p class="item__guests--text">Добавьте необходимое кол-во гостей и укажите возраст</p>
+                </li>
+
+                <li class="dropdown__item__guests">
+                  <div class="search-bar__subitem">
+                    <p class="subitem__title">Взрослых</p>
+
+                    <div class="search-bar__subitem-subrow counter">
+                      <button id="adults-decrement" class="decrement" type="button">
+                        <img src="/assets/images/icons/couneter-minus.svg" alt="minus" width="14" height="14" />
+                      </button>
+
+                      <span id="adults-counter-value" class="counter-value"> 0 </span>
+
+                      <button id="adults-increment" class="increment" type="button">
+                        <img src="/assets/images/icons/counter-plus.svg" alt="plus" width="14" height="14" />
+                      </button>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="dropdown__item__guests">
+                  <div class="search-bar__subitem">
+                    <p class="subitem__title">Детей</p>
+
+                    <div class="search-bar__subitem-subrow counter">
+                      <button id="kids-decrement" class="decrement" type="button">
+                        <img src="/assets/images/icons/couneter-minus.svg" alt="minus" width="14" height="14" />
+                      </button>
+
+                      <span id="kids-counter-value" class="counter-value"> 0 </span>
+
+                      <button id="kids-increment" class="increment" type="button">
+                        <img src="/assets/images/icons/counter-plus.svg" alt="plus" width="14" height="14" />
+                      </button>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="dropdown__item__guests">
+                  <button class="search-bar__guests-add main-btn" type="button">Добавить</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <button class="search-bar-btn" type="button">
+            <svg class="icon icon__magnifying-glass">
+              <use xlink:href="/assets/sprites/sprite.svg#magnifying-glass"></use>
+            </svg>
+            Найти
+          </button>
+        </div>
+      </div>
+
+      <div class="search-row">
+        <div class="search-row__sub">
+          <a href="#" class="search__advance--search">
+            <svg class="icon icon__search-plus" width="16" height="16">
+              <use xlink:href="/assets/sprites/sprite.svg#search-plus"></use>
+            </svg>
+            Расширенный поиск
+          </a>
+
+          <hr class="search__line" style="display: none" />
+
+          <button class="search__btn-close" style="display: none" type="button">
+            <span class="search__btn-close-span">
+              <img
+                src="/assets/images/icons/couneter-minus.svg"
+                alt="minus"
+                width="20"
+                height="20"
+                class="btn-close__img"
+              />
+              Закрыть
+            </span>
+          </button>
+        </div>
+
+        <div class="search-row__panel category" style="display: none">
+          <div class="category__items">
+            <div class="category__rating">
+              <div class="category__rating-stars">
+                <h2 class="category__title">Категория размещения</h2>
+
+                <button class="category__btns" type="button">
+                  <svg class="icon icon__star" width="18" height="18">
+                    <use xlink:href="/assets/sprites/sprite.svg#star"></use>
+                  </svg>
+
+                  <svg class="icon icon__star" width="18" height="18">
+                    <use xlink:href="/assets/sprites/sprite.svg#star"></use>
+                  </svg>
+                </button>
+
+                <button class="category__btns" type="button">
+                  <svg class="icon icon__star" width="18" height="18">
+                    <use xlink:href="/assets/sprites/sprite.svg#star"></use>
+                  </svg>
+
+                  <svg class="icon icon__star" width="18" height="18">
+                    <use xlink:href="/assets/sprites/sprite.svg#star"></use>
+                  </svg>
+
+                  <svg class="icon icon__star" width="18" height="18">
+                    <use xlink:href="/assets/sprites/sprite.svg#star"></use>
+                  </svg>
+                </button>
+
+                <button class="category__btns" type="button">
+                  <svg class="icon icon__star" width="18" height="18">
+                    <use xlink:href="/assets/sprites/sprite.svg#star"></use>
+                  </svg>
+
+                  <svg class="icon icon__star" width="18" height="18">
+                    <use xlink:href="/assets/sprites/sprite.svg#star"></use>
+                  </svg>
+
+                  <svg class="icon icon__star" width="18" height="18">
+                    <use xlink:href="/assets/sprites/sprite.svg#star"></use>
+                  </svg>
+
+                  <svg class="icon icon__star" width="18" height="18">
+                    <use xlink:href="/assets/sprites/sprite.svg#star"></use>
+                  </svg>
+                </button>
+                <button class="category__btns" type="button">
+                  <svg class="icon icon__star" width="18" height="18">
+                    <use xlink:href="/assets/sprites/sprite.svg#star"></use>
+                  </svg>
+
+                  <svg class="icon icon__star" width="18" height="18">
+                    <use xlink:href="/assets/sprites/sprite.svg#star"></use>
+                  </svg>
+
+                  <svg class="icon icon__star" width="18" height="18">
+                    <use xlink:href="/assets/sprites/sprite.svg#star"></use>
+                  </svg>
+
+                  <svg class="icon icon__star" width="18" height="18">
+                    <use xlink:href="/assets/sprites/sprite.svg#star"></use>
+                  </svg>
+
+                  <svg class="icon icon__star" width="18" height="18">
+                    <use xlink:href="/assets/sprites/sprite.svg#star"></use>
+                  </svg>
+                </button>
+
+                <button class="category__btns" type="button">
+                  <svg class="icon icon__house" width="16" height="16">
+                    <use xlink:href="/assets/sprites/sprite.svg#house"></use>
+                  </svg>
+                  Апартаменты
+                </button>
+              </div>
+
+              <div class="category__rating-meal">
+                <h2 class="category__title">Питание</h2>
+
+                <button class="category__btns" type="button">
+                  <svg class="icon icon__checkmark-circle category__btns--svg" width="16" height="16">
+                    <use xlink:href="/assets/sprites/sprite.svg#checkmark-circle"></use>
+                  </svg>
+                  Без питания
+                </button>
+
+                <button class="category__btns" type="button">
+                  <svg class="icon icon__checkmark-circle category__btns--svg" width="16" height="16">
+                    <use xlink:href="/assets/sprites/sprite.svg#checkmark-circle"></use>
+                  </svg>
+                  Завтрак
+                </button>
+
+                <button class="category__btns" type="button">
+                  <svg class="icon icon__checkmark-circle category__btns--svg" width="16" height="16">
+                    <use xlink:href="/assets/sprites/sprite.svg#checkmark-circle"></use>
+                  </svg>
+                  Затрак и ужин
+                </button>
+
+                <button class="category__btns" type="button">
+                  <svg class="icon icon__checkmark-circle category__btns--svg" width="16" height="16">
+                    <use xlink:href="/assets/sprites/sprite.svg#checkmark-circle"></use>
+                  </svg>
+                  Завтрак, обед, ужин
+                </button>
+
+                <button class="category__btns" type="button">
+                  <svg class="icon icon__checkmark-circle category__btns--svg" width="16" height="16">
+                    <use xlink:href="/assets/sprites/sprite.svg#checkmark-circle"></use>
+                  </svg>
+                  Всё включено
+                </button>
+
+                <button class="category__btns" type="button">
+                  <svg class="icon icon__checkmark-circle category__btns--svg" width="16" height="16">
+                    <use xlink:href="/assets/sprites/sprite.svg#checkmark-circle"></use>
+                  </svg>
+                  Ультра: всё включено
+                </button>
+              </div>
+            </div>
+
+            <div class="category__fly">
+              <div class="category__lineup">
+                <h2 class="category__title">Состав тура</h2>
+
+                <button data-tour="tour" class="category__btns category__btns-tour" type="button">
+                  <svg class="icon icon__checkmark-circle category__btns--svg" width="16" height="16">
+                    <use xlink:href="/assets/sprites/sprite.svg#checkmark-circle"></use>
+                  </svg>
+                  Туристический пакет
+                </button>
+
+                <button data-tour="fly" class="category__btns category__btns-tour" type="button">
+                  <svg class="icon icon__checkmark-circle category__btns--svg" width="16" height="16">
+                    <use xlink:href="/assets/sprites/sprite.svg#checkmark-circle"></use>
+                  </svg>
+                  Только перелет
+                </button>
+              </div>
+
+              <div class="category__departure">
+                <h2 class="category__title">Вылет из</h2>
+
+                <button class="category__btns category__btns-city" type="button">
+                  <svg class="icon icon__checkmark-circle category__btns--svg" width="16" height="16">
+                    <use xlink:href="/assets/sprites/sprite.svg#checkmark-circle"></use>
+                  </svg>
+                  Таллин
+                </button>
+
+                <button class="category__btns category__btns-city" type="button">
+                  <svg class="icon icon__checkmark-circle category__btns--svg" width="16" height="16">
+                    <use xlink:href="/assets/sprites/sprite.svg#checkmark-circle"></use>
+                  </svg>
+                  Рига
+                </button>
+
+                <button class="category__btns category__btns-city" type="button">
+                  <svg class="icon icon__checkmark-circle category__btns--svg" width="16" height="16">
+                    <use xlink:href="/assets/sprites/sprite.svg#checkmark-circle"></use>
+                  </svg>
+                  Вильнюс
+                </button>
+              </div>
+
+              <div class="category__price">
+                <h2 class="category__title">Цена на одного человека</h2>
+
+                <div class="category__slider noUi-target noUi-ltr noUi-horizontal noUi-txt-dir-ltr"></div>
+              </div>
+            </div>
+
+            <div class="category__regions">
+              <h2 class="category__title">Регион</h2>
+
+              <p class="category__regions-current"></p>
+
+              <div class="category__regions-item category__regions-item_change">
+                <button class="category__btns" type="button">
+                  <svg class="icon icon__checkmark-circle category__btns--svg" width="16" height="16">
+                    <use xlink:href="/assets/sprites/sprite.svg#checkmark-circle"></use>
+                  </svg>
+                  Албена
+                </button>
+
+                <button class="category__btns" type="button">
+                  <svg class="icon icon__checkmark-circle category__btns--svg" width="16" height="16">
+                    <use xlink:href="/assets/sprites/sprite.svg#checkmark-circle"></use>
+                  </svg>
+                  Банско
+                </button>
+
+                <button class="category__btns" type="button">
+                  <svg class="icon icon__checkmark-circle category__btns--svg" width="16" height="16">
+                    <use xlink:href="/assets/sprites/sprite.svg#checkmark-circle"></use>
+                  </svg>
+                  Бургас
+                </button>
+
+                <button class="category__btns" type="button">
+                  <svg class="icon icon__checkmark-circle category__btns--svg" width="16" height="16">
+                    <use xlink:href="/assets/sprites/sprite.svg#checkmark-circle"></use>
+                  </svg>
+                  Дюны
+                </button>
+
+                <button class="category__btns" type="button">
+                  <svg class="icon icon__checkmark-circle category__btns--svg" width="16" height="16">
+                    <use xlink:href="/assets/sprites/sprite.svg#checkmark-circle"></use>
+                  </svg>
+                  Елините
+                </button>
+
+                <button class="category__btns">
+                  <svg class="icon icon__checkmark-circle category__btns--svg" width="16" height="16">
+                    <use xlink:href="/assets/sprites/sprite.svg#checkmark-circle"></use>
+                  </svg>
+                  Золотые пески
+                </button>
+
+                <button class="category__btns" type="button">
+                  <svg class="icon icon__checkmark-circle category__btns--svg" width="16" height="16">
+                    <use xlink:href="/assets/sprites/sprite.svg#checkmark-circle"></use>
+                  </svg>
+                  Кранево
+                </button>
+
+                <button class="category__btns" type="button">
+                  <svg class="icon icon__checkmark-circle category__btns--svg" width="16" height="16">
+                    <use xlink:href="/assets/sprites/sprite.svg#checkmark-circle"></use>
+                  </svg>
+                  Несебр
+                </button>
+
+                <button class="category__btns" type="button">
+                  <svg class="icon icon__checkmark-circle category__btns--svg" width="16" height="16">
+                    <use xlink:href="/assets/sprites/sprite.svg#checkmark-circle"></use>
+                  </svg>
+                  Обзор
+                </button>
+
+                <button class="category__btns" type="button">
+                  <svg class="icon icon__checkmark-circle category__btns--svg" width="16" height="16">
+                    <use xlink:href="/assets/sprites/sprite.svg#checkmark-circle"></use>
+                  </svg>
+                  Помирие
+                </button>
+
+                <button class="category__btns" type="button">
+                  <svg class="icon icon__checkmark-circle category__btns--svg" width="16" height="16">
+                    <use xlink:href="/assets/sprites/sprite.svg#checkmark-circle"></use>
+                  </svg>
+                  Равда
+                </button>
+
+                <button class="category__btns" type="button">
+                  <svg class="icon icon__checkmark-circle category__btns--svg" width="16" height="16">
+                    <use xlink:href="/assets/sprites/sprite.svg#checkmark-circle"></use>
+                  </svg>
+                  Ривьера
+                </button>
+
+                <button class="category__btns" type="button">
+                  <svg class="icon icon__checkmark-circle category__btns--svg" width="16" height="16">
+                    <use xlink:href="/assets/sprites/sprite.svg#checkmark-circle"></use>
+                  </svg>
+                  Сарафово
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="category__filter">
+            <hr class="category__filter-line" />
+
+            <div class="category__filter-item">
+              <h3 class="category__filter-title">Активные фильтры:</h3>
+
+              <h3 class="category__filter-title filter-title-second">Категория Категория размещенияотеля</h3>
+
+              <div class="category__filter-stars stars-box-one">
+                <span>5 звезд</span>
+              </div>
+
+              <div class="category__filter-stars stars-box-two">
+                <span>3 звезды</span>
+              </div>
+
+              <div class="category__filter__group">
+                <h3 class="category__filter-title">Состав тура</h3>
+
+                <div class="category__filter-stars stars-box-three">
+                  <span>Только перелет</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

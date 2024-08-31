@@ -1,0 +1,600 @@
+<div class="second-wrapper">
+
+<section class="hotel-card-info">
+   <div class="hotel-card-info__wrapper">
+
+<div class="hotel-card-sidebar__first-block hotel-card-info__first-block">
+    <div class="hotel-card-sidebar__first-block-top">
+        <p class="hotel-card-sidebar__first-block-title">
+            Выбранный тур
+        </p>
+
+        <a href="/src/pages/search-result/search-result.html" class="hotel-card-sidebar__first-block-link">изменить</a>
+    </div>
+
+    <ul class="hotel-card-sidebar__third-block-list">
+        <li class="hotel-card-sidebar__third-block-item">
+            <div class="hotel-card-sidebar__consultant-link">
+                <svg class="icon icon__calendar">
+                    <use xlink:href="/public/assets/sprites/sprite.svg#calendar"></use>
+                </svg>
+                <p class="hotel-card-sidebar__consultant-link-text">18 июня 2020 г. | 7 ночей</p>
+            </div>
+        </li>
+
+        <li class="hotel-card-sidebar__third-block-item">
+            <div class="hotel-card-sidebar__consultant-link">
+                <svg class="icon icon__airplane-takeoff">
+                    <use xlink:href="/public/assets/sprites/sprite.svg#airplane-takeoff"></use>
+                </svg>
+                <p class="hotel-card-sidebar__consultant-link-text">Вылет из Таллинна</p>
+            </div>
+        </li>
+
+        <li class="hotel-card-sidebar__third-block-item">
+            <div class="hotel-card-sidebar__consultant-link">
+                <svg class="icon icon__cutlery">
+                    <use xlink:href="/public/assets/sprites/sprite.svg#cutlery"></use>
+                </svg>
+                <p class="hotel-card-sidebar__consultant-link-text">Завтраки</p>
+            </div>
+        </li>
+
+        <li class="hotel-card-sidebar__third-block-item">
+            <div class="hotel-card-sidebar__consultant-link">
+                <svg class="icon icon__house">
+                    <use xlink:href="/public/assets/sprites/sprite.svg#house"></use>
+                </svg>
+                <p class="hotel-card-sidebar__consultant-link-text">Стандарт</p>
+            </div>
+        </li>
+    </ul>
+
+    <p class="hotel-card-sidebar__first-block-price"><span>429€</span>/чел</p>
+    <p class="hotel-card-sidebar__first-block-text">
+        <span>Цена на одного человека</span> действительна при размещении в двухместном номере. Цена зависит от
+        количества мест и может
+        измениться.
+    </p>
+
+    {{!-- <div class="search-bar__guests">
+        <p class="search-bar__title">Количество отдыхающих</p>
+        <div class="dropdown">
+            <div class="dropdown__row">
+                <p class="dropdown__current">
+                    <span class="search-bar__guests-adults">Взрослых:</span>
+                    <span id="adults-display" class="search-bar__guests-counter">
+                        0
+                    </span>
+                    <span class="search-bar__guests-kids">Детей:</span>
+                    <span id="kids-display" class="search-bar__guests-sub-counter"> 0 </span>
+                </p>
+                <img src="/assets/images/icons/select-arrow.svg" class="icon__arrow-down" alt="" />
+            </div>
+            <ul class="dropdown__list" style="top: 24px;">
+                <li class="dropdown__item__guests">
+                    <p class="item__guests--text">
+                        Добавьте необходимое кол-во гостей и укажите возраст
+                    </p>
+                </li>
+
+                <li class="dropdown__item__guests">
+                    <div class="search-bar__subitem">
+                        <p class="subitem__title">Взрослых</p>
+                        <div class="search-bar__subitem-subrow counter">
+                            <button id="adults-decrement" class="decrement">
+                                <img src="/assets/images/icons/couneter-minus.svg" alt="minus" width="14" height="14" />
+                            </button>
+                            <span id="adults-counter-value" class="counter-value">
+                                0
+                            </span>
+                            <button id="adults-increment" class="increment">
+                                <img src="/assets/images/icons/counter-plus.svg" alt="plus" width="14" height="14" />
+                            </button>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="dropdown__item__guests">
+                    <div class="search-bar__subitem">
+                        <p class="subitem__title">Детей</p>
+                        <div class="search-bar__subitem-subrow counter">
+                            <button id="kids-decrement" class="decrement">
+                                <img src="/assets/images/icons/couneter-minus.svg" alt="minus" width="14" height="14" />
+                            </button>
+                            <span id="kids-counter-value" class="counter-value">
+                                0
+                            </span>
+                            <button id="kids-increment" class="increment">
+                                <img src="/assets/images/icons/counter-plus.svg" alt="plus" width="14" height="14" />
+                            </button>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="dropdown__item__guests">
+                    <button class="search-bar__guests-add main-btn">Добавить</button>
+                </li>
+            </ul>
+        </div>
+    </div> --}}
+
+    <p class="hotel-card-sidebar__first-block-total-price">Общая стоимость тура: <span>1 429€</span></p>
+
+    <button class="main-btn hotel-card-sidebar__first-block-btn">Бронировать</button>
+
+    <div class="hotel-card-sidebar__first-block-private-block">
+        <svg class="icon icon__padlock">
+            <use xlink:href="/public/assets/sprites/sprite.svg#padlock"></use>
+        </svg>
+
+        <p class="hotel-card-sidebar__first-block-text">
+            Ваши данные надежно защищены и обрабатываются согласно <span>с условиями обработки личных
+                данных</span>
+        </p>
+    </div>
+</div>
+
+<div class="swiper-container gallery-top">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <img src="/public/assets/images/hotel-card-room.png" alt="img" width="730" height="499">
+        </div>
+        <div class="swiper-slide">
+            <img src="/public/assets/images/hotel-card-room.png" alt="img" width="730" height="499">
+        </div>
+        <div class="swiper-slide">
+            <img src="/public/assets/images/hotel-card-room.png" alt="img" width="730" height="499">
+        </div>
+        <div class="swiper-slide">
+            <img src="/public/assets/images/hotel-card-room.png" alt="img" width="730" height="499">
+        </div>
+
+    </div>
+
+</div>
+<div class="swiper-container gallery-thumbs">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <img src="/public/assets/images/hotel-card-room2.png" alt="img" width="169" height="97">
+        </div>
+        <div class="swiper-slide">
+            <img src="/public/assets/images/hotel-card-room3.png" alt="img" width="169" height="97">
+        </div>
+        <div class="swiper-slide">
+            <img src="/public/assets/images/hotel-card-room4.png" alt="img" width="169" height="97">
+        </div>
+        <div class="swiper-slide">
+            <img src="/public/assets/images/hotel-card-room5.png" alt="img" width="169" height="97">
+        </div>
+    </div>
+</div>
+
+<div class="hotel-card-info__content-wrapper">
+    <p class="hotel-card-info__title">Рекомендуем для семейного и молодёжного отдыха.</p>
+    <p class="hotel-card-info__text">Гости города Золотые пески, приехавшие в город по делам бизнеса или для отдыха,
+        могут остановиться в гостинце Ambassador
+        (Амбассадор). Отель прекрасно сочетает в себе как современный комфорт, так и высокий уровень обслуживания.
+        Каждый номер
+        оснащен всем необходимым для комфортного отдыха (кондиционер, телевизор, письменный стол, сейф и утренняя
+        газета). Вы
+        сможете воспользоваться услугами массажиста, баром, лифтом, спа, сауной, рестораном, отдохнуть у бассейна,
+        посетить
+        фитнес зал и прогуляться по саду. Ваш отдых в отеле Ambassador (Амбассадор) будет ярким и запоминающимся, вас не
+        оставят
+        равнодушными первоклассный сервис и великолепное обслуживание. Отель находится в 27 км от Международного
+        аэропорта Варна
+        (Varna International Airport), в 900 метрах от центра курорта Золотые пески и в 150 метрах от пляжа. Отель
+        принимает
+        отдыхающих круглый год и является прекрасным местом для отдыха, спорта и развлечений. В бальнеологическом центре
+        «Амбассадор» предлагаются свыше 100 видов услуг: таласотерапия, ванные, массаж, электротерапия, грязелечение,
+        водолечение, акупунктура, медицинская косметика, сауна, открытый и крытый бассейны, фитнес зал, солярий и много
+        других.</p>
+
+    <ul class="hotel-card-info__list">
+        <li class="hotel-card-info__item">
+            <p class="hotel-card-info__title">Месторасположение</p>
+            <p class="hotel-card-info__subtitle">Гостиница находится в южной части курортного комплекса «Золотые пески»
+                в нескольких минутах ходьбы от моря.</p>
+        </li>
+
+        <li class="hotel-card-info__item">
+            <p class="hotel-card-info__title">Пляж</p>
+
+            <ul class="hotel-card-info__short-list">
+                <li class="hotel-card-info__short-item">
+                    <p class="hotel-card-info__subtitle">Расстояние до пляжа (60 м.)</p>
+                </li>
+
+                <li class="hotel-card-info__short-item">
+                    <p class="hotel-card-info__subtitle">Зонтики (платно)</p>
+                </li>
+
+                <li class="hotel-card-info__short-item">
+                    <p class="hotel-card-info__subtitle">Шезлонги (платно)</p>
+                </li>
+            </ul>
+        </li>
+
+        <li class="hotel-card-info__item">
+            <p class="hotel-card-info__title">Для детей</p>
+
+            <ul class="hotel-card-info__short-list">
+                <li class="hotel-card-info__short-item">
+                    <p class="hotel-card-info__subtitle">детская площадка</p>
+                </li>
+
+                <li class="hotel-card-info__short-item">
+                    <p class="hotel-card-info__subtitle">детский бассейн</p>
+                </li>
+            </ul>
+        </li>
+
+        <li class="hotel-card-info__item">
+            <p class="hotel-card-info__title">Номера</p>
+
+            <ul class="hotel-card-info__short-list">
+                <li class="hotel-card-info__short-item">
+                    <p class="hotel-card-info__subtitle">181 номеров</p>
+                </li>
+
+                <li class="hotel-card-info__short-item">
+                    <p class="hotel-card-info__subtitle">душ</p>
+                </li>
+
+                <li class="hotel-card-info__short-item">
+                    <p class="hotel-card-info__subtitle">туалет</p>
+                </li>
+
+                <li class="hotel-card-info__short-item">
+                    <p class="hotel-card-info__subtitle">умывальник</p>
+                </li>
+                <li class="hotel-card-info__short-item">
+                    <p class="hotel-card-info__subtitle">балкон</p>
+                </li>
+                <li class="hotel-card-info__short-item">
+                    <p class="hotel-card-info__subtitle">ТВ спутниковое</p>
+                </li>
+                <li class="hotel-card-info__short-item">
+                    <p class="hotel-card-info__subtitle">кондиционер</p>
+                </li>
+                <li class="hotel-card-info__short-item">
+                    <p class="hotel-card-info__subtitle">телефон</p>
+                </li>
+                <li class="hotel-card-info__short-item">
+                    <p class="hotel-card-info__subtitle">холодильник</p>
+                </li>
+            </ul>
+        </li>
+
+        <li class="hotel-card-info__item">
+            <p class="hotel-card-info__title">Рестораны и бары</p>
+
+            <ul class="hotel-card-info__short-list">
+                <li class="hotel-card-info__short-item">
+                    <p class="hotel-card-info__subtitle">бары</p>
+                </li>
+
+                <li class="hotel-card-info__short-item">
+                    <p class="hotel-card-info__subtitle">кафе</p>
+                </li>
+
+                <li class="hotel-card-info__short-item">
+                    <p class="hotel-card-info__subtitle">рестораны</p>
+                </li>
+            </ul>
+        </li>
+
+        <li class="hotel-card-info__item">
+            <p class="hotel-card-info__title">Развлечения и спорт</p>
+
+            <ul class="hotel-card-info__short-list">
+                <li class="hotel-card-info__short-item">
+                    <p class="hotel-card-info__subtitle">бассейн крытый</p>
+                </li>
+
+                <li class="hotel-card-info__short-item">
+                    <p class="hotel-card-info__subtitle">бассейн открытый</p>
+                </li>
+
+                <li class="hotel-card-info__short-item">
+                    <p class="hotel-card-info__subtitle">массаж</p>
+                </li>
+
+                <li class="hotel-card-info__short-item">
+                    <p class="hotel-card-info__subtitle">салон красоты</p>
+                </li>
+
+                <li class="hotel-card-info__short-item">
+                    <p class="hotel-card-info__subtitle">сауна</p>
+                </li>
+
+                <li class="hotel-card-info__short-item">
+                    <p class="hotel-card-info__subtitle">фитнес центр</p>
+                </li>
+
+                <li class="hotel-card-info__short-item">
+                    <p class="hotel-card-info__subtitle">велосипеды</p>
+                </li>
+
+                <li class="hotel-card-info__short-item">
+                    <p class="hotel-card-info__subtitle">прокат</p>
+                </li>
+
+                <li class="hotel-card-info__short-item">
+                    <p class="hotel-card-info__subtitle">теннис настольный</p>
+                </li>
+            </ul>
+        </li>
+
+        <li class="hotel-card-info__item">
+            <p class="hotel-card-info__title">Сервис</p>
+
+            <ul class="hotel-card-info__short-list">
+                <li class="hotel-card-info__short-item">
+                    <p class="hotel-card-info__subtitle">парковка</p>
+                </li>
+
+                <li class="hotel-card-info__short-item">
+                    <p class="hotel-card-info__subtitle">прокат автомобилей</p>
+                </li>
+
+                <li class="hotel-card-info__short-item">
+                    <p class="hotel-card-info__subtitle">обмен валют</p>
+                </li>
+
+                <li class="hotel-card-info__short-item">
+                    <p class="hotel-card-info__subtitle">сейф</p>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+   </div>
+    
+    <div class="hotel-card-sidebar">
+    
+        <div class="hotel-card-sidebar__wrapper">
+            <div class="hotel-card-sidebar__first-block hotel-card-sidebar__first-block-mob">
+                <div class="hotel-card-sidebar__first-block-top">
+                    <p class="hotel-card-sidebar__first-block-title">
+                        Выбранный тур
+                    </p>
+    
+                    <a href="/src/pages/search-result/search-result.html"
+                        class="hotel-card-sidebar__first-block-link">изменить</a>
+                </div>
+    
+                <ul class="hotel-card-sidebar__third-block-list">
+                    <li class="hotel-card-sidebar__third-block-item">
+                        <a href="#" class="hotel-card-sidebar__consultant-link">
+                            <svg class="icon icon__calendar">
+                                <use xlink:href="/public/assets/sprites/sprite.svg#calendar"></use>
+                            </svg>
+                            <p class="hotel-card-sidebar__consultant-link-text">18 июня 2020 г. | 7 ночей</p>
+                        </a>
+                    </li>
+    
+                    <li class="hotel-card-sidebar__third-block-item">
+                        <a href="#" class="hotel-card-sidebar__consultant-link">
+                            <svg class="icon icon__airplane-takeoff">
+                                <use xlink:href="/public/assets/sprites/sprite.svg#airplane-takeoff"></use>
+                            </svg>
+                            <p class="hotel-card-sidebar__consultant-link-text">Вылет из Таллинна</p>
+                        </a>
+                    </li>
+    
+                    <li class="hotel-card-sidebar__third-block-item">
+                        <a href="#" class="hotel-card-sidebar__consultant-link">
+                            <svg class="icon icon__cutlery">
+                                <use xlink:href="/public/assets/sprites/sprite.svg#cutlery"></use>
+                            </svg>
+                            <p class="hotel-card-sidebar__consultant-link-text">Завтраки</p>
+                        </a>
+                    </li>
+    
+                    <li class="hotel-card-sidebar__third-block-item">
+                        <a href="#" class="hotel-card-sidebar__consultant-link">
+                            <svg class="icon icon__house">
+                                <use xlink:href="/public/assets/sprites/sprite.svg#house"></use>
+                            </svg>
+                            <p class="hotel-card-sidebar__consultant-link-text">Стандарт</p>
+                        </a>
+                    </li>
+                </ul>
+    
+                <p class="hotel-card-sidebar__first-block-price"><span>429€</span>/чел</p>
+                <p class="hotel-card-sidebar__first-block-text">
+                    <span>Цена на одного человека</span> действительна при размещении в двухместном номере. Цена зависит от
+                    количества мест и может
+                    измениться.
+                </p>
+    
+                {{!-- <div class="search-bar__guests">
+                    <p class="search-bar__title">Количество отдыхающих</p>
+                    <div class="dropdown">
+                        <div class="dropdown__row">
+                            <p class="dropdown__current">
+                                <span class="search-bar__guests-adults">Взрослых:</span>
+                                <span id="adults-display" class="search-bar__guests-counter">
+                                    0
+                                </span>
+                                <span class="search-bar__guests-kids">Детей:</span>
+                                <span id="kids-display" class="search-bar__guests-sub-counter"> 0 </span>
+                            </p>
+                            <img src="/assets/images/icons/select-arrow.svg" class="icon__arrow-down" alt="" />
+                        </div>
+                        <ul class="dropdown__list" style="top: 24px;">
+                            <li class="dropdown__item__guests">
+                                <p class="item__guests--text">
+                                    Добавьте необходимое кол-во гостей и укажите возраст
+                                </p>
+                            </li>
+    
+                            <li class="dropdown__item__guests">
+                                <div class="search-bar__subitem">
+                                    <p class="subitem__title">Взрослых</p>
+                                    <div class="search-bar__subitem-subrow counter">
+                                        <button id="adults-decrement" class="decrement">
+                                            <img src="/assets/images/icons/couneter-minus.svg" alt="minus" width="14"
+                                                height="14" />
+                                        </button>
+                                        <span id="adults-counter-value" class="counter-value">
+                                            0
+                                        </span>
+                                        <button id="adults-increment" class="increment">
+                                            <img src="/assets/images/icons/counter-plus.svg" alt="plus" width="14"
+                                                height="14" />
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+    
+                            <li class="dropdown__item__guests">
+                                <div class="search-bar__subitem">
+                                    <p class="subitem__title">Детей</p>
+                                    <div class="search-bar__subitem-subrow counter">
+                                        <button id="kids-decrement" class="decrement">
+                                            <img src="/assets/images/icons/couneter-minus.svg" alt="minus" width="14"
+                                                height="14" />
+                                        </button>
+                                        <span id="kids-counter-value" class="counter-value">
+                                            0
+                                        </span>
+                                        <button id="kids-increment" class="increment">
+                                            <img src="/assets/images/icons/counter-plus.svg" alt="plus" width="14"
+                                                height="14" />
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+    
+                            <li class="dropdown__item__guests">
+                                <button class="search-bar__guests-add main-btn">Добавить</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div> --}}
+    
+                <p class="hotel-card-sidebar__first-block-total-price">Общая стоимость тура: <span>1 429€</span></p>
+    
+                <button class="main-btn hotel-card-sidebar__first-block-btn">Бронировать</button>
+    
+                <div class="hotel-card-sidebar__first-block-private-block">
+                    <svg class="icon icon__padlock">
+                        <use xlink:href="/public/assets/sprites/sprite.svg#padlock"></use>
+                    </svg>
+    
+                    <p class="hotel-card-sidebar__first-block-text">
+                        Ваши данные надежно защищены и обрабатываются согласно <span>с условиями обработки личных
+                            данных</span>
+                    </p>
+                </div>
+            </div>
+    
+            <div class="hotel-card-sidebar__second-block">
+                <p class="hotel-card-sidebar__block-title">ПОЧЕМУ БРОНИРОВАТЬ ТУР У НАС?</p>
+    
+                <ul class="hotel-card-sidebar__second-block-list">
+                    <li class="hotel-card-sidebar__second-block-item">
+                        <div class="hotel-card-sidebar__svg-wrapper">
+                            <svg class="icon icon__checkmark">
+                                <use xlink:href="/public/assets/sprites/sprite.svg#checkmark"></use>
+                            </svg>
+                        </div>
+    
+                        <p class="hotel-card-sidebar__second-block-text">Только отобранные отели</p>
+                    </li>
+    
+                    <li class="hotel-card-sidebar__second-block-item">
+                        <div class="hotel-card-sidebar__svg-wrapper">
+                            <svg class="icon icon__checkmark">
+                                <use xlink:href="/public/assets/sprites/sprite.svg#checkmark"></use>
+                            </svg>
+                        </div>
+    
+                        <p class="hotel-card-sidebar__second-block-text">Все туроператоры на одном сайте</p>
+                    </li>
+    
+                    <li class="hotel-card-sidebar__second-block-item">
+                        <div class="hotel-card-sidebar__svg-wrapper">
+                            <svg class="icon icon__checkmark">
+                                <use xlink:href="/public/assets/sprites/sprite.svg#checkmark"></use>
+                            </svg>
+                        </div>
+    
+                        <p class="hotel-card-sidebar__second-block-text">Прозрачно и безопасно</p>
+                    </li>
+    
+                    <li class="hotel-card-sidebar__second-block-item">
+                        <div class="hotel-card-sidebar__svg-wrapper">
+                            <svg class="icon icon__checkmark">
+                                <use xlink:href="/public/assets/sprites/sprite.svg#checkmark"></use>
+                            </svg>
+                        </div>
+    
+                        <p class="hotel-card-sidebar__second-block-text">Без наценок</p>
+                    </li>
+                </ul>
+            </div>
+    
+            <div class="hotel-card-sidebar__third-block">
+                <p class="hotel-card-sidebar__block-title">ЕСТЬ ВОПРОСЫ ПО ОТЕЛЮ
+                    ИЛИ <span>ХОТИТЕ ПОДОБРАТЬ ТУР?</span></p>
+    
+                <p class="hotel-card-sidebar__block-subtitle">
+                    Вам поможет наш консультант <br> <span>Марина Каасик</span>
+                </p>
+
+                <picture>
+                    <source media="(max-width:767px)" srcset="/public/assets/images/offer-cons-mob.png">
+                    <img src="/public/assets/images/offer-cons.png" alt="women" width="323" height="160">
+                </picture>
+    
+    
+                <ul class="hotel-card-sidebar__third-block-list">
+                    <li class="hotel-card-sidebar__third-block-item">
+                        <a href="#" class="hotel-card-sidebar__consultant-link">
+                            <svg class="icon icon__phone">
+                                <use xlink:href="/public/assets/sprites/sprite.svg#phone"></use>
+                            </svg>
+                            <p class="hotel-card-sidebar__consultant-link-text">+372 <span>6 130 633</span></p>
+                        </a>
+                    </li>
+    
+                    <li class="hotel-card-sidebar__third-block-item">
+                        <a href="#" class="hotel-card-sidebar__consultant-link">
+                            <svg class="icon icon__envelope">
+                                <use xlink:href="/public/assets/sprites/sprite.svg#envelope"></use>
+                            </svg>
+                            <p class="hotel-card-sidebar__consultant-link-text">contact@email.ee</p>
+                        </a>
+                    </li>
+    
+                    <li class="hotel-card-sidebar__third-block-item">
+                        <a href="#" class="hotel-card-sidebar__consultant-link">
+                            <svg class="icon icon__message">
+                                <use xlink:href="/public/assets/sprites/sprite.svg#message"></use>
+                            </svg>
+                            <p class="hotel-card-sidebar__consultant-link-text">Написать в Messenger</p>
+                        </a>
+                    </li>
+    
+                    <li class="hotel-card-sidebar__third-block-item">
+                        <a href="#" class="hotel-card-sidebar__consultant-link">
+                            <svg class="icon icon__clock">
+                                <use xlink:href="/public/assets/sprites/sprite.svg#clock"></use>
+                            </svg>
+                            <p class="hotel-card-sidebar__consultant-link-text">Пн - Пт <span>10.00 - 18.00</span></p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+    </div>
+</section>
+
+
+
+</div>

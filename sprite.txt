@@ -101,3 +101,7 @@
 <svg class="icon icon__chevron">
   <use xlink:href="/assets/sprites/sprite.svg#mdi_chevron-left"></use>
 </svg>
+
+<svg class="icon icon__card-line">
+  <use xlink:href="/assets/sprites/sprite.svg#card-line"></use>
+</svg>
