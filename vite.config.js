@@ -1,14 +1,14 @@
-import Inspect from "vite-plugin-inspect";
-import path from "path";
-import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
-import handlebars from "vite-plugin-handlebars";
-import { defineConfig } from "vite";
-import { resolve } from "path";
-import viteImagemin from "vite-plugin-imagemin";
-import imageminWebp from "imagemin-webp";
+import Inspect from 'vite-plugin-inspect'
+import path from 'path'
+import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
+import handlebars from 'vite-plugin-handlebars'
+import { defineConfig } from 'vite'
+import { resolve } from 'path'
+import viteImagemin from 'vite-plugin-imagemin'
+import imageminWebp from 'imagemin-webp'
 
 export default defineConfig({
-  base: "./",
+  base: './',
   plugins: [
     viteImagemin({
       gifsicle: {
@@ -28,10 +28,10 @@ export default defineConfig({
       svgo: {
         plugins: [
           {
-            name: "removeViewBox",
+            name: 'removeViewBox',
           },
           {
-            name: "removeEmptyAttrs",
+            name: 'removeEmptyAttrs',
             active: false,
           },
         ],
@@ -52,29 +52,29 @@ export default defineConfig({
     }),
     handlebars({
       partialDirectory: [
-        resolve(__dirname, "src/html/components"),
-        resolve(__dirname, "src/html/pages/main"),
-        resolve(__dirname, "src/html/modules"),
-        resolve(__dirname, "src/html/pages/search-result"),
-        resolve(__dirname, "src/html/pages/hot-offers"),
-        resolve(__dirname, "src/html/pages/hotel-card/"),
-      ]
+        resolve(__dirname, 'src/html/components'),
+        resolve(__dirname, 'src/html/pages/main'),
+        resolve(__dirname, 'src/html/modules'),
+        resolve(__dirname, 'src/html/pages/search-result'),
+        resolve(__dirname, 'src/html/pages/hot-offers'),
+        resolve(__dirname, 'src/html/pages/hotel-card/'),
+      ],
     }),
   ],
   build: {
-    outDir: "docs",
+    outDir: 'docs',
     rollupOptions: {
       input: {
-        main: resolve(__dirname, "/index.html"),
-        search: resolve(__dirname, "/src/pages/search-result/search-result.html"),
-        hotOffers: resolve(__dirname, "/src/pages/hot-offers/hot-offers.html"),
-        card: resolve(__dirname, "/src/pages/hotel-card/hotel-card.html"),
+        main: resolve(__dirname, '/index.html'),
+        search: resolve(__dirname, '/src/pages/search-result/search-result.html'),
+        hotOffers: resolve(__dirname, '/src/pages/hot-offers/hot-offers.html'),
+        card: resolve(__dirname, '/src/pages/hotel-card/hotel-card.html'),
       },
     },
   },
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"),
+      '@': path.resolve(__dirname, './src'),
     },
   },
-});
+})
