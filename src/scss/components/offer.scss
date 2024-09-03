@@ -1,208 +1,197 @@
 .offer {
-
-    &__img {
-background-image: url(/public/assets/images/offer-img.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 570px;
+  &__img {
     width: 100%;
     max-width: 1920px;
+    height: 570px;
     margin: 0 auto;
+    background-image: url("/public/assets/images/offer-img.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__wrapper {
+    max-width: 1036px;
+    margin: 0 auto;
+    padding: 90px 15px 94px;
+    color: $white;
+  }
+
+  &__title {
+    margin: 0 0 16px;
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  &__subtitle {
+    max-width: 552px;
+    margin: 0 auto 95px;
+    font-size: 16px;
+    line-height: 1.4;
+    text-align: center;
+  }
+
+  &__text {
+    max-width: 380px;
+    font-size: 18px;
+    line-height: 1.4;
+    text-align: center;
+  }
+
+  &__content-wrapper {
+    @extend %display-jc-sb;
+  }
+
+  &__btn {
+    width: 100%;
+    margin: 36px 0 0;
+    padding: 12px;
+  }
+
+  &__or-block {
+    position: relative;
+
+    &::before {
+      @extend %gray-line;
+      top: -47px;
+      right: 50%;
+      height: 77px;
+      background-color: $white;
+      transform: translateY(-50%);
     }
 
-    &__wrapper {
-color: $white;
-max-width: 1036px;
-margin: 0 auto;
-padding: 90px 15px 94px 15px;
-
+    &::after {
+      @extend %gray-line;
+      top: 67px;
+      right: 50%;
+      height: 77px;
+      background-color: $white;
+      transform: translateY(-50%);
     }
+  }
 
-    &__title {
-        font-weight: 700;
-        font-size: 26px;
-        text-align: center;
-        margin: 0 0 16px;
+  &__consultant-wrapper {
+    @extend %display-flex;
+    margin: 16px 0 0;
+  }
+
+  &__text-sec {
+    text-align: start;
+  }
+
+  &__consultant-info {
+    margin: 0 0 0 32px;
+  }
+
+  &__consultant-name {
+    margin: 0 0 4px;
+    font-size: 22px;
+  }
+
+  &__consultant-prof {
+    margin: 0 0 24px;
+  }
+
+  .icon--phone,
+  .icon--message,
+  .icon--envelope {
+    width: 18px;
+    height: 18px;
+    margin: 0 12px 0 0;
+    fill: $white;
+  }
+
+  &__consultant-link {
+    @extend %display-flex;
+    transition: opacity 0.3s ease;
+
+    @media (hover: hover) {
+      &:hover {
+        opacity: 0.6;
+      }
     }
+  }
 
-    &__subtitle {
-        font-size: 16px;
-        line-height: 1.4;
-        text-align: center;
-        max-width: 552px;
-        margin: 0 auto 95px auto;
-    }
+  &__consultant-item:not(:last-child) {
+    margin: 0 0 8px;
+  }
 
-    &__text {
-        font-size: 18px;
-        line-height: 1.4;
-        max-width: 380px;
-        text-align: center;
+  &__consultant-link-text {
+    font-size: 16px;
+  }
+
+  @include respond-to($l-tablet) {
+    &__img {
+      height: 723px;
+      background-image: url("/public/assets/images/offer-img-mob.png");
     }
 
     &__content-wrapper {
-        @extend %display-jc-sb;
-    }
-
-    &__btn {
-        width: 100%;
-        padding: 12px;
-        margin: 36px 0 0;
+      flex-direction: column;
     }
 
     &__or-block {
-        position: relative;
-    
+      margin: 32px 0;
 
-        &::before {
-            @extend %gray-line;
-            height: 77px;
-            background-color: $white;
-            right: 50%;
-            top: -47px;
-            transform: translateY(-50%);
-        }
+      &::before {
+        @extend %gray-line;
+        top: 50%;
+        right: -132px;
+        width: 77px;
+        height: 1px;
+        background-color: $white;
+        transform: translateX(-50%);
+      }
 
-        &::after {
-            @extend %gray-line;
-            height: 77px;
-            background-color: $white;
-            right: 50%;
-            top: 67px;
-            transform: translateY(-50%);
-        }
+      &::after {
+        @extend %gray-line;
+        top: 50%;
+        right: 0;
+        width: 77px;
+        height: 1px;
+        background-color: $white;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  @include respond-to($mobile) {
+    &__img {
+      height: 823px;
     }
 
     &__consultant-wrapper {
-        margin: 16px 0 0;
-        @extend %display-flex;
-
-    }
-
-    &__text-sec {
-        text-align: start;
+      display: block;
     }
 
     &__consultant-info {
-margin: 0 0 0 32px;
+      margin: 16px 0 0;
     }
 
-    &__consultant-name {
-        font-size: 22px;
-        margin: 0 0 4px;
-    }
-
-    &__consultant-prof {
-        margin: 0 0 24px;
-    }
-
-.icon__phone,
-.icon__message,
-.icon__envelope {
-    width: 18px;
-    height: 18px;
-    fill: $white;
-    margin: 0 12px 0 0; 
-}
-
-&__consultant-link {
-     @extend %display-flex;
-     transition: opacity 0.3s ease;
-
-     @media (hover: hover) {
-       &:hover {
-         opacity: 0.6;
-       }
-     }
-}
-
-&__consultant-item:not(:last-child) {
-margin: 0 0 8px;
-}
-
-&__consultant-link-text {
-    font-size: 16px;
-}
-
-@include respond-to($l-tablet) {
-     &__img {
-background-image: url(/public/assets/images/offer-img-mob.png);
-height: 723px;
-     }
-
-      &__content-wrapper {
-        flex-direction: column;
-    }
-
-    &__or-block {
-       margin: 32px 0;
-
-        &::before {
-            @extend %gray-line;
-            height: 1px;
-            width: 77px;
-            background-color: $white;
-            top: 50%;
-            right: -132px;
-           
-            transform: translateX(-50%);
-        }
-
-        &::after {
-            @extend %gray-line;
-             height: 1px;
-            width: 77px;
-            background-color: $white;
-            top: 50%;
-            right: 0;
-            transform: translateX(-50%);
-        }
-    }
-}
-
-@include respond-to($mobile) {
-     &__img {
-height: 823px;
-     }
-
-     &__consultant-wrapper {
-        display: block;
-     }
-
-     &__consultant-info  {
-        margin: 0;
-     }
-
-     &__consultant-info {
-        margin: 16px 0 0;
-     }
-
-      &__wrapper {
-padding: 30px 10px 44px 10px;
-
+    &__wrapper {
+      padding: 30px 10px 44px;
     }
 
     &__subtitle {
-        margin: 0 auto 32px auto;
-        max-width: 332px;
+      max-width: 332px;
+      margin: 0 auto 32px;
     }
 
     &__title {
-        max-width: 240px;
-        margin: 0 auto 16px auto;
+      max-width: 240px;
+      margin: 0 auto 16px;
     }
+  }
+
+  @include respond-to($mobile) {
+    &__consultant-wrapper {
+      display: flex;
+      flex-direction: column;
     }
 
-    @include respond-to($mobile) {
-      &__consultant-wrapper {
-       display: flex;
-       flex-direction: column;
-      }
-
-      &__text-sec {
-        text-align: center;
-      }
+    &__text-sec {
+      text-align: center;
     }
-    
+  }
 }

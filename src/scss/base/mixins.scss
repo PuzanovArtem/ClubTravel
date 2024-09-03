@@ -2,7 +2,7 @@ $s-mobile: 374px;
 $mobile: 575px;
 $tablet: 767px;
 $l-tablet: 1023px;
-$lapTop: 1219px;
+$lap-top: 1219px;
 $desktop: 1499px;
 
 @mixin respond-to($breakpoint) {
@@ -11,5 +11,3 @@ $desktop: 1499px;
   }
 }
 
-///////приклад використання
-/// @include respond-to($xxl-LapTop) { }

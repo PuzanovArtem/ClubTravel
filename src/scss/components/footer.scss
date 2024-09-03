@@ -7,15 +7,15 @@
     padding: 0 0 110px;
   }
 
-  .icon__clock,
-  .icon__message,
-  .icon__phone,
-  .icon__location {
-    fill: $green;
-    width: 20px;
+  .icon--clock,
+  .icon--message,
+  .icon--phone,
+  .icon--location {
+     width: 20px;
     height: 20px;
-margin: 0 12px 0 0;
-padding: 0;
+    margin: 0 12px 0 0;
+    padding: 0;
+    fill: $green;
   }
 
   &__info {
@@ -27,10 +27,10 @@ padding: 0;
   }
 
   &__title {
+    margin: 0 0 24px;
     font-size: 16px;
     line-height: 1.4;
     color: $gray;
-    margin: 0 0 24px;
     text-transform: uppercase;
   }
 
@@ -40,9 +40,9 @@ padding: 0;
   }
 
   &__popular-country-item {
+    margin: 0 0 10px;
     font-size: 18px;
     line-height: 1.4;
-    margin: 0 0 10px;
     transition: color 0.3s ease;
 
     @media (hover: hover) {
@@ -53,10 +53,10 @@ padding: 0;
   }
 
   &__contact-subtitle {
+     margin: 0 0 24px;
     font-size: 16px;
-    font-weight: 600;
     line-height: 1.4;
-    margin: 0 0 24px;
+    font-weight: 600;
   }
 
   &__contact-item:not(:last-child) {
@@ -77,7 +77,6 @@ padding: 0;
     line-height: 1.4;
     color: $blue;
     text-decoration: underline;
-
     transition: color 0.3s ease;
 
     &:hover {
@@ -89,15 +88,15 @@ padding: 0;
     @extend %position-rel;
     padding: 0 5px 0 0;
 
-    &:after {
-      content: "";
+    &::after {
+      content: '';
       position: absolute;
-      width: 1px;
-      height: 70%;
       top: 50%;
       right: 0;
-      transform: translateY(-50%);
+      width: 1px;
+      height: 70%;
       background-color: $gray;
+      transform: translateY(-50%);
     }
   }
 
@@ -108,9 +107,9 @@ padding: 0;
   &__social-link {
     font-size: 16px;
     line-height: 1.4;
+    color: transparent;
     background: linear-gradient(to right, #f48f0c, #fd1d1d, #f95d1b);
     -webkit-background-clip: text;
-    color: transparent;
   }
 
   &__social {
@@ -126,22 +125,19 @@ padding: 0;
   }
 
   &__bottom-wrapper {
+    @extend %display-center;
     padding: 15px 0;
     background: #f4f4f4;
   }
 
   &__bottom-text {
-    color: #575757;
-    margin: 0 16px 0 0;
     align-items: end;
+    margin: 0 16px 0 0;
+    color: #575757;
   }
 
   &__bottom-link {
     font-size: 14px;
-  }
-
-  &__bottom-wrapper {
-    @extend %display-center;
   }
 
   @include respond-to($l-tablet) {
@@ -173,9 +169,9 @@ padding: 0;
     }
 
     &__social {
-      margin: 62px 0 0 0;
-      padding: 0;
       display: flex;
+      margin: 62px 0 0;
+      padding: 0;
     }
 
     &__popular-country {
@@ -196,10 +192,11 @@ padding: 0;
 }
 
 .fb-page {
+  overflow: hidden;
   width: 340px;
   height: auto;
-  overflow: hidden;
 }
+
 .fb-page .fb_iframe_widget_fluid {
   width: 340px !important;
   height: 130px !important;
@@ -207,10 +204,11 @@ padding: 0;
 
 @include respond-to($mobile) {
   .fb-page {
+    display: inline-block !important;
     width: 290px;
     height: auto;
-    display: inline-block !important;
   }
+  
   .fb-page .fb_iframe_widget_fluid {
     width: 290px !important;
     height: 130px !important;

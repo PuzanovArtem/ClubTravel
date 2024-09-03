@@ -1,6 +1,5 @@
 .search-content {
-margin: -70px 0 80px 0;
-
+  margin: -70px 0 80px;
 
   &__filter {
     @extend %display-jc-sb;
@@ -16,16 +15,16 @@ margin: -70px 0 80px 0;
   }
 
   &__filter-text {
+    margin: 0 20px 0 0;
     font-size: 24px;
     line-height: 1.4;
-    margin: 0 20px 0 0;
   }
 
-  .icon__calendar-euro {
+  .icon--calendar-euro {
     width: 25px;
     height: 21px;
-    fill: $primary;
     margin: 0 12px 0 0;
+    fill: $primary;
     transition: fill 0.3s ease;
   }
 
@@ -33,21 +32,24 @@ margin: -70px 0 80px 0;
   &__filter-cal-btn {
     @extend %display-flex;
     justify-content: center;
+    display: flex;
+    margin: 0 35px 0 0;
+    padding: 11px 17px 12px 13px;
     border: 1px solid $primary;
     border-radius: 6px;
-    background: $white;
     color: $primary;
-    padding: 11px 17px 12px 13px;
-    margin: 0 35px 0 0;
-    transition: background 0.3s ease, color 0.3s ease;
-    display: flex;
+    background: $white;
+    transition:
+      background 0.3s ease,
+      color 0.3s ease;
+  
 
     @media (hover: hover) {
       &:hover {
-        background: $primary;
         color: $white;
+        background: $primary;
 
-        .icon__calendar-euro {
+        .icon--calendar-euro {
           fill: $white;
         }
       }
@@ -65,31 +67,33 @@ margin: -70px 0 80px 0;
 
   &__filter-cal-block {
     @extend %display-flex;
-    padding-left: 21px;
     position: relative;
+    padding-left: 21px;
 
-    &:after {
-        @extend %gray-line;
-        right: auto;
-        left: 0;
+    &::after {
+      @extend %gray-line;
+      right: auto;
+      left: 0;
     }
   }
 
-  .icon__list {
+  .icon--list {
     width: 25px;
     height: 21px;
-    fill: $primary;
     margin: 0 12px 0 0;
+    fill: $primary;
     transition: fill 0.3s ease;
   }
 
-  .icon__calendar-euro-green {
+  .icon_calendar-euro {
+    width: 25px;
+    height: 21px;
+    margin: 0 12px 0 0;
     fill: $green;
   }
 
   &__filter-cal-text {
     font-size: 24px;
-
   }
 
   &__filter-select-wrapper,
@@ -98,28 +102,20 @@ margin: -70px 0 80px 0;
   }
 
   &__filter-select-title {
-    color: $gray;
     margin: 0 12px 0 0;
+    color: $gray;
   }
 
   &__select-custom {
-    margin: 0 0 0 10px;
     width: 200px;
+    margin: 0 0 0 10px;
   }
 
-  // &__hotel-list {
-  //     margin: 35px 0 0;
-  // }
-
   &__hotel-item {
-    // display: flex;
-    // justify-content: space-between;
-
     position: relative;
-
     display: grid;
-    gap: 40px;
     grid-template-columns: 380px 294px 167px 1fr;
+    gap: 40px;
   }
 
   &__hotel-items {
@@ -127,13 +123,13 @@ margin: -70px 0 80px 0;
     padding: 35px 0 40px;
 
     &::after {
-      content: "";
+      content: '';
       position: absolute;
+      bottom: 0;
+      left: 0;
       width: 100%;
       height: 1px;
       background: $light-gray;
-      bottom: 0;
-      left: 0;
     }
   }
 
@@ -160,7 +156,7 @@ margin: -70px 0 80px 0;
     margin: 12px 0 0;
   }
 
-  .icon__location {
+  .icon--location {
     width: 10px;
     height: 14px;
     fill: $green;
@@ -190,7 +186,7 @@ margin: -70px 0 80px 0;
     }
   }
 
-  .icon__arrow-right {
+  .icon--arrow-right {
     width: 24px;
     height: 24px;
     margin: 0 0 0 20px;
@@ -202,7 +198,7 @@ margin: -70px 0 80px 0;
   }
 
   &__hotel-stars,
-  &__hotel-short-info-item {
+  &__short-info-item {
     @extend %display-flex;
   }
 
@@ -214,13 +210,13 @@ margin: -70px 0 80px 0;
   //  margin: 0 33px 0 40px;
   // }
 
-  .icon__star {
+  .icon--star {
     width: 18px;
     height: 18px;
     fill: #f5c213;
   }
 
-  &__hotel-short-info-item:not(:last-child) {
+  &__short-info-item:not(:last-child) {
     margin: 0 0 24px;
   }
 
@@ -228,10 +224,10 @@ margin: -70px 0 80px 0;
     margin: 0 4px 0 0;
   }
 
-  .icon__clock,
-  .icon__cutlery,
-  .icon__house,
-  .icon__sun {
+  .icon--clock,
+  .icon--cutlery,
+  .icon--house,
+  .icon--sun {
     width: 18px;
     height: 18px;
     margin: 0 18px 0 0;
@@ -250,7 +246,10 @@ margin: -70px 0 80px 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transition: background 0.5s ease, height 0.5s ease-in-out, box-shadow 0.5s ease;
+    transition:
+      background 0.5s ease,
+      height 0.5s ease-in-out,
+      box-shadow 0.5s ease;
   }
 
   &__hotel-offer-card.active {
@@ -301,7 +300,7 @@ margin: -70px 0 80px 0;
 
   .swiper-button-next::after,
   .swiper-button-prev::after {
-    content: "";
+    content: '';
   }
 
   &__arow-r,
@@ -319,7 +318,7 @@ margin: -70px 0 80px 0;
 
   .swiper-button-next::before,
   .swiper-button-prev::before {
-    content: "";
+    content: '';
     width: 24px;
     height: 24px;
     position: absolute;
@@ -411,7 +410,7 @@ margin: -70px 0 80px 0;
 
   &__thead-tr::after,
   &__tbody-tr::after {
-    content: "";
+    content: '';
     position: absolute;
     bottom: 0;
     left: 23px;
@@ -459,7 +458,7 @@ margin: -70px 0 80px 0;
     border-radius: 6px;
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.1);
 
-    @include respond-to($lapTop) {
+    @include respond-to($lap-top) {
       & {
         width: 33.333% !important;
       }
@@ -596,9 +595,9 @@ margin: -70px 0 80px 0;
   }
 
   .fc-day-selected {
-  background-color: #f68521;
-  color: white;
-}
+    background-color: #f68521;
+    color: white;
+  }
 
   &__calendar-subtitle {
     font-size: 24px;
@@ -611,7 +610,7 @@ margin: -70px 0 80px 0;
     }
 
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       width: 100%;
       height: 1px;
@@ -625,7 +624,7 @@ margin: -70px 0 80px 0;
     }
   }
 
-  @include respond-to($lapTop) {
+  @include respond-to($lap-top) {
     &__filter-text {
       font-size: 18px;
       margin: 0 10px 0 0;
@@ -650,8 +649,6 @@ margin: -70px 0 80px 0;
   }
 
   @include respond-to($l-tablet) {
-
-
     &__filter {
       display: block;
     }
@@ -691,20 +688,18 @@ margin: -70px 0 80px 0;
     }
 
     &__filter-cal-block {
-    padding-left: 0;
+      padding-left: 0;
 
-    &:after {
+      &:after {
         background: transparent;
         width: 0;
         height: 0;
+      }
     }
   }
-  
-  }
 
-
-  @media(max-width:875px) {
-margin: 60px 0 80px 0;
+  @media (max-width: 875px) {
+    margin: 60px 0 80px 0;
   }
 
   @include respond-to($tablet) {
@@ -742,11 +737,11 @@ margin: 60px 0 80px 0;
       max-width: 100%;
     }
 
-    &__hotel-short-info-item:not(:last-child) {
+    &__short-info-item:not(:last-child) {
       margin: 0;
     }
 
-    &__hotel-short-info {
+    &__short-info {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       align-items: center;
@@ -817,13 +812,12 @@ margin: 60px 0 80px 0;
     }
 
     &__filter-cal-text {
-    font-size: 16px;
-    
-   }
+      font-size: 16px;
+    }
 
-   &__filter-cal-block {
-margin-bottom: 12px;
-   }
+    &__filter-cal-block {
+      margin-bottom: 12px;
+    }
 
     &__filter-wrapper-cal.active {
       flex-direction: column;
@@ -903,7 +897,7 @@ margin-bottom: 12px;
       order: 5;
     }
 
-    &__hotel-short-info {
+    &__short-info {
       grid-template-columns: repeat(2, 1fr);
       gap: 12px;
     }
@@ -962,7 +956,7 @@ margin-bottom: 12px;
       z-index: 20;
     }
 
-    .icon__location {
+    .icon--location {
       fill: $white;
     }
 
@@ -997,5 +991,4 @@ margin-bottom: 12px;
       align-items: start;
     }
   }
-
 }

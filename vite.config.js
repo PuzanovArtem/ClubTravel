@@ -57,6 +57,7 @@ export default defineConfig({
         resolve(__dirname, "src/html/modules"),
         resolve(__dirname, "src/html/pages/search-result"),
         resolve(__dirname, "src/html/pages/hotel-card/"),
+        resolve(__dirname, "src/html/pages/directions-tour/"),
       ]
     }),
   ],
@@ -67,6 +68,7 @@ export default defineConfig({
         main: resolve(__dirname, "/index.html"),
         search: resolve(__dirname, "/src/pages/search-result/search-result.html"),
         card: resolve(__dirname, "/src/pages/hotel-card/hotel-card.html"),
+        directions: resolve(__dirname, "/src/pages/directions-tour/directions-tour.html"),
       },
     },
   },

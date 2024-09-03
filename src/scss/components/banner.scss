@@ -1,78 +1,76 @@
 .banner {
-max-width: 1920px;
-margin: 0 auto;
   position: relative;
+  max-width: 1920px;
+  margin: 0 auto;
 
   &__img {
-    background-image: url(/public/assets/images/banner-img.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 320px;
     width: 100%;
     max-width: 1920px;
+    height: 320px;
     margin: 0 auto;
+    background-image: url("/public/assets/images/banner-img.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     clip-path: polygon(100% 0, 100% 100%, 53% 90%, 33% 91%, 0 100%, 0 0);
   }
 
   &__card-img {
-clip-path: polygon(50% 0%, 100% 0, 100% 100%, 94% 90%, 89% 85%, 84% 83%, 64% 85%, 38% 94%, 0 100%, 0 0);
+    clip-path: polygon(50% 0%, 100% 0, 100% 100%, 94% 90%, 89% 85%, 84% 83%, 64% 85%, 38% 94%, 0 100%, 0 0);
   }
 
   &__block {
+    position: absolute;
+    bottom: 35px;
+    left: 98px;
+    display: none;
     width: 304px;
     height: 85px;
+    padding: 12px 19px;
     border-radius: 8px;
     background: $white;
-    padding: 12px 19px;
-    position: absolute;
-    left: 98px;
-    bottom: 35px;
-    display: none;
 
     &.active {
-    display: block;
+      display: block;
+    }
   }
-  }
-
- 
 
   &__block-title {
-    font-weight: 700;
-    font-size: 26px;
-    text-transform: uppercase;
     margin-right: 15px;
+    font-size: 26px;
+    font-weight: 700;
+    text-transform: uppercase;
   }
 
   &__stars-list {
-    display: flex;
     align-items: start;
+    display: flex;
   }
 
   &__star-item:not(:last-child) {
     margin-right: 4px;
   }
 
-  .icon__star {
+  .icon--star {
     width: 18px;
     height: 18px;
     fill: $yellow;
   }
 
-  .icon__cross {
+  .icon--cross {
+    display: flex;
+    flex-direction: column;
     width: 10px;
     height: 10px;
     fill: $yellow;
     rotate: 45deg;
-    display: flex;
-    flex-direction: column;
   }
 
-  .icon__location {
+  .icon--location {
     width: 10px;
     height: 15px;
-    fill: $green;
     margin-right: 9px;
+    fill: $green;
   }
 
   &__block-location-wrapper {
@@ -80,62 +78,60 @@ clip-path: polygon(50% 0%, 100% 0, 100% 100%, 94% 90%, 89% 85%, 84% 83%, 64% 85%
     margin-top: 8px;
   }
 
-  
-
   &__block-title-wrapper {
-    display: flex;
     justify-content: space-between;
+    display: flex;
   }
 
   @include respond-to($l-tablet) {
-    &__img, &__card-img {
-      background-image: url(/public/assets/images/banner-img-mob.png);
+    &__img,
+    &__card-img {
+      background-image: url("/public/assets/images/banner-img-mob.png");
     }
 
-&__card-img {
-  clip-path: none;
-}
+    &__card-img {
+      clip-path: none;
+    }
 
-&__block {
-  left: 35px;
-  bottom: 35px;
-}
+    &__block {
+      bottom: 35px;
+      left: 35px;
+    }
   }
 
   @include respond-to($mobile) {
-    &__img, &__card-img {
+    &__img,
+    &__card-img {
       height: 191px;
       clip-path: none;
     }
 
     &__block {
-  left: 18px;
-  bottom: 18px;
-}
+      bottom: 18px;
+      left: 18px;
+    }
   }
 
   @include respond-to($s-mobile) {
-&__block {
-    width: 240px;
-    height: 65px;
-    left: 14px;
-  bottom: 14px;
-  }
+    &__block {
+      bottom: 14px;
+      left: 14px;
+      width: 240px;
+      height: 65px;
+    }
 
-  &__block-title {
-    font-size: 20px;
-  }
+    &__block-title {
+      font-size: 20px;
+    }
 
-  .icon__star {
-    width: 12px;
-    height: 12px;
-   
-  }
+    .icon--star {
+      width: 12px;
+      height: 12px;
+    }
 
-  .icon__cross {
-    width: 6px;
-    height: 6px;
-
-  }
+    .icon--cross {
+      width: 6px;
+      height: 6px;
+    }
   }
 }

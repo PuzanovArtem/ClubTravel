@@ -4,6 +4,6 @@ import '../../js/modules/accordion.js';
 import '../../js/modules/vcalendar.js';
 import { cardSlider } from '../../js/libs/swiper.js';
 
-document.addEventListener('DOMContentLoaded',()=>{
+document.addEventListener('DOMContentLoaded',() => {
     cardSlider()
 })

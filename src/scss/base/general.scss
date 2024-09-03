@@ -1,15 +1,16 @@
-@import "/src/scss/base/vars.scss";
-@import "/src/scss/base/fonts.scss";
+@import "/src/scss/base/vars";
+@import "/src/scss/base/fonts";
 
 body,
 html {
   margin: 0;
   padding: 0;
   font-family: $fontFamilyBase;
+    font-size: $fontSizeBase;
   font-weight: $fontWeightBase;
-  font-size: $fontSizeBase;
-  background: $white;
   color: $text;
+  background: $white;
+
 }
 
 body.no-scroll {
@@ -23,8 +24,8 @@ body.no-scroll {
 }
 
 .container {
-  margin: 0 auto;
-  max-width: $maxWidthContainer;
-  padding: 0 15px;
   position: relative;
+  max-width: $maxWidthContainer;
+  margin: 0 auto;
+  padding: 0 15px;
 }
