@@ -1,4 +1,59 @@
-input[type="checkbox"] {
-    fill: $white;
-    accent-color: $primary;
+.directions {
+&__sidebar-title {
+    margin-bottom: 32px;
+    font-size: 26px;
+    font-weight: 700;
+}    
+
+  &__checkbox {
+    cursor: pointer;
+    position: relative;
+    display: block;
+    margin-bottom: 8px;
+    padding-top: 2px;
+    padding-left: 8px;
+    font-size: 16px;
+
+    input[type='checkbox'] {
+      visibility: hidden;
+    }
+
+    &-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 24px;
+      height: 24px;
+      border: 2px solid $gray;
+      border-radius: 4px;
+      background-color: transparent;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 3px;
+        left: 7px;
+        display: none;
+        width: 6px;
+        height: 12px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+      }
+    }
+
+    input:checked ~ &-container {
+      border: 2px solid $primary;
+      background-color: $primary;
+
+      &::after {
+        display: block;
+      }
+    }
+  }
+
+  &__tours {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(273px, 1fr));
+  }
 }

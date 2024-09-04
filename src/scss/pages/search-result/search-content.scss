@@ -149,34 +149,34 @@
 
   &__hotel-location-block {
     @extend %display-flex;
-    border: 1px solid $light-gray;
-    border-radius: 6px;
-    padding: 5px 11px;
     width: 214px;
     margin: 12px 0 0;
+    padding: 5px 11px;
+    border: 1px solid $light-gray;
+    border-radius: 6px;
   }
 
   .icon--location {
     width: 10px;
     height: 14px;
+     margin: 0 9px 0 0;
     fill: $green;
-    margin: 0 9px 0 0;
   }
 
   &__hotel-text {
-    color: $gray;
     overflow: hidden;
     display: -webkit-box;
+    margin: 11px 0 0;
+    color: $gray;
     -webkit-line-clamp: 5;
     -webkit-box-orient: vertical;
-    margin: 11px 0 0;
   }
 
   &__hotel-link {
-    font-size: 16px;
-    color: $gray;
     @extend %display-flex;
     margin: 35px 0 0;
+    font-size: 16px;
+    color: $gray;
     transition: transform 0.3s ease;
 
     @media (hover: hover) {
@@ -206,10 +206,6 @@
     margin: 0 0 24px;
   }
 
-  // &__hotel-static {
-  //  margin: 0 33px 0 40px;
-  // }
-
   .icon--star {
     width: 18px;
     height: 18px;
@@ -235,17 +231,16 @@
   }
 
   &__hotel-offer-card {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
     width: 200px;
     // height: 271px;
     height: 240px;
-    box-shadow: 0px 5px 10px 0px #0000001a;
-    border-radius: 6px;
+    margin: 0 0 0 auto;
     padding: 20px;
-    margin-right: 0;
-    margin-left: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    border-radius: 6px;
+    box-shadow: 0 5px 10px 0 #0000001a;
     transition:
       background 0.5s ease,
       height 0.5s ease-in-out,
@@ -253,20 +248,20 @@
   }
 
   &__hotel-offer-card.active {
-    background: rgba(37, 82, 150, 0.059);
-    box-shadow: none;
     height: 274px;
     padding-bottom: 40px;
-    border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    background: rgba(37, 82, 150, 0.059);
+    box-shadow: none;
   }
 
   &__hotel-offer-title {
+    margin: 32px 0 0;
     font-size: 18px;
     line-height: 1.4;
     font-weight: 400;
     text-align: center;
-    margin: 32px 0 0;
 
     span {
       font-size: 24px;
@@ -278,15 +273,15 @@
   }
 
   &__hotel-offer-btn {
-    padding: 12px;
     width: 100%;
+    padding: 12px;
   }
 
   .swiper-container {
-    max-width: 380px;
     overflow: hidden;
-    border-radius: 10px;
     position: relative;
+    max-width: 380px;
+    border-radius: 10px;
   }
 
   .swiper-wrapper {
@@ -319,14 +314,14 @@
   .swiper-button-next::before,
   .swiper-button-prev::before {
     content: '';
-    width: 24px;
-    height: 24px;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    width: 24px;
+    height: 24px;
     border-radius: 50px;
     background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
 
     @media (hover: hover) {
       &:hover {
@@ -354,8 +349,8 @@
   }
 
   &__booking-table-container {
-    max-height: 0;
     overflow: hidden;
+    max-height: 0;
     transition: max-height 0.3s ease-out;
   }
 
@@ -369,15 +364,15 @@
   }
 
   &__booking-table {
+    position: relative;
     width: 100%;
-    border-collapse: collapse;
-    background-color: rgba(37, 82, 150, 0.059);
-    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 0 21px 0 25px;
     border-radius: 10px;
     border-top-right-radius: 0;
-    padding: 0 21px 0 25px;
-    position: relative;
-    margin-bottom: 20px;
+    border-collapse: collapse;
+    background-color: rgba(37, 82, 150, 0.059);
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
   }
 
   &__th,
@@ -391,8 +386,8 @@
   }
 
   &__th {
-    color: $table-gray;
     font-weight: 400;
+    color: $table-gray;
   }
 
   &__td {
@@ -412,9 +407,9 @@
   &__tbody-tr::after {
     content: '';
     position: absolute;
+    right: 23px;
     bottom: 0;
     left: 23px;
-    right: 23px;
     height: 1px;
     background-color: $light-gray;
   }
@@ -424,8 +419,8 @@
   }
 
   &__choose-btn {
-    padding: 8px 16px;
     width: 100%;
+    padding: 8px 16px;
   }
 
   &__choose-btn:hover {
@@ -456,7 +451,7 @@
     width: 25% !important;
     border: 1px solid $light-gray;
     border-radius: 6px;
-    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
 
     @include respond-to($lap-top) {
       & {
@@ -478,18 +473,22 @@
   }
 
   .fc .fc-multimonth {
-    gap: 46px;
+    overflow: hidden;
     flex-wrap: nowrap;
-    border: none;
+    gap: 46px;
     padding: 9px;
+    border: none;
   }
 
   .fc .fc-view-harness {
     height: 288px !important;
     margin: 0 88px;
   }
+
   .fc .fc-multimonth-title {
-    padding: 1em 0px 0.4em 0;
+    padding: 1em 0 0.4em;
+    font-size: 16px;
+    text-transform: capitalize;
   }
 
   .fc .fc-col-header-cell-cushion {
@@ -507,8 +506,8 @@
   }
 
   .fc .fc-multimonth-daygrid {
-    border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
   }
 
   .fc-direction-ltr .fc-daygrid-more-link,
@@ -521,17 +520,15 @@
   }
 
   .custom-div {
-    text-align: end;
-    margin-top: 7px;
-    margin-bottom: 4px;
+    margin: 7px 0 4px;
     text-align: center;
   }
 
   .fc-no-event {
-    background-color: #f0f0f0;
-    color: #d0d0d0;
-    pointer-events: none;
     opacity: 0.5;
+    pointer-events: none;
+    color: #d0d0d0;
+    background-color: #f0f0f0;
   }
 
   .fc .fc-daygrid-day-top {
@@ -543,8 +540,8 @@
   }
 
   .fc {
-    max-height: 0;
     overflow: hidden;
+    max-height: 0;
     transition: max-height 0.5s ease-out;
   }
 
@@ -564,8 +561,8 @@
   .fc .fc-button {
     position: absolute;
     top: 50%;
-    transform: translateX(-50%);
     z-index: 100;
+    transform: translateX(-50%);
   }
 
   .fc .fc-next-button {
@@ -577,34 +574,30 @@
   }
 
   .fc .fc-button-primary {
-    background-color: rgba(62, 119, 57, 0.4);
+     width: 48px;
+    height: 48px;
+    border-radius: 50%;
     border-color: rgba(62, 119, 57, 0.4);
     color: rgba(62, 119, 57, 1);
-    border-radius: 50%;
-    width: 48px;
-    height: 48px;
+    background-color: rgba(62, 119, 57, 0.4);
   }
 
   .fc .fc-toolbar.fc-header-toolbar {
     margin: 11px 0;
   }
 
-  .fc .fc-multimonth-title {
-    font-size: 16px;
-    text-transform: capitalize;
-  }
-
   .fc-day-selected {
-    background-color: #f68521;
     color: white;
+    background-color: #f68521;
   }
 
   &__calendar-subtitle {
-    font-size: 24px;
-    margin: 48px 0 10px 0;
     position: relative;
-    padding: 0 0 8px;
     display: none;
+    margin: 48px 0 10px;
+    padding: 0 0 8px;
+    font-size: 24px;
+
     span {
       font-weight: 700;
     }
@@ -612,10 +605,10 @@
     &::after {
       content: '';
       position: absolute;
-      width: 100%;
-      height: 1px;
       bottom: 0;
       left: 0;
+      width: 100%;
+      height: 1px;
       background-color: $light-gray;
     }
 
@@ -626,8 +619,8 @@
 
   @include respond-to($lap-top) {
     &__filter-text {
-      font-size: 18px;
       margin: 0 10px 0 0;
+      font-size: 18px;
     }
 
     &__select-custom {
@@ -658,9 +651,9 @@
     }
 
     &__filter-text {
-      text-align: center;
       margin: 0 0 16px;
       font-size: 20px;
+      text-align: center;
     }
 
     &__hotel-item {
@@ -669,10 +662,9 @@
 
     &__hotel-offer-card {
       grid-column: span 3;
-      // max-width: 420px;
       width: 100%;
-      margin: 0 auto;
       height: 180px;
+      margin: 0 auto;
     }
 
     &__hotel-offer-btn {
@@ -690,16 +682,39 @@
     &__filter-cal-block {
       padding-left: 0;
 
-      &:after {
-        background: transparent;
+      &::after {
         width: 0;
         height: 0;
+        background: transparent;
       }
+    }
+
+    .fc .fc-button {
+      position: static;
+      padding: 0;
+      transform: none;
+    }
+
+    .fc .fc-view-harness {
+      margin: 0;
+    }
+
+    .fc .fc-toolbar {
+      justify-content: end;
+    }
+
+    .fc .fc-prev-button {
+      margin-right: 15px;
+    }
+
+    .fc .fc-button-primary {
+        width: 40px;
+        height: 40px;
     }
   }
 
   @media (max-width: 875px) {
-    margin: 60px 0 80px 0;
+    margin: 60px 0 80px;
   }
 
   @include respond-to($tablet) {
@@ -711,8 +726,8 @@
 
     &__filter-btn {
       order: 2;
-      margin: 19px 0 0;
       width: 100%;
+      margin: 19px 0 0;
     }
 
     &__filter-select-wrapper {
@@ -742,9 +757,9 @@
     }
 
     &__short-info {
+      align-items: center;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      align-items: center;
     }
 
     &__booking-table {
@@ -752,29 +767,29 @@
     }
 
     &__booking-tab {
+      position: relative;
       display: block;
-      border-top-left-radius: 0;
       width: 100%;
-      border-collapse: collapse;
-      background-color: rgba(37, 82, 150, 0.059);
-      box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.1);
+      margin-bottom: 15px;
+      padding: 0 21px 18px 25px;
       border-radius: 10px;
       border-top-right-radius: 0;
-      padding: 0 21px 18px 25px;
-      position: relative;
-      margin-bottom: 15px;
+      border-top-left-radius: 0;
+      border-collapse: collapse;
+      background-color: rgba(37, 82, 150, 0.059);
+      box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
     }
 
     &__booking-table-mob {
       width: 100%;
+      margin: 13px 0 16px;
       border-collapse: collapse;
-      margin: 13px 0 16px 0;
     }
 
     &__tbody-mob {
-      gap: 0 20px;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
+      gap: 0 20px;
     }
 
     &__th,
@@ -801,14 +816,10 @@
       width: 100%;
     }
 
-    .fc .fc-view-harness {
-      margin: 0 74px;
-    }
-
     &__calendar-subtitle {
-      font-size: 16px;
-      margin: 38px 0 0 0;
       display: none;
+      margin: 38px 0 0;
+      font-size: 16px;
     }
 
     &__filter-cal-text {
@@ -822,6 +833,28 @@
     &__filter-wrapper-cal.active {
       flex-direction: column;
     }
+
+    .fc .fc-button-primary {
+      position: relative;
+      width: 28px;
+      height: 28px;
+    }
+
+    .fc .fc-next-button {
+    right: 0;
+}
+
+ .fc .fc-prev-button {
+      margin-right: 35px;
+    }
+
+    .fc-button .fc-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 1.2em;
+    transform: translate(-50%, -50%);
+}
   }
 
   @include respond-to($mobile) {
@@ -838,14 +871,15 @@
     }
 
     &__filter-text {
+      margin: 0 auto 16px;
       text-align: start;
-      margin: 0 auto 16px auto;
     }
 
     &__select-custom {
       width: 100%;
       margin: 0 0 0 5px;
     }
+    
     .select {
       flex-grow: 1;
     }
@@ -855,17 +889,13 @@
     }
 
     &__title-mob {
+      order: 2;
       display: flex;
     }
 
     &__hotel-item {
       grid-template-columns: 1fr;
       gap: 15px;
-    }
-
-    &__hotel-offer-card,
-    &__hotel-static {
-      grid-column: span 1;
     }
 
     &__title-wrapper,
@@ -881,20 +911,14 @@
       order: 1;
     }
 
-    &__title-mob {
-      order: 2;
-    }
-
     &__hotel-static {
       order: 3;
+      grid-column: span 1;
     }
 
     &__hotel-info {
       order: 4;
-    }
-
-    &__hotel-offer-card {
-      order: 5;
+      max-width: 100%;
     }
 
     &__short-info {
@@ -902,17 +926,13 @@
       gap: 12px;
     }
 
-    &__hotel-info {
-      max-width: 100%;
-    }
-
     &__hotel-link {
       display: none;
     }
 
     &__hotel-offer-title {
-      font-size: 16px;
       margin: 0;
+      font-size: 16px;
 
       span {
         font-size: 16px;
@@ -920,13 +940,19 @@
     }
 
     &__hotel-offer-card {
+      order: 5;
+      grid-column: span 1;
       height: 103px;
-      padding: 12px 15px 15px 15px;
+      padding: 12px 15px 15px;
+
+      &.active {
+        height: 103px;
+      }
     }
 
     &__hotel-offer-btn {
       width: 160px;
-      margin: 12px auto 0 auto;
+      margin: 12px auto 0;
     }
 
     .swiper-container {
@@ -943,17 +969,17 @@
     }
 
     &__hotel-location-mob {
-      align-items: center;
-      display: flex;
-      padding: 6px 15px;
-      color: $white;
-      background: rgba(0, 0, 0, 0.5);
-      width: 222px;
-      border-radius: 6px;
       position: absolute;
       bottom: 10px;
       left: 10px;
+      align-items: center;
       z-index: 20;
+      display: flex;
+      width: 222px;
+      padding: 6px 15px;
+      border-radius: 6px;
+      color: $white;
+      background: rgba(0, 0, 0, 0.5);
     }
 
     .icon--location {
@@ -964,28 +990,28 @@
       grid-template-columns: repeat(1, 1fr);
     }
 
-    .fc .fc-button {
-      position: static;
-      transform: none;
-      padding: 0;
-    }
+    // .fc .fc-button {
+    //   position: static;
+    //   padding: 0;
+    //   transform: none;
+    // }
 
-    .fc .fc-view-harness {
-      margin: 0;
-    }
+    // .fc .fc-view-harness {
+    //   margin: 0;
+    // }
 
-    .fc .fc-toolbar {
-      justify-content: end;
-    }
+    // .fc .fc-toolbar {
+    //   justify-content: end;
+    // }
 
-    .fc .fc-prev-button {
-      margin-right: 15px;
-    }
+    // .fc .fc-prev-button {
+    //   margin-right: 15px;
+    // }
 
-    .fc .fc-button-primary {
-      width: 28px;
-      height: 28px;
-    }
+    // .fc .fc-button-primary {
+    //   width: 28px;
+    //   height: 28px;
+    // }
 
     &__filter-wrapper-cal.active {
       align-items: start;

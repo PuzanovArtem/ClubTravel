@@ -4,7 +4,7 @@
     max-width: 1920px;
     height: 570px;
     margin: 0 auto;
-    background-image: url("/public/assets/images/offer-img.png");
+    background-image: url("/public/assets/images/offer-img.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -124,7 +124,7 @@
   @include respond-to($l-tablet) {
     &__img {
       height: 723px;
-      background-image: url("/public/assets/images/offer-img-mob.png");
+      background-image: url("/public/assets/images/offer-img-mob.jpg");
     }
 
     &__content-wrapper {
