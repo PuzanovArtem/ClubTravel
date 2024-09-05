@@ -29,7 +29,6 @@
     "@html-eslint/eslint-plugin": "^0.26.0",
     "@html-eslint/parser": "^0.26.0",
     "eslint": "^9.9.0"
-
   },
   "dependencies": {
     "fullcalendar": "^6.1.15",
