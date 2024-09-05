@@ -161,3 +161,4 @@ document.querySelectorAll('.category__btns--svg').forEach(function(button) {
     this.classList.toggle('clicked');
   });
 });
+
