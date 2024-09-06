@@ -1,15 +1,15 @@
-.hotDeals {
+.hot-deals {
   margin-top: -25px;
-
+  margin-bottom: 113px;
   &__icon {
-    &.hotDeals__icon_triangle-down {
+    &.hot-deals__icon_triangle-down {
       fill: $primary;
       width: 10px;
       height: 5px;
       margin: 0 0 0 10px;
     }
 
-    &.hotDeals__icon_star {
+    &.hot-deals__icon_star {
       width: 18px;
       height: 18px;
       fill: #f5c213;
@@ -28,7 +28,7 @@
 
   &__head {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns:repeat(5, 190px) 200px;
   }
 
   &__head-cell {
@@ -76,7 +76,7 @@
       padding-left: 24px;
       height: 66px;
       display: grid;
-      grid-template-columns: repeat(6, 1fr);
+      grid-template-columns: repeat(5, 185px) 200px;
       align-items: center;
     }
   }
@@ -108,7 +108,7 @@
     color: #f68521;
     cursor: pointer;
     transition: all 0.2s;
-    padding: 0 0 0 49px;
+    padding: 0 0 0 70px;
 
     &_active {
       color: #222;
@@ -123,9 +123,9 @@
     }
 
     &-head {
-      padding: 18px 0 11px 24px;
+      padding: 18px 0 11px 30px;
       display: grid;
-      grid-template-columns: repeat(6, 1fr);
+      grid-template-columns: repeat(5, 185px) 200px;
       align-items: center;
 
       &-cell {
@@ -160,7 +160,7 @@
 
         &-wrapper {
           display: grid;
-          grid-template-columns: repeat(6, 1fr);
+          grid-template-columns: repeat(5, 185px) 200px;
         }
 
         &_active {
@@ -254,7 +254,8 @@
   &__dropdown {
     margin: 0 auto;
     margin-top: 20px;
-    padding: 0 12px 0 0;
+    margin-left: -15px;
+    padding: 0 12px 0 15px;
     width: 1149px;
     display: none;
     background: #f4f6fa;
@@ -267,7 +268,7 @@
     &-row {
       padding: 18px 0 20px;
       display: grid;
-      grid-template-columns: repeat(6, 1fr);
+      grid-template-columns: repeat(5, 185px) 200px;
       align-items: center;
       border-bottom: 1px solid #e2e2e2;
 
@@ -338,7 +339,7 @@
 }
 
 @media (max-width: 1188px) {
-  .hotDeals {
+  .hot-deals {
     padding: 0 25px;
 
     &__table {
@@ -352,7 +353,7 @@
     &__body {
       display: flex;
       flex-wrap: wrap;
-      gap: 25px;
+      gap: 15px;
     }
 
     &__body-row_active {
@@ -361,6 +362,7 @@
 
     &__body-row {
       height: 228px;
+      margin: 0 auto;
     }
 
     &__body-row-wrapper {
@@ -391,6 +393,7 @@
       margin: 20px auto 0;
       width: 100%;
       text-align: center;
+      padding: 0;
     }
 
     &__addition-head {
@@ -476,23 +479,23 @@
 }
 
 @media (max-width: 875px) {
-  .hotDeals {
-    margin: 100px 0 0;
+  .hot-deals {
+    margin: 100px 0 113px;
   }
 }
 
 @media (max-width: 425px) {
-  .hotDeals {
-      margin-top: 90px;
-      padding: 0;
-      padding-bottom: 25px;
+  .hot-deals {
+    margin-top: 90px;
+    padding: 0;
+    padding-bottom: 25px;
 
     &__table {
       width: 100%;
     }
 
     &__body {
-      gap: 0;
+      gap: 20px;
     }
 
     &__body-row_active {
@@ -505,14 +508,23 @@
     }
 
     &__body-row-wrapper {
-      margin: 0;
+      margin: 0 auto;
+      width: 270px;
+      padding: 20px 15px;
       padding-bottom: 25px;
     }
 
     &__body-cell {
       font-size: 16px;
       line-height: 22px;
+
+      &_hide {
+        &:last-of-type {
+          margin-right: 20px !important;
+        }
+      }
     }
+   
 
     &__body-btn {
       margin-top: 17px;
@@ -536,10 +548,15 @@
     &__dropdown {
       padding: 0 0 0 20px;
       width: 100%;
+      margin-left: -5px;
     }
 
     &__dropdown-row {
       padding-top: 27px;
+    }
+    &__addition-body-cell_hide {
+      display: block;
+      margin-right: 50px;
     }
   }
 }

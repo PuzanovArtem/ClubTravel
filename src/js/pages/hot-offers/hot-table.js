@@ -1,143 +1,118 @@
-// document.addEventListener('DOMContentLoaded', function () {
-// 	const buttons = document.querySelectorAll('.hot-table__btn.hot-table__btn_act');
-  
-// 	buttons.forEach(button => {
-// 	  button.addEventListener('click', function () {
-// 		const contentId = this.getAttribute('id').replace('button', 'content');
-// 		const hotTableRow = document.getElementById(contentId);
-// 		const tbodyBlock = this.closest('.hot-table__tbody');
-  
-// 		if (hotTableRow) {
-// 		  if (hotTableRow.style.maxHeight) {
-// 			hotTableRow.style.maxHeight = null;
-// 			tbodyBlock.classList.remove('with-shadow');
-// 			this.textContent = 'Открыть'; 
-// 		  } else {
-// 			hotTableRow.style.maxHeight = hotTableRow.scrollHeight + "px";
-// 			tbodyBlock.classList.add('with-shadow');
-// 			this.textContent = 'Закрыть'; 
-// 		  }
-// 		}
-// 	  });
-// 	});
-//   });
-
 document.addEventListener('DOMContentLoaded', () => {
-	const hotDealsRow = document.querySelectorAll('.hotDeals__body-row');
-	const hotDealsBtn = document.querySelectorAll('.hotDeals__body-btn');
-  
-	const hotDealsAddition = document.querySelectorAll('.hotDeals__addition');
-	const hotDealsAdditionRow = document.querySelectorAll('.hotDeals__addition-body-row');
-	const hotDealsAdditionDropDown = document.querySelectorAll('.hotDeals__addition-body-dropdown');
-	const hotDealsDropDown = document.querySelectorAll('.hotDeals__dropdown');
-  
-	const toggleActiveClassForHotDealsRow = index => {
-	  if (!hotDealsRow[index].classList.contains('hotDeals__body-row_active')) {
-		hotDealsRow.forEach(elem => {
-		  elem.classList.contains('hotDeals__body-row_active')
-			? elem.classList.remove('hotDeals__body-row_active')
-			: null;
-		});
-  
-		hotDealsRow[index].classList.add('hotDeals__body-row_active');
-	  } else {
-		hotDealsRow[index].classList.remove('hotDeals__body-row_active');
-	  }
-	};
-  
-	const toggleActiveClassForHotDealsBtn = index => {
-	  if (!hotDealsBtn[index].classList.contains('hotDeals__body-btn_active')) {
-		hotDealsBtn.forEach(elem => {
-		  elem.classList.contains('hotDeals__body-btn_active')
-			? elem.classList.remove('hotDeals__body-btn_active')
-			: null;
-		  elem.innerHTML = 'Открыть';
-		});
-  
-		hotDealsBtn[index].classList.add('hotDeals__body-btn_active');
-		hotDealsBtn[index].innerHTML = 'закрыть';
-	  } else {
-		hotDealsBtn[index].classList.remove('hotDeals__body-btn_active');
-		hotDealsBtn[index].innerHTML = 'Открыть';
-	  }
-	};
-  
-	const toggleActiveClassForHotDealsAddition = index => {
-	  if (!hotDealsAddition[index].classList.contains('hotDeals__addition_active')) {
-		hotDealsAddition.forEach(elem => {
-		  elem.classList.contains('hotDeals__addition_active')
-			? elem.classList.remove('hotDeals__addition_active')
-			: null;
-		});
-  
-		hotDealsAddition[index].classList.add('hotDeals__addition_active');
-	  } else {
-		hotDealsAddition[index].classList.remove('hotDeals__addition_active');
-	  }
-	};
-  
-	hotDealsBtn.forEach((elem, index) => {
-	  elem.addEventListener('click', () => {
-		toggleActiveClassForHotDealsRow(index);
-		toggleActiveClassForHotDealsBtn(index);
-		toggleActiveClassForHotDealsAddition(index);
-	  });
-	});
-  
-	const toggleActiveClassForHotDealsAdditionDropDown = index => {
-	  if (!hotDealsAdditionDropDown[index].classList.contains('hotDeals__addition-body-dropdown_active')) {
-		hotDealsAdditionDropDown.forEach(elem => {
-		  elem.classList.contains('hotDeals__addition-body-dropdown_active')
-			? elem.classList.remove('hotDeals__addition-body-dropdown_active')
-			: null;
-  
-		  elem.childNodes[0].textContent = 'открыть предложения';
-		});
-  
-		hotDealsAdditionDropDown[index].classList.add('hotDeals__addition-body-dropdown_active');
-		hotDealsAdditionDropDown[index].childNodes[0].textContent = 'скрыть предложения';
-	  } else {
-		hotDealsAdditionDropDown[index].classList.remove('hotDeals__addition-body-dropdown_active');
-		hotDealsAdditionDropDown[index].childNodes[0].textContent = 'открыть предложения';
-	  }
-	};
-  
-	const toggleActiveClassForHotDealsAdditionRow = index => {
-	  if (
-		!hotDealsAdditionDropDown[index].parentNode.parentNode.classList.contains('hotDeals__addition-body-row_active')
-	  ) {
-		hotDealsAdditionRow.forEach(elem => {
-		  elem.classList.contains('hotDeals__addition-body-row_active')
-			? elem.classList.remove('hotDeals__addition-body-row_active')
-			: null;
-		});
-		hotDealsAdditionDropDown[index].parentNode.parentNode.classList.add('hotDeals__addition-body-row_active');
-		console.log('add');
-	  } else {
-		hotDealsAdditionDropDown[index].parentNode.parentNode.classList.remove('hotDeals__addition-body-row_active');
-		console.log('remove');
-	  }
-	};
-  
-	const toggleActiveClassForHotDealsDropDown = index => {
-	  if (!hotDealsDropDown[index].classList.contains('hotDeals__dropdown_active')) {
-		hotDealsDropDown.forEach(elem => {
-		  elem.classList.contains('hotDeals__dropdown_active')
-			? elem.classList.remove('hotDeals__dropdown_active')
-			: null;
-		});
-		hotDealsDropDown[index].classList.add('hotDeals__dropdown_active');
-	  } else {
-		hotDealsDropDown[index].classList.remove('hotDeals__dropdown_active');
-	  }
-	};
-  
-	hotDealsAdditionDropDown.forEach((elem, index) => {
-	  elem.addEventListener('click', () => {
-		toggleActiveClassForHotDealsAdditionDropDown(index);
-		toggleActiveClassForHotDealsAdditionRow(index);
-		toggleActiveClassForHotDealsDropDown(index);
-	  });
-	});
-  });
-  
+  const hotDealsRow = document.querySelectorAll('.hot-deals__body-row')
+  const hotDealsBtn = document.querySelectorAll('.hot-deals__body-btn')
+
+  const hotDealsAddition = document.querySelectorAll('.hot-deals__addition')
+  const hotDealsAdditionRow = document.querySelectorAll('.hotDeals__addition-body-row')
+  const hotDealsAdditionDropDown = document.querySelectorAll('.hot-deals__addition-body-dropdown')
+  const hotDealsDropDown = document.querySelectorAll('.hot-deals__dropdown')
+
+  const toggleActiveClassForHotDealsRow = index => {
+    if (!hotDealsRow[index].classList.contains('hot-deals__body-row_active')) {
+      hotDealsRow.forEach(elem => {
+        elem.classList.contains('hot-deals__body-row_active')
+          ? elem.classList.remove('hot-deals__body-row_active')
+          : null
+      })
+
+      hotDealsRow[index].classList.add('hot-deals__body-row_active')
+    } else {
+      hotDealsRow[index].classList.remove('hot-deals__body-row_active')
+    }
+  }
+
+  const toggleActiveClassForHotDealsBtn = index => {
+    if (!hotDealsBtn[index].classList.contains('hot-deals__body-btn_active')) {
+      hotDealsBtn.forEach(elem => {
+        elem.classList.contains('hot-deals__body-btn_active')
+          ? elem.classList.remove('hot-deals__body-btn_active')
+          : null
+        elem.innerHTML = 'Открыть'
+      })
+
+      hotDealsBtn[index].classList.add('hot-deals__body-btn_active')
+      hotDealsBtn[index].innerHTML = 'закрыть'
+    } else {
+      hotDealsBtn[index].classList.remove('hot-deals__body-btn_active')
+      hotDealsBtn[index].innerHTML = 'Открыть'
+    }
+  }
+
+  const toggleActiveClassForHotDealsAddition = index => {
+    if (!hotDealsAddition[index].classList.contains('hot-deals__addition_active')) {
+      hotDealsAddition.forEach(elem => {
+        elem.classList.contains('hot-deals__addition_active')
+          ? elem.classList.remove('hot-deals__addition_active')
+          : null
+      })
+
+      hotDealsAddition[index].classList.add('hot-deals__addition_active')
+    } else {
+      hotDealsAddition[index].classList.remove('hot-deals__addition_active')
+    }
+  }
+
+  hotDealsBtn.forEach((elem, index) => {
+    elem.addEventListener('click', () => {
+      toggleActiveClassForHotDealsRow(index)
+      toggleActiveClassForHotDealsBtn(index)
+      toggleActiveClassForHotDealsAddition(index)
+    })
+  })
+
+  const toggleActiveClassForHotDealsAdditionDropDown = index => {
+    if (!hotDealsAdditionDropDown[index].classList.contains('hot-deals__addition-body-dropdown_active')) {
+      hotDealsAdditionDropDown.forEach(elem => {
+        elem.classList.contains('hot-deals__addition-body-dropdown_active')
+          ? elem.classList.remove('hot-deals__addition-body-dropdown_active')
+          : null
+
+        elem.childNodes[0].textContent = 'открыть предложения'
+      })
+
+      hotDealsAdditionDropDown[index].classList.add('hot-deals__addition-body-dropdown_active')
+      hotDealsAdditionDropDown[index].childNodes[0].textContent = 'скрыть предложения'
+    } else {
+      hotDealsAdditionDropDown[index].classList.remove('hot-deals__addition-body-dropdown_active')
+      hotDealsAdditionDropDown[index].childNodes[0].textContent = 'открыть предложения'
+    }
+  }
+
+  const toggleActiveClassForHotDealsAdditionRow = index => {
+    if (
+      !hotDealsAdditionDropDown[index].parentNode.parentNode.classList.contains('hot-deals__addition-body-row_active')
+    ) {
+      hotDealsAdditionRow.forEach(elem => {
+        elem.classList.contains('hot-deals__addition-body-row_active')
+          ? elem.classList.remove('hot-deals__addition-body-row_active')
+          : null
+      })
+      hotDealsAdditionDropDown[index].parentNode.parentNode.classList.add('hot-deals__addition-body-row_active')
+      console.log('add')
+    } else {
+      hotDealsAdditionDropDown[index].parentNode.parentNode.classList.remove('hot-deals__addition-body-row_active')
+      console.log('remove')
+    }
+  }
+
+  const toggleActiveClassForHotDealsDropDown = index => {
+    if (!hotDealsDropDown[index].classList.contains('hot-deals__dropdown_active')) {
+      hotDealsDropDown.forEach(elem => {
+        elem.classList.contains('hot-deals__dropdown_active')
+          ? elem.classList.remove('hot-deals__dropdown_active')
+          : null
+      })
+      hotDealsDropDown[index].classList.add('hot-deals__dropdown_active')
+    } else {
+      hotDealsDropDown[index].classList.remove('hot-deals__dropdown_active')
+    }
+  }
+
+  hotDealsAdditionDropDown.forEach((elem, index) => {
+    elem.addEventListener('click', () => {
+      toggleActiveClassForHotDealsAdditionDropDown(index)
+      toggleActiveClassForHotDealsAdditionRow(index)
+      toggleActiveClassForHotDealsDropDown(index)
+    })
+  })
+})
