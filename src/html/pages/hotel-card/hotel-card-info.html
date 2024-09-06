@@ -57,67 +57,89 @@
           количества мест и может измениться.
         </p>
 
-        <!-- {{!-- <div class="search-bar__guests">
-        <p class="search-bar__title">Количество отдыхающих</p>
-        <div class="dropdown">
-            <div class="dropdown__row">
+         <div class="search-bar__guests">
+            <p class="hotel-card-sidebar__guests-title">Количество отдыхающих</p>
+
+            <div class="dropdown">
+              <div class="dropdown__row">
                 <p class="dropdown__current">
-                    <span class="search-bar__guests-adults">Взрослых:</span>
-                    <span id="adults-display" class="search-bar__guests-counter">
-                        0
-                    </span>
-                    <span class="search-bar__guests-kids">Детей:</span>
-                    <span id="kids-display" class="search-bar__guests-sub-counter"> 0 </span>
+                  <span class="search-bar__guests-adults">Взрослых:</span>
+
+                  <span id="adults-display" class="search-bar__guests-counter"> 0 </span>
+
+                  <span class="search-bar__guests-kids">Детей:</span>
+
+                  <span id="kids-display" class="search-bar__guests-sub-counter"> 0 </span>
                 </p>
-                <img src="/assets/images/icons/select-arrow.svg" class="icon__arrow-down" alt="" />
+
+                <img src="/assets/images/icons/select-arrow.svg" class="icon__arrow-down" alt="">
+              </div>
+
+              <ul class="dropdown__list">
+                <li class="dropdown__item--guests">
+                  <p class="item__guests--text">Добавьте необходимое кол-во гостей и укажите возраст</p>
+                </li>
+
+                <li class="dropdown__item--guests">
+                  <div class="search-bar__subitem">
+                    <p class="subitem__title">Взрослых</p>
+
+                    <div class="search-bar__subitem-subrow counter">
+                      <button id="adults-decrement" class="decrement" type="button">
+                        <img src="/assets/images/icons/couneter-minus.svg" alt="minus" width="14" height="14">
+                      </button>
+
+                      <span id="adults-counter-value" class="counter-value"> 0 </span>
+
+                      <button id="adults-increment" class="increment" type="button">
+                        <img src="/assets/images/icons/counter-plus.svg" alt="plus" width="14" height="14">
+                      </button>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="dropdown__item--guests">
+                  <div class="search-bar__subitem">
+                    <p class="subitem__title">Детей</p>
+
+                    <div class="search-bar__subitem-subrow counter">
+                      <button id="kids-decrement" class="decrement" type="button">
+                        <img src="/assets/images/icons/couneter-minus.svg" alt="minus" width="14" height="14" />
+                      </button>
+
+                      <span id="kids-counter-value" class="counter-value"> 0 </span>
+
+                      <button id="kids-increment" class="increment" type="button">
+                        <img src="/assets/images/icons/counter-plus.svg" alt="plus" width="14" height="14" />
+                      </button>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="dropdown__item--guests">
+                  <button class="search-bar__guests-add main-btn" type="button">Добавить</button>
+                </li>
+              </ul>
             </div>
-            <ul class="dropdown__list" style="top: 24px;">
-                <li class="dropdown__item__guests">
-                    <p class="item__guests--text">
-                        Добавьте необходимое кол-во гостей и укажите возраст
-                    </p>
-                </li>
+          </div>
 
-                <li class="dropdown__item__guests">
-                    <div class="search-bar__subitem">
-                        <p class="subitem__title">Взрослых</p>
-                        <div class="search-bar__subitem-subrow counter">
-                            <button id="adults-decrement" class="decrement">
-                                <img src="/assets/images/icons/couneter-minus.svg" alt="minus" width="14" height="14" />
-                            </button>
-                            <span id="adults-counter-value" class="counter-value">
-                                0
-                            </span>
-                            <button id="adults-increment" class="increment">
-                                <img src="/assets/images/icons/counter-plus.svg" alt="plus" width="14" height="14" />
-                            </button>
-                        </div>
-                    </div>
-                </li>
+          <ul class="hotel-card-sidebar__first-block-counter">
+            <li class="hotel-card-sidebar__first-block-counter-item">
+              <span class="hotel-card-sidebar__first-block-counter-text">Взрослых x2</span>
+            </li>
 
-                <li class="dropdown__item__guests">
-                    <div class="search-bar__subitem">
-                        <p class="subitem__title">Детей</p>
-                        <div class="search-bar__subitem-subrow counter">
-                            <button id="kids-decrement" class="decrement">
-                                <img src="/assets/images/icons/couneter-minus.svg" alt="minus" width="14" height="14" />
-                            </button>
-                            <span id="kids-counter-value" class="counter-value">
-                                0
-                            </span>
-                            <button id="kids-increment" class="increment">
-                                <img src="/assets/images/icons/counter-plus.svg" alt="plus" width="14" height="14" />
-                            </button>
-                        </div>
-                    </div>
-                </li>
+            <li class="hotel-card-sidebar__first-block-counter-item">
+              <span class="hotel-card-sidebar__first-block-counter-text">15 лет x1</span>
+            </li>
 
-                <li class="dropdown__item__guests">
-                    <button class="search-bar__guests-add main-btn">Добавить</button>
-                </li>
-            </ul>
-        </div>
-    </div> --}} -->
+            <li class="hotel-card-sidebar__first-block-counter-item">
+              <span class="hotel-card-sidebar__first-block-counter-text">3 года x1</span>
+            </li>
+
+            <li class="hotel-card-sidebar__first-block-counter-item">
+              <span class="hotel-card-sidebar__first-block-counter-text">10 лет х3</span>
+            </li>
+          </ul>
 
         <p class="hotel-card-sidebar__first-block-total-price">Общая стоимость тура: <span>1 429€</span></p>
 
@@ -450,61 +472,89 @@
             количества мест и может измениться.
           </p>
 
-          <!-- {{!--
           <div class="search-bar__guests">
-            <p class="search-bar__title">Количество отдыхающих</p>
+            <p class="hotel-card-sidebar__guests-title">Количество отдыхающих</p>
+
             <div class="dropdown">
               <div class="dropdown__row">
                 <p class="dropdown__current">
                   <span class="search-bar__guests-adults">Взрослых:</span>
+
                   <span id="adults-display" class="search-bar__guests-counter"> 0 </span>
+
                   <span class="search-bar__guests-kids">Детей:</span>
+
                   <span id="kids-display" class="search-bar__guests-sub-counter"> 0 </span>
                 </p>
+
                 <img src="/assets/images/icons/select-arrow.svg" class="icon__arrow-down" alt="" />
               </div>
-              <ul class="dropdown__list" style="top: 24px">
-                <li class="dropdown__item__guests">
+
+              <ul class="dropdown__list">
+                <li class="dropdown__item--guests">
                   <p class="item__guests--text">Добавьте необходимое кол-во гостей и укажите возраст</p>
                 </li>
 
-                <li class="dropdown__item__guests">
+                <li class="dropdown__item--guests">
                   <div class="search-bar__subitem">
                     <p class="subitem__title">Взрослых</p>
+
                     <div class="search-bar__subitem-subrow counter">
-                      <button id="adults-decrement" class="decrement">
+                      <button id="adults-decrement" class="decrement" type="button">
                         <img src="/assets/images/icons/couneter-minus.svg" alt="minus" width="14" height="14" />
                       </button>
+
                       <span id="adults-counter-value" class="counter-value"> 0 </span>
-                      <button id="adults-increment" class="increment">
+
+                      <button id="adults-increment" class="increment" type="button">
                         <img src="/assets/images/icons/counter-plus.svg" alt="plus" width="14" height="14" />
                       </button>
                     </div>
                   </div>
                 </li>
 
-                <li class="dropdown__item__guests">
+                <li class="dropdown__item--guests">
                   <div class="search-bar__subitem">
                     <p class="subitem__title">Детей</p>
+
                     <div class="search-bar__subitem-subrow counter">
-                      <button id="kids-decrement" class="decrement">
+                      <button id="kids-decrement" class="decrement" type="button">
                         <img src="/assets/images/icons/couneter-minus.svg" alt="minus" width="14" height="14" />
                       </button>
+
                       <span id="kids-counter-value" class="counter-value"> 0 </span>
-                      <button id="kids-increment" class="increment">
+
+                      <button id="kids-increment" class="increment" type="button">
                         <img src="/assets/images/icons/counter-plus.svg" alt="plus" width="14" height="14" />
                       </button>
                     </div>
                   </div>
                 </li>
 
-                <li class="dropdown__item__guests">
-                  <button class="search-bar__guests-add main-btn">Добавить</button>
+                <li class="dropdown__item--guests">
+                  <button class="search-bar__guests-add main-btn" type="button">Добавить</button>
                 </li>
               </ul>
             </div>
           </div>
-          --}} -->
+
+          <ul class="hotel-card-sidebar__first-block-counter">
+            <li class="hotel-card-sidebar__first-block-counter-item">
+              <span class="hotel-card-sidebar__first-block-counter-text">Взрослых x2</span>
+            </li>
+
+            <li class="hotel-card-sidebar__first-block-counter-item">
+              <span class="hotel-card-sidebar__first-block-counter-text">15 лет x1</span>
+            </li>
+
+            <li class="hotel-card-sidebar__first-block-counter-item">
+              <span class="hotel-card-sidebar__first-block-counter-text">3 года x1</span>
+            </li>
+
+            <li class="hotel-card-sidebar__first-block-counter-item">
+              <span class="hotel-card-sidebar__first-block-counter-text">10 лет х3</span>
+            </li>
+          </ul>
 
           <p class="hotel-card-sidebar__first-block-total-price">Общая стоимость тура: <span>1 429€</span></p>
 
@@ -576,11 +626,11 @@
           </p>
 
           <picture>
-            <source srcset="/public/assets/images/offer-cons.webp" type="image/webp">
+            <source srcset="/public/assets/images/hotel-card/offer-card-hotel.webp" type="image/webp">
 
             <source media="(max-width:767px)" srcset="/public/assets/images/offer-cons-mob.jpg">
 
-            <img src="/public/assets/images/offer-cons.jpg" alt="women" width="323" height="160">
+            <img src="/public/assets/images/hotel-card/offer-card-hotel.jpg" alt="women" width="323" height="160">
           </picture>
 
           <ul class="hotel-card-sidebar__third-block-list">

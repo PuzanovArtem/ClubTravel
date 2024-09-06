@@ -1,11 +1,13 @@
 import Inspect from 'vite-plugin-inspect'
-import path from 'path'
-import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
 import handlebars from 'vite-plugin-handlebars'
+import imageminWebp from 'imagemin-webp'
+import path from 'path'
+import viteImagemin from 'vite-plugin-imagemin'
+import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
 import { defineConfig } from 'vite'
 import { resolve } from 'path'
-import viteImagemin from 'vite-plugin-imagemin'
-import imageminWebp from 'imagemin-webp'
+
+
 
 export default defineConfig({
   base: './',

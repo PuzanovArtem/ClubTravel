@@ -29,6 +29,10 @@
     fill: $green;
   }
 
+  .dropdown__row {
+    border: 1px solid $light-gray;
+  }
+
   &__content-wrapper {
     margin-top: 15px;
   }

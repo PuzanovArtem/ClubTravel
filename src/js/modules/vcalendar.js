@@ -7,16 +7,14 @@ import ruLocale from "@fullcalendar/core/locales/ru";
 
 
 document.addEventListener("DOMContentLoaded", function () {
-  var calendarEl = document.getElementById("calendar");
-  var showCalendarBtn = document.getElementById("showCalendarBtn");
+  const calendarEl = document.getElementById("calendar");
+  const showCalendarBtn = document.getElementById("showCalendarBtn");
   const hideCalBtn = document.querySelector(".search-content__filter-cal-btn");
   const filter = document.querySelector(".search-content__filter-wrapper");
-  const wrapperCal = document.querySelector(
-    ".search-content__filter-wrapper-cal"
-  );
+  const wrapperCal = document.querySelector(".search-content__filter-wrapper-cal");
   const calTitle = document.querySelector(".search-content__calendar-subtitle");
-  var calendarVisible = false;
-  var calendar;
+  let calendarVisible = false;
+  let calendar;
 
   function initializeCalendar(months) {
     if (calendar) {
@@ -28,10 +26,6 @@ document.addEventListener("DOMContentLoaded", function () {
       initialView: "multiMonthYear",
       locale: ruLocale,
       views: {
-        // multiMonthYear: {
-        //   type: "multiMonth",
-        //   duration: { months: months },
-        // },
 
         multiMonthYear: {
         type: "multiMonth",
@@ -39,11 +33,14 @@ document.addEventListener("DOMContentLoaded", function () {
         titleFormat: { year: 'numeric', month: 'long' },
       },
       },
+
       headerToolbar: {
         left: "prev",
         right: "next",
       },
+
       initialDate: "2024-06-01",
+      
       events: [
         { title: "450€", start: "2024-06-22" },
         { title: "455€", start: "2024-06-15" },
@@ -54,46 +51,62 @@ document.addEventListener("DOMContentLoaded", function () {
         { title: "455€", start: "2024-09-21" },
         { title: "455€", start: "2024-09-28" },
       ],
+
       eventDidMount: function (info) {
         let dayEvents = info.el
           .closest(".fc-daygrid-day")
           .querySelector(".fc-daygrid-day-events");
+        
         if (dayEvents) {
           let customDiv = document.createElement("div");
+
           customDiv.classList.add("custom-div");
+
           customDiv.innerText = `${info.event.title}`;
+
           dayEvents.appendChild(customDiv);
         }
       },
-      dateClick: function (info) {
 
-        
+      dateClick: function (info) {
         const previouslySelected = document.querySelector('.fc-day-selected');
-      if (previouslySelected) {
+      
+        if (previouslySelected) {
         previouslySelected.classList.remove('fc-day-selected');
-      }
+        }
+        
       info.dayEl.classList.add('fc-day-selected');
   
-         const selectedDateEl = document.getElementById('selectedDate');
-    const options = { year: 'numeric', month: 'long', day: 'numeric' };
-    const formattedDate = info.date.toLocaleDateString('ru-RU', options);
-selectedDateEl.innerHTML = `Предложения на <span>${formattedDate}</span> от <span>455€</span>`;
+        const selectedDateEl = document.getElementById('selectedDate');
+
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+
+        const formattedDate = info.date.toLocaleDateString('ru-RU', options);
+
+        selectedDateEl.innerHTML = `Предложения на <span>${formattedDate}</span> от <span>455€</span>`;
       },
 
         datesSet: function() {
     const titleElement = document.querySelector('.fc-toolbar-title');
+    
     if (titleElement) {
       let [month, year] = titleElement.innerText.split(' ');
+
       month = month.charAt(0).toUpperCase() + month.slice(1);
+
       titleElement.innerText = `${month} ${year}`;
     }
-  },
+      },
+        
       dayCellDidMount: function (info) {
         let dateStr = info.date.toISOString().split("T")[0];
+
         let hasEvent = calendar.getEvents().some((event) => {
-          let eventDateStr = event.start.toISOString().split("T")[0];
+
+        let eventDateStr = event.start.toISOString().split("T")[0];
           return eventDateStr === dateStr;
         });
+        
         if (!hasEvent) {
           info.el.classList.add("fc-no-event");
         }
@@ -107,7 +120,9 @@ selectedDateEl.innerHTML = `Предложения на <span>${formattedDate}</
 
   function showCalendar() {
     calendarEl.classList.add("activeCal");
+
     calendar.render();
+
     calendarVisible = !calendarVisible;
 
     calTitle.classList.add("active");
