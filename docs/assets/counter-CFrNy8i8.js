@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll(".counter").forEach(t=>{const c=t.querySelector(".decrement"),o=t.querySelector(".increment"),n=t.querySelector(".counter-value");let e=parseInt(n.textContent,10);c.addEventListener("click",()=>{e--,n.textContent=e}),o.addEventListener("click",()=>{e++,n.textContent=e})})});
