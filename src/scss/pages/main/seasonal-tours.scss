@@ -2,12 +2,9 @@
   margin-bottom: 104px;
 
   &__title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @extend %display-center ;
     margin-bottom: 17px;
     font-weight: 700;
-    line-height: normal;
     text-transform: uppercase;
     letter-spacing: 1.3px;
     font-size: 26px;
@@ -17,13 +14,11 @@
   &__text {
     padding-bottom: 42px;
     text-align: center;
-    font-size: 14px;
     color: #888;
   }
-  
+
   &__wrapper {
-    display: flex;
-    align-items: center;
+    @extend %display-flex ;
   }
   
   &__swiper {
@@ -51,7 +46,7 @@
     width: 100%;
     height: 364px;
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
-    background: #fff;
+    background: $white;
   }
   
   &__card-img {
@@ -67,22 +62,19 @@
   }
   
   &__card-text-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @extend %display-jc-sb ;
     padding: 15px 16px 18px;
   }
   
   &__card-place-wrapper {
-    display: flex;
-    align-items: center;
+    @extend %display-flex ;
     gap: 4px;
   }
   
   &__icon {
     width: 24px;
     height: 24px;
-    fill: #3e7739;
+    fill:$green;
   }
   
   &__card-place {
@@ -94,7 +86,8 @@
     letter-spacing: 1px;
   }
   
-  .winter-tour__card-price-new span {
+  &__price--strong {
+    margin-right: -5px;
     font-weight: 700;
     color: #000;
   }
