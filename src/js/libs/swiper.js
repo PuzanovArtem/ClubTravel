@@ -8,8 +8,8 @@ export const headerSlider = () => {
       enabled: false,
       grabCursor: true,
       navigation: {
-        nextEl: '.header-button-next',
-        prevEl: '.header-button-prev',
+        nextEl: '.header__button--next',
+        prevEl: '.header__button--prev',
       },
       breakpoints: {
         769: {

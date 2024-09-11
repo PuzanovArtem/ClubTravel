@@ -1,106 +1,98 @@
 .season-tours {
   margin-bottom: 104px;
 
-  .season-tours__title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  &__title {
+    @extend %display-center ;
     margin-bottom: 17px;
     font-weight: 700;
-    line-height: normal;
     text-transform: uppercase;
     letter-spacing: 1.3px;
     font-size: 26px;
     gap: 7px;
   }
-
-  .season-tours__text {
+  
+  &__text {
     padding-bottom: 42px;
     text-align: center;
-    font-size: 14px;
     color: #888;
   }
 
-  .season-tours__wrapper {
-    display: flex;
-    align-items: center;
-
-    .season-tours__swiper {
-      
-      padding: 0 2px 10px;
-
-      .season-tours__swiper-wrapper {
-        position: relative;
-
-        .season-tours__swiper-slide {
-          padding: 0 10px 15px;
-        }
-      }
-    }
+  &__wrapper {
+    @extend %display-flex ;
   }
-}
-
-.main-winter {
-  margin: 105px 0 0;
-}
-
-.main-summer {
-  margin: 103px 0 100px;
-}
-
-.season-tours__card {
-  border-radius: 10px;
-  width: 100%;
-  height: 364px;
-  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
-  background: #fff;
-
-  .season-tours__card-img {
+  
+  &__swiper {
+    padding: 0 2px 10px;
+  }
+  
+  &__swiper-wrapper {
     position: relative;
-
-    .hero__bg-img {
-      border-radius: 10px 10px 0 0;
-      height: 250px;
-      width: 100%;
-      max-height: 100%;
-      object-fit: cover;
-    }
   }
-
-  .season-tours__card-text-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  
+  &__swiper-slide {
+    padding: 0 10px 15px;
+  }
+  
+  .main-winter {
+    margin: 105px 0 0;
+  }
+  
+  .main-summer {
+    margin: 103px 0 100px;
+  }
+  
+  &__card {
+    border-radius: 10px;
+    width: 100%;
+    height: 364px;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+    background: $white;
+  }
+  
+  &__card-img {
+    position: relative;
+  }
+  
+  .hero__bg-img {
+    border-radius: 10px 10px 0 0;
+    height: 250px;
+    width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+  }
+  
+  &__card-text-wrapper {
+    @extend %display-jc-sb ;
     padding: 15px 16px 18px;
-
-    .season-tours__card-place-wrapper {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-
-      .season-tours__icon {
-        width: 24px;
-        height: 24px;
-        fill: #3e7739;
-      }
-
-      .season-tours__card-place {
-        font-size: 16px;
-        color: #222;
-      }
-    }
-
-    .season-tours__card-price-new {
-      letter-spacing: 1px;
-    }
-
-    .winter-tour__card-price-new span {
-      font-weight: 700;
-      color: #000;
-    }
   }
-
-  .season-tours__btn {
+  
+  &__card-place-wrapper {
+    @extend %display-flex ;
+    gap: 4px;
+  }
+  
+  &__icon {
+    width: 24px;
+    height: 24px;
+    fill:$green;
+  }
+  
+  &__card-place {
+    font-size: 16px;
+    color: #222;
+  }
+  
+  &__card-price-new {
+    letter-spacing: 1px;
+  }
+  
+  &__price--strong {
+    margin-right: -5px;
+    font-weight: 700;
+    color: #000;
+  }
+  
+  &__btn {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -109,9 +101,7 @@
     max-width: 248px;
     color: #fff;
   }
-}
-
-.main-summer__button-wrapper{
+  
 
 }
 
@@ -124,7 +114,7 @@
     margin: 81px 0 80px;
   }
 
-  .season-tours__button-wrapper{
+  .season-tours__button-wrapper {
     margin: 15px 0 0;
   }
 }

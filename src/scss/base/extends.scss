@@ -15,17 +15,20 @@
   display: flex;
 }
 
+
 %display-start {
   align-items: center;
   justify-content: start;
   display: flex;
 }
 
+
 %display-end {
   align-items: center;
   justify-content: end;
   display: flex;
 }
+
 
 %position-rel {
   position: relative;
@@ -44,3 +47,4 @@
   height: 100%;
   background-color: $gray;
 }
+
