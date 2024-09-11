@@ -95,7 +95,7 @@ padding-bottom: 90px;
   &__tour-price {
     font-size: 16px;
 
-    span {
+    &--strong {
       font-weight: 700;
     }
   }
@@ -131,8 +131,6 @@ padding-bottom: 90px;
   }
 
   .icon--calendar {
-    width: 24px;
-    height: 24px;
     fill: #B3B3B3;
   }
 

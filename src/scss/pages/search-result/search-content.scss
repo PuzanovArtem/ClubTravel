@@ -89,7 +89,6 @@
     width: 25px;
     height: 21px;
     margin: 0 12px 0 0;
-    fill: $green;
   }
 
   &__filter-cal-text {
@@ -160,7 +159,6 @@
     width: 10px;
     height: 14px;
      margin: 0 9px 0 0;
-    fill: $green;
   }
 
   &__hotel-text {
@@ -187,8 +185,6 @@
   }
 
   .icon--arrow-right {
-    width: 24px;
-    height: 24px;
     margin: 0 0 0 20px;
     fill: $primary;
   }
@@ -227,7 +223,6 @@
     width: 18px;
     height: 18px;
     margin: 0 18px 0 0;
-    fill: $green;
   }
 
   &__hotel-offer-card {
@@ -235,7 +230,6 @@
     display: flex;
     flex-direction: column;
     width: 200px;
-    // height: 271px;
     height: 240px;
     margin: 0 0 0 auto;
     padding: 20px;
@@ -263,13 +257,14 @@
     font-weight: 400;
     text-align: center;
 
-    span {
-      font-size: 24px;
-    }
+  &--strong {
+    font-size: 24px;
+    font-weight: 700;
   }
 
-  &__span {
-    font-weight: 700;
+  &--grow {
+      font-size: 24px;
+  }
   }
 
   &__hotel-offer-btn {
@@ -990,28 +985,6 @@
       grid-template-columns: repeat(1, 1fr);
     }
 
-    // .fc .fc-button {
-    //   position: static;
-    //   padding: 0;
-    //   transform: none;
-    // }
-
-    // .fc .fc-view-harness {
-    //   margin: 0;
-    // }
-
-    // .fc .fc-toolbar {
-    //   justify-content: end;
-    // }
-
-    // .fc .fc-prev-button {
-    //   margin-right: 15px;
-    // }
-
-    // .fc .fc-button-primary {
-    //   width: 28px;
-    //   height: 28px;
-    // }
 
     &__filter-wrapper-cal.active {
       align-items: start;

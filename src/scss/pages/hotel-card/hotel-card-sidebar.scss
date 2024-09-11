@@ -34,7 +34,7 @@ margin-top: -30px;
     margin: 24px 0 10px;
     font-size: 24px;
 
-    span {
+    &--strong {
       font-weight: 700;
     }
   }
@@ -44,7 +44,7 @@ margin-top: -30px;
     line-height: 1.3;
     color: $gray-text;
 
-    span {
+    &--strong {
       font-weight: 700;
     }
   }
@@ -95,11 +95,11 @@ margin-top: -30px;
     fill: $gray-text;
   }
 
-  &__first-block-total-price {
+  &__total-price {
     margin: 30px 0 16px;
     font-size: 16px;
 
-    span {
+    &--important {
       margin-left: 5px;
       font-size: 24px;
       font-weight: 700;
@@ -119,7 +119,7 @@ margin-top: -30px;
     font-size: 17px;
     line-height: 1.4;
 
-    span {
+    &--strong {
       font-weight: 700;
     }
   }
@@ -168,10 +168,7 @@ margin-top: -30px;
   .icon--airplane-takeoff,
   .icon--cutlery,
   .icon--house {
-    width: 24px;
-    height: 24px;
     padding: 0;
-    fill: $green;
   }
 
   &__third-block {
@@ -187,7 +184,7 @@ margin-top: -30px;
     font-size: 16px;
     line-height: 1.4;
 
-    span {
+    &--strong {
       font-size: 18px;
       font-weight: 700;
      
@@ -210,7 +207,7 @@ margin-top: -30px;
     margin-left: 12px;
     font-size: 16px;
 
-    span {
+    &--strong {
       font-weight: 700;
     }
   }
@@ -230,9 +227,10 @@ margin-top: -30px;
 }
 
   @include respond-to($tablet) {
-    &__first-block-mob {
-      display: none;
-    }
+    // &__first-block-mob {
+    //   position: absolute;
+    //   top: 0;
+    // }
 
     &__first-block {
       margin: 0 -15px 32px;

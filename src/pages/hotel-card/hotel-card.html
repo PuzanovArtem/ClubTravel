@@ -1,22 +1,19 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta name="description" content="travel club">
+    <meta name="description" content="travel club" />
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/assets/images/icons/logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/src/pages/hotel-card/hotel-card.scss">
+    <link rel="stylesheet" href="/src/pages/hotel-card/hotel-card.scss" />
     <title>Club Travel</title>
   </head>
   <body>
     {{> header }}
     <main class="main">
       {{> banner banner-class='banner__card-img' banner-block-class='active'}}
-    <div class="container">
-    {{> hotel-card-info }}
-    </div>
-      {{> main-hot title-class='block-class' hotel-card-section='hotel-card-block'  hotel-card-class='none-block'}}
-      
+      <div class="container">{{> hotel-card-info }}</div>
+      {{> main-hot title-class='block-class' hotel-card-section='hotel-card-block' hotel-card-class='none-block'}}
     </main>
     {{> _footer }}
 

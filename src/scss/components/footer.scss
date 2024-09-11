@@ -11,7 +11,8 @@
   .icon--message,
   .icon--phone,
   .icon--location {
-     width: 20px;
+    opacity: 0.5;
+    width: 20px;
     height: 20px;
     margin: 0 12px 0 0;
     padding: 0;
@@ -73,8 +74,9 @@
   }
 
   .icon--instagram {
-    fill: #fd1d1d;
-  }
+    margin-right: 20px;
+    fill: #f95d1b;
+}
 
   &__contact-link {
     font-size: 16px;
@@ -105,6 +107,7 @@
   }
 
   &__social-link-wrapper {
+    @extend %display-flex;
     margin: 0 0 24px;
   }
 
@@ -125,6 +128,7 @@
       right: auto;
       left: 0;
       height: 276px;
+      margin: 0 15px;
     }
   }
 

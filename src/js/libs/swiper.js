@@ -1,6 +1,6 @@
-import Swiper from 'swiper/bundle'
-import 'swiper/css/bundle'
-import { Autoplay } from 'swiper/modules'
+import Swiper from 'swiper/bundle';
+import 'swiper/css/bundle';
+
 
 export const headerSlider = () => {
   try {
@@ -188,7 +188,7 @@ export const mainSummerSlider = () => {
 };
 
 export const hotelCardSlider = () => {
-  var galleryThumbs = new Swiper('.gallery-thumbs', {
+  const galleryThumbs = new Swiper('.gallery-thumbs', {
       spaceBetween: 10,
       slidesPerView: 4,
       loop: true,
@@ -197,7 +197,7 @@ export const hotelCardSlider = () => {
       watchSlidesVisibility: true,
       watchSlidesProgress: true,
     });
-    var galleryTop = new Swiper('.gallery-top', {
+    const galleryTop = new Swiper('.gallery-top', {
       spaceBetween: 10,
       loop: true,
       loopedSlides: 5,
