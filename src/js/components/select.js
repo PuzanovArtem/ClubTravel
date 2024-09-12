@@ -22,7 +22,6 @@ export const select = () => {
     item.addEventListener('click', selectChoose);
   });
 
-  // Закриття селекту при натисканні за його межами
   document.addEventListener('click', function (e) {
     selectCust.forEach(item => {
       if (!item.contains(e.target)) {

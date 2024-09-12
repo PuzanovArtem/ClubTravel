@@ -227,11 +227,6 @@ margin-top: -30px;
 }
 
   @include respond-to($tablet) {
-    // &__first-block-mob {
-    //   position: absolute;
-    //   top: 0;
-    // }
-
     &__first-block {
       margin: 0 -15px 32px;
       box-shadow: 0 5px 5px 0 #0000001a;

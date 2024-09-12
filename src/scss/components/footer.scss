@@ -88,6 +88,10 @@
     &:hover {
       color: rgb(93, 0, 255);
     }
+
+    &--bottom {
+      font-size: 14px;
+    }
   }
 
   &__contact-first-link {
@@ -142,10 +146,6 @@
     align-items: end;
     margin: 0 16px 0 0;
     color: #575757;
-  }
-
-  &__bottom-link {
-    font-size: 14px;
   }
 
   @include respond-to($l-tablet) {

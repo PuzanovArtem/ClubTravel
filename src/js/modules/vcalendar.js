@@ -1,7 +1,7 @@
 import { Calendar } from '@fullcalendar/core'
 import dayGridPlugin from '@fullcalendar/daygrid'
-import multiMonthPlugin from '@fullcalendar/multimonth'
 import interactionPlugin from '@fullcalendar/interaction'
+import multiMonthPlugin from '@fullcalendar/multimonth'
 import ruLocale from '@fullcalendar/core/locales/ru'
 
 export const calendarSearch = () =>  {
@@ -21,8 +21,11 @@ export const calendarSearch = () =>  {
 
     calendar = new Calendar(calendarEl, {
       plugins: [dayGridPlugin, multiMonthPlugin, interactionPlugin],
+      
       initialView: 'multiMonthYear',
+      
       locale: ruLocale,
+      
       views: {
         multiMonthYear: {
           type: 'multiMonth',

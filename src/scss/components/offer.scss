@@ -6,7 +6,7 @@
     max-width: 1920px;
     height: 570px;
     margin: 0 auto;
-    background-image: url("/public/assets/images/offer-img.jpg");
+    background-image: url("/public/assets/images/components/offer/offer-img.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -222,7 +222,7 @@
   @include respond-to($mobile) {
    &__img {
       height: 823px;
-      background-image: url("/public/assets/images/offer-img-mob.jpg");
+      background-image: url("/public/assets/images/components/offer/offer-img-mob.jpg");
     }
 
     &__consultant-wrapper {
