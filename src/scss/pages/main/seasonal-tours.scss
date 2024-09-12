@@ -1,108 +1,112 @@
+.icon {
+  &--location {
+    opacity: 0.5;
+    width: 14px;
+    height: 14px;
+  }
+}
+
 .season-tours {
   margin-bottom: 104px;
 
   &__title {
-    @extend %display-center ;
+    @extend %display-center;
+    gap: 7px;
     margin-bottom: 17px;
+    font-size: 26px;
+    letter-spacing: 1.3px;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 1.3px;
-    font-size: 26px;
-    gap: 7px;
   }
-  
+
   &__text {
     padding-bottom: 42px;
-    text-align: center;
     color: #888;
+    text-align: center;
   }
 
   &__wrapper {
-    @extend %display-flex ;
+    @extend %display-flex;
   }
-  
+
   &__swiper {
     padding: 0 2px 10px;
   }
-  
+
   &__swiper-wrapper {
     position: relative;
   }
-  
+
   &__swiper-slide {
     padding: 0 10px 15px;
   }
-  
+
   .main-winter {
     margin: 105px 0 0;
   }
-  
+
   .main-summer {
     margin: 103px 0 100px;
   }
-  
+
   &__card {
-    border-radius: 10px;
     width: 100%;
     height: 364px;
-    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
     background: $white;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
   }
-  
+
   &__card-img {
     position: relative;
   }
-  
+
   .hero__bg-img {
-    border-radius: 10px 10px 0 0;
-    height: 250px;
     width: 100%;
+    height: 250px;
     max-height: 100%;
+    border-radius: 10px 10px 0 0;
     object-fit: cover;
   }
-  
+
   &__card-text-wrapper {
-    @extend %display-jc-sb ;
+    @extend %display-jc-sb;
     padding: 15px 16px 18px;
   }
-  
+
   &__card-place-wrapper {
-    @extend %display-flex ;
+    @extend %display-flex;
     gap: 4px;
   }
-  
+
   &__icon {
     width: 24px;
     height: 24px;
-    fill:$green;
+    fill: $green;
   }
-  
+
   &__card-place {
     font-size: 16px;
     color: #222;
   }
-  
+
   &__card-price-new {
     letter-spacing: 1px;
   }
-  
+
   &__price--strong {
     margin-right: -5px;
     font-weight: 700;
     color: #000;
   }
-  
+
   &__btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    height: 42px;
+    @extend %display-center;
     max-width: 248px;
+    height: 42px;
+    margin: 0 auto;
     color: #fff;
   }
-  
-
 }
 
 @media (max-width: 525px) {

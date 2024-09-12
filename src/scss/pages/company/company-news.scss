@@ -1,18 +1,16 @@
 .company-news {
-	margin: 61px 0 72px 0;
+  margin: 61px 0 72px;
 
   &__wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-	margin: 42px 0 0 0;
-	gap: 16px 0;
+    @extend %display-center;
+    gap: 16px 0;
+    margin: 42px 0 0;
   }
 }
 
 @media (max-width: 578px) {
   .company-news {
-	margin: 53px 0 65px 0;
+    margin: 53px 0 65px ;
 
     &__slide {
       margin-right: 0 !important;
