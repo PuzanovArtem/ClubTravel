@@ -4,7 +4,7 @@
   margin: 0 auto;
 }
 
-.icon{
+.icon {
   &--chevron {
     fill: $white;
   }
@@ -28,15 +28,17 @@
 
 .header__slider .header__button--next,
 .header__slider .header__button--prev {
-  width: 48px;
-  height: 48px;
   @extend %display-center;
-
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-  color: $white;
   top: 49.5%;
   left: 20px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  color: $white;
+  background-color: rgba(255, 255, 255, 0.2);
+
+
+
 }
 
 .header__slider .header__button--next::after,
@@ -45,10 +47,10 @@
 }
 
 .header__slider .header__button--next {
-  left: auto;
   right: 20px;
-}
+  left: auto;
 
+}
 
 @media (max-width: 768px) {
   .header__slider .header__button--next,

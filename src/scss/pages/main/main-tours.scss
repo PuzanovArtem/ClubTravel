@@ -3,9 +3,9 @@
   padding: 0;
 }
 
-.icon{
+.icon {
   &__card-line {
-    @extend %position-rel ;
+    @extend %position-rel;
     top: -4px;
     left: 3px;
     width: 3px;
@@ -14,7 +14,7 @@
   }
 
   &--card-price {
-    @extend %position-rel ;
+    @extend %position-rel;
     left: 0;
     width: 3px;
     height: 31px;
@@ -26,7 +26,7 @@
     height: 16px;
     fill: #fff;
   }
-  
+
   &--star {
     width: 18px;
     height: 18px;
@@ -34,16 +34,29 @@
   }
 
   &--location {
-    opacity: 0.5;
     width: 14px;
-    height: 14px;     
-    fill: #fff;
-
+    height: 14px;
+    fill: $white;
   }
 }
 
 .main-tour {
   margin: 0;
+
+  &__text {
+    @extend %display-center;
+    gap: 6px;
+    padding: 18px 0 4px;
+    line-height: 1.18;
+    letter-spacing: 0.5px;
+    color: #888;
+  }
+
+  &__price--strong {
+    margin-right: -5px;
+    font-weight: 700;
+    color: #000;
+  }
 
   &__wrapper {
     @extend %display-flex;
@@ -54,7 +67,7 @@
   }
 
   &__swiper-wrapper {
-    @extend %position-rel ;
+    @extend %position-rel;
   }
 
   &__swiper-slide {
@@ -64,7 +77,7 @@
   }
 
   .main-company__swiper {
-    margin: 37px 0 12px ;
+    margin: 37px 0 12px;
   }
 
   .main-hot__swiper {
@@ -91,7 +104,6 @@
     border-radius: 10px;
     background: $white;
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
-
   }
 
   &__card-img {
@@ -105,8 +117,8 @@
 
   &__card-line {
     @extend %position-abs;
-    right: 16px;
     top: 29px;
+    right: 16px;
     display: flex;
   }
 
@@ -116,20 +128,20 @@
 
   &__card-line-price {
     @extend %position-rel;
-    left: 67%;
     top: 50%;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    transform: translate(-50%, -50%);
+    left: 67%;
     z-index: 1;
+    letter-spacing: 1.5px;
+    font-weight: 700;
     color: #fff;
+    transform: translate(-50%, -50%);
   }
 
   &__card-line-wrapper::after {
-    content: '';
     @extend %position-abs;
-    left: 0;
+    content: '';
     top: 0;
+    left: 0;
     width: 128%;
     height: 31px;
     background: #f68521;
@@ -137,13 +149,13 @@
 
   &__card-data-wrapper {
     @extend %position-abs;
-    left: 15px;
-    bottom: 14px;
     @extend %display-flex;
-    border-radius: 6px;
-    padding: 7px 15px 7px 8px;
-    background: rgba(0, 0, 0, 0.5);
+    bottom: 14px;
+    left: 15px;
     gap: 10px;
+    padding: 7px 15px 7px 8px;
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.5);
   }
 
   &__card-data {
@@ -152,27 +164,27 @@
   }
 
   .hot-deals__card-data-wrapper {
-    position: absolute;
-    left: 15px;
+    @extend %position-abs;
     bottom: 58px;
-    display: flex;
+    left: 15px;
     align-items: center;
-    border-radius: 6px;
-    padding: 7px 15px 7px 8px;
-    background: rgba(0, 0, 0, 0.5);
+    display: flex;
     gap: 10px;
+    padding: 7px 15px 7px 8px;
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.5);
   }
 
   .hot-deals__card-place-wrapper {
     position: absolute;
-    left: 15px;
     bottom: 14px;
-    display: flex;
+    left: 15px;
     align-items: center;
-    border-radius: 6px;
-    padding: 7px 15px 7px 8px;
-    background: rgba(0, 0, 0, 0.5);
+    display: flex;
     gap: 10px;
+    padding: 7px 15px 7px 8px;
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.5);
   }
 
   .hot-deals__card-place {
@@ -188,17 +200,17 @@
   }
 
   .hot-deals__card-wrappers {
+    justify-content: space-between;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     height: 100%;
     max-height: 85px;
   }
 
   .hot-deals__card-text-wrapper {
-    display: flex;
     align-items: center;
     justify-content: space-between;
+    display: flex;
     padding: 18px 16px 0;
   }
 
@@ -211,15 +223,15 @@
   }
 
   .hot-deals__card-prices-wrapper {
-    display: flex;
     justify-content: space-between;
+    display: flex;
   }
 
   .hot-deals__card-price-wrapper {
-    display: flex;
     align-items: center;
-    padding-left: 16px;
+    display: flex;
     gap: 8px;
+    padding-left: 16px;
     letter-spacing: 1px;
   }
 
@@ -229,37 +241,37 @@
   }
 
   .hot-deals__card-price-old {
-    text-decoration: line-through;
     color: #bfbfbf;
+    text-decoration: line-through;
   }
 
   .hot-deals__card-line {
-    @extend %position-rel ;
+    @extend %position-rel;
     left: -43px;
     display: flex;
   }
 
   .hot-deals__card-line-wrapper {
-    @extend %position-rel ;
+    @extend %position-rel;
   }
 
   .hot-deals__card-line-price {
-    @extend %position-rel ;
-    left: 102%;
+    @extend %position-rel;
     top: 50%;
+    left: 102%;
+    z-index: 1;
     font-size: 16px;
     line-height: 1.36;
     font-weight: 700;
-    transform: translate(-50%, -50%);
-    z-index: 1;
     color: #fff;
+    transform: translate(-50%, -50%);
   }
 
   .hot-deals__card-line-wrapper::after {
     content: '';
     position: absolute;
-    left: 3px;
     top: -4px;
+    left: 3px;
     width: 80px;
     height: 31px;
     background: #f68521;
@@ -269,20 +281,13 @@
     height: 349px;
   }
 
-  .hot-deals__text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    letter-spacing: 0.5px;
-    padding: 18px 0 4px;
-    line-height: 1.18;
-    color: #888;
-    gap: 6px;
-  }
-
   .hot-deals__img {
     width: 20px;
     height: 20px;
+  }
+
+  .hot-deals--lication {
+    opacity: 1;
   }
 
   &__button-wrapper {
@@ -292,11 +297,11 @@
   }
 
   &__button {
-    transition: all 0.2s ease;
-    color: #555;
     font-size: 16px;
     line-height: 1.36;
     letter-spacing: 1px;
+    color: #555;
+    transition: all 0.2s ease;
   }
 
   &__button:hover {
@@ -328,8 +333,8 @@
 
     &__swiper-slide {
       width: 50% !important;
-      padding: 0 15px;
       margin-right: 0 !important;
+      padding: 0 15px;
     }
 
     .main-company__swiper-slide:nth-child(even) {
@@ -360,8 +365,8 @@
 
     &__swiper-slide {
       width: 100% !important;
-      padding: 0 15px;
       margin-right: 20px !important;
+      padding: 0 15px;
     }
   }
 }
@@ -391,11 +396,11 @@
     }
 
     &__card {
-      border-radius: 10px;
       width: 100%;
       height: 330px;
-      box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
       background: #fff;
+      box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
     }
 
     .card__bg-img {
@@ -412,11 +417,11 @@
       margin: 27px 0 0;
     }
 
-    .hot-deals__text {
+    &__text {
+      gap: 6px;
+      width: 316px;
       margin: 0 auto;
       text-align: center;
-      width: 316px;
-      gap: 6px;
     }
 
     .hot-deals__img {
@@ -433,11 +438,11 @@
 
   .main-tour {
     &__card {
-      border-radius: 10px;
       width: 100%;
       height: 330px;
-      box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
       background: #fff;
+      box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
     }
 
     .hot-deal__card {

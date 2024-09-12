@@ -16,7 +16,6 @@
     background 0.3s,
     color 0.3s;
 
-
   @media (hover: hover) {
     &:hover {
       color: $text;
@@ -40,7 +39,6 @@
   transition:
     background 0.3s,
     color 0.3s;
-
 
   @media (hover: hover) {
     &:hover {
@@ -82,20 +80,20 @@
   }
 }
 
-.main__tour__title {
+.main-tour__title {
   @extend %display-center;
+  gap: 7px;
   font-size: 26px;
-  font-weight: 700;
   line-height: 1.36;
   letter-spacing: 2.5px;
-  text-transform: uppercase;
+  font-weight: 700;
   color: $text;
-  gap: 7px;
+  text-transform: uppercase;
 
-  .main__tour__title--svg {
-    fill: $primary;
+  &--svg {
     width: 30px;
     height: 30px;
+    fill: $primary;
   }
 
   .icon__stopwatch {
@@ -103,114 +101,121 @@
     height: 30px;
   }
 
-  .main__tour__title--span {
+  &--strong {
     color: $primary;
   }
 }
 
-.main-tour__swiper-button-prev,
-.main-tour__swiper-button-next {
-  position: absolute;
-  top: 50%;
-  cursor: pointer;
-  z-index: 2;
-
-  .main-tour__swiper-round {
-    display: flex;
-    position: relative;
-  }
-
-  .main-tour__swiper-round::before {
-    content: '';
+.main-tour {
+  &__swiper-button-prev,
+  &__swiper-button-next {
+    cursor: pointer;
     position: absolute;
-    left: 50%;
     top: 50%;
-    border-radius: 50%;
-    width: 48px;
-    height: 48px;
-    transform: translate(-50%, -50%);
-    transition: opacity 0.2s ease;
-    z-index: -1;
-    background: #3e7739;
-    opacity: 0.1;
+    z-index: 2;
   }
 
-  .main-tour__button-svg {
+  &__swiper-round {
+    @extend %position-rel;
+    display: flex;
+
+    &::before {
+      @extend %position-abs;
+      content: '';
+      opacity: 0.1;
+      top: 50%;
+      left: 50%;
+      z-index: -1;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: #3e7739;
+      transform: translate(-50%, -50%);
+      transition: opacity 0.2s ease;
+    }
+  }
+
+  &__button-svg {
     width: 32px;
     height: 32px;
     fill: $green;
   }
-}
 
-.main-tour__swiper-button-prev {
-  left: -5.5%;
-}
+  &__swiper-button-prev {
+    left: -5.5%;
+  }
 
-.main-tour__swiper-button-next {
-  right: -5.5%;
+  &__swiper-button-next {
+    right: -5.5%;
+  }
 }
 
 @media (max-width: 1344px) {
-  .main-tour__swiper-button-prev,
-  .main-tour__swiper-button-next {
-    top: 95%;
+  .main-tour {
+    &__swiper-button-prev,
+    &__swiper-button-next {
+      top: 95%;
 
-    .main-tour__swiper-round::before {
-      background: #fff;
-      opacity: 1;
-      
+      &::before {
+        opacity: 1;
+        background: #fff;
+      }
     }
-  }
 
-  .main-tour__swiper-button-prev {
-    left: 4%;
-  }
+    &__swiper-button-prev {
+      left: 4%;
+    }
 
-  .main-tour__swiper-button-next {
-    right: 4%;
+    &__swiper-button-next {
+      right: 4%;
+    }
   }
 }
 
 @media (max-width: 1023px) {
-  .main-tour__swiper-button-prev {
-    left: 6%;
-  }
+  .main-tour {
+    &__swiper-button-prev {
+      left: 6%;
+    }
 
-  .main-tour__swiper-button-next {
-    right: 6%;
+    &__swiper-button-next {
+      right: 6%;
+    }
   }
 }
 
 @media (max-width: 575px) {
-  .main-tour__swiper-button-next,
-  .main-tour__swiper-button-prev{
-    top: 105%;
-  }
+  .main-tour {
+    &__swiper-button-next,
+    &__swiper-button-prev {
+      top: 105%;
+    }
 
-  .main-tour__swiper-button-prev {
-    left: 10%;
-  }
+    &__swiper-button-prev {
+      left: 10%;
+    }
 
-  .main-tour__swiper-button-next {
+    &__swiper-button-next {
       right: 10%;
+    }
   }
 }
 
 @media (max-width: 525px) {
-  .main__tour__title {
+  .main-tour__title {
     flex-direction: column;
-    letter-spacing: 2.5px;
     gap: 0;
+    letter-spacing: 2.5px;
 
     .icon__stopwatch {
       margin: 0 0 10px;
     }
 
-    .main__tour__title--span {
+    &--strong {
       color: $primary;
     }
 
-    .main__tour__title--span:last-child {
+    &--strong:last-child {
       padding: 14px 0 0;
     }
 
@@ -240,7 +245,7 @@
     position: relative;
   }
 
-   &__items {
+  &__items {
     overflow-y: scroll;
     position: absolute;
     top: 42px;
@@ -267,7 +272,6 @@
   &__custom.is-active .select__items {
     max-height: 400px;
   }
-
 
   &__items div {
     cursor: pointer;
