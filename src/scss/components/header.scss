@@ -2,41 +2,44 @@
   background: $white;
 
   &__logo {
-    width: 189px;
-    height: 154px;
-    @extend %display-center;
     @extend %position-abs;
+    @extend %display-center;
     left: 44px;
     z-index: 2;
+    width: 189px;
+    height: 154px;
 
     &-bg {
       @extend %position-abs;
       top: 0;
       left: -73px;
-      background: $white;
-      border-radius: 50%;
       width: 165px;
       height: 145px;
+      border-radius: 50%;
+      background: $white;
+
     }
 
     &-img {
-      margin: 0;
-      position: absolute;
+      @extend %position-abs;
       top: 9px;
       left: -29px;
       width: 100%;
       height: 100%;
+      margin: 0;
+
     }
   }
 
   &__info {
-    height: 40px;
     @extend %display-end;
+    height: 40px;
 
     &-wrapper {
-      width: 622px;
-      display: flex;
       justify-content: space-between;
+      display: flex;
+      width: 622px;
+
     }
 
     &-links {
@@ -57,37 +60,37 @@
     }
 
     &-contacts {
-      padding: 0 24px;
-      margin: 0 0 0 31px;
-      height: 24px;
       display: flex;
+      gap: 10px;
+      height: 24px;
+      margin: 0 0 0 31px;
+      padding: 0 24px;
       border-left: 1px solid #f2f2f2;
-      gap: 10px
-      ;
+
       .icon {
         &__phone,
         &__envelope {
-          fill: #999;
-          padding-right: 10px;
-          padding: 3px 10px 0 0;
           width: 24px;
           height: 16px;
+          padding: 3px 10px 0 0;
+          padding-right: 10px;
+          fill: #999;
         }
       }
 
       &-tel,
       &-mail {
-        padding-right: 27px;
         @extend %display-flex;
+        padding-right: 27px;
         font-size: 12px;
         line-height: 16px;
         color: #666;
 
         span {
-          padding-right: 10px;
-          color: #999;
           opacity: 0.7;
+          padding-right: 10px;
           font-size: 13px;
+          color: #999;
         }
       }
 
@@ -98,10 +101,10 @@
       align-items: center;
 
       .burger {
+        cursor: pointer;
         display: none;
         font-size: 21px;
         color: #606c81;
-        cursor: pointer;
 
         .icon__list-horizontal {
           width: 22px;
@@ -116,31 +119,32 @@
         color: #606c81;
 
         .icon__user {
-          fill: #606c81;
           width: 22px;
           height: 20px;
+          fill: #606c81;
         }
       }
 
       .header__country {
+        overflow: hidden;
         margin-right: 2px;
         border-radius: 50%;
-        overflow: hidden;
+
       }
     }
   }
 
   &__navigation {
-    height: 60px;
     @extend %display-end;
+    height: 60px;
 
     .header__nav {
       display: flex;
 
       .header__nav-item {
-        margin-right: 26px;
         @extend %display-flex;
         @extend %position-rel;
+        margin-right: 26px;
         font-size: 16px;
         line-height: 22px;
 
@@ -163,17 +167,17 @@
 
             .icon {
               &__percent {
-                fill: $primary;
                 width: 24px;
                 height: 24px;
                 margin-right: 10px;
+                fill: $primary;
               }
 
               &__stopwatch {
-                fill: $primary;
                 width: 28px;
                 height: 24px;
                 margin-right: 10px;
+                fill: $primary;
               }
             }
           }
@@ -183,10 +187,10 @@
       .header__nav-link {
         @extend %display-flex;
         align-items: center;
+        letter-spacing: -0.5px;
         color: $blue;
         text-align: center;
         text-transform: uppercase;
-        letter-spacing: -0.5px;
 
         span {
           margin-right: 6px;
@@ -197,9 +201,9 @@
   }
 
   .burger {
-    display: none;
-    align-items: center;
     cursor: pointer;
+    align-items: center;
+    display: none;
 
     .icon__list-horizontal {
       width: 22px;
@@ -210,21 +214,22 @@
 }
 
 .sidebar {
-  padding: 24px 24px 77px 22px;
-  width: 80%;
-  background: $white;
+  overflow-y: scroll;
   position: fixed;
   top: 0;
   left: -100%;
   z-index: 4;
-  overflow-y: scroll;
-  transition: all 0.4s;
   display: none;
+  width: 80%;
+  padding: 24px 24px 77px 22px;
+  background: $white;
+  transition: all 0.4s;
 
   &.sidebar_active {
-    transform: translateX(0);
-    display: block;
     left: 0;
+    display: block;
+    transform: translateX(0);
+
   }
 
   &::-webkit-scrollbar {
@@ -267,11 +272,12 @@
     }
 
     &__contacts {
-      margin-top: 16px;
-      margin-left: 2px;
       display: flex;
       flex-direction: column;
       gap: 15px;
+      margin-top: 16px;
+      margin-left: 2px;
+
 
       .sidebar__mail,
       .sidebar__tel {
@@ -301,11 +307,12 @@
     margin: 25px 0 0;
 
     &-img {
-      margin-right: 15px;
+      overflow: hidden;
       width: 20px;
       height: 20px;
+      margin-right: 15px;
       border-radius: 50%;
-      overflow: hidden;
+
     }
 
     &-text {
@@ -320,7 +327,6 @@
   .header{
     &__navigation {
       height: 60px;
-      @extend %display-end;
   
       .header__nav {
         display: flex;
@@ -340,9 +346,9 @@
 
 @media (max-width: 1024px) {
   .header__logo {
+    left: 56%;
     width: 110px;
     height: 95px;
-    left: 56%;
     transform: translateX(-50%);
 
     &-bg {
@@ -353,11 +359,11 @@
     }
 
     &-img {
-      margin-top: 0;
-      width: 48px;
-      height: 67px;
       top: 13px;
       left: 8px;
+      width: 48px;
+      height: 67px;
+      margin-top: 0;
 
       img {
         width: 100%;
@@ -367,9 +373,9 @@
   }
 
   .icon__user {
-    fill: #606c81;
     width: 27px;
     height: 26px;
+    fill: #606c81;
   }
 
   .header__navigation {
@@ -377,8 +383,8 @@
   }
 
   .header__info {
-    padding: 0 2px 0 6px;
     height: 49px;
+    padding: 0 2px 0 6px;
 
     &-wrapper {
       width: 100%;
@@ -390,20 +396,22 @@
     }
 
     &-personal {
-      width: 100%;
       align-items: center;
       justify-content: space-between;
+      width: 100%;
+
     }
 
     .burger {
-      display: flex;
       align-items: center;
+      display: flex;
+
     }
 
     .header__personal {
-      padding-right: 0;
-      display: flex;
       align-items: center;
+      display: flex;
+      padding-right: 0;
       font-size: 28px;
     }
 
