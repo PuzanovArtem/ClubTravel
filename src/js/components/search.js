@@ -1,20 +1,17 @@
-import { initializeDropdowns } from './toggleDropdown.js';
-import { initializeCounters } from './setupCounter.js';
-import { initializeDatePicker } from './datePicker.js';
-import { initializeAdvancedSearch } from './advancedSearch.js';
-import { priceSlider } from './priceSlider.js';
-import { initializeCategoryButtons } from './categoryButtons.js';
+import { initializeDropdowns } from '/src/js/modules/search/dropdown'
+import { initializeCounters } from '/src/js/modules/search/counter'
+import { initializeDatePicker } from '/src/js/modules/search/datePicker'
+import { initializeAdvancedSearch } from '/src/js/modules/search/advancedSearch'
+import { priceSlider } from '/src/js/modules/search/priceSlider'
 
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('DOM fully loaded and parsed');
-    
-    initializeDropdowns();
-    initializeCounters();
-    initializeDatePicker();
-    initializeAdvancedSearch();
-    priceSlider();
-    initializeCategoryButtons();
-});
+
+  initializeDropdowns()
+  initializeCounters()
+  initializeDatePicker()
+  initializeAdvancedSearch()
+  priceSlider()
+})
 
 
 
@@ -53,7 +50,6 @@ document.addEventListener('DOMContentLoaded', () => {
 //     });
 // });
 
-
 // document.addEventListener("DOMContentLoaded", function () {
 //   function setupCounter(counterId, displayId, incrementId, decrementId, max = 10) {
 //     const counter = document.getElementById(counterId);
@@ -84,8 +80,6 @@ document.addEventListener('DOMContentLoaded', () => {
 //   setupCounter('kids-counter-value', 'kids-display', 'kids-increment', 'kids-decrement');
 // });
 
-
-
 // // calendar
 // document.addEventListener('DOMContentLoaded', function() {
 //   var datePicker = flatpickr("#date-picker", {
@@ -94,14 +88,13 @@ document.addEventListener('DOMContentLoaded', () => {
 //     onChange: function(selectedDates, dateStr, instance) {
 //       document.getElementById("selected-date").innerText = dateStr;
 //     },
-//     locale: "ru", 
+//     locale: "ru",
 //   });
 
 //   document.getElementById('date-picker').addEventListener('click', function() {
-//     datePicker.open(); 
+//     datePicker.open();
 //   });
 // });
-
 
 // //Расширеный поиск
 
@@ -128,12 +121,6 @@ document.addEventListener('DOMContentLoaded', () => {
 //   });
 // });
 
-
-
-
-
-
-
 // document.addEventListener('DOMContentLoaded', function () {
 //   console.log('DOM fully loaded and parsed');
 //   priceSlider();
@@ -143,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
 //   console.log('Initializing price slider...');
 
 //   const slider = document.querySelector('.category__slider');
-  
+
 //   if (!slider) {
 //     console.error('Slider element not found');
 //     return;
@@ -157,9 +144,9 @@ document.addEventListener('DOMContentLoaded', () => {
 //       'min': 300,
 //       'max': 6000,
 //     },
-//     start: [1700, 3500], 
-//     connect: true, 
-//     tooltips: [true, true], 
+//     start: [1700, 3500],
+//     connect: true,
+//     tooltips: [true, true],
 //     step: 200,
 //     format: {
 //       to: function (value) {
@@ -178,12 +165,8 @@ document.addEventListener('DOMContentLoaded', () => {
 //   console.log('Slider initialized successfully');
 // }
 
-
-
-
 // document.querySelectorAll('.category__btns--svg').forEach(function(button) {
 //   button.addEventListener('click', function() {
 //     this.classList.toggle('clicked');
 //   });
 // });
-
