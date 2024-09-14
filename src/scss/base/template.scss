@@ -248,20 +248,17 @@
   &__items {
     overflow-y: scroll;
     position: absolute;
-    top: 42px;
+    top: 40px;
     left: 50%;
     z-index: 1;
     width: 100%;
     max-height: 0;
-    padding: 5px 6px;
-    border: 1px solid #e2e2e2;
-    border-bottom-right-radius: 6px;
-    border-bottom-left-radius: 6px;
-    border-top: none;
+    padding: 0 6px;
     font-size: 14px;
     background: rgb(255, 255, 255);
     transform: translateX(-50%);
-    transition: max-height 0.3s ease;
+    scrollbar-width: none;
+    transition: max-height 0.3s ease, padding 0.3s ease, border 0.3s ease;
   }
 
   &__custom.is-active {
@@ -269,8 +266,16 @@
     border-bottom-left-radius: 0;
   }
 
+  &__custom.is-active .icon--arrow-down{
+    rotate: 180deg;
+  }
+
   &__custom.is-active .select__items {
     max-height: 400px;
+    padding:5px 6px;
+    border: 1px solid $light-gray;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
   }
 
   &__items div {
@@ -278,7 +283,7 @@
     position: relative;
     padding: 8px 0;
 
-    &::after {
+    &:not(:last-child)::after {
       content: '';
       opacity: 0.6;
       position: absolute;
@@ -297,11 +302,10 @@
   &__arrow {
     pointer-events: none;
     position: absolute;
-    top: 50%;
+    top: 35%;
     right: 14px;
     width: 7px;
     height: 12px;
-    transform: translateY(-50%);
     fill: $gray;
   }
 }

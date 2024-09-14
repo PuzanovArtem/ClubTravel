@@ -11,6 +11,13 @@ export const accordion = () => {
             tableContainer.classList.toggle('active');
         }
 
+        if (this.innerText === 'ОТКРЫТЬ') {
+            console.log(true);
+    this.innerText = 'ЗАКРЫТЬ';
+  } else {
+    this.innerText = 'ОТКРЫТЬ';
+  }
+
         this.classList.toggle('active');
 
         const card = this.closest('.search-content__hotel-offer-card');

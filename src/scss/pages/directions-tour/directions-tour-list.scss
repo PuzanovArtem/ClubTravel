@@ -83,8 +83,18 @@ padding-bottom: 90px;
     padding-bottom: 16px;
   }
 
-  .season-tours__card-img .hero__bg-img {
+  .hero__bg-img {
+    width: 100%;
     height: 160px;
+  }
+
+  &__btn {
+    width: 100%;
+    padding: 12px;
+  }
+
+  &__btn-wrapper {
+    padding: 0 16px;
   }
 
   &__tour-city {
@@ -150,23 +160,9 @@ padding-bottom: 90px;
       margin: 0 0 24px;
     }
 
-    &__checkbox {
-      padding-left: 0;
-
-      input[type='checkbox'] {
-      position: absolute;
-      right: 0;
-    }
-    }
-
     &__checkbox-wrapper {
-      column-count: 2;
+      column-count: 3;
       column-gap: 40px;
-    }
-
-    &__checkbox-container {
-      right: 0;
-      left: auto;
     }
 
     &__sidebar-title {
@@ -178,6 +174,27 @@ padding-bottom: 90px;
   @include respond-to($mobile) {
     &__wrapper {
        margin-top: 30px;
+    }
+
+    &__checkbox-wrapper {
+      column-count: 2;
+    }
+  }
+
+
+@include respond-to($s-mobile) {
+     &__checkbox {
+      padding-left: 0;
+
+      input[type='checkbox'] {
+      position: absolute;
+      right: 0;
+    }
+    }
+
+    &__checkbox-container {
+      right: 0;
+      left: auto;
     }
 
     &__checkbox-wrapper {

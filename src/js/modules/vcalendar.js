@@ -4,7 +4,7 @@ import interactionPlugin from '@fullcalendar/interaction'
 import multiMonthPlugin from '@fullcalendar/multimonth'
 import ruLocale from '@fullcalendar/core/locales/ru'
 
-export const calendarSearch = () =>  {
+export const calendarSearch = () => {
   const calendarEl = document.getElementById('calendar')
   const showCalendarBtn = document.getElementById('showCalendarBtn')
   const hideCalBtn = document.querySelector('.search-content__filter-cal-btn')
@@ -21,11 +21,11 @@ export const calendarSearch = () =>  {
 
     calendar = new Calendar(calendarEl, {
       plugins: [dayGridPlugin, multiMonthPlugin, interactionPlugin],
-      
+
       initialView: 'multiMonthYear',
-      
+
       locale: ruLocale,
-      
+
       views: {
         multiMonthYear: {
           type: 'multiMonth',
@@ -67,7 +67,11 @@ export const calendarSearch = () =>  {
       },
 
       dateClick: function (info) {
-         const previouslySelected = document.querySelector('.fc-day-selected')
+        const previouslySelected = document.querySelector('.fc-day-selected')
+
+         if (info.dayEl.classList.contains('fc-day-disabled')) {
+    return; // Нічого не робимо, оскільки дата заблокована
+  }
 
         if (previouslySelected) {
           previouslySelected.classList.remove('fc-day-selected')
@@ -100,14 +104,14 @@ export const calendarSearch = () =>  {
         const dateStr = info.date.toISOString().split('T')[0]
 
         const hasEvent = calendar.getEvents().some(event => {
-
           const eventDateStr = event.start.toISOString().split('T')[0]
 
           return eventDateStr === dateStr
         })
 
         if (!hasEvent) {
-          info.el.classList.add('fc-no-event')
+          info.el.classList.add('fc-no-event');
+          info.el.classList.add('fc-day-disabled');
         }
       },
     })
