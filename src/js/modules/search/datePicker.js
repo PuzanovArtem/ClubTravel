@@ -1,4 +1,4 @@
-import flatpickr from "flatpickr";
+// import flatpickr from "flatpickr";
 
 export function initializeDatePicker() {
     const datePicker = flatpickr("#date-picker", {
