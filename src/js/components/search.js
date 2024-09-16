@@ -5,20 +5,12 @@ import { initializeAdvancedSearch } from '/src/js/modules/search/advancedSearch'
 import { priceSlider } from '/src/js/modules/search/priceSlider'
 
 document.addEventListener('DOMContentLoaded', () => {
-
   initializeDropdowns()
   initializeCounters()
   initializeDatePicker()
   initializeAdvancedSearch()
   priceSlider()
 })
-
-
-
-
-
-
-
 
 // function toggleDropdown(dropdown) {
 //     dropdown.classList.toggle('dropdown--open');

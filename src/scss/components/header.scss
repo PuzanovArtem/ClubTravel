@@ -160,7 +160,7 @@
           margin-right: 0;
         }
 
-        &.header__nav-item_hot {
+        &.header__nav-item--hot {
           .header__nav-link {
             font-weight: 600;
             color: $primary;
@@ -194,7 +194,7 @@
 
         span {
           margin-right: 6px;
-          font-size: 24px;
+          font-size: 16px;
         }
       }
     }

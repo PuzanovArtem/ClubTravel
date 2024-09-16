@@ -1,6 +1,5 @@
-import Swiper from 'swiper/bundle';
-import 'swiper/css/bundle';
-
+import 'swiper/css/bundle'
+import Swiper from 'swiper/bundle'
 
 export const headerSlider = () => {
   try {
@@ -18,9 +17,9 @@ export const headerSlider = () => {
       },
     }
 
-    const headerSwiper = new Swiper('.header__slider', config)
+    new Swiper('.header__slider', config)
   } catch (error) {
-    console.log('Swiper initialization error:', error)
+    console.error('Swiper initialization error:', error)
   }
 }
 
@@ -66,7 +65,7 @@ export const mainCompanySlider = () => {
       },
     }
 
-     new Swiper('.main-company__swiper', config)
+    new Swiper('.main-company__swiper', config)
   } catch (error) {
     console.log('Swiper initialization error:', error)
   }
@@ -90,7 +89,7 @@ export const mainHotSlider = () => {
         },
         578: {
           slidesPerView: 1,
-          spaceBetween:0,
+          spaceBetween: 0,
         },
         804: {
           slidesPerView: 2,
@@ -173,9 +172,9 @@ export const mainSummerSlider = () => {
       },
     }
 
-     new Swiper('.main-summer__swiper', config)
+    new Swiper('.main-summer__swiper', config)
   } catch (error) {
-    console.log('Swiper initialization error:', error)
+    console.error('Swiper initialization error:', error)
   }
 
   const swiper = new Swiper('.search-content__swiper-container', {
@@ -184,29 +183,29 @@ export const mainSummerSlider = () => {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
-  });
-};
+  })
+}
 
 export const hotelCardSlider = () => {
   const galleryThumbs = new Swiper('.gallery-thumbs', {
-      spaceBetween: 10,
-      slidesPerView: 4,
-      loop: true,
-      freeMode: true,
-      loopedSlides: 5, 
-      watchSlidesVisibility: true,
-      watchSlidesProgress: true,
-    });
-    const galleryTop = new Swiper('.gallery-top', {
-      spaceBetween: 10,
-      loop: true,
-      loopedSlides: 5,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      thumbs: {
-        swiper: galleryThumbs,
-      },
-    });
+    spaceBetween: 10,
+    slidesPerView: 4,
+    loop: true,
+    freeMode: true,
+    loopedSlides: 5,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+  })
+  const galleryTop = new Swiper('.gallery-top', {
+    spaceBetween: 10,
+    loop: true,
+    loopedSlides: 5,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    thumbs: {
+      swiper: galleryThumbs,
+    },
+  })
 }

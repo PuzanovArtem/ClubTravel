@@ -1,4 +1,4 @@
-._container {
+.-container {
   max-width: 1200px;
   padding: 0;
 }
@@ -315,13 +315,13 @@
   }
 }
 
-@media (max-width: 875px) {
+@media (width <= 875px) {
   .main-company {
     margin: 83px 0 0;
   }
 }
 
-@media (max-width: 803px) {
+@media (width <= 803px) {
   .main-tour {
     &__swiper {
       padding: 0;
@@ -353,7 +353,7 @@
   }
 }
 
-@media (max-width: 578px) {
+@media (width <= 578px) {
   .main-tour {
     &__swiper {
       padding: 0;
@@ -371,7 +371,7 @@
   }
 }
 
-@media (max-width: 525px) {
+@media (width <= 525px) {
   .main-tour {
     margin: 75px 0 0;
 
@@ -431,8 +431,8 @@
   }
 }
 
-@media (max-width: 425px) {
-  ._container {
+@media (width <= 425px) {
+  .-container {
     max-width: 1200px;
   }
 
