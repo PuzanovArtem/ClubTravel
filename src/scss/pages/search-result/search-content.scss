@@ -42,7 +42,6 @@
     transition:
       background 0.3s ease,
       color 0.3s ease;
-  
 
     @media (hover: hover) {
       &:hover {
@@ -158,7 +157,7 @@
   .icon--location {
     width: 10px;
     height: 14px;
-     margin: 0 9px 0 0;
+    margin: 0 9px 0 0;
   }
 
   &__hotel-text {
@@ -257,14 +256,14 @@
     font-weight: 400;
     text-align: center;
 
-  &--strong {
-    font-size: 24px;
-    font-weight: 700;
-  }
-
-  &--grow {
+    &--strong {
       font-size: 24px;
-  }
+      font-weight: 700;
+    }
+
+    &--grow {
+      font-size: 24px;
+    }
   }
 
   &__hotel-offer-btn {
@@ -272,18 +271,18 @@
     padding: 12px;
   }
 
-  .swiper-container {
+  &__swiper-container {
     overflow: hidden;
     position: relative;
     max-width: 380px;
     border-radius: 10px;
   }
 
-  .swiper-wrapper {
+  &__swiper-wrapper {
     z-index: 0;
   }
 
-  .swiper-slide img {
+  &__swiper-img {
     width: 100%;
     border-radius: 10px;
   }
@@ -306,8 +305,8 @@
     rotate: 90deg;
   }
 
-  .swiper-button-next::before,
-  .swiper-button-prev::before {
+  &__swiper-button-next::before,
+  &__swiper-button-prev::before {
     content: '';
     position: absolute;
     top: 50%;
@@ -569,7 +568,7 @@
   }
 
   .fc .fc-button-primary {
-     width: 48px;
+    width: 48px;
     height: 48px;
     border-radius: 50%;
     border-color: rgba(62, 119, 57, 0.4);
@@ -622,7 +621,7 @@
       width: 149px;
     }
 
-    .swiper-container {
+    &__swiper-container {
       max-width: 320px;
       margin: auto 0;
     }
@@ -631,7 +630,7 @@
       height: 220px;
     }
 
-   &__hotel-item {
+    &__hotel-item {
       grid-template-columns: 315px 1fr 1fr 1fr;
     }
   }
@@ -664,7 +663,7 @@
       box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
     }
 
-    &__hotel-offer-title { 
+    &__hotel-offer-title {
       margin: 0;
     }
 
@@ -710,8 +709,8 @@
     }
 
     .fc .fc-button-primary {
-        width: 40px;
-        height: 40px;
+      width: 40px;
+      height: 40px;
     }
   }
 
@@ -843,20 +842,20 @@
     }
 
     .fc .fc-next-button {
-    right: 0;
-}
+      right: 0;
+    }
 
- .fc .fc-prev-button {
+    .fc .fc-prev-button {
       margin-right: 35px;
     }
 
     .fc-button .fc-icon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    font-size: 1.2em;
-    transform: translate(-50%, -50%);
-}
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      font-size: 1.2em;
+      transform: translate(-50%, -50%);
+    }
   }
 
   @include respond-to($mobile) {
@@ -881,7 +880,7 @@
       width: 100%;
       margin: 0 0 0 5px;
     }
-    
+
     .select {
       flex-grow: 1;
     }
@@ -909,10 +908,6 @@
       margin: 0;
     }
 
-    &__swiper-container {
-      order: 1;
-    }
-
     &__hotel-static {
       order: 3;
       grid-column: span 1;
@@ -936,7 +931,8 @@
       margin: 0;
       font-size: 16px;
 
-      span {
+      &--strong,
+      &--grow {
         font-size: 16px;
       }
     }
@@ -957,7 +953,8 @@
       margin: 12px auto 0;
     }
 
-    .swiper-container {
+    &__swiper-container {
+      order: 1;
       max-width: 100%;
     }
 
@@ -991,7 +988,6 @@
     &__tbody-mob {
       grid-template-columns: repeat(1, 1fr);
     }
-
 
     &__filter-wrapper-cal.active {
       align-items: start;

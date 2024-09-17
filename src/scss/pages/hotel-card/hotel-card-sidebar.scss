@@ -212,6 +212,33 @@ margin-top: -30px;
     }
   }
 
+  &__item--guests {
+    align-items: center;
+  }
+
+  &__subitem {
+    padding: 0 4px 0 0;
+  }
+
+  &__select {
+    flex-grow: 1;
+    margin-right: 8px;
+  }
+
+  &__select-custom {
+    width: 100%;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top: 0;
+    border-bottom: 0;
+    border-left: 0;
+  }
+
+  .icon--cross {
+    margin-left: 10px;
+    fill: $cross;
+  }
+
   .search-bar__guests {
     width: 100%;
   }
@@ -263,6 +290,7 @@ margin-top: -30px;
     max-height: 206px;
   }
 
-.dropdown--open:last-child .dropdown__list:last-child {
-    max-height: 230px;
+.dropdown--open:last-child 
+.dropdown__list:last-child {
+    max-height: max-content;
   }

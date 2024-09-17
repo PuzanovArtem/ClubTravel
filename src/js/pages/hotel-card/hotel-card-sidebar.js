@@ -1,20 +1,18 @@
 export const changePlace = () => {
+  function handleResize(event) {
+    const firstBlock = document.querySelector('.hotel-card-sidebar__first-block')
+    const cardInfo = document.querySelector('.hotel-card-info__wrapper')
+    const cardSidebar = document.querySelector('.hotel-card-sidebar')
 
-function handleResize(event) {
-  const item = document.getElementById('first-block');
-  const list1 = document.getElementById('hotel-card-info');
-  const list2 = document.getElementById('hotel-card-sidebar');
-
-   if (!event.matches) {
-    list2.insertBefore(item, list2.firstChild);
-  } else {
-    list1.insertBefore(item, list1.firstChild);
+    if (!event.matches) {
+      cardSidebar.insertBefore(firstBlock, cardSidebar.firstChild)
+    } else {
+      cardInfo.insertBefore(firstBlock, cardInfo.firstChild)
+    }
   }
+
+  const mediaQuery = window.matchMedia('(max-width: 767px)')
+
+  mediaQuery.addEventListener('change', handleResize)
+  handleResize(mediaQuery)
 }
-
-const mediaQuery = window.matchMedia('(max-width: 767px)');
-
-mediaQuery.addEventListener('change', handleResize);
-handleResize(mediaQuery);
-}
-
