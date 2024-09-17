@@ -15,6 +15,7 @@ export default [
       /* eslint-disable-next-line no-magic-numbers */
       complexity: ['error', 6],
       curly: ['error', 'multi-line'],
+      curly: ['error', 'multi-line'],
       'for-direction': 'error',
       'no-class-assign': 'error',
       'no-compare-neg-zero': 'error',
@@ -113,6 +114,11 @@ export default [
             '\\{\\}|\\{\\{\\}\\}',
             '\\{[^\\}]*$',
             '(?<![a-zA-Z0-9\\}])\\}',
+            '[^a-zA-Z\\d_\\-\\s\\{\\}]',
+            '\\{\\{[-_]*\\}\\}',
+            '\\{\\}|\\{\\{\\}\\}',
+            '\\{[^\\}]*$',
+            '(?<![a-zA-Z0-9\\}])\\}',
           ],
           message: 'Class pattern must match BEM',
         },
@@ -122,7 +128,13 @@ export default [
           message: 'using wrong modificator syntaxis. instead -- you use _',
         },
         {
+          attrPatterns: ['^class$'],
+          attrValuePatterns: ['(?<!_)_(?!_)'],
+          message: 'using wrong modificator syntaxis. instead -- you use _',
+        },
+        {
           attrPatterns: ['^id$'],
+          attrValuePatterns: ['[^a-zA-Z\\d_\\-\\s\\{\\}]'],
           attrValuePatterns: ['[^a-zA-Z\\d_\\-\\s\\{\\}]'],
           message: 'Incorrect ID pattern',
         },
