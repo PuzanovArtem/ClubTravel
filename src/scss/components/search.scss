@@ -589,6 +589,29 @@
   }
 }
 
+/* Начальное состояние элементов */
+.search__line, .search-row__panel, .search__btn-close {
+  display: none;
+}
+
+/* Состояние при активной панели поиска */
+.search-row.active .search__line,
+.search-row.active .search-row__panel {
+  display: block;
+}
+
+.search-row.active .search__btn-close {
+  display: inline-block;
+}
+
+.search-row.active .search__advance--search {
+  display: block;
+}
+
+
+
+
+
 @media (width <= 1024px) {
   .search {
     &__wrapper {

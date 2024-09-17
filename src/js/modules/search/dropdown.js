@@ -8,21 +8,25 @@ export function setDropdownValue(dropdown, value) {
 }
 
 export function initializeDropdowns() {
-  document.querySelectorAll('.dropdown__row').forEach(function (row) {
-    row.addEventListener('click', function () {
-      toggleDropdown(this.parentElement)
+  const dropdownRows = document.querySelectorAll('.dropdown__row')
+  const dropdownItems = document.querySelectorAll('.dropdown__list .dropdown__item')
+  const dropdowns = document.querySelectorAll('.dropdown')
+
+  dropdownRows.forEach(row => {
+    row.addEventListener('click', () => {
+      toggleDropdown(row.parentElement)
     })
   })
 
-  document.querySelectorAll('.dropdown__list .dropdown__item').forEach(function (item) {
-    item.addEventListener('click', function () {
-      const dropdown = this.closest('.dropdown')
-      setDropdownValue(dropdown, this.textContent)
+  dropdownItems.forEach(item => {
+    item.addEventListener('click', () => {
+      const dropdown = item.closest('.dropdown')
+      setDropdownValue(dropdown, item.textContent)
     })
   })
 
-  window.addEventListener('click', function (e) {
-    document.querySelectorAll('.dropdown').forEach(function (dropdown) {
+  window.addEventListener('click', e => {
+    dropdowns.forEach(dropdown => {
       if (!dropdown.contains(e.target)) {
         dropdown.classList.remove('dropdown--open')
       }
