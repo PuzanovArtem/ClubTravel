@@ -3,6 +3,13 @@ export function initializeAdvancedSearch() {
   const closeButton = document.querySelector('.search__btn-close')
   const searchLine = document.querySelector('.search__line')
   const searchPanel = document.querySelector('.search-row__panel')
+  // const parent = document.querySelector('.search-row')
+
+  // searchButton.addEventListener('click', e => {
+  //   e.preventDefault()
+
+  //   parent.classList.toggle('active')
+  // })
 
   searchButton.addEventListener('click', function (e) {
     e.preventDefault()
