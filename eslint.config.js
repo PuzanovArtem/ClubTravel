@@ -15,7 +15,6 @@ export default [
       /* eslint-disable-next-line no-magic-numbers */
       complexity: ['error', 6],
       curly: ['error', 'multi-line'],
-      curly: ['error', 'multi-line'],
       'for-direction': 'error',
       'no-class-assign': 'error',
       'no-compare-neg-zero': 'error',
@@ -134,7 +133,6 @@ export default [
         },
         {
           attrPatterns: ['^id$'],
-          attrValuePatterns: ['[^a-zA-Z\\d_\\-\\s\\{\\}]'],
           attrValuePatterns: ['[^a-zA-Z\\d_\\-\\s\\{\\}]'],
           message: 'Incorrect ID pattern',
         },
