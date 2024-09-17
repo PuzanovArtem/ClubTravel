@@ -1,2 +1,6 @@
 import '../../js/components/search.js';
-import '../../js/components/header.js';
+import { header } from '../../js/components/header.js';
+
+document.addEventListener('DOMContentLoaded', () => {
+    header();
+})
