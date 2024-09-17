@@ -6,11 +6,10 @@
     max-width: 1920px;
     height: 570px;
     margin: 0 auto;
-    background-image: url("/public/assets/images/components/offer/offer-img.jpg");
+    background-image: url('/public/assets/images/components/offer/offer-img.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    
   }
 
   &__wrapper {
@@ -126,71 +125,68 @@
   }
 
   @include respond-to($l-tablet) {
-&__img {
-  height: 700px;
-}
+    &__img {
+      height: 700px;
+    }
 
     &__consultant-wrapper {
       align-items: start;
       flex-direction: column;
-      
     }
 
     &__or-block {
-    &::before {
-      top: -97px;
-      height: 157px;
-    }
+      &::before {
+        top: -97px;
+        height: 157px;
+      }
 
-    &::after {
-      top: 117px;
-      height: 157px;
+      &::after {
+        top: 117px;
+        height: 157px;
+      }
     }
-  }
 
     &__consultant-info {
-    margin: 15px 0 0;
-}
-   
+      margin: 15px 0 0;
+    }
   }
 
-   @include respond-to($tablet) {
-&__img {
-  height: 565px;
-}
-
-&__wrapper {
-    padding: 40px 15px;
-}
-
-    &__subtitle {
-    max-width: 100%;
-    margin-bottom: 25px;
-}
-
-&__text {
-    max-width: 100%;
-    font-size: 16px;
-}
-
- &__consultant-wrapper {
-      flex-direction:row;
-      
+  @include respond-to($tablet) {
+    &__img {
+      height: 565px;
     }
 
-     &__consultant-info {
-    margin: 0 0 0 25px;
-}
+    &__wrapper {
+      padding: 40px 15px;
+    }
 
-&__btn {
-    margin: 25px 0;
-}
+    &__subtitle {
+      max-width: 100%;
+      margin-bottom: 25px;
+    }
 
-&__text-sec {
-  margin-top: 25px;
-}
+    &__text {
+      max-width: 100%;
+      font-size: 16px;
+    }
 
- &__content-wrapper {
+    &__consultant-wrapper {
+      flex-direction: row;
+    }
+
+    &__consultant-info {
+      margin: 0 0 0 25px;
+    }
+
+    &__btn {
+      margin: 25px 0;
+    }
+
+    &__text-sec {
+      margin-top: 25px;
+    }
+
+    &__content-wrapper {
       flex-direction: column;
     }
 
@@ -217,12 +213,12 @@
         transform: translateX(-50%);
       }
     }
-   }
+  }
 
   @include respond-to($mobile) {
-   &__img {
+    &__img {
       height: 823px;
-      background-image: url("/public/assets/images/components/offer/offer-img-mob.jpg");
+      background-image: url('/public/assets/images/components/offer/offer-img-mob.jpg');
     }
 
     &__consultant-wrapper {
