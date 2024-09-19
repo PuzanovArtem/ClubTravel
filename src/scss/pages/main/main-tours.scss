@@ -293,7 +293,7 @@
   &__button-wrapper {
     @extend %display-center;
     gap: 8px;
-    margin: 0 auto;
+    margin: 15px auto 0;
   }
 
   &__button {
@@ -313,6 +313,10 @@
     height: 24px;
     fill: $primary;
   }
+}
+
+.main-hot {
+  margin: 100px 0 0;
 }
 
 @media (width <= 875px) {
@@ -375,16 +379,8 @@
   .main-tour {
     margin: 75px 0 0;
 
-    .main-company__swiper {
-      margin: 103px 0 12px;
-    }
-
-    .main-hot__swiper {
-      margin: 38px 0 0;
-    }
-
     &__swiper {
-      padding: 0 2px 10px;
+      padding: 38px 2px 10px;
     }
 
     &__swiper-wrapper {
@@ -414,7 +410,7 @@
     }
 
     &__button-wrapper {
-      margin: 27px 0 0;
+      margin: 40px 0 0;
     }
 
     &__text {

@@ -1,10 +1,17 @@
 export function toggleDropdown(dropdown) {
   dropdown.classList.toggle('dropdown--open')
+  const dropdownList = dropdown.querySelector('.dropdown__list')
+  if (dropdown.classList.contains('dropdown--open')) {
+    dropdownList.classList.add('active')
+  } else {
+    dropdownList.classList.remove('active')
+  }
 }
 
 export function setDropdownValue(dropdown, value) {
   dropdown.querySelector('.dropdown__current').textContent = value
   dropdown.classList.remove('dropdown--open')
+  dropdown.querySelector('.dropdown__list').classList.remove('active')
 }
 
 export function initializeDropdowns() {
@@ -29,6 +36,7 @@ export function initializeDropdowns() {
     dropdowns.forEach(dropdown => {
       if (!dropdown.contains(e.target)) {
         dropdown.classList.remove('dropdown--open')
+        dropdown.querySelector('.dropdown__list').classList.remove('active')
       }
     })
   })
