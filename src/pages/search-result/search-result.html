@@ -1,33 +1,36 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta name="description" content="travel club">
-    <meta charset="UTF-8"/>
-    <link rel="icon" type="image/svg+xml" href="/assets/images/icons/logo.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="/src/pages/search-result/search-result.scss">
-    <title>Club Travel</title>
-  </head>
-  <body>
-    {{> header }}
+<head>
+  <meta name="description" content="travel club">
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="/assets/images/icons/logo.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <main class="main">
-      {{> banner }}
+  <link rel="stylesheet" href="/src/pages/search-result/search-result.scss">
+  <title>Club Travel</title>
+</head>
 
-      {{> search }}
+<body>
+  {{> header }}
 
-      {{> search-content }}
+  <main class="main">
+    {{> banner }}
 
-      {{> offer }}
+    {{> search title = "Найти тур" additionalClass="icon--search-title"}}
 
-    </main>
+    {{> search-content }}
 
-    {{> _footer }}
+    {{> offer }}
 
-    <script crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v11.0"></script>
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.1/nouislider.min.js"></script>
-    <script type="module" src="/src/pages/search-result/search-result.js"></script>
-  </body>
+  </main>
+
+  {{> _footer }}
+
+  <script crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v11.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.1/nouislider.min.js"></script>
+  <script type="module" src="/src/pages/search-result/search-result.js"></script>
+</body>
+
 </html>

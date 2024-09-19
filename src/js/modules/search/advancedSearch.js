@@ -1,5 +1,5 @@
 export function initializeAdvancedSearch() {
-  const searchButton = document.querySelector('.search__advance--search')
+  const searchButton = document.querySelector('.search-row__sub')
 
   const parent = document.querySelector('.search-row')
 

@@ -1,8 +1,12 @@
 <section class="search">
   <div class="-container">
     <div class="search__content">
-      <h1 class="search__title">Найти тур</h1>
-
+      <h1 class="search__title">
+        <svg class="icon icon--search-stopwatch {{additionalClass}}">
+          <use xlink:href="/assets/sprites/sprite.svg#stopwatch"></use>
+        </svg>
+        {{title}}
+      </h1>
       <div class="search__wrapper">
         <div class="search-bar">
           <div class="search-bar__destination">
@@ -150,7 +154,7 @@
       <div class="search-row">
         <div class="search-row__sub">
           <a href="#" class="search__advance--search">
-            <svg class="icon icon__search-plus" width="16" height="16">
+            <svg class="icon icon--search-plus" width="16" height="16">
               <use xlink:href="/assets/sprites/sprite.svg#search-plus"></use>
             </svg>
 
@@ -158,14 +162,16 @@
           </a>
 
           <hr class="search__line">
+          <div class="search__btn-minus">
+            <span><svg class="icon icon--btn-close ">
+              <use xlink:href="/assets/sprites/sprite.svg#minus"></use>
+            </svg>
+          </span>
+          </div>
+          
 
           <button class="search__btn-close" type="button">
-            <span class="search__btn-close-span">
-              <img src="/assets/images/icons/couneter-minus.svg" alt="minus" width="20" height="20"
-                class="btn-close__img">
-
-              <span>Закрыть</span>
-            </span>
+            <span>Закрыть</span>
           </button>
         </div>
 
@@ -362,7 +368,7 @@
 
               <p class="category__regions-current"></p>
 
-              <div class="category__regions-item category__regions-item_change">
+              <div class="category__regions-item">
                 <button class="category__btns" type="button">
                   <svg class="icon icon__checkmark-circle category__btns--svg" width="16" height="16">
                     <use xlink:href="/assets/sprites/sprite.svg#checkmark-circle"></use>
