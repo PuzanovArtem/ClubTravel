@@ -213,6 +213,14 @@
 
   &__item--guests {
     align-items: center;
+
+    &.visible {
+      display: flex;
+    }
+
+    &.hidden {
+      display: none;
+    }
   }
 
   &__subitem {
@@ -240,6 +248,17 @@
 
   .search-bar__guests {
     width: 100%;
+  }
+
+  &__add-child {
+    align-items: center;
+    display: flex;
+    margin-bottom: 10px;
+  }
+
+  .icon__search-plus {
+    margin-right: 10px;
+    fill: $primary;
   }
 
   @include respond-to($l-tablet) {
@@ -289,5 +308,6 @@
 }
 
 .dropdown--open:last-child .dropdown__list:last-child {
+  overflow: visible;
   max-height: max-content;
 }

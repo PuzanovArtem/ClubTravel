@@ -1,6 +1,7 @@
 .hotel-card-info {
   justify-content: space-between;
   display: flex;
+  margin-bottom: 70px;
 
   &__wrapper {
     width: 62.5%;
@@ -23,6 +24,11 @@
   .icon--cutlery,
   .icon--house {
     padding: 0;
+  }
+
+  .icon--cross {
+    margin-left: 10px;
+    fill: $cross;
   }
 
   .dropdown__row {
@@ -106,6 +112,7 @@
 
   @include respond-to($tablet) {
     flex-direction: column;
+    margin-bottom: 56px;
 
     &__wrapper {
       width: 100%;
