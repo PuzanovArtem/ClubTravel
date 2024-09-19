@@ -1,35 +1,37 @@
 export const select = () => {
-  const selectCust = document.querySelectorAll('.select__custom');
-  const selectItems = document.querySelectorAll('.select__item');
+  const selectCust = document.querySelectorAll('.select__custom')
+  const selectItems = document.querySelectorAll('.select__item')
 
   function selectToggle() {
-    this.classList.toggle('is-active');
+    this.classList.toggle('is-active')
   }
 
   function selectChoose() {
-    const text = this.innerText;
-    const selectBlock = this.closest('.select');
-    const currentText = selectBlock.querySelector('.select__selected');
-    currentText.innerText = text;
-    selectBlock.classList.remove('is-active');
+    const text = this.innerText
+    const selectBlock = this.closest('.select')
+    const currentText = selectBlock.querySelector('.select__selected')
+    currentText.innerText = text
+    selectBlock.classList.remove('is-active')
   }
 
   selectCust.forEach(item => {
-    item.addEventListener('click', selectToggle);
-  });
+    item.addEventListener('click', selectToggle)
+  })
 
   selectItems.forEach(item => {
-    item.addEventListener('click', selectChoose);
-  });
+    item.addEventListener('click', selectChoose)
+  })
 
   document.addEventListener('click', function (e) {
     selectCust.forEach(item => {
       if (!item.contains(e.target)) {
-        item.classList.remove('is-active');
+        item.classList.remove('is-active')
       }
-    });
-  });
-};
+    })
+  })
+}
 
 select();
+
+
 
