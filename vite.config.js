@@ -7,8 +7,6 @@ import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
 import { defineConfig } from 'vite'
 import { resolve } from 'path'
 
-
-
 export default defineConfig({
   base: './',
   plugins: [
@@ -55,25 +53,25 @@ export default defineConfig({
     handlebars({
       partialDirectory: [
         resolve(__dirname, 'src/html/components'),
+        resolve(__dirname, 'src/html/modules'),
         resolve(__dirname, 'src/html/pages/main'),
         resolve(__dirname, 'src/html/modules'),
         resolve(__dirname, 'src/html/pages/search-result'),
         resolve(__dirname, 'src/html/pages/hot-offers'),
         resolve(__dirname, 'src/html/pages/hotel-card/'),
         resolve(__dirname, 'src/html/pages/company/'),
-        resolve(__dirname, "src/html/pages/directions-tour/"),
+        resolve(__dirname, 'src/html/pages/directions-tour/'),
       ],
-       
     }),
   ],
   build: {
     outDir: 'docs',
     rollupOptions: {
       input: {
-        main: resolve(__dirname, "/index.html"),
-        search: resolve(__dirname, "/src/pages/search-result/search-result.html"),
-        card: resolve(__dirname, "/src/pages/hotel-card/hotel-card.html"),
-        directions: resolve(__dirname, "/src/pages/directions-tour/directions-tour.html"),
+        main: resolve(__dirname, '/index.html'),
+        search: resolve(__dirname, '/src/pages/search-result/search-result.html'),
+        card: resolve(__dirname, '/src/pages/hotel-card/hotel-card.html'),
+        directions: resolve(__dirname, '/src/pages/directions-tour/directions-tour.html'),
         hotOffers: resolve(__dirname, '/src/pages/hot-offers/hot-offers.html'),
         company: resolve(__dirname, '/src/pages/company/company.html'),
       },

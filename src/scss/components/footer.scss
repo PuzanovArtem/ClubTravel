@@ -120,7 +120,7 @@
     line-height: 1.4;
     color: transparent;
     background: linear-gradient(to right, #f48f0c, #fd1d1d, #f95d1b);
-    -webkit-background-clip: text;
+    background-clip: text;
   }
 
   &__social {

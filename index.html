@@ -13,8 +13,13 @@
 <body>
   {{> header }}
   <main class="main">
-    {{> main-banner }} {{> search title = "Найти тур" additionalClass="icon--search-title" }} {{> main-company }} {{> main-hot }} {{> main-winter }} {{> main-summer }} {{>
-    offer }}
+    {{> hero bannerClass="banner-hidden" mainBannerClass="banner-visible" searchClass="search-visible " title = "Найти
+    тур" additionalClass="icon--search-title"}}
+    {{> main-company }}
+    {{> main-hot }}
+    {{> main-winter }}
+    {{> main-summer }}
+    {{> offer }}
   </main>
   {{> _footer }}
 

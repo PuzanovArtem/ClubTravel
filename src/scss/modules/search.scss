@@ -331,6 +331,7 @@
     }
 
     .search__advance--search {
+      display: block;
       width: 265px;
       padding: 0;
       font-size: 18px;
@@ -635,10 +636,6 @@
 .search-row.active .search__btn-close {
   align-items: center;
   display: inline-block;
-}
-
-.search-row.active .search__advance--search {
-  display: block;
 }
 
 .noUi-handle {

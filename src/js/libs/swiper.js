@@ -24,7 +24,7 @@ export const headerSlider = () => {
 }
 
 export const cardSlider = () => {
-  const swiper = new Swiper('.search-content__swiper-container', {
+  new Swiper('.search-content__swiper-container', {
     loop: true,
     navigation: {
       nextEl: '.swiper-button-next',
@@ -43,7 +43,7 @@ export const mainCompanySlider = () => {
         enabled: true,
       },
       touchEventsTarget: 'wrapper',
-
+      spaceBetween: 10,
       breakpoints: {
         320: {
           slidesPerView: 1,
@@ -59,7 +59,7 @@ export const mainCompanySlider = () => {
           spaceBetween: 15,
         },
         1200: {
-          slidesPerView: 4,
+          slidesPerView: 3,
           spaceBetween: 11,
         },
       },
@@ -67,7 +67,7 @@ export const mainCompanySlider = () => {
 
     new Swiper('.main-company__swiper', config)
   } catch (error) {
-    console.log('Swiper initialization error:', error)
+    console.error('Swiper initialization error:', error)
   }
 }
 
@@ -81,34 +81,30 @@ export const mainHotSlider = () => {
         enabled: true,
       },
       touchEventsTarget: 'wrapper',
-
+      spaceBetween: 10,
       breakpoints: {
         320: {
           slidesPerView: 1,
-          spaceBetween: 20,
+          spaceBetween: 10,
         },
         578: {
-          slidesPerView: 1,
-          spaceBetween: 0,
-        },
-        804: {
           slidesPerView: 2,
           spaceBetween: 10,
         },
         991: {
           slidesPerView: 3,
-          spaceBetween: 15,
+          spaceBetween: 10,
         },
         1200: {
-          slidesPerView: 4,
-          spaceBetween: 11,
+          slidesPerView: 3,
+          spaceBetween: 10,
         },
       },
     }
 
     new Swiper('.main-hot__swiper', config)
   } catch (error) {
-    console.log('Swiper initialization error:', error)
+    console.error('Swiper initialization error:', error)
   }
 }
 
@@ -141,7 +137,7 @@ export const mainWinterSlider = () => {
 
     new Swiper('.main-winter__swiper', config)
   } catch (error) {
-    console.log('Swiper initialization error:', error)
+    console.error('Swiper initialization error:', error)
   }
 }
 

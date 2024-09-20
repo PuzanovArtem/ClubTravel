@@ -1,17 +1,14 @@
+import '/src/js/modules/counter.js'
+import './src/js/components/search.js'
 import {
   headerSlider,
   mainCompanySlider,
   mainHotSlider,
-  mainWinterSlider,
   mainSummerSlider,
+  mainWinterSlider,
 } from './src/js/libs/swiper'
 
-import {
-  header,
-} from './src/js/components/header.js'
-  
-import '/src/js/modules/counter.js'
-import './src/js/components/search.js'
+import { header } from './src/js/components/header.js'
 
 document.addEventListener('DOMContentLoaded', () => {
   header()
