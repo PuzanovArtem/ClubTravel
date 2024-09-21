@@ -421,10 +421,6 @@
     padding: 8px 16px;
   }
 
-  &__choose-btn:hover {
-    background-color: #e67e00;
-  }
-
   &__booking-table-tab {
     display: none;
   }
@@ -656,7 +652,8 @@
     }
 
     &__hotel-item {
-      grid-template-columns: 1fr 1fr 167px;
+      grid-template-columns: 315px 1fr 167px;
+      gap: 20px;
     }
 
     &__hotel-offer-card {
@@ -751,7 +748,7 @@
     }
 
     &__hotel-item {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 315px 1fr;
     }
 
     &__hotel-offer-card,

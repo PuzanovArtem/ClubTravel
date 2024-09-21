@@ -62,6 +62,7 @@ export default defineConfig({
         resolve(__dirname, 'src/html/pages/hotel-card/'),
         resolve(__dirname, 'src/html/pages/company/'),
         resolve(__dirname, "src/html/pages/directions-tour/"),
+        resolve(__dirname, "src/html/pages/user-account/"),
       ],
        
     }),
@@ -76,6 +77,7 @@ export default defineConfig({
         directions: resolve(__dirname, "/src/pages/directions-tour/directions-tour.html"),
         hotOffers: resolve(__dirname, '/src/pages/hot-offers/hot-offers.html'),
         company: resolve(__dirname, '/src/pages/company/company.html'),
+        account: resolve(__dirname, '/src/pages/user-account/user-account.html'),
       },
     },
   },
