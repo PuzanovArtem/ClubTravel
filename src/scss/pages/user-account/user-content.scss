@@ -1,6 +1,6 @@
 .account {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 314px 1fr;
   gap: 52px;
 }
 
@@ -111,10 +111,16 @@
   }
 
   &__table {
+    width: 100%;
     box-shadow: 0 3px 6px 0 #00000029;
   }
 
   &__th {
+    padding: 15px 25px;
     font-weight: 700;
+  }
+
+  &__thead-tr {
+    box-shadow: 0px 2px 2px 0px #0000001A;
   }
 }
