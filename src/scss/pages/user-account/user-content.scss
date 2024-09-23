@@ -121,6 +121,63 @@
   }
 
   &__thead-tr {
-    box-shadow: 0px 2px 2px 0px #0000001A;
+    box-shadow: 0 2px 2px 0 #0000001A;
+  }
+
+  &__td {
+    padding: 25px;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  &__tbody-tr {
+    position: relative;
+
+    &::after {
+      content: "";
+      opacity: 0.2;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: $text;
+    }
+  }
+
+  &__status {
+    position: relative;
+    font-size: 12px;
+
+    &::after {
+      content: "";
+      opacity: 0.2;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 99px;
+      height: 26px;
+      border-radius: 6px;
+      transform: translate(-50%, -50%);
+      
+    }
+
+    &--paid {
+      color: $green;
+    }
+
+    &--paid::after {
+      content: "";
+      background: $green;
+    }
+
+    &--unpaid {
+      color: $primary;
+    }
+
+    &--unpaid::after {
+      content: "";
+      background: $primary;
+    }
   }
 }

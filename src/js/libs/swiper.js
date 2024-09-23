@@ -173,7 +173,7 @@ export const mainSummerSlider = () => {
     console.error('Swiper initialization error:', error)
   }
 
-  const swiper = new Swiper('.search-content__swiper-container', {
+  new Swiper('.search-content__swiper-container', {
     loop: true,
     navigation: {
       nextEl: '.swiper-button-next',
@@ -192,7 +192,7 @@ export const hotelCardSlider = () => {
     watchSlidesVisibility: true,
     watchSlidesProgress: true,
   })
-  const galleryTop = new Swiper('.gallery-top', {
+  new Swiper('.gallery-top', {
     spaceBetween: 10,
     loop: true,
     loopedSlides: 5,

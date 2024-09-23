@@ -13,7 +13,7 @@ export default [
       quotes: ['warn', 'single'],
       camelcase: ['error', { ignoreImports: true }],
       /* eslint-disable-next-line no-magic-numbers */
-      complexity: ['error', 6],
+      complexity: ['error', 10],
       curly: ['error', 'multi-line'],
       'for-direction': 'error',
       'no-class-assign': 'error',
