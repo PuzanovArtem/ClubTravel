@@ -2,7 +2,6 @@
   position: relative;
   padding: 84px 0 0;
 
-
   &::after {
     content: '';
     position: absolute;
@@ -11,7 +10,7 @@
     width: 100%;
     max-width: 1920px;
     height: 1px;
-    background:  $table-gray;
+    background: $table-gray;
     transform: translateX(-50%);
   }
 
@@ -89,7 +88,7 @@
 
   .icon--instagram {
     margin-right: 20px;
-    fill: #f95d1b;
+    fill: $cross;
   }
 
   &__contact-link {
@@ -133,7 +132,7 @@
     font-size: 16px;
     line-height: 1.4;
     color: transparent;
-    background: linear-gradient(to right, #f48f0c, #fd1d1d, #f95d1b);
+    background: $hot-yellow-orange;
     background-clip: text;
   }
 
@@ -153,13 +152,13 @@
   &__bottom-wrapper {
     @extend %display-center;
     padding: 15px 0;
-    background: #f4f4f4;
+    background: $white;
   }
 
   &__bottom-text {
     align-items: end;
     margin: 0 16px 0 0;
-    color: #575757;
+    color: $gray;
   }
 
   @include respond-to($l-tablet) {

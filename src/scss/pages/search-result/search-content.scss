@@ -208,7 +208,7 @@
   .icon--star {
     width: 18px;
     height: 18px;
-    fill: #f5c213;
+    fill: $yellow;
   }
 
   &__short-info-item:not(:last-child) {
@@ -237,7 +237,7 @@
     margin: 0 0 0 auto;
     padding: 20px;
     border-radius: 6px;
-    box-shadow: 0 5px 10px 0 $black0001a;
+    box-shadow: 0 5px 10px 0 $light-black;
     transition:
       background 0.5s ease,
       height 0.5s ease-in-out,
@@ -370,7 +370,7 @@
     border-top-right-radius: 0;
     border-collapse: collapse;
     background-color: rgba(37, 82, 150, 0.059);
-    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 10px 0 $black-shadow-10;
   }
 
   &__th,
@@ -413,7 +413,7 @@
   }
 
   &__tr:hover {
-    background-color: #f1f1f1;
+    background-color: $white;
   }
 
   &__choose-btn {
@@ -445,7 +445,7 @@
     width: 25% !important;
     border: 1px solid $light-gray;
     border-radius: 6px;
-    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 10px 0 $black-shadow-10;
 
     @include respond-to($lap-top) {
       & {
@@ -522,8 +522,8 @@
   .fc-no-event {
     opacity: 0.5;
     pointer-events: none;
-    color: #d0d0d0;
-    background-color: #f0f0f0;
+    color: $light-gray;
+    background-color: $white;
   }
 
   .fc .fc-daygrid-day-top {
@@ -583,7 +583,7 @@
 
   .fc-day-selected {
     color: white;
-    background-color: #f68521;
+    background-color: $primary;
   }
 
   &__calendar-subtitle {
@@ -785,7 +785,7 @@
       border-top-left-radius: 0;
       border-collapse: collapse;
       background-color: rgba(37, 82, 150, 0.059);
-      box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+      box-shadow: 0 5px 10px 0 $black-shadow-10;
     }
 
     &__booking-table-mob {

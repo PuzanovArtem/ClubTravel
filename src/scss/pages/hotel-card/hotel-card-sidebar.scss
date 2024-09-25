@@ -9,7 +9,7 @@
     margin-bottom: 48px;
     padding: 25px;
     background: $white;
-    box-shadow: 0 5px 10px 0 $black0001a;
+    box-shadow: 0 5px 10px 0 $light-black;
   }
 
   &__first-block-top {
@@ -77,7 +77,7 @@
     border: 1px solid $light-gray;
     border-radius: 6px;
     font-size: 12px;
-    box-shadow: 0 2px 3px 0 $black0001a;
+    box-shadow: 0 2px 3px 0 $light-black;
   }
 
   .dropdown__row {
@@ -176,7 +176,7 @@
     padding: 24px;
     border-radius: 8px;
     background: $white;
-    box-shadow: 0 5px 10px 0 $black0001a;
+    box-shadow: 0 5px 10px 0 $light-black;
   }
 
   &__block-subtitle {
@@ -274,7 +274,7 @@
   @include respond-to($tablet) {
     &__first-block {
       margin: 0 -15px 32px;
-      box-shadow: 0 5px 5px 0 $black0001a;
+      box-shadow: 0 5px 5px 0 $light-black;
     }
 
     &__wrapper {
