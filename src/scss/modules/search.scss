@@ -649,7 +649,7 @@
   background: $primary !important;
 }
 
-@media (width <=1170px) {
+@include respond-to($lap-top) {
   .search {
     &__content {
       border-radius: 0;
@@ -661,7 +661,7 @@
   }
 }
 
-@media (width <= 1024px) {
+@include respond-to($l-tablet) {
   .search {
     &__wrapper {
       padding: 15px;
@@ -699,7 +699,7 @@
   }
 }
 
-@media (width <= 900px) {
+@include respond-to(900px) {
   .dropdown {
     &__current {
       font-size: 14px;
@@ -707,7 +707,7 @@
   }
 }
 
-@media (width <= 875px) {
+@include respond-to(875px) {
   .search {
     top: 0;
 
@@ -733,24 +733,9 @@
     display: block;
     height: 100%;
 
-    &__destination {
-      width: 100%;
-      min-width: 290px;
-      border-bottom: 1px solid $light-gray;
-    }
-
-    &__duration {
-      width: 100%;
-      min-width: 290px;
-      border-bottom: 1px solid $light-gray;
-    }
-
-    &__date {
-      width: 100%;
-      min-width: 290px;
-      border-bottom: 1px solid $light-gray;
-    }
-
+    &__destination,
+    &__duration,
+    &__date,
     &__guests {
       width: 100%;
       min-width: 290px;
@@ -795,7 +780,7 @@
     }
 
     &__regions {
-      grid-column: 1/3;
+      grid-column: 1 / 3;
       grid-row: 2;
     }
 
@@ -805,7 +790,7 @@
   }
 }
 
-@media (width <= 529px) {
+@include respond-to(529px) {
   .search {
     top: 0;
 
@@ -828,28 +813,11 @@
       margin: 15px 0 5px 16px;
     }
 
-    &__destination {
-      height: 71px;
-    }
-
-    &__duration {
-      height: 65px;
-    }
-
-    &__date {
-      height: 65px;
-    }
-
-    &__title {
-      margin: 7px 0 3px 16px;
-    }
-
+    &__destination,
+    &__duration,
+    &__date,
     &__guests {
       height: 55px;
-    }
-
-    &__title {
-      margin: 7px 0 3px 16px;
     }
 
     &-btn {

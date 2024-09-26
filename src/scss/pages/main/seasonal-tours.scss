@@ -101,7 +101,7 @@
   }
 }
 
-@media (width<= 1355px) {
+@include respond-to(1355px) {
   .season-tours {
     &__swiper {
       margin: 20px 0 0;
@@ -109,7 +109,7 @@
   }
 }
 
-@media (width <= 525px) {
+@include respond-to(525px) {
   .main-winter {
     margin: 85px 0 0;
   }

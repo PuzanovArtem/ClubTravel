@@ -150,7 +150,7 @@
   }
 }
 
-@media (width <= 1355px) {
+@include respond-to(1355px) {
   .main-tour {
     &__swiper-button-prev,
     &__swiper-button-next {
@@ -172,7 +172,7 @@
   }
 }
 
-@media (width <= 1023px) {
+@include respond-to($l-tablet) {
   .main-tour {
     &__swiper-button-prev {
       left: 6%;
@@ -191,7 +191,7 @@
   }
 }
 
-@media (width <= 660px) {
+@include respond-to(660px) {
   .main-tour {
     &__swiper-button-next,
     &__swiper-button-prev {
@@ -215,7 +215,7 @@
   }
 }
 
-@media (width <= 525px) {
+@include respond-to(525px) {
   .main-tour {
     &__swiper-button-next,
     &__swiper-button-prev {
@@ -229,9 +229,7 @@
   .main-summer__swiper-button-next {
     top: 13%;
   }
-}
 
-@media (width <= 525px) {
   .main-tour__title {
     flex-direction: column;
     gap: 0;
