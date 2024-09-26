@@ -2,6 +2,22 @@
   display: grid;
   grid-template-columns: 314px 1fr;
   gap: 52px;
+  padding-bottom: 100px;
+
+  @include respond-to($lap-top) {
+    gap: 35px;
+    padding-top: 31px;
+  }
+
+  @include respond-to($l-tablet) {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding-bottom: 50px;
+  }
+
+  @include respond-to($mobile) {
+    gap: 15px;
+  }
 }
 
 .account-sidebar {
@@ -18,7 +34,7 @@
   }
 
   &__name {
-    margin-top: 10px;
+    margin-top: 25px;
     font-size: 26px;
     line-height: 1.3;
     text-align: center;
@@ -102,9 +118,38 @@
       }
     }
   }
+
+  @include respond-to($l-tablet) {
+    &__card {
+      width: 100%;
+    }
+
+    &__menu,
+    &__policy {
+      justify-content: center;
+      display: flex;
+      flex-direction: row;
+      gap: 15px;
+    }
+  }
+
+  @include respond-to($l-tablet) {
+    &__menu {
+      display: block;
+    }
+  }
+
+  @include respond-to($mobile) {
+    &__policy {
+      flex-direction: column;
+      gap: 0;
+    }
+  }
 }
 
 .account-orders {
+  padding-top: 25px;
+
   &__title {
     margin-bottom: 24px;
     font-size: 26px;
@@ -113,6 +158,10 @@
   &__table {
     width: 100%;
     box-shadow: 0 3px 6px 0 #00000029;
+
+    &--mob {
+      display: none;
+    }
   }
 
   &__th {
@@ -121,11 +170,11 @@
   }
 
   &__thead-tr {
-    box-shadow: 0 2px 2px 0 #0000001A;
+    box-shadow: 0 2px 2px 0 #0000001a;
   }
 
   &__td {
-    padding: 25px;
+    padding: 22px 25px;
     font-size: 16px;
     text-align: center;
   }
@@ -134,7 +183,7 @@
     position: relative;
 
     &::after {
-      content: "";
+      content: '';
       opacity: 0.2;
       position: absolute;
       bottom: 0;
@@ -150,7 +199,7 @@
     font-size: 12px;
 
     &::after {
-      content: "";
+      content: '';
       opacity: 0.2;
       position: absolute;
       top: 50%;
@@ -159,7 +208,6 @@
       height: 26px;
       border-radius: 6px;
       transform: translate(-50%, -50%);
-      
     }
 
     &--paid {
@@ -167,7 +215,7 @@
     }
 
     &--paid::after {
-      content: "";
+      content: '';
       background: $green;
     }
 
@@ -176,8 +224,184 @@
     }
 
     &--unpaid::after {
-      content: "";
+      content: '';
       background: $primary;
+    }
+  }
+
+  &__pagination-container {
+    padding: 20px 18px;
+
+    &--second {
+      text-align: end;
+    }
+  }
+
+  &__pagination-btn {
+    cursor: pointer;
+    margin: 0 10px;
+    padding: 3px 9px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-size: 14px;
+    color: $white;
+    background-color: $primary;
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease,
+      border 0.3s ease;
+
+    @media (hover: hover) {
+      &:hover {
+        border: 1px solid $primary;
+        color: $primary;
+        background-color: $white;
+      }
+    }
+  }
+
+  &__pagination-btn:disabled {
+    cursor: not-allowed;
+    background-color: $light-gray;
+  }
+
+  &__pagination-pages {
+    font-size: 16px;
+
+    &--current-page {
+      padding: 3px 10px;
+      border-radius: 4px;
+      background-color: $light-gray;
+    }
+
+    &--total-pages {
+      color: grey;
+    }
+  }
+
+  &__pagination-counter {
+    font-size: 16px;
+    color: $gray-text;
+  }
+
+  @include respond-to($lap-top) {
+    &__td {
+      padding: 18px 10px;
+      font-size: 14px;
+    }
+  }
+
+  @include respond-to($tablet) {
+    &__table {
+      padding: 0 20px;
+
+      &--mob {
+        display: block;
+      }
+
+      &--tab {
+        display: none;
+      }
+    }
+
+    &__card-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+      gap: 40px;
+    }
+
+    &__card {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 20px 0;
+
+      &::after {
+        content: '';
+        opacity: 0.2;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: $text;
+      }
+    }
+
+    &__td,
+    &__th {
+      padding: 5px 0;
+      text-align: start;
+    }
+
+    &__td {
+      font-size: 16px;
+    }
+
+    &__status-mob {
+      width: 110px;
+      padding: 5px;
+      border-radius: 4px;
+      text-align: center;
+
+      &--paid {
+        color: $green;
+        background: $light-green;
+      }
+
+      &--unpaid {
+        color: $primary;
+        background: $light-primary;
+      }
+    }
+
+    &__pagination-container {
+      padding: 8px 0;
+
+      &--second {
+        text-align: center;
+      }
+    }
+
+    &__pagination {
+      margin-top: 21px;
+      text-align: center;
+    }
+  }
+
+  @include respond-to($mobile) {
+    &__table {
+      box-shadow: none;
+
+      &--mob {
+        padding: 0;
+      }
+    }
+
+    &__pagination-container {
+      &--second {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+      }
+    }
+
+    &__pagination-pages {
+      order: 3;
+      grid-column: span 2;
+    }
+
+    &__pagination-btn {
+      order: 1;
+    }
+
+    &__th {
+      width: 100px;
+    }
+
+    &__card-list {
+      grid-template-columns: 1fr;
+      gap: 0;
     }
   }
 }

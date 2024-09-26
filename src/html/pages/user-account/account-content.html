@@ -56,7 +56,7 @@
     <div class="account-orders">
       <h2 class="account-orders__title">Заказы</h2>
 
-      <table class="account-orders__table">
+      <table class="account-orders__table account-orders__table--tab">
         <thead class="account-orders__thead">
           <tr class="account-orders__thead-tr">
             <th class="account-orders__th">Номер заказа</th>
@@ -71,80 +71,58 @@
           </tr>
         </thead>
 
-        <tbody class="account-orders__tbody">
-          <tr class="account-orders__tbody-tr">
-            <td class="account-orders__td">1588665993</td>
+        <tbody class="orders-tbody account-orders__tbody"></tbody>
 
-            <td class="account-orders__td">554.00</td>
+        <tfoot>
+          <tr>
+            <td colspan="2" class="account-orders__pagination-container">
+              <span class="account-orders__pagination-counter display-info">Показано 0 из 0</span>
+            </td>
 
-            <td class="account-orders__td">admin@admin.ee</td>
+            <td colspan="3" class="account-orders__pagination-container account-orders__pagination-container--second">
+              <button type="button" class="prev-btn account-orders__pagination-btn">Назад</button>
 
-            <td class="account-orders__td account-orders__status account-orders__status--paid">Оплачено</td>
+              <span class="account-orders__pagination-pages">
+                <span class="account-orders__pagination-pages">Страница</span>
 
-            <td class="account-orders__td">18 июня 2020 15:01</td>
+                <span class="account-orders__pagination-pages--current-page current-page">1</span>
+
+                <span class="account-orders__pagination-pages">из</span>
+
+                <span class="account-orders__pagination-pages--total-pages total-pages">1</span>
+              </span>
+
+              <button type="button" class="next-btn account-orders__pagination-btn">Вперед</button>
+            </td>
           </tr>
-
-          <tr class="account-orders__tbody-tr">
-            <td class="account-orders__td">1588665993</td>
-
-            <td class="account-orders__td">554.00</td>
-
-            <td class="account-orders__td">admin@admin.ee</td>
-
-            <td class="account-orders__td account-orders__status account-orders__status--unpaid">В обработке</td>
-
-            <td class="account-orders__td">18 июня 2020 15:01</td>
-          </tr>
-
-          <tr class="account-orders__tbody-tr">
-            <td class="account-orders__td">1588665993</td>
-
-            <td class="account-orders__td">554.00</td>
-
-            <td class="account-orders__td">admin@admin.ee</td>
-
-            <td class="account-orders__td account-orders__status account-orders__status--unpaid">В обработке</td>
-
-            <td class="account-orders__td">18 июня 2020 15:01</td>
-          </tr>
-
-          <tr class="account-orders__tbody-tr">
-            <td class="account-orders__td">1588665993</td>
-
-            <td class="account-orders__td">554.00</td>
-
-            <td class="account-orders__td">admin@admin.ee</td>
-
-            <td class="account-orders__td account-orders__status account-orders__status--unpaid">В обработке</td>
-
-            <td class="account-orders__td">18 июня 2020 15:01</td>
-          </tr>
-
-          <tr class="account-orders__tbody-tr">
-            <td class="account-orders__td">1588665993</td>
-
-            <td class="account-orders__td">554.00</td>
-
-            <td class="account-orders__td">admin@admin.ee</td>
-
-            <td class="account-orders__td account-orders__status account-orders__status--unpaid">В обработке</td>
-
-            <td class="account-orders__td">18 июня 2020 15:01</td>
-          </tr>
-
-          <tr class="account-orders__tbody-tr">
-            <td class="account-orders__td">1588665993</td>
-
-            <td class="account-orders__td">554.00</td>
-
-            <td class="account-orders__td">admin@admin.ee</td>
-
-            <td class="account-orders__td account-orders__status account-orders__status--unpaid">В обработке</td>
-
-            <td class="account-orders__td">18 июня 2020 15:01</td>
-          </tr>
-        </tbody>
+        </tfoot>
       </table>
+
+      <div class="account-orders__table account-orders__table--mob">
+        <div class="orders-tbody-mob account-orders__card-list"></div>
+
+        <div class="account-orders__pagination">
+          <div class="account-orders__pagination-container">
+            <span class="account-orders__pagination-counter display-info-mob">Показано 0 из 0</span>
+          </div>
+
+          <div class="account-orders__pagination-container account-orders__pagination-container--second">
+            <button type="button" class="account-orders__pagination-btn prev-btn-mob">Назад</button>
+
+            <span class="account-orders__pagination-pages">
+              <span class="account-orders__pagination-pages">Страница</span>
+
+              <span class="account-orders__pagination-pages--current-page current-page-mob">1</span>
+
+              <span class="account-orders__pagination-pages">из</span>
+
+              <span class="account-orders__pagination-pages--total-pages total-pages-mob">1</span>
+            </span>
+
+            <button type="button" class="account-orders__pagination-btn next-btn-mob">Вперед</button>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </div>
