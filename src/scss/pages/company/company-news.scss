@@ -8,9 +8,9 @@
   }
 }
 
-@media (max-width: 578px) {
+@include respond-to(578px) {
   .company-news {
-    margin: 53px 0 65px ;
+    margin: 53px 0 65px;
 
     &__slide {
       margin-right: 0 !important;

@@ -179,21 +179,23 @@
             color: $primary;
           }
         }
-      }
 
-      .header__nav-link {
-        @extend %display-flex;
-        align-items: center;
-        letter-spacing: -0.5px;
-        color: $blue;
-        text-align: center;
-        text-transform: uppercase;
+        &-link {
+          @extend %display-flex;
+          align-items: center;
+          letter-spacing: -0.5px;
+          color: $blue;
+          text-align: center;
+          text-transform: uppercase;
 
-        span {
-          margin-right: 6px;
-          font-size: 16px;
+          span {
+            margin-right: 6px;
+            font-size: 16px;
+          }
         }
       }
+
+      
     }
   }
 
@@ -260,39 +262,39 @@
     padding: 16px 0 22px;
     border-top: 1px solid $black-shadow-10;
     border-bottom: 1px solid $black-shadow-10;
+  }
 
-    &__links {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
 
-    &__contacts {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      margin-top: 16px;
-      margin-left: 2px;
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 16px;
+    margin-left: 2px;
+  }
 
-      .sidebar__mail,
-      .sidebar__tel {
-        @extend %display-flex;
-        align-items: center;
-        font-size: 12px;
-        line-height: 16px;
-        color: $gray-text;
+  &__mail,
+  &__tel {
+    @extend %display-flex;
+    align-items: center;
+    font-size: 12px;
+    line-height: 16px;
+    color: $gray-text;
+  }
 
-        &--icon {
-          width: 13px;
-          height: 11px;
-          margin: 0 5px 0 0;
-        }
+  &__icon {
+    width: 13px;
+    height: 11px;
+    margin-right: 5px;
+  }
 
-        &--contacts {
-          margin-right: 10px;
-        }
-      }
-    }
+  &__tel--number {
+    margin-right: 10px;
   }
 
   &__country {

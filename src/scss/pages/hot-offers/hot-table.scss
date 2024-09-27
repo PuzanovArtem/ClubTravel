@@ -334,7 +334,7 @@
   }
 }
 
-@media (width <= 1188px) {
+@m@include respond-to(1188px) {
   .hot-deals {
     padding: 0 25px;
 
@@ -474,13 +474,13 @@
   }
 }
 
-@media (width <= 875px) {
+@include respond-to(875px) {
   .hot-deals {
     margin: 100px 0 113px;
   }
 }
 
-@media (width <= 425px) {
+@include respond-to(425px) {
   .hot-deals {
     margin-top: 90px;
     padding: 0;
