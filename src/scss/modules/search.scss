@@ -37,7 +37,7 @@
     z-index: 1;
     border-radius: 10px;
     background: $white;
-    box-shadow: 0 5px 10px 0 #0000001a;
+    box-shadow: 0 5px 10px 0 $light-black;
   }
 
   &__title {
@@ -53,11 +53,11 @@
   &__wrapper {
     height: 89px;
     padding: 15px 32px;
-    background: linear-gradient(180deg, #fccb04 0%, #ee901b 100%);
+    background: $yellow-orange;
   }
 
   .icon__calendar {
-    fill: #a9a9a9;
+    fill: $light-gray;
   }
 
   .icon__arrow-down {
@@ -79,25 +79,25 @@
     width: 18px;
     height: 18px;
     margin: 0 4px 0 0;
-    fill: #ffe489;
+    fill: $light-yellow;
   }
 
   .icon__house {
     width: 16px;
     height: 16px;
     margin: 0 8px 0 0;
-    fill: #cecece;
+    fill: $white;
   }
 
   .icon__checkmark-circle {
     width: 16px;
     height: 16px;
     margin: 0 8px 0 0;
-    fill: #cecece;
+    fill: $slide-gray;
   }
 
   .item__guests--text {
-    color: #888;
+    color: $gray-text;
   }
 
   .dropdown__list::-webkit-scrollbar {
@@ -142,7 +142,7 @@
     width: 100%;
     height: 1px;
     margin: 0 21px 0 24px;
-    background: #999;
+    background: $gray-text;
     transition: 0.9s ease;
   }
 
@@ -167,19 +167,19 @@
     display: inline-block;
     width: 258px;
     height: 60px;
-    border-right: 1px solid #e2e2e2;
+    border-right: 1px solid $light-gray;
   }
 
   &__duration,
   &__date {
     width: 180px;
     height: 60px;
-    border-right: 1px solid #e2e2e2;
+    border-right: 1px solid $light-gray;
   }
 
   &__title {
     margin: 7px 0 0 16px;
-    color: #888;
+    color: $gray-text;
   }
 
   &__guests {
@@ -199,11 +199,11 @@
     @extend %display-jc-sb;
     width: 100%;
     padding: 12px;
-    border: 1px solid #e2e2e2;
+    border: 1px solid $light-gray;
     border-radius: 6px;
     font-family: $font-family-second;
     font-size: 16px;
-    color: #222;
+    color: $text;
   }
 
   &__subitem-subrow {
@@ -215,10 +215,10 @@
   &__guests-add {
     width: 100%;
     height: 42px;
-    border: 1px solid #f68521;
+    border: 1px solid $primary;
     font-family: $font-family-second;
     font-size: 16px;
-    color: #222;
+    color: $text;
 
     &:hover {
       background: $white;
@@ -232,9 +232,9 @@
     height: 60px;
     border-radius: 0 6px 6px 0;
     letter-spacing: 0.7px;
-    color: #fff;
+    color: $white;
     text-transform: uppercase;
-    background: #13882d;
+    background: $light-green;
   }
 }
 
@@ -245,9 +245,9 @@
 
   &__row {
     @extend %display-jc-sb;
-    padding: 8px 13px 5px 8px;
+    padding: 7px 13px 1px 8px;
     border-radius: 4px;
-    background-color: #fff;
+    background-color: $white;
   }
 
   &__current {
@@ -313,8 +313,8 @@
   width: 100%;
   padding: 0 32px 0 26px;
   border-radius: 0 0 10px 10px;
-  background: #fff;
-  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+  background: $white;
+  box-shadow: 0 5px 10px 0 $black-shadow-10;
   transition: 0.6s ease;
 
   &__sub {
@@ -345,7 +345,7 @@
     margin-bottom: 16px;
     letter-spacing: 0.6px;
     font-weight: 700;
-    color: #000;
+    color: $black;
   }
 
   &__items {
@@ -373,21 +373,20 @@
       margin: 30px 0;
     }
 
-    .noUi-target {
-      border-radius: 10px;
-      background: #e5e5e5;
-    }
-
     .noUi-connect {
       background: orange;
+    }
+
+    .noUi-connects {
+      background: $slide-gray;
     }
 
     .noUi-handle {
       width: 20px;
       height: 20px;
       border-radius: 50%;
-      background-color: #ff6c00;
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+      background-color: $cross;
+      box-shadow: 0 0 5px $black-shadow-30;
     }
 
     .noUi-tooltip {
@@ -412,10 +411,10 @@
       display: block;
       border: none !important;
       border-radius: 0 !important;
-      background: #cecece !important;
+      background: $white !important;
       box-shadow:
-        inset 0 1px 1px #f0f0f0,
-        0 3px 6px -5px #bbb;
+        inset 0 1px 1px $white,
+        0 3px 6px -5px $light-gray;
 
       *,
       & {
@@ -437,9 +436,9 @@
         right: 0 !important;
         width: 20px !important;
         height: 20px !important;
-        border: 1px solid #d9d9d9 !important;
+        border: 1px solid $slide-border-gray !important;
         border-radius: 50% !important;
-        background: #f68521 !important;
+        background: $primary !important;
         box-shadow: 0 3px 10px 0 rgba(247, 143, 31, 0.5) !important;
 
         .noUi-touch-area {
@@ -453,12 +452,12 @@
         bottom: 120%;
         left: 50%;
         padding: 5px;
-        border: 1px solid #d9d9d9;
+        border: 1px solid $slide-border-gray;
         border-radius: 3px;
-        color: #000;
+        color: $black;
         text-align: center;
         white-space: nowrap;
-        background: #fff;
+        background: $white;
         transform: translate(-50%, 0);
       }
     }
@@ -500,12 +499,12 @@
       position: absolute;
       display: block;
       padding: 5px;
-      border: 1px solid #d9d9d9;
+      border: 1px solid $slide-border-gray;
       border-radius: 3px;
-      color: #000;
+      color: $black;
       text-align: center;
       white-space: nowrap;
-      background: #fff;
+      background: $white;
     }
   }
 
@@ -526,7 +525,7 @@
   &__btns {
     @extend %display-flex;
     margin-bottom: 12px;
-    color: #222;
+    color: $text;
     text-align: left;
   }
 
@@ -551,7 +550,7 @@
       left: -8px;
       width: 18px;
       height: 100%;
-      background: #cecece;
+      background: $slide-gray;
       transform: translateY(-50%) rotate(-90deg);
     }
 
@@ -565,7 +564,7 @@
     opacity: 0.2;
     width: 100%;
     height: 1px;
-    background: #999;
+    background: $gray-text;
   }
 
   &__filter-item {
@@ -581,7 +580,7 @@
   }
 
   &__filter-title {
-    color: #666;
+    color: $gray-text;
   }
 
   .filter-title-second {
@@ -592,9 +591,9 @@
   &__filter-stars {
     display: flex;
     height: 22px;
-    border: 1px solid #e2e2e2;
+    border: 1px solid $light-gray;
     text-align: center;
-    box-shadow: 0 2px 3px 0 #0000001a;
+    box-shadow: 0 2px 3px 0 $light-black;
 
     span {
       margin: 0 auto;
@@ -650,7 +649,7 @@
   background: $primary !important;
 }
 
-@media (width <=1170px) {
+@include respond-to($lap-top) {
   .search {
     &__content {
       border-radius: 0;
@@ -662,7 +661,7 @@
   }
 }
 
-@media (width <= 1024px) {
+@include respond-to($l-tablet) {
   .search {
     &__wrapper {
       padding: 15px;
@@ -700,7 +699,7 @@
   }
 }
 
-@media (width <= 900px) {
+@include respond-to(900px) {
   .dropdown {
     &__current {
       font-size: 14px;
@@ -708,7 +707,7 @@
   }
 }
 
-@media (width <= 875px) {
+@include respond-to(875px) {
   .search {
     top: 0;
 
@@ -734,28 +733,13 @@
     display: block;
     height: 100%;
 
-    &__destination {
-      width: 100%;
-      min-width: 290px;
-      border-bottom: 1px solid #ccc;
-    }
-
-    &__duration {
-      width: 100%;
-      min-width: 290px;
-      border-bottom: 1px solid #ccc;
-    }
-
-    &__date {
-      width: 100%;
-      min-width: 290px;
-      border-bottom: 1px solid #ccc;
-    }
-
+    &__destination,
+    &__duration,
+    &__date,
     &__guests {
       width: 100%;
       min-width: 290px;
-      border-bottom: 1px solid #ccc;
+      border-bottom: 1px solid $light-gray;
     }
 
     &-btn {
@@ -796,7 +780,7 @@
     }
 
     &__regions {
-      grid-column: 1/3;
+      grid-column: 1 / 3;
       grid-row: 2;
     }
 
@@ -806,7 +790,7 @@
   }
 }
 
-@media (width <= 529px) {
+@include respond-to(529px) {
   .search {
     top: 0;
 
@@ -829,28 +813,11 @@
       margin: 15px 0 5px 16px;
     }
 
-    &__destination {
-      height: 71px;
-    }
-
-    &__duration {
-      height: 65px;
-    }
-
-    &__date {
-      height: 65px;
-    }
-
-    &__title {
-      margin: 7px 0 3px 16px;
-    }
-
+    &__destination,
+    &__duration,
+    &__date,
     &__guests {
       height: 55px;
-    }
-
-    &__title {
-      margin: 7px 0 3px 16px;
     }
 
     &-btn {

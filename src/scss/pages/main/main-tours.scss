@@ -10,7 +10,7 @@
     left: 3px;
     width: 3px;
     height: 31px;
-    fill: #f68521;
+    fill: $primary;
   }
 
   &--card-price {
@@ -18,19 +18,19 @@
     left: 0;
     width: 3px;
     height: 31px;
-    fill: #f68521;
+    fill: $primary;
   }
 
   &--clock {
     width: 16px;
     height: 16px;
-    fill: #fff;
+    fill: $white;
   }
 
   &--star {
     width: 18px;
     height: 18px;
-    fill: #f5c213;
+    fill: $yellow;
   }
 
   &--location {
@@ -49,13 +49,13 @@
     padding: 18px 0 4px;
     line-height: 1.18;
     letter-spacing: 0.5px;
-    color: #888;
+    color: $gray-text;
   }
 
   &__price--strong {
     margin-right: -5px;
     font-weight: 700;
-    color: #000;
+    color: $black;
   }
 
   &__wrapper {
@@ -73,7 +73,7 @@
   }
 
   &__swiper-slide {
-    width: 395px !important;
+    // width: 395px !important;
     padding: 0 10px 15px;
     box-sizing: border-box;
   }
@@ -105,7 +105,7 @@
     height: 330px;
     border-radius: 10px;
     background: $white;
-    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 10px 0 $black-shadow-10;
   }
 
   &__card-img {
@@ -136,7 +136,7 @@
     z-index: 1;
     letter-spacing: 1.5px;
     font-weight: 700;
-    color: #fff;
+    color: $white;
     transform: translate(-50%, -50%);
   }
 
@@ -147,7 +147,7 @@
     left: 0;
     width: 128%;
     height: 31px;
-    background: #f68521;
+    background: $primary;
   }
 
   &__card-data-wrapper {
@@ -163,7 +163,7 @@
 
   &__card-data {
     font-size: 14px;
-    color: #fff;
+    color: $white;
   }
 
   .hot-deals__card-data-wrapper {
@@ -192,7 +192,7 @@
 
   .hot-deals__card-place {
     font-size: 14px;
-    color: #fff;
+    color: $white;
   }
 
   &__card-text {
@@ -240,11 +240,11 @@
 
   &__card-price-new span {
     font-weight: 700;
-    color: #000;
+    color: $black;
   }
 
   .hot-deals__card-price-old {
-    color: #bfbfbf;
+    color: $slide-gray;
     text-decoration: line-through;
   }
 
@@ -266,7 +266,7 @@
     font-size: 16px;
     line-height: 1.36;
     font-weight: 700;
-    color: #fff;
+    color: $white;
     transform: translate(-50%, -50%);
   }
 
@@ -277,7 +277,7 @@
     left: 3px;
     width: 80px;
     height: 31px;
-    background: #f68521;
+    background: $primary;
   }
 
   .hot-deal__card {
@@ -303,7 +303,7 @@
     font-size: 16px;
     line-height: 1.36;
     letter-spacing: 1px;
-    color: #555;
+    color: $table-gray;
     transition: all 0.2s ease;
   }
 
@@ -318,13 +318,19 @@
   }
 }
 
-@media (width <= 875px) {
+@include respond-to($l-tablet) {
   .main-company {
     margin: 83px 0 0;
   }
 }
 
-@media (width <= 803px) {
+@include respond-to(875px) {
+  .main-company {
+    margin: 83px 0 0;
+  }
+}
+
+@include respond-to(803px) {
   .main-tour {
     &__swiper {
       padding: 0;
@@ -356,7 +362,7 @@
   }
 }
 
-@media (width <= 665px) {
+@include respond-to($mobile) {
   .main-tour {
     &__swiper {
       margin: 60px 0 15px !important;
@@ -375,7 +381,7 @@
   }
 }
 
-@media (width <= 525px) {
+@include respond-to(525px) {
   .main-tour {
     margin: 75px 0 0;
 
@@ -395,8 +401,8 @@
       width: 100%;
       height: 330px;
       border-radius: 10px;
-      background: #fff;
-      box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+      background: $white;
+      box-shadow: 0 5px 10px 0 $black-shadow-10;
     }
 
     .card__bg-img {
@@ -427,7 +433,7 @@
   }
 }
 
-@media (width <= 425px) {
+@include respond-to(425px) {
   .-container {
     max-width: 1200px;
   }
@@ -437,8 +443,8 @@
       width: 100%;
       height: 330px;
       border-radius: 10px;
-      background: #fff;
-      box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+      background: $white;
+      box-shadow: 0 5px 10px 0 $black-shadow-10;
     }
 
     .hot-deal__card {

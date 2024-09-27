@@ -5,7 +5,7 @@
 }
 
 .main-btn {
-  // display: inline-block;
+  display: inline-block;
   border: 1px solid $primary;
   border-radius: 6px;
   color: $white;
@@ -129,7 +129,7 @@
       width: 48px;
       height: 48px;
       border-radius: 50%;
-      background: #3e7739;
+      background: $green;
       transform: translate(-50%, -50%);
       transition: opacity 0.2s ease;
     }
@@ -150,7 +150,7 @@
   }
 }
 
-@media (width <= 1355px) {
+@include respond-to(1355px) {
   .main-tour {
     &__swiper-button-prev,
     &__swiper-button-next {
@@ -158,7 +158,7 @@
 
       &::before {
         opacity: 1;
-        background: #fff;
+        background: $white;
       }
     }
 
@@ -172,7 +172,7 @@
   }
 }
 
-@media (width <= 1023px) {
+@include respond-to($l-tablet) {
   .main-tour {
     &__swiper-button-prev {
       left: 6%;
@@ -191,7 +191,7 @@
   }
 }
 
-@media (width <= 660px) {
+@include respond-to(660px) {
   .main-tour {
     &__swiper-button-next,
     &__swiper-button-prev {
@@ -215,7 +215,7 @@
   }
 }
 
-@media (width <= 525px) {
+@include respond-to(525px) {
   .main-tour {
     &__swiper-button-next,
     &__swiper-button-prev {
@@ -229,9 +229,7 @@
   .main-summer__swiper-button-next {
     top: 13%;
   }
-}
 
-@media (width <= 525px) {
   .main-tour__title {
     flex-direction: column;
     gap: 0;
