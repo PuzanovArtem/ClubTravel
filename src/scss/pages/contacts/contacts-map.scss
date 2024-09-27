@@ -1,0 +1,21 @@
+.contacts-map {
+    padding: 35px 0 100px;
+
+    &__frame {
+        width: 100%;
+        height: 395px;
+        border-radius: 10px;
+    }
+
+    @include respond-to($tablet) {
+        &__frame {
+            height: 295px;
+        }
+    }
+
+    @include respond-to($mobile) {
+        &__frame {
+            height: 192px;
+        }
+    }
+}

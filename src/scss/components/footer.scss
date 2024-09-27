@@ -87,11 +87,6 @@
     line-height: 1.4;
   }
 
-  .icon--instagram {
-    margin-right: 20px;
-    fill: #f95d1b;
-  }
-
   &__contact-link {
     font-size: 16px;
     line-height: 1.4;
@@ -130,6 +125,7 @@
   }
 
   &__social-link {
+     margin-left: 20px;
     font-size: 16px;
     line-height: 1.4;
     color: transparent;
@@ -139,7 +135,7 @@
 
   &__social {
     position: relative;
-    padding: 0 0 0 40px;
+    padding: 0 0 0 79px;
 
     &::after {
       @extend %gray-line;
@@ -212,26 +208,26 @@
   }
 }
 
-.fb-page {
-  overflow: hidden;
-  width: 340px;
-  height: auto;
-}
+// .fb-page {
+//   overflow: hidden;
+//   width: 340px;
+//   height: auto;
+// }
 
-.fb-page .fb_iframe_widget_fluid {
-  width: 340px !important;
-  height: 130px !important;
-}
+// .fb-page .fb_iframe_widget_fluid {
+//   width: 340px !important;
+//   height: 130px !important;
+// }
 
-@include respond-to($mobile) {
-  .fb-page {
-    display: inline-block !important;
-    width: 290px;
-    height: auto;
-  }
+// @include respond-to($mobile) {
+//   .fb-page {
+//     display: inline-block !important;
+//     width: 290px;
+//     height: auto;
+//   }
 
-  .fb-page .fb_iframe_widget_fluid {
-    width: 290px !important;
-    height: 130px !important;
-  }
-}
+//   .fb-page .fb_iframe_widget_fluid {
+//     width: 290px !important;
+//     height: 130px !important;
+//   }
+// }
