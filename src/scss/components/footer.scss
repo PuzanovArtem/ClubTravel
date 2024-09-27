@@ -129,6 +129,7 @@
   }
 
   &__social-link {
+     margin-left: 20px;
     font-size: 16px;
     line-height: 1.4;
     color: transparent;
@@ -138,7 +139,7 @@
 
   &__social {
     position: relative;
-    padding: 0 0 0 40px;
+    padding: 0 0 0 79px;
 
     &::after {
       @extend %gray-line;
@@ -152,13 +153,13 @@
   &__bottom-wrapper {
     @extend %display-center;
     padding: 15px 0;
-    background: $white;
+    background: #f4f4f4;
   }
 
   &__bottom-text {
     align-items: end;
     margin: 0 16px 0 0;
-    color: $gray;
+    color: $link-text;
   }
 
   @include respond-to($l-tablet) {
@@ -211,26 +212,26 @@
   }
 }
 
-.fb-page {
-  overflow: hidden;
-  width: 340px;
-  height: auto;
-}
+// .fb-page {
+//   overflow: hidden;
+//   width: 340px;
+//   height: auto;
+// }
 
-.fb-page .fb_iframe_widget_fluid {
-  width: 340px !important;
-  height: 130px !important;
-}
+// .fb-page .fb_iframe_widget_fluid {
+//   width: 340px !important;
+//   height: 130px !important;
+// }
 
-@include respond-to($mobile) {
-  .fb-page {
-    display: inline-block !important;
-    width: 290px;
-    height: auto;
-  }
+// @include respond-to($mobile) {
+//   .fb-page {
+//     display: inline-block !important;
+//     width: 290px;
+//     height: auto;
+//   }
 
-  .fb-page .fb_iframe_widget_fluid {
-    width: 290px !important;
-    height: 130px !important;
-  }
-}
+//   .fb-page .fb_iframe_widget_fluid {
+//     width: 290px !important;
+//     height: 130px !important;
+//   }
+// }

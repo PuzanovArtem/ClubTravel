@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta name="description" content="travel club">
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/assets/images/icons/logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/src/pages/authorization/authorization.scss">
+    <title>Club Travel</title>
+</head>
+
+<body>
+    {{> header }}
+
+    <main class="main">
+
+        {{> authorization }}
+    </main>
+
+    {{> _footer }}
+
+    <script crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v11.0"></script>
+
+    <script type="module" src="/src/pages/authorization/authorization.js"></script>
+</body>
+
+</html>
