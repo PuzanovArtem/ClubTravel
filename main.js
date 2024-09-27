@@ -1,5 +1,4 @@
 import '/src/js/modules/counter.js'
-import './src/js/components/search.js'
 import {
   headerSlider,
   mainCompanySlider,
@@ -10,6 +9,7 @@ import {
 
 import { header } from './src/js/components/header.js'
 
+import { initSearchBar } from './src/js/components/search'
 document.addEventListener('DOMContentLoaded', () => {
   header()
   headerSlider()
@@ -17,4 +17,5 @@ document.addEventListener('DOMContentLoaded', () => {
   mainHotSlider()
   mainWinterSlider()
   mainSummerSlider()
+  initSearchBar()
 })

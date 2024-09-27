@@ -2,25 +2,21 @@ import 'swiper/css/bundle'
 import Swiper from 'swiper/bundle'
 
 export const headerSlider = () => {
-  try {
-    const config = {
-      enabled: false,
-      grabCursor: true,
-      navigation: {
-        nextEl: '.header__button--next',
-        prevEl: '.header__button--prev',
+  const config = {
+    enabled: false,
+    grabCursor: true,
+    navigation: {
+      nextEl: '.header__button--next',
+      prevEl: '.header__button--prev',
+    },
+    breakpoints: {
+      769: {
+        enabled: true,
       },
-      breakpoints: {
-        769: {
-          enabled: true,
-        },
-      },
-    }
-
-    new Swiper('.header__slider', config)
-  } catch (error) {
-    console.error('Swiper initialization error:', error)
+    },
   }
+
+  new Swiper('.header__slider', config)
 }
 
 export const cardSlider = () => {
@@ -34,152 +30,128 @@ export const cardSlider = () => {
 }
 
 export const mainCompanySlider = () => {
-  try {
-    const config = {
-      loop: true,
-      navigation: {
-        nextEl: '.main-company__swiper-button-next',
-        prevEl: '.main-company__swiper-button-prev',
-        enabled: true,
+  const config = {
+    loop: true,
+    navigation: {
+      nextEl: '.main-company__swiper-button-next',
+      prevEl: '.main-company__swiper-button-prev',
+      enabled: true,
+    },
+    touchEventsTarget: 'wrapper',
+    spaceBetween: 10,
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20,
       },
-      touchEventsTarget: 'wrapper',
-      spaceBetween: 10,
-      breakpoints: {
-        320: {
-          slidesPerView: 1,
-          spaceBetween: 20,
-        },
 
-        804: {
-          slidesPerView: 2,
-          spaceBetween: 10,
-        },
-        991: {
-          slidesPerView: 3,
-          spaceBetween: 15,
-        },
-        1200: {
-          slidesPerView: 3,
-          spaceBetween: 11,
-        },
+      804: {
+        slidesPerView: 2,
+        spaceBetween: 10,
       },
-    }
-
-    new Swiper('.main-company__swiper', config)
-  } catch (error) {
-    console.error('Swiper initialization error:', error)
+      991: {
+        slidesPerView: 3,
+        spaceBetween: 15,
+      },
+      1200: {
+        slidesPerView: 3,
+        spaceBetween: 11,
+      },
+    },
   }
+
+  new Swiper('.main-company__swiper', config)
 }
 
 export const mainHotSlider = () => {
-  try {
-    const config = {
-      loop: true,
-      navigation: {
-        nextEl: '.main-hot__swiper-button-next',
-        prevEl: '.main-hot__swiper-button-prev',
-        enabled: true,
+  const config = {
+    loop: true,
+    navigation: {
+      nextEl: '.main-hot__swiper-button-next',
+      prevEl: '.main-hot__swiper-button-prev',
+      enabled: true,
+    },
+    touchEventsTarget: 'wrapper',
+    spaceBetween: 10,
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20,
       },
-      touchEventsTarget: 'wrapper',
-      spaceBetween: 10,
-      breakpoints: {
-        320: {
-          slidesPerView: 1,
-          spaceBetween: 10,
-        },
-        578: {
-          slidesPerView: 2,
-          spaceBetween: 10,
-        },
-        991: {
-          slidesPerView: 3,
-          spaceBetween: 10,
-        },
-        1200: {
-          slidesPerView: 3,
-          spaceBetween: 10,
-        },
+      576: {
+        slidesPerView: 2,
+        spaceBetween: 10,
       },
-    }
-
-    new Swiper('.main-hot__swiper', config)
-  } catch (error) {
-    console.error('Swiper initialization error:', error)
+      991: {
+        slidesPerView: 3,
+        spaceBetween: 10,
+      },
+      1200: {
+        slidesPerView: 3,
+        spaceBetween: 10,
+      },
+    },
   }
+
+  new Swiper('.main-hot__swiper', config)
 }
 
 export const mainWinterSlider = () => {
-  try {
-    const config = {
-      loop: true,
-      navigation: {
-        nextEl: '.main-winter__swiper-button-next',
-        prevEl: '.main-winter__swiper-button-prev',
-        enabled: true,
-      },
-      touchEventsTarget: 'wrapper',
+  const config = {
+    loop: true,
+    navigation: {
+      nextEl: '.main-winter__swiper-button-next',
+      prevEl: '.main-winter__swiper-button-prev',
+      enabled: true,
+    },
+    touchEventsTarget: 'wrapper',
 
-      breakpoints: {
-        375: {
-          slidesPerView: 1,
-        },
-        575: {
-          slidesPerView: 2,
-        },
-        991: {
-          slidesPerView: 3,
-        },
-        1200: {
-          slidesPerView: 4,
-        },
+    breakpoints: {
+      375: {
+        slidesPerView: 1,
       },
-    }
-
-    new Swiper('.main-winter__swiper', config)
-  } catch (error) {
-    console.error('Swiper initialization error:', error)
+      576: {
+        slidesPerView: 2,
+      },
+      991: {
+        slidesPerView: 3,
+      },
+      1200: {
+        slidesPerView: 4,
+      },
+    },
   }
+
+  new Swiper('.main-winter__swiper', config)
 }
 
 export const mainSummerSlider = () => {
-  try {
-    const config = {
-      loop: true,
-      navigation: {
-        nextEl: '.main-summer__swiper-button-next',
-        prevEl: '.main-summer__swiper-button-prev',
-        enabled: true,
-      },
-      touchEventsTarget: 'wrapper',
-
-      breakpoints: {
-        375: {
-          slidesPerView: 1,
-        },
-        575: {
-          slidesPerView: 2,
-        },
-        991: {
-          slidesPerView: 3,
-        },
-        1200: {
-          slidesPerView: 4,
-        },
-      },
-    }
-
-    new Swiper('.main-summer__swiper', config)
-  } catch (error) {
-    console.error('Swiper initialization error:', error)
-  }
-
-  const swiper = new Swiper('.search-content__swiper-container', {
+  const config = {
     loop: true,
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.main-summer__swiper-button-next',
+      prevEl: '.main-summer__swiper-button-prev',
+      enabled: true,
     },
-  })
+    touchEventsTarget: 'wrapper',
+
+    breakpoints: {
+      375: {
+        slidesPerView: 1,
+      },
+      576: {
+        slidesPerView: 2,
+      },
+      991: {
+        slidesPerView: 3,
+      },
+      1200: {
+        slidesPerView: 4,
+      },
+    },
+  }
+
+  new Swiper('.main-summer__swiper', config)
 }
 
 export const hotelCardSlider = () => {

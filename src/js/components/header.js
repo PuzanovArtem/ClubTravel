@@ -16,11 +16,12 @@ export const header = () => {
   })
 
   document.addEventListener('click', event => {
-    if (
+    const isOutClick =
       sideMenu.classList.contains('sidebar_active') &&
       !sideMenu.contains(event.target) &&
       !burger.contains(event.target)
-    ) {
+
+    if (isOutClick) {
       sideMenu.classList.remove('sidebar_active')
       burger.classList.remove('burger_active')
       document.body.style.overflow = ''
