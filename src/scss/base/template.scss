@@ -343,7 +343,8 @@
   }
 }
 
-.form-input {
+.form {
+&__input {
   width: 100%;
   padding: 12px;
   border: 1px solid $light-gray;
@@ -356,4 +357,17 @@
   border-color: $primary; 
   outline: none; 
 } 
+}
+
+&__group {
+    margin-bottom: 16px;
+  }
+
+  &__subtitle {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: $user-card-gray;
+  }
+
 }
