@@ -1,4 +1,3 @@
-
 import { Counter, updateTotalChildren } from './src/js/modules/counter.js'
 import {
   headerSlider,
