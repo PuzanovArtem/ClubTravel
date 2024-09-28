@@ -102,7 +102,8 @@
 
   &__card {
     width: 100%;
-    height: 330px;
+    margin: 0 0 10px;
+    // height: 330px;
     border-radius: 10px;
     background: $white;
     box-shadow: 0 5px 10px 0 $black-shadow-10;
@@ -196,10 +197,15 @@
   }
 
   &__card-text {
+    height: 75px;
     padding: 19px 0 5px 21px;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 1.5px;
+    // overflow: hidden;
+    // display: -webkit-box;
+    // -webkit-box-orient: vertical;
+    // -webkit-line-clamp: 1;
   }
 
   .hot-deals__card-wrappers {
@@ -358,6 +364,22 @@
       width: 100%;
       height: 250px;
       object-fit: cover;
+    }
+  }
+}
+
+@include respond-to($tablet) {
+  .main-tour {
+    &__swiper {
+      margin: 65px 0 12px;
+    }
+
+    .main-company__swiper {
+      margin: 65px 0 15px;
+    }
+
+    .main-hot__swiper {
+      margin: 65px 0 22px;
     }
   }
 }

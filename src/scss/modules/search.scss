@@ -68,7 +68,7 @@
     transition: transform 0.3s ease;
   }
 
-  .icon__magnifying-glass {
+  .icon--magnifying-glass {
     width: 16px;
     height: 16px;
     margin-right: 5px;
@@ -89,7 +89,7 @@
     fill: $white;
   }
 
-  .icon__checkmark-circle {
+  .icon--checkmark-circle {
     width: 16px;
     height: 16px;
     margin: 0 8px 0 0;
@@ -122,20 +122,6 @@
       fill: $primary;
     }
   }
-
-  // &__advance--search.active {
-  //   width: 300px;
-  //   padding: 0;
-  //   font-size: 18px;
-  //   letter-spacing: 1px;
-  //   color: $text;
-
-  //   .icon--search-plus {
-  //     display: none;
-  //     margin: 0 8px 0 0;
-  //     fill: $primary;
-  //   }
-  // }
 
   &__line {
     opacity: 1;
@@ -234,7 +220,7 @@
     letter-spacing: 0.7px;
     color: $white;
     text-transform: uppercase;
-    background: $light-green;
+    background: $dark-green;
   }
 }
 
@@ -263,7 +249,7 @@
     top: 26px;
     left: 0;
     z-index: 1000;
-    // display: none;
+    display: none;
     width: 100%;
     max-height: 0;
     margin: 2px 0 0;
@@ -274,7 +260,7 @@
     transition: max-height 0.3s ease;
 
     &.active {
-      // display: block;
+      display: block;
       border: 1px solid $light-gray;
     }
   }
@@ -527,6 +513,28 @@
     margin-bottom: 12px;
     color: $text;
     text-align: left;
+
+    &:hover {
+      .icon--star,
+      .icon--checkmark-circle {
+        fill: $primary;
+      }
+
+      span {
+        color: $primary;
+      }
+    }
+
+    &.active {
+      .icon--star,
+      .icon--checkmark-circle {
+        fill: $primary;
+      }
+
+      span {
+        color: $primary;
+      }
+    }
   }
 
   &__btns--svg.clicked {
@@ -823,7 +831,7 @@
     &-btn {
       height: 49px;
 
-      .icon__magnifying-glass {
+      .icon--magnifying-glass {
         display: none;
       }
     }
