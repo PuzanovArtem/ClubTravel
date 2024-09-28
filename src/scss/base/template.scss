@@ -190,7 +190,7 @@
   }
 }
 
-@include respond-to(660px) {
+@include respond-to($tablet) {
   .main-tour {
     &__swiper-button-next,
     &__swiper-button-prev {

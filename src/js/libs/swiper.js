@@ -126,30 +126,31 @@ export const mainWinterSlider = () => {
 }
 
 export const mainSummerSlider = () => {
-  const config = {
-    loop: true,
-    navigation: {
-      nextEl: '.main-summer__swiper-button-next',
-      prevEl: '.main-summer__swiper-button-prev',
-      enabled: true,
-    },
-    touchEventsTarget: 'wrapper',
+  try {
+    const config = {
+      loop: true,
+      navigation: {
+        nextEl: '.main-summer__swiper-button-next',
+        prevEl: '.main-summer__swiper-button-prev',
+        enabled: true,
+      },
+      touchEventsTarget: 'wrapper',
 
-    breakpoints: {
-      375: {
-        slidesPerView: 1,
+      breakpoints: {
+        375: {
+          slidesPerView: 1,
+        },
+        576: {
+          slidesPerView: 2,
+        },
+        991: {
+          slidesPerView: 3,
+        },
+        1200: {
+          slidesPerView: 4,
+        },
       },
-      576: {
-        slidesPerView: 2,
-      },
-      991: {
-        slidesPerView: 3,
-      },
-      1200: {
-        slidesPerView: 4,
-      },
-    },
-  }
+    }
 
     new Swiper('.main-summer__swiper', config)
   } catch (error) {

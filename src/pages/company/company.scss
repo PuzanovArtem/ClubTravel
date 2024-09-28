@@ -1,6 +1,9 @@
 @import '/src/scss/base.scss';
 @import '/src/scss/components/header.scss';
-@import '/src/scss/components/banner.scss';
+@import '/src/scss/components/hero';
+@import '/src/scss/modules/banner';
+@import '/src/scss/modules/slider-banner';
+@import '/src/scss/modules/search';
 @import '/src/scss/pages/main/main-tours.scss';
 @import '/src/scss/pages/company/company-news.scss';
 @import '/src/scss/components/offer.scss';

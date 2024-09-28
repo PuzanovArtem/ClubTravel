@@ -2,7 +2,7 @@
   background: $white;
 
   .icon {
-    &__percent {
+    &--percent {
       width: 24px;
       height: 24px;
       margin-right: 10px;
@@ -150,52 +150,55 @@
   &__navigation {
     @extend %display-end;
     height: 60px;
+  }
 
-    .header__nav {
-      display: flex;
+  &__nav {
+    display: flex;
+  }
 
-      .header__nav-item {
-        @extend %display-flex;
-        @extend %position-rel;
-        margin-right: 24px;
-        font-size: 16px;
-        line-height: 22px;
+  &__nav-item {
+    @extend %display-flex;
+    @extend %position-rel;
+    margin-right: 24px;
+    font-size: 16px;
+    line-height: 22px;
 
-        &:hover .header__nav-link {
-          color: $primary;
-        }
+    &:nth-child(2) {
+      margin-right: 16px;
+    }
 
-        &:nth-child(2) {
-          margin-right: 16px;
-        }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 
-        &:last-child {
-          margin-right: 0;
-        }
+  &__nav-link {
+    @extend %display-flex;
+    align-items: center;
+    letter-spacing: -0.5px;
+    color: $blue;
+    text-align: center;
+    text-transform: uppercase;
 
-        &.header__nav-item--hot {
-          .header__nav-link {
-            font-weight: 600;
-            color: $primary;
-          }
-        }
+    span {
+      margin-right: 6px;
+      font-size: 16px;
+      color: $primary;
 
-        &-link {
-          @extend %display-flex;
-          align-items: center;
-          letter-spacing: -0.5px;
-          color: $blue;
-          text-align: center;
-          text-transform: uppercase;
-
-          span {
-            margin-right: 6px;
-            font-size: 16px;
-          }
-        }
+      &:hover {
+        color: $light-gray;
       }
+    }
 
-      
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  &__nav-link--hot {
+    &:hover {
+      color: $white;
+      fill: $white;
     }
   }
 
