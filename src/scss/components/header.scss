@@ -320,7 +320,6 @@
 }
 
 @include respond-to($lap-top) {
-  // соответствует 1280px
   .header {
     &__navigation {
       height: 60px;
@@ -439,7 +438,7 @@
 }
 
 @include respond-to($mobile) {
-  // соответствует 568px
+  
   .header__info {
     &-wrapper {
       justify-content: center;
