@@ -43,7 +43,6 @@ export const orderList = () => {
             const row = document.createElement('tr');
             row.classList.add('account-orders__tbody-tr');
 
-            // Визначаємо клас на основі статусу
             const statusClass = order.status === "Оплачено" 
                 ? "account-orders__status--paid" 
                 : "account-orders__status--unpaid";
@@ -58,7 +57,6 @@ export const orderList = () => {
             ordersTbody.appendChild(row);
         });
 
-        // Оновлюємо інформацію про кількість показаних замовлень
         displayInfo.textContent = `Показано ${end} из ${orders.length}`;
         currentPageElement.textContent = currentPage;
         totalPagesElement.textContent = totalPages;

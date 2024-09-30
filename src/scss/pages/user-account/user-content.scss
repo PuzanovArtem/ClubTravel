@@ -157,7 +157,7 @@
 
   &__table {
     width: 100%;
-    box-shadow: 0 3px 6px 0 #00000029;
+    box-shadow: 0 3px 6px 0 $black-shadow-29;
 
     &--mob {
       display: none;
@@ -170,7 +170,7 @@
   }
 
   &__thead-tr {
-    box-shadow: 0 2px 2px 0 #0000001a;
+    box-shadow: 0 2px 2px 0 $light-black;
   }
 
   &__td {

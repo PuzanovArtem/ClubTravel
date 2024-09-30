@@ -133,4 +133,57 @@
             }
         }
     }
+
+    &__policy {
+        display: flex;
+        flex-direction: column;
+        margin-top: 16px;
+    } 
+
+    &__policy-link {
+        margin-bottom: 6px;
+        color: $white;
+        text-align: center;
+        text-decoration: underline;
+        transition: opacity 0.3s ease;
+
+        @media (hover: hover) {
+          &:hover {
+            opacity: 0.6;
+          }
+        }
+    }
+
+    @include respond-to($mobile) {
+        &__form {
+            width: 100%;
+        }
+
+        &__or-block {
+        &::after {
+            max-width: 90px;
+        }
+
+        &::before {
+            max-width: 90px;
+        }
+    }
+    }
+
+    @include respond-to($s-mobile) {
+        &__soc-btn {
+            text-align: end;
+        }
+
+        &__or-block {
+        &::after {
+            left: 0;
+        }
+
+        &::before {
+            right: 0;
+        }
+    
+    }
+}
 }
