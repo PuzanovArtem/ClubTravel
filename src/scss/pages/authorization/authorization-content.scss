@@ -70,9 +70,9 @@
         &::after {
             content: '';
             position: absolute;
-            top: 50%;
+            top: 60%;
             left: 34px;
-            width: 100%;
+            width: 50%;
             max-width: 124px;
             height: 1px;
             background: $gray-text;
@@ -82,9 +82,9 @@
         &::before {
             content: '';
             position: absolute;
-            top: 50%;
+            top: 60%;
             right: 34px;
-            width: 100%;
+            width: 50%;
             max-width: 124px;
             height: 1px;
             background: $gray-text;
@@ -133,4 +133,54 @@
             }
         }
     }
+
+    &__policy {
+        display: flex;
+        flex-direction: column;
+        margin-top: 16px;
+    } 
+
+    &__policy-link {
+        margin-bottom: 6px;
+        color: $white;
+        text-align: center;
+        text-decoration: underline;
+        transition: opacity 0.3s ease;
+
+        @media (hover: hover) {
+          &:hover {
+            opacity: 0.6;
+          }
+        }
+    }
+
+    @include respond-to($mobile) {
+        &__form {
+            width: 100%;
+            padding: 15px;
+        }
+
+        &__or-block {
+        &::after {
+            max-width: 94px;
+        }
+
+        &::before {
+            max-width: 94px;
+        }
+    }
+    }
+
+    @include respond-to($s-mobile) {
+        &__or-block {
+        &::after {
+            left: 15px;
+        }
+
+        &::before {
+            right: 15px;
+        }
+    
+    }
+}
 }

@@ -1,10 +1,10 @@
-<section class="authorization">
+<section class="authorization registration">
     <div class="container authorization__container">
-        <div class="authorization__wrapper">
+        <div class="authorization__wrapper registration__wrapper">
             <div class="container">
                 <form class="authorization__form">
                     <div class="authorization__form-top">
-                        <p class="authorization__form-text">Войдите используя соц. сети</p>
+                        <p class="authorization__form-text">Зарегистрируйтесь используя соц. сети</p>
 
                         <button type="button" class="authorization__soc-btn authorization__soc-btn--facebook">
                             <img src="/public/assets/images/icons/facebook.svg" class="authorization__soc-icon"
@@ -31,16 +31,23 @@
                     <div class="form__group">
                         <div class="authorization__link-wrapper">
                             <label class="form__subtitle">Пароль</label>
-
-                            <a href="/src/pages/forgot-password/forgot-password.html" class="authorization__link">Забыли пароль?</a>
                         </div>
 
                         <input type="password" class="form__input">
                     </div>
 
+                    <div class="form__group">
+                        <div class="authorization__link-wrapper">
+                            <label class="form__subtitle">Повторите пароль</label>
+                        </div>
+                    
+                        <input type="password" class="form__input">
+                    </div>
+
                     <div class="authorization__btn-wrapper">
-                        <a href="/src/pages/registration/registration.html" class="authorization__submit-btn authorization__submit-btn--sec main-btn">Регистрация</a>
-                        <button type="submit" class="authorization__submit-btn main-btn">Вход</button>
+                        <a href="/src/pages/authorization/authorization.html"
+                            class="authorization__submit-btn authorization__submit-btn--sec main-btn">вход</a>
+                        <button type="submit" class="authorization__submit-btn main-btn">регистрация</button>
                     </div>
                 </form>
             </div>
