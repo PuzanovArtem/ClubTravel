@@ -3,7 +3,7 @@
   margin-bottom: 113px;
 
   &__icon {
-    &.hot-deals__icon_triangle-down {
+    &.hot-deals__icon--triangle-down {
       width: 10px;
       height: 5px;
       margin: 0 0 0 10px;
@@ -286,27 +286,27 @@
         line-height: 20px;
       }
 
-      &_hide {
+      &--hide {
         display: none;
         width: 80px;
         font-size: 14px;
         line-height: 19px;
         font-weight: 400;
-        color: $gray-text;
+        color: $gray-text; 
       }
 
-      &_hide1,
-      &_hide2 {
+      &--hide1,
+      &--hide2 {
         font-size: 14px;
         line-height: 19px;
         color: $text;
       }
 
-      &_hide1 {
+      &--hide1 {
         display: none;
       }
 
-      &_hide2 {
+      &--hide2 {
         font-size: 15px;
         line-height: 20px;
       }
@@ -334,7 +334,7 @@
   }
 }
 
-@m@include respond-to(1188px) {
+@include respond-to(1188px) {
   .hot-deals {
     padding: 0 25px;
 
