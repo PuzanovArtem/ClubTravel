@@ -15,6 +15,12 @@
     height: 20px;
     fill: $primary;
   }
+
+  &--calendar {
+    width: 22px;
+    height: 22px;
+    fill: $light-gray;
+  }
 }
 
 .icon--search-title {
@@ -56,17 +62,11 @@
     background: $yellow-orange;
   }
 
-  .icon__calendar {
-    fill: $light-gray;
-  }
-
   .icon__arrow-down {
     transition: transform 0.3s ease;
   }
 
-  .icon__arrow--down {
-    transition: transform 0.3s ease;
-  }
+  
 
   .icon--magnifying-glass {
     width: 16px;
@@ -125,7 +125,7 @@
 
   &__line {
     opacity: 1;
-    width: 100%;
+    width: 90%;
     height: 1px;
     margin: 0 21px 0 24px;
     background: $gray-text;
@@ -310,8 +310,6 @@
   }
 
   &.active {
-    padding: 0 29px 0 34px;
-
     .icon--search-plus {
       display: none;
     }
@@ -677,7 +675,7 @@
 
     .category {
       &__rating {
-        min-width: 173px;
+        min-width: 190px;
       }
     }
 
