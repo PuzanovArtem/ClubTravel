@@ -292,7 +292,7 @@
         font-size: 14px;
         line-height: 19px;
         font-weight: 400;
-        color: $gray-text; 
+        color: $gray-text;
       }
 
       &--hide1,
@@ -349,7 +349,6 @@
     &__body {
       display: flex;
       flex-wrap: wrap;
-      gap: 15px;
     }
 
     &__body-row_active {
@@ -357,6 +356,7 @@
     }
 
     &__body-row {
+      width: 32%;
       height: 228px;
       margin: 0 auto;
     }
@@ -366,7 +366,7 @@
       display: flex;
       flex-direction: column;
       gap: 11px;
-      width: 320px;
+      // width: 320px;
       height: auto;
       margin: 0 auto;
       padding: 19px 20px;
@@ -474,9 +474,25 @@
   }
 }
 
-@include respond-to(875px) {
+@include respond-to(950px) {
   .hot-deals {
     margin: 100px 0 113px;
+
+    &__body-row {
+      width: 50%;
+      height: 228px;
+      margin: 0 auto;
+    }
+  }
+}
+
+@include respond-to($mobile) {
+  .hot-deals {
+    &__body-row {
+      width: 100%;
+      height: 228px;
+      margin: 0 auto;
+    }
   }
 }
 
