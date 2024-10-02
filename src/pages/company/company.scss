@@ -1,10 +1,7 @@
-@import '/src/scss/base.scss';
-@import '/src/scss/components/header.scss';
-@import '/src/scss/components/hero';
+@import '/src/scss/base';
+@import '/src/scss/components/header';
 @import '/src/scss/modules/banner';
-@import '/src/scss/modules/slider-banner';
-@import '/src/scss/modules/search';
-@import '/src/scss/pages/main/main-tours.scss';
-@import '/src/scss/pages/company/company-news.scss';
-@import '/src/scss/components/offer.scss';
-@import '/src/scss/components/footer.scss';
+@import '/src/scss/pages/main/main-tours';
+@import '/src/scss/pages/company/company-news';
+@import '/src/scss/components/offer';
+@import '/src/scss/components/footer';

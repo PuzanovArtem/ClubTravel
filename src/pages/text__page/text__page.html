@@ -2,25 +2,24 @@
 <html lang="en">
 
 <head>
+  <meta name="description" content="travel club">
   <meta charset="UTF-8">
   <link rel="icon" type="image/svg+xml" href="/assets/images/icons/logo.svg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/src/pages/hot-offers/hot-offers.scss">
-
+  <link rel="stylesheet" href="/src/pages/text__page/text__page.scss">
   <title>Club Travel</title>
 </head>
 
 <body>
   {{> header }}
   <main class="main">
-    {{> hero bannerClass="" mainBannerClass="hide" searchClass=" " title = "горящие предложения" additionalClass="icon--search-title-vie"}}
-    {{> hot-table}}
-    {{> offer }}
+    {{> insurance}}
   </main>
   {{> _footer }}
 
   <script crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v11.0"></script>
-  <script type="module" src="/src/pages/hot-offers/hot-offers.js"></script>
+
+  <script type="module" src="/src/pages/text__page/text__page.js"></script>
 </body>
 
 </html>

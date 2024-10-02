@@ -3,17 +3,32 @@
 
   .icon {
     &--percent {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+      fill: $primary;
+    }
+
+    &--stopwatch {
       width: 24px;
       height: 24px;
       margin-right: 10px;
       fill: $primary;
     }
 
-    &__stopwatch {
-      width: 28px;
-      height: 24px;
-      margin-right: 10px;
-      fill: $primary;
+    &--phone,
+    &--envelope {
+      width: 24px;
+      height: 16px;
+      padding: 3px 10px 0 0;
+      padding-right: 10px;
+      fill: $gray-text;
+    }
+
+    &--user {
+      width: 22px;
+      height: 20px;
+      fill: $dark-blue;
     }
   }
 
@@ -48,103 +63,81 @@
   &__info {
     @extend %display-end;
     height: 40px;
+  }
 
-    &-wrapper {
-      justify-content: space-between;
-      display: flex;
-      width: 622px;
+  &__info-wrapper {
+    @extend %display-jc-sb;
+    width: 622px;
+  }
+
+  &__info-links {
+    @extend%display-flex;
+  }
+
+  &__info-link {
+    padding-right: 21px;
+    font-size: 12px;
+    line-height: 25px;
+    color: $gray-text;
+
+    &:nth-child(2) {
+      padding-right: 22px;
     }
 
-    &-links {
-      @extend%display-flex;
+    &:last-child {
+      padding-right: 0;
+    }
+  }
 
-      .header__info-link {
-        padding-right: 21px;
-        font-size: 12px;
-        line-height: 25px;
-        color: $gray-text;
+  &__info-contacts {
+    @extend %display-flex;
+    gap: 10px;
+    height: 24px;
+    border-left: 1px solid $white;
+  }
 
-        &:nth-child(2) {
-          padding-right: 22px;
-        }
+  &__info-tel,
+  &__info-mail {
+    @extend %display-flex;
+    font-size: 12px;
+    line-height: 16px;
+    color: $gray-text;
 
-        &:last-child {
-          padding-right: 0;
-        }
+    span {
+      opacity: 0.7;
+      padding-right: 10px;
+      font-size: 13px;
+      color: $gray-text;
+    }
+  }
+
+  &__personal {
+    @extend %display-flex;
+
+    .burger {
+      cursor: pointer;
+      display: none;
+      font-size: 21px;
+      color: $dark-blue;
+
+      .icon__list-horizontal {
+        width: 22px;
+        height: 16px;
+        fill: $dark-blue;
       }
     }
+  }
 
-    &-contacts {
-      display: flex;
-      gap: 10px;
-      height: 24px;
-      margin: 0 0 0 31px;
-      padding: 0 24px;
-      border-left: 1px solid $white;
+  &__personal-account {
+    padding-right: 22px;
+    font-size: 20px;
+    color: $dark-blue;
+  }
 
-      .icon {
-        &__phone,
-        &__envelope {
-          width: 24px;
-          height: 16px;
-          padding: 3px 10px 0 0;
-          padding-right: 10px;
-          fill: $gray-text;
-        }
-      }
-
-      &-tel,
-      &-mail {
-        @extend %display-flex;
-        padding-right: 27px;
-        font-size: 12px;
-        line-height: 16px;
-        color: $gray-text;
-
-        span {
-          opacity: 0.7;
-          padding-right: 10px;
-          font-size: 13px;
-          color: $gray-text;
-        }
-      }
-    }
-
-    &-personal {
-      @extend %display-flex;
-      align-items: center;
-
-      .burger {
-        cursor: pointer;
-        display: none;
-        font-size: 21px;
-        color: $dark-blue;
-
-        .icon__list-horizontal {
-          width: 22px;
-          height: 16px;
-          fill: $dark-blue;
-        }
-      }
-
-      .header__personal {
-        padding-right: 22px;
-        font-size: 20px;
-        color: $dark-blue;
-
-        .icon__user {
-          width: 22px;
-          height: 20px;
-          fill: $dark-blue;
-        }
-      }
-
-      .header__country {
-        overflow: hidden;
-        margin-right: 2px;
-        border-radius: 50%;
-      }
-    }
+  &__personal-country {
+    overflow: hidden;
+    margin-right: 2px;
+    border-radius: 50%;
   }
 
   &__navigation {
@@ -153,7 +146,8 @@
   }
 
   &__nav {
-    display: flex;
+    @extend %display-flex;
+    gap: 9px;
   }
 
   &__nav-item {
@@ -174,14 +168,12 @@
 
   &__nav-link {
     @extend %display-flex;
-    align-items: center;
     letter-spacing: -0.5px;
     color: $blue;
     text-align: center;
     text-transform: uppercase;
 
     span {
-      margin-right: 6px;
       font-size: 16px;
       color: $primary;
 
@@ -284,7 +276,6 @@
   &__mail,
   &__tel {
     @extend %display-flex;
-    align-items: center;
     font-size: 12px;
     line-height: 16px;
     color: $gray-text;
@@ -323,122 +314,124 @@
   .header {
     &__navigation {
       height: 60px;
+    }
 
-      .header__nav {
-        display: flex;
+    &__nav {
+      display: flex;
+      gap: 6px;
+    }
 
-        .header__nav-item {
-          font-size: 14px;
-        }
+    &__nav-item {
+      font-size: 14px;
+    }
+
+    &__logo {
+      left: 105px;
+      width: 140px;
+      height: 125px;
+      transform: translateX(-50%);
+
+      &-bg {
+        top: 1px;
+        left: -21px;
+        width: 150px;
+        height: 140px;
       }
-    }
-  }
 
-  .header__logo {
-    left: 105px;
-    width: 140px;
-    height: 125px;
-    transform: translateX(-50%);
+      &-img {
+        top: 13px;
+        left: 8px;
+        width: 88px;
+        height: 107px;
+        margin-top: 0;
 
-    &-bg {
-      top: 1px;
-      left: -21px;
-      width: 150px;
-      height: 140px;
-    }
-
-    &-img {
-      top: 13px;
-      left: 8px;
-      width: 88px;
-      height: 107px;
-      margin-top: 0;
-
-      img {
-        width: 100%;
-        height: 100%;
+        img {
+          width: 100%;
+          height: 100%;
+        }
       }
     }
   }
 }
 
 @include respond-to($l-tablet) {
-  .header__logo {
-    left: 56%;
-    width: 110px;
-    height: 95px;
-    transform: translateX(-50%);
-
-    &-bg {
-      top: 1px;
-      left: -21px;
+  .header {
+    &__logo {
+      left: 56%;
       width: 110px;
-      height: 100px;
-    }
+      height: 95px;
+      transform: translateX(-50%);
 
-    &-img {
-      top: 13px;
-      left: 8px;
-      width: 48px;
-      height: 67px;
-      margin-top: 0;
+      &-bg {
+        top: 1px;
+        left: -21px;
+        width: 110px;
+        height: 100px;
+      }
 
-      img {
-        width: 100%;
-        height: 100%;
+      &-img {
+        top: 13px;
+        left: 8px;
+        width: 48px;
+        height: 67px;
+        margin-top: 0;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
       }
     }
-  }
 
-  .icon__user {
-    width: 27px;
-    height: 26px;
-    fill: $dark-blue;
-  }
-
-  .header__navigation {
-    display: none;
-  }
-
-  .header__info {
-    height: 49px;
-    padding: 0 2px 0 6px;
-
-    &-wrapper {
-      width: 100%;
+    .icon--user {
+      width: 27px;
+      height: 26px;
+      fill: $dark-blue;
     }
 
-    &-links,
-    &-contacts {
+    &__navigation {
       display: none;
     }
 
-    &-personal {
+    &__info {
+      height: 49px;
+      padding: 0 2px 0 6px;
+
+      &-wrapper {
+        width: 100%;
+      }
+
+      &-links,
+      &-contacts {
+        display: none;
+      }
+    }
+
+    &__personal {
       align-items: center;
       justify-content: space-between;
       width: 100%;
+
+      .burger {
+        align-items: center;
+        display: flex;
+      }
     }
 
-    .burger {
-      align-items: center;
-      display: flex;
-    }
-
-    .header__personal {
+    &__personal-account {
       align-items: center;
       display: flex;
       padding-right: 0;
       font-size: 28px;
     }
 
-    .header__country {
+    &__personal-country {
       display: none;
     }
   }
 }
 
 @include respond-to($mobile) {
-  
   .header__info {
     &-wrapper {
       justify-content: center;
