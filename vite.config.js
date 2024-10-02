@@ -8,7 +8,7 @@ import { defineConfig } from 'vite'
 import { resolve } from 'path'
 
 export default defineConfig({
-  base: './',
+  base: '/ClubTravel/',
   plugins: [
     viteImagemin({
       gifsicle: {
@@ -75,19 +75,19 @@ export default defineConfig({
     outDir: 'docs',
     rollupOptions: {
       input: {
-        main: resolve(__dirname, '/index.html'),
-        search: resolve(__dirname, '/src/pages/search-result/search-result.html'),
-        card: resolve(__dirname, '/src/pages/hotel-card/hotel-card.html'),
-        directions: resolve(__dirname, '/src/pages/directions-tour/directions-tour.html'),
-        hotOffers: resolve(__dirname, '/src/pages/hot-offers/hot-offers.html'),
-        company: resolve(__dirname, '/src/pages/company/company.html'),
-        account: resolve(__dirname, '/src/pages/user-account/user-account.html'),
-        contacts: resolve(__dirname, '/src/pages/contacts/contacts.html'),
-        authorization: resolve(__dirname, '/src/pages/authorization/authorization.html'),
-        registration: resolve(__dirname, '/src/pages/registration/registration.html'),
-        forgotPassword: resolve(__dirname, '/src/pages/forgot-password/forgot-password.html'),
-        textPage: resolve(__dirname, '/src/pages/text__page/text__page.html'),
-        errorPage: resolve(__dirname, '/src/pages/errorPage/errorPage.html'),
+        main: resolve(__dirname, 'index.html'),
+        search: resolve(__dirname, 'src/pages/search-result/search-result.html'),
+        card: resolve(__dirname, 'src/pages/hotel-card/hotel-card.html'),
+        directions: resolve(__dirname, 'src/pages/directions-tour/directions-tour.html'),
+        hotOffers: resolve(__dirname, 'src/pages/hot-offers/hot-offers.html'),
+        company: resolve(__dirname, 'src/pages/company/company.html'),
+        account: resolve(__dirname, 'src/pages/user-account/user-account.html'),
+        contacts: resolve(__dirname, 'src/pages/contacts/contacts.html'),
+        authorization: resolve(__dirname, 'src/pages/authorization/authorization.html'),
+        registration: resolve(__dirname, 'src/pages/registration/registration.html'),
+        forgotPassword: resolve(__dirname, 'src/pages/forgot-password/forgot-password.html'),
+        textPage: resolve(__dirname, 'src/pages/text__page/text__page.html'),
+        errorPage: resolve(__dirname, 'src/pages/errorPage/errorPage.html'),
       },
     },
   },
