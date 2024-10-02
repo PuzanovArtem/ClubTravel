@@ -1,1 +1,0 @@
-import"./modulepreload-polyfill-B5Qt9EMX.js";import{e}from"./validator-DP9h7IiL.js";import{h as o}from"./header-CDcaaDmM.js";import"./_commonjsHelpers-Cpj98o6Y.js";document.addEventListener("DOMContentLoaded",()=>{o(),e()});

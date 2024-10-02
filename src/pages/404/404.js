@@ -1,5 +1,5 @@
-import { header } from '/src/js/components/header.js'
+// import { header } from '/src/js/components/header.js'
 
-document.addEventListener('DOMContentLoaded', () => {
-  header()
-})
+// document.addEventListener('DOMContentLoaded', () => {
+//   header()
+// })
