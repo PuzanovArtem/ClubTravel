@@ -5,7 +5,7 @@ import {
   mainHotSlider,
   mainSummerSlider,
   mainWinterSlider,
-} from './src/js/libs/swiper'
+} from '/src/js/libs/swiper'
 
 import { header } from './src/js/components/header.js'
 
