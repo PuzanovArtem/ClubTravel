@@ -1,17 +1,17 @@
 export const orderList = () => {
     const orders = [
-        { id: 1588665993, amount: 554.00, email: 'admin@admin.ee', status: 'Оплачено', date: '18 июня 2020 15:01' },
-        { id: 1588665994, amount: 654.00, email: 'admin2@admin.ee', status: 'В обработке', date: '19 июня 2020 16:02' },
-        { id: 1588665995, amount: 754.00, email: 'admin3@admin.ee', status: 'В обработке', date: '20 июня 2020 17:03' },
-        { id: 1588665993, amount: 554.00, email: 'admin@admin.ee', status: 'Оплачено', date: '18 июня 2020 15:01' },
-        { id: 1588665994, amount: 654.00, email: 'admin2@admin.ee', status: 'В обработке', date: '19 июня 2020 16:02' },
-        { id: 1588665995, amount: 754.00, email: 'admin3@admin.ee', status: 'В обработке', date: '20 июня 2020 17:03' },
-        { id: 1588665993, amount: 554.00, email: 'admin@admin.ee', status: 'Оплачено', date: '18 июня 2020 15:01' },
-        { id: 1588665994, amount: 654.00, email: 'admin2@admin.ee', status: 'В обработке', date: '19 июня 2020 16:02' },
-        { id: 1588665995, amount: 754.00, email: 'admin3@admin.ee', status: 'В обработке', date: '20 июня 2020 17:03' },
-        { id: 1588665993, amount: 554.00, email: 'admin@admin.ee', status: 'Оплачено', date: '18 июня 2020 15:01' },
-        { id: 1588665994, amount: 654.00, email: 'admin2@admin.ee', status: 'В обработке', date: '19 июня 2020 16:02' },
-        { id: 1588665995, amount: 754.00, email: 'admin3@admin.ee', status: 'В обработке', date: '20 июня 2020 17:03' },
+        { number: 1588665993, amount: 554.00, email: 'admin@admin.ee', status: 'Оплачено', date: '18 июня 2020 15:01' },
+        { number: 1588665994, amount: 654.00, email: 'admin2@admin.ee', status: 'В обработке', date: '19 июня 2020 16:02' },
+        { number: 1588665995, amount: 754.00, email: 'admin3@admin.ee', status: 'В обработке', date: '20 июня 2020 17:03' },
+        { number: 1588665993, amount: 554.00, email: 'admin@admin.ee', status: 'Оплачено', date: '18 июня 2020 15:01' },
+        { number: 1588665994, amount: 654.00, email: 'admin2@admin.ee', status: 'В обработке', date: '19 июня 2020 16:02' },
+        { number: 1588665995, amount: 754.00, email: 'admin3@admin.ee', status: 'В обработке', date: '20 июня 2020 17:03' },
+        { number: 1588665993, amount: 554.00, email: 'admin@admin.ee', status: 'Оплачено', date: '18 июня 2020 15:01' },
+        { number: 1588665994, amount: 654.00, email: 'admin2@admin.ee', status: 'В обработке', date: '19 июня 2020 16:02' },
+        { number: 1588665995, amount: 754.00, email: 'admin3@admin.ee', status: 'В обработке', date: '20 июня 2020 17:03' },
+        { number: 1588665993, amount: 554.00, email: 'admin@admin.ee', status: 'Оплачено', date: '18 июня 2020 15:01' },
+        { number: 1588665994, amount: 654.00, email: 'admin2@admin.ee', status: 'В обработке', date: '19 июня 2020 16:02' },
+        { number: 1588665995, amount: 754.00, email: 'admin3@admin.ee', status: 'В обработке', date: '20 июня 2020 17:03' },
     ];
 
     const itemsPerPage = 9;
@@ -48,7 +48,7 @@ export const orderList = () => {
                 : "account-orders__status--unpaid";
 
             row.innerHTML = `
-                <td class="account-orders__td">${order.id}</td>
+                <td class="account-orders__td">${order.number}</td>
                 <td class="account-orders__td">${order.amount + '.00'}</td>
                 <td class="account-orders__td">${order.email}</td>
                 <td class="account-orders__td account-orders__status ${statusClass}">${order.status}</td>
@@ -82,7 +82,7 @@ export const orderList = () => {
 
             row.innerHTML = `
                 <span class="account-orders__th">Номер заказа</span>
-          <span class="account-orders__th">${order.id}</span>
+          <span class="account-orders__th">${order.number}</span>
           <span class="account-orders__th">Сумма</span>
           <span class="account-orders__td">${order.amount}</span>
           <span class="account-orders__th">E-mail</span>

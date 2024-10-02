@@ -367,4 +367,8 @@
     color: $user-card-gray;
   }
 
+  &__error-message {
+    font-size: 12px;
+    color: red;
+  }
 }

@@ -2,7 +2,7 @@
     <div class="container authorization__container">
         <div class="authorization__wrapper registration__wrapper">
             <div class="container">
-                <form class="authorization__form">
+                <form class="authorization__form" id="loginForm">
                     <div class="authorization__form-top">
                         <p class="authorization__form-text">Зарегистрируйтесь используя соц. сети</p>
 
@@ -25,7 +25,8 @@
 
                     <div class="form__group">
                         <label class="form__subtitle">E-mail</label>
-                        <input type="email" class="form__input">
+                        <input type="email" class="form__input" id="login">
+                        <span id="loginError" class="form__error-message"></span>
                     </div>
 
                     <div class="form__group">
@@ -33,7 +34,8 @@
                             <label class="form__subtitle">Пароль</label>
                         </div>
 
-                        <input type="password" class="form__input">
+                        <input type="password" class="form__input" id="password">
+                        <span id="passwordError" class="form__error-message"></span>
                     </div>
 
                     <div class="form__group">
@@ -41,7 +43,8 @@
                             <label class="form__subtitle">Повторите пароль</label>
                         </div>
                     
-                        <input type="password" class="form__input">
+                        <input type="password" class="form__input" id="repeatPassword">
+                        <span id="repeatPasswordError" class="form__error-message"></span>
                     </div>
 
                     <div class="authorization__btn-wrapper">

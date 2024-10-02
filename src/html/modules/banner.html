@@ -2,7 +2,14 @@
   <div class='banner__wrapper'>
 
     <div class='banner__img-wrapper'>
-      <img class='banner__img {{banner-class}}' src="/public/assets/images/components/banner/banner-img.jpg" alt="banner">
+      <picture>
+        <source srcset="/public/assets/images/components/banner/banner-img.webp" type="image/webp">
+        <source srcset="/public/assets/images/components/banner/banner-img-mob.webp" type="image/webp">
+      
+        <source media="(max-width:1023px)" srcset="/public/assets/images/components/banner/banner-img-mob.jpg">
+      
+        <img class='banner__img {{banner-class}}' src="/public/assets/images/components/banner/banner-img.jpg" alt="banner">
+      </picture>
     </div>
 
     <div class='banner__block {{banner-block-class}}'>

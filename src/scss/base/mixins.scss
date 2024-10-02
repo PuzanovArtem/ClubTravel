@@ -5,6 +5,10 @@ $l-tablet: 1023px;
 $lap-top: 1219px;
 $desktop: 1499px;
 
+///// calendar
+$calendar-tablet: 900px;
+$calendar-mobile: 650px;
+
 @mixin respond-to($breakpoint) {
   @media only screen and (max-width: $breakpoint) {
     @content;

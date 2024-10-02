@@ -214,30 +214,9 @@
 
     &__wrapper {
       margin: 0;
+      padding: 0 0 60px;
     }
   }
 }
 
-// .fb-page {
-//   overflow: hidden;
-//   width: 340px;
-//   height: auto;
-// }
-
-// .fb-page .fb_iframe_widget_fluid {
-//   width: 340px !important;
-//   height: 130px !important;
-// }
-
-// @include respond-to($mobile) {
-//   .fb-page {
-//     display: inline-block !important;
-//     width: 290px;
-//     height: auto;
-//   }
-
-//   .fb-page .fb_iframe_widget_fluid {
-//     width: 290px !important;
-//     height: 130px !important;
-//   }
-// }
+ 

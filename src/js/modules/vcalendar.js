@@ -70,7 +70,7 @@ export const calendarSearch = () => {
         const previouslySelected = document.querySelector('.fc-day-selected')
 
          if (info.dayEl.classList.contains('fc-day-disabled')) {
-    return; // Нічого не робимо, оскільки дата заблокована
+    return;
   }
 
         if (previouslySelected) {

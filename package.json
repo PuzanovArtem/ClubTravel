@@ -34,6 +34,7 @@
     "flatpickr": "^4.6.13",
     "fullcalendar": "^6.1.15",
     "nouislider": "^15.8.1",
-    "swiper": "^11.1.4"
+    "swiper": "^11.1.4",
+    "validator": "^13.12.0"
   }
 }

@@ -151,7 +151,7 @@
 
   &__hotel-location-block {
     @extend %display-flex;
-    width: 214px;
+    width: 217px;
     margin: 12px 0 0;
     padding: 5px 11px;
     border: 1px solid $light-gray;
@@ -453,13 +453,13 @@
       }
     }
 
-    @media only screen and (width <= 900px) {
+    @include respond-to($calendar-tablet) {
       & {
         width: 50% !important;
       }
     }
 
-    @media only screen and (width <= 650px) {
+    @include respond-to($calendar-mobile) {
       & {
         width: 100% !important;
       }

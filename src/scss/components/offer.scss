@@ -54,7 +54,6 @@
 
   &__or-block {
     position: relative;
-    margin: 0 20px;
 
     &::before {
       @extend %gray-line;
@@ -218,7 +217,7 @@
 
   @include respond-to($mobile) {
     &__img {
-      height: 823px;
+      height: 923px;
       background-image: url('/public/assets/images/components/offer/offer-img-mob.jpg');
     }
 
