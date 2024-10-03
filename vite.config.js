@@ -6,6 +6,7 @@ import viteImagemin from 'vite-plugin-imagemin'
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
 import { defineConfig } from 'vite'
 import { resolve } from 'path'
+import commonjs from 'vite-plugin-commonjs'
 
 export default defineConfig({
   base: './',
@@ -45,11 +46,11 @@ export default defineConfig({
       jpg: {
         quality: 80,
       },
-
       png: {
         quality: 100,
       },
     }),
+    commonjs(), // Добавлен плагин CommonJS для поддержки CommonJS-зависимостей
     handlebars({
       partialDirectory: [
         resolve(__dirname, 'src/html/components'),
@@ -90,10 +91,16 @@ export default defineConfig({
         errorPage: resolve(__dirname, 'src/pages/errorPage/errorPage.html'),
       },
     },
+    commonjsOptions: {
+      include: /node_modules/, // Обрабатывает CommonJS модули из node_modules
+    },
   },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
     },
+  },
+  optimizeDeps: {
+    include: ['some-dependency'], // Добавь сюда любые пакеты, которые могут требовать предобработки
   },
 })
