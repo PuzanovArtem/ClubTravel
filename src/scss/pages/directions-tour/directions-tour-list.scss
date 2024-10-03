@@ -155,7 +155,7 @@ padding-bottom: 90px;
   @include respond-to($l-tablet) {
    &__wrapper {
       flex-direction: column;
-      margin-top: -30px;
+      margin-top: 20px;
     }
 
     &__sidebar {
