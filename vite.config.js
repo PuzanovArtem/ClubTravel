@@ -8,7 +8,7 @@ import { defineConfig } from 'vite'
 import { resolve } from 'path'
 
 export default defineConfig({
-  base: './',
+  base: '/',
   plugins: [
     viteImagemin({
       gifsicle: {
