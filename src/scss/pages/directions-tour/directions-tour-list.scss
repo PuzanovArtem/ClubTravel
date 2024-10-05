@@ -76,6 +76,7 @@ padding-bottom: 90px;
     grid-template-columns: repeat(auto-fit, minmax(272px, 1fr));
     flex-grow: 1;
     gap: 30px;
+    height: fit-content;
   }
 
   .season-tours__card {

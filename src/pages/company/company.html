@@ -1,23 +1,25 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/assets/images/icons/logo.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/src/pages/company/company.scss" />
-    <title>Club Travel</title>
-    </head>
-  <body>
-    {{> header }}
-    <main class="main">
-      {{> banner}}
-	  {{> company-news}}
-    </main>
 
-	{{> _footer }}
-    
-    
-    <script crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v11.0"></script>
-    <script type="module" src="/src/pages/company/company.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="/assets/images/icons/logo.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/src/pages/company/company.scss">
+  <title>Club Travel</title>
+</head>
+
+<body>
+  {{> header }}
+  <main class="main">
+    {{> hero mainBannerClass="hide" searchClass="hide "}}
+    {{> company-news}}
+  </main>
+
+  {{> _footer }}
+
+  <script crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v11.0"></script>
+  <script type="module" src="/src/pages/company/company.js"></script>
+</body>
+
 </html>

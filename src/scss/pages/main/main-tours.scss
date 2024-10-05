@@ -15,7 +15,7 @@
 
   &--card-price {
     @extend %position-rel;
-    left: 0;
+    left: -2px;
     width: 3px;
     height: 31px;
     fill: $primary;
@@ -73,17 +73,16 @@
   }
 
   &__swiper-slide {
-    // width: 395px !important;
     padding: 0 10px 15px;
     box-sizing: border-box;
   }
 
   .main-company__swiper {
-    margin: 37px 0 12px;
+    margin: 43px 0 12px;
   }
 
   .main-hot__swiper {
-    margin: 38px 0 22px;
+    margin: 43px 0 22px;
   }
 
   &__hotel-card-title {
@@ -103,7 +102,6 @@
   &__card {
     width: 100%;
     margin: 0 0 10px;
-    // height: 330px;
     border-radius: 10px;
     background: $white;
     box-shadow: 0 5px 10px 0 $black-shadow-10;
@@ -133,7 +131,7 @@
   &__card-line-price {
     @extend %position-rel;
     top: 50%;
-    left: 67%;
+    left: 65%;
     z-index: 1;
     letter-spacing: 1.5px;
     font-weight: 700;
@@ -145,7 +143,7 @@
     @extend %position-abs;
     content: '';
     top: 0;
-    left: 0;
+    left: -2px;
     width: 128%;
     height: 31px;
     background: $primary;
@@ -180,11 +178,10 @@
   }
 
   .hot-deals__card-place-wrapper {
-    position: absolute;
+    @extend %position-abs;
+    @extend %display-flex;
     bottom: 14px;
     left: 15px;
-    align-items: center;
-    display: flex;
     gap: 10px;
     padding: 7px 15px 7px 8px;
     border-radius: 6px;
@@ -198,29 +195,23 @@
 
   &__card-text {
     height: 75px;
-    padding: 19px 0 5px 21px;
+    padding: 19px 5px 5px 21px;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 1.5px;
-    // overflow: hidden;
-    // display: -webkit-box;
-    // -webkit-box-orient: vertical;
-    // -webkit-line-clamp: 1;
   }
 
   .hot-deals__card-wrappers {
     justify-content: space-between;
     display: flex;
     flex-direction: column;
-    height: 100%;
-    max-height: 85px;
+    height: 95px;
+    padding: 0 0 10px;
   }
 
   .hot-deals__card-text-wrapper {
-    align-items: center;
-    justify-content: space-between;
-    display: flex;
-    padding: 18px 16px 0;
+    @extend %display-jc-sb;
+    padding: 18px 10px 0 16px;
   }
 
   .hot-deals__card-text {
@@ -237,8 +228,7 @@
   }
 
   .hot-deals__card-price-wrapper {
-    align-items: center;
-    display: flex;
+    @extend %display-flex;
     gap: 8px;
     padding-left: 16px;
     letter-spacing: 1px;
@@ -277,17 +267,13 @@
   }
 
   .hot-deals__card-line-wrapper::after {
+    @extend %position-abs;
     content: '';
-    position: absolute;
     top: -4px;
     left: 3px;
     width: 80px;
     height: 31px;
     background: $primary;
-  }
-
-  .hot-deal__card {
-    height: 349px;
   }
 
   .hot-deals__img {
@@ -324,7 +310,16 @@
   }
 }
 
+@include respond-to($lap-top) {
+}
+
 @include respond-to($l-tablet) {
+  .main-tour {
+    &__card-text {
+      font-size: 15px;
+    }
+  }
+
   .main-company {
     margin: 83px 0 0;
   }
@@ -349,7 +344,7 @@
     &__swiper-slide {
       width: 50% !important;
       margin-right: 0 !important;
-      padding: 0 15px;
+      padding: 0 10px;
     }
 
     .main-company__swiper-slide:nth-child(even) {
@@ -375,11 +370,11 @@
     }
 
     .main-company__swiper {
-      margin: 65px 0 15px;
+      margin: 70px 0 15px;
     }
 
     .main-hot__swiper {
-      margin: 65px 0 22px;
+      margin: 70px 0 22px;
     }
   }
 }
@@ -442,7 +437,8 @@
     }
 
     &__text {
-      gap: 6px;
+      @extend %display-center;
+      flex-wrap: wrap;
       width: 316px;
       margin: 0 auto;
       text-align: center;
@@ -451,6 +447,7 @@
     .hot-deals__img {
       width: 20px;
       height: 20px;
+      margin-left: 6px;
     }
   }
 }

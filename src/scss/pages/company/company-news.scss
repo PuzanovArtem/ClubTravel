@@ -3,17 +3,47 @@
 
   &__wrapper {
     @extend %display-center;
-    gap: 16px 0;
+    flex-wrap: wrap;
+    gap: 16px 20px;
     margin: 42px 0 0;
+  }
+
+  &__slide {
+    width: 31%;
+    padding: 0;
   }
 }
 
-@include respond-to(578px) {
+@include respond-to($l-tablet) {
   .company-news {
     margin: 53px 0 65px;
 
+    &__wrapper {
+      gap: 13px 15px;
+    }
+
     &__slide {
+      width: 48% !important;
+    }
+  }
+}
+
+@include respond-to($mobile) {
+  .company-news {
+    margin: 53px 0 65px;
+
+    &__wrapper {
+      gap: 8px 15px;
+    }
+
+    &__slide {
+      width: 100% !important;
+      max-width: 100%;
       margin-right: 0 !important;
     }
+  }
+
+  .main-tour__title {
+    gap: 6px;
   }
 }

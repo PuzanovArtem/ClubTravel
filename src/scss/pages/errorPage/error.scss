@@ -1,0 +1,48 @@
+.error {
+  height: 689px;
+  background-image: url('/public/assets/images/404.webp');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__container {
+    @extend %display-center;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &__title {
+    margin: 0 0 13px;
+    font-size: clamp(26px, 9vw, 84px);
+    font-weight: 700;
+    color: $white;
+    text-align: center;
+  }
+
+  &__text {
+    margin-bottom: 46px;
+    font-size: 24px;
+    color: $white;
+    text-align: center;
+
+    &--sub {
+      margin-bottom: 15px;
+      font-size: 14px;
+    }
+  }
+
+  &__list {
+    @extend %display-jc-sb;
+    flex-direction: column;
+    width: 181px;
+    height: 172px;
+    margin: 0 auto;
+  }
+
+  &__link {
+    font-size: 16px;
+    color: $white;
+    text-align: center;
+    text-decoration-line: underline;
+  }
+}
