@@ -29,6 +29,10 @@
       width: 22px;
       height: 20px;
       fill: $dark-blue;
+
+      &:hover{
+        fill: $primary;
+      }
     }
   }
 
@@ -87,6 +91,10 @@
     &:last-child {
       padding-right: 0;
     }
+
+    &:hover {
+      color: $primary;
+    }
   }
 
   &__info-contacts {
@@ -108,6 +116,14 @@
       padding-right: 10px;
       font-size: 13px;
       color: $gray-text;
+
+      &:hover {
+        color: $primary;
+      }
+    }
+
+    &:hover {
+      color: $primary;
     }
   }
 
@@ -178,7 +194,7 @@
       color: $primary;
 
       &:hover {
-        color: $light-gray;
+        color: $blue;
       }
     }
 
