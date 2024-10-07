@@ -1,21 +1,27 @@
 .icon {
-  opacity: 0.5;
-  width: 18px;
-  height: 18px;
-  margin-right: 12px;
-  fill: $green;
-  //   &--phone {
-  //     width: 18px;
-  //     height: 18px;
-  //   }
+  &--phone,
+  &--envelope,
+  &--message {
+    opacity: 0.5;
+    width: 18px;
+    height: 18px;
+    margin-right: 12px;
+    fill: $green;
+  }
 
-  //   &--message {
-  //     width: 18px;
-  //     height: 18px;
-  //   }
-  //   &--envelope{
+  &--cross {
+    fill: $cross;
+  }
 
-  //   }
+  &--arrow-down {
+    width: 12px;
+    height: 7px;
+  }
+
+  &--search-plus {
+    width: 18px;
+    height: 18px;
+  }
 }
 
 .tour-request {
@@ -275,6 +281,7 @@
   width: 100%;
   max-width: 418px;
   height: 100%;
+  margin: -3px 12px 0 0;
 
   @include respond-to($tablet) {
     max-width: unset;
@@ -372,7 +379,9 @@
     }
 
     &-guests {
-      margin-bottom: 7px;
+      margin: 11px 0 7px;
+      border: 1px solid;
+      border: 1px solid $light-gray;
     }
 
     &-hover {
@@ -446,12 +455,17 @@
     }
   }
 
+  &__guests {
+    width: 100%;
+  }
+
   &__counter {
     align-items: center;
     justify-content: space-between;
     display: flex;
     width: 100%;
     height: 42px;
+    margin-top: 50px;
     user-select: none;
 
     &-btn {

@@ -315,14 +315,507 @@
             <h3 class="form__title">Гости</h3>
 
             <div class="form__drop form__drop-guests">
+              <!--Компонента Марты (щас не подключены стили )-->
+              <div class="search-bar__guests  form__guests">
+                <div class="dropdown">
+                  <div class="dropdown__row">
+                    <p class="dropdown__current">
+                      <span class="search-bar__guests-adults">Взрослых:</span>
 
-              <!-- подключить компоненту каунтера Марты-->
+                      <span id="adults-display-form" class="search-bar__guests-counter"> 0 </span>
+
+                      <span class="search-bar__guests-kids">Детей:</span>
+
+                      <span id="kids-display-form" class="search-bar__guests-sub-counter"> 0 </span>
+                    </p>
+
+                    <img src="/assets/images/icons/select-arrow.svg" class="icon__arrow-down" alt="">
+                  </div>
+
+                  <ul class="dropdown__list">
+                    <li class="dropdown__item--guests">
+                      <p class="item__guests--text">Добавьте необходимое кол-во гостей и укажите возраст</p>
+                    </li>
+
+                    <li class="dropdown__item--guests">
+                      <div class="search-bar__subitem">
+                        <p class="subitem__title">Взрослых</p>
+
+                        <div class="search-bar__subitem-subrow counter" id="counter-3">
+                          <button id="adults-decrement" class="decrement" type="button" data-action="decrement">
+                            <img src="/assets/images/icons/couneter-minus.svg" alt="minus" width="14" height="14">
+                          </button>
+
+                          <span id="adults-counter-value" class="counter-value"> 0 </span>
+
+                          <button id="adults-increment" class="increment" type="button" data-action="increment">
+                            <img src="/assets/images/icons/counter-plus.svg" alt="plus" width="14" height="14">
+                          </button>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="dropdown__item--guests hotel-card-sidebar__item--guests hidden">
+                      <div class="search-bar__subitem hotel-card-sidebar__subitem">
+                        <div class="select hotel-card-sidebar__select">
+                          <div class="select__custom hotel-card-sidebar__select-custom">
+                            <div class="select__selected">Ребёнок</div>
+
+                            <div class="select__items">
+                              <div class="select__item">до 1 года</div>
+
+                              <div class="select__item">1 год</div>
+
+                              <div class="select__item">2 года</div>
+
+                              <div class="select__item">3 года</div>
+
+                              <div class="select__item">4 года</div>
+
+                              <div class="select__item">5 лет</div>
+
+                              <div class="select__item">6 лет</div>
+
+                              <div class="select__item">7 лет</div>
+
+                              <div class="select__item">8 лет</div>
+
+                              <div class="select__item">9 лет</div>
+
+                              <div class="select__item">10 лет</div>
+
+                              <div class="select__item">11 лет</div>
+
+                              <div class="select__item">12 лет</div>
+
+                              <div class="select__item">13 лет</div>
+
+                              <div class="select__item">14 лет</div>
+
+                              <div class="select__item">15 лет</div>
+
+                              <div class="select__item">16 лет</div>
+
+                              <div class="select__item">17 лет</div>
+                            </div>
+
+                            <svg class="icon icon--arrow-down select__arrow">
+                              <use xlink:href="/public/assets/sprites/sprite.svg#arrow-down"></use>
+                            </svg>
+                          </div>
+                        </div>
+
+                        <div class="search-bar__subitem-subrow counter" id="counter-4" data-counter-type="child-form">
+                          <button class="decrement" type="button" data-action="decrement">
+                            <img src="/assets/images/icons/couneter-minus.svg" alt="minus" width="14" height="14">
+                          </button>
+
+                          <span class="counter-value"> 0 </span>
+
+                          <button class="increment" type="button" data-action="increment">
+                            <img src="/assets/images/icons/counter-plus.svg" alt="plus" width="14" height="14">
+                          </button>
+                        </div>
+                      </div>
+
+                      <svg class="icon icon--cross">
+                        <use xlink:href="/public/assets/sprites/sprite.svg#cross"></use>
+                      </svg>
+                    </li>
+
+                    <li class="dropdown__item--guests hotel-card-sidebar__item--guests hidden">
+                      <div class="search-bar__subitem hotel-card-sidebar__subitem">
+                        <div class="select hotel-card-sidebar__select">
+                          <div class="select__custom hotel-card-sidebar__select-custom">
+                            <div class="select__selected">Ребёнок</div>
+
+                            <div class="select__items">
+                              <div class="select__item">до 1 года</div>
+
+                              <div class="select__item">1 год</div>
+
+                              <div class="select__item">2 года</div>
+
+                              <div class="select__item">3 года</div>
+
+                              <div class="select__item">4 года</div>
+
+                              <div class="select__item">5 лет</div>
+
+                              <div class="select__item">6 лет</div>
+
+                              <div class="select__item">7 лет</div>
+
+                              <div class="select__item">8 лет</div>
+
+                              <div class="select__item">9 лет</div>
+
+                              <div class="select__item">10 лет</div>
+
+                              <div class="select__item">11 лет</div>
+
+                              <div class="select__item">12 лет</div>
+
+                              <div class="select__item">13 лет</div>
+
+                              <div class="select__item">14 лет</div>
+
+                              <div class="select__item">15 лет</div>
+
+                              <div class="select__item">16 лет</div>
+
+                              <div class="select__item">17 лет</div>
+                            </div>
+
+                            <svg class="icon icon--arrow-down select__arrow">
+                              <use xlink:href="/public/assets/sprites/sprite.svg#arrow-down"></use>
+                            </svg>
+                          </div>
+                        </div>
+
+                        <div class="search-bar__subitem-subrow counter" id="counter-5" data-counter-type="child-form">
+                          <button class="decrement" type="button" data-action="decrement">
+                            <img src="/assets/images/icons/couneter-minus.svg" alt="minus" width="14" height="14">
+                          </button>
+
+                          <span class="counter-value"> 0 </span>
+
+                          <button class="increment" type="button" data-action="increment">
+                            <img src="/assets/images/icons/counter-plus.svg" alt="plus" width="14" height="14">
+                          </button>
+                        </div>
+                      </div>
+
+                      <svg class="icon icon--cross">
+                        <use xlink:href="/public/assets/sprites/sprite.svg#cross"></use>
+                      </svg>
+                    </li>
+
+                    <li class="dropdown__item--guests hotel-card-sidebar__item--guests hidden">
+                      <div class="search-bar__subitem hotel-card-sidebar__subitem">
+                        <div class="select hotel-card-sidebar__select">
+                          <div class="select__custom hotel-card-sidebar__select-custom">
+                            <div class="select__selected">Ребёнок</div>
+
+                            <div class="select__items">
+                              <div class="select__item">до 1 года</div>
+
+                              <div class="select__item">1 год</div>
+
+                              <div class="select__item">2 года</div>
+
+                              <div class="select__item">3 года</div>
+
+                              <div class="select__item">4 года</div>
+
+                              <div class="select__item">5 лет</div>
+
+                              <div class="select__item">6 лет</div>
+
+                              <div class="select__item">7 лет</div>
+
+                              <div class="select__item">8 лет</div>
+
+                              <div class="select__item">9 лет</div>
+
+                              <div class="select__item">10 лет</div>
+
+                              <div class="select__item">11 лет</div>
+
+                              <div class="select__item">12 лет</div>
+
+                              <div class="select__item">13 лет</div>
+
+                              <div class="select__item">14 лет</div>
+
+                              <div class="select__item">15 лет</div>
+
+                              <div class="select__item">16 лет</div>
+
+                              <div class="select__item">17 лет</div>
+                            </div>
+
+                            <svg class="icon icon--arrow-down select__arrow">
+                              <use xlink:href="/public/assets/sprites/sprite.svg#arrow-down"></use>
+                            </svg>
+                          </div>
+                        </div>
+
+                        <div class="search-bar__subitem-subrow counter" id="counter-6" data-counter-type="child-form">
+                          <button class="decrement" type="button" data-action="decrement">
+                            <img src="/assets/images/icons/couneter-minus.svg" alt="minus" width="14" height="14">
+                          </button>
+
+                          <span class="counter-value"> 0 </span>
+
+                          <button class="increment" type="button" data-action="increment">
+                            <img src="/assets/images/icons/counter-plus.svg" alt="plus" width="14" height="14">
+                          </button>
+                        </div>
+                      </div>
+
+                      <svg class="icon icon--cross">
+                        <use xlink:href="/public/assets/sprites/sprite.svg#cross"></use>
+                      </svg>
+                    </li>
+
+                    <li class="dropdown__item--guests hotel-card-sidebar__item--guests hidden">
+                      <div class="search-bar__subitem hotel-card-sidebar__subitem">
+                        <div class="select hotel-card-sidebar__select">
+                          <div class="select__custom hotel-card-sidebar__select-custom">
+                            <div class="select__selected">Ребёнок</div>
+
+                            <div class="select__items">
+                              <div class="select__item">до 1 года</div>
+
+                              <div class="select__item">1 год</div>
+
+                              <div class="select__item">2 года</div>
+
+                              <div class="select__item">3 года</div>
+
+                              <div class="select__item">4 года</div>
+
+                              <div class="select__item">5 лет</div>
+
+                              <div class="select__item">6 лет</div>
+
+                              <div class="select__item">7 лет</div>
+
+                              <div class="select__item">8 лет</div>
+
+                              <div class="select__item">9 лет</div>
+
+                              <div class="select__item">10 лет</div>
+
+                              <div class="select__item">11 лет</div>
+
+                              <div class="select__item">12 лет</div>
+
+                              <div class="select__item">13 лет</div>
+
+                              <div class="select__item">14 лет</div>
+
+                              <div class="select__item">15 лет</div>
+
+                              <div class="select__item">16 лет</div>
+
+                              <div class="select__item">17 лет</div>
+                            </div>
+
+                            <svg class="icon icon--arrow-down select__arrow">
+                              <use xlink:href="/public/assets/sprites/sprite.svg#arrow-down"></use>
+                            </svg>
+                          </div>
+                        </div>
+
+                        <div class="search-bar__subitem-subrow counter" id="counter-7" data-counter-type="child-form">
+                          <button class="decrement" type="button" data-action="decrement">
+                            <img src="/assets/images/icons/couneter-minus.svg" alt="minus" width="14" height="14">
+                          </button>
+
+                          <span class="counter-value"> 0 </span>
+
+                          <button class="increment" type="button" data-action="increment">
+                            <img src="/assets/images/icons/counter-plus.svg" alt="plus" width="14" height="14">
+                          </button>
+                        </div>
+                      </div>
+
+                      <svg class="icon icon--cross">
+                        <use xlink:href="/public/assets/sprites/sprite.svg#cross"></use>
+                      </svg>
+                    </li>
+
+                    <li class="dropdown__item--guests hotel-card-sidebar__item--guests hidden">
+                      <div class="search-bar__subitem hotel-card-sidebar__subitem">
+                        <div class="select hotel-card-sidebar__select">
+                          <div class="select__custom hotel-card-sidebar__select-custom">
+                            <div class="select__selected">Ребёнок</div>
+
+                            <div class="select__items">
+                              <div class="select__item">до 1 года</div>
+
+                              <div class="select__item">1 год</div>
+
+                              <div class="select__item">2 года</div>
+
+                              <div class="select__item">3 года</div>
+
+                              <div class="select__item">4 года</div>
+
+                              <div class="select__item">5 лет</div>
+
+                              <div class="select__item">6 лет</div>
+
+                              <div class="select__item">7 лет</div>
+
+                              <div class="select__item">8 лет</div>
+
+                              <div class="select__item">9 лет</div>
+
+                              <div class="select__item">10 лет</div>
+
+                              <div class="select__item">11 лет</div>
+
+                              <div class="select__item">12 лет</div>
+
+                              <div class="select__item">13 лет</div>
+
+                              <div class="select__item">14 лет</div>
+
+                              <div class="select__item">15 лет</div>
+
+                              <div class="select__item">16 лет</div>
+
+                              <div class="select__item">17 лет</div>
+                            </div>
+
+                            <svg class="icon icon--arrow-down select__arrow">
+                              <use xlink:href="/public/assets/sprites/sprite.svg#arrow-down"></use>
+                            </svg>
+                          </div>
+                        </div>
+
+                        <div class="search-bar__subitem-subrow counter" id="counter-8" data-counter-type="child-form">
+                          <button class="decrement" type="button" data-action="decrement">
+                            <img src="/assets/images/icons/couneter-minus.svg" alt="minus" width="14" height="14">
+                          </button>
+
+                          <span class="counter-value"> 0 </span>
+
+                          <button class="increment" type="button" data-action="increment">
+                            <img src="/assets/images/icons/counter-plus.svg" alt="plus" width="14" height="14">
+                          </button>
+                        </div>
+                      </div>
+
+                      <svg class="icon icon--cross">
+                        <use xlink:href="/public/assets/sprites/sprite.svg#cross"></use>
+                      </svg>
+                    </li>
+
+                    <li class="dropdown__item--guests hotel-card-sidebar__item--guests hidden">
+                      <div class="search-bar__subitem hotel-card-sidebar__subitem">
+                        <div class="select hotel-card-sidebar__select">
+                          <div class="select__custom hotel-card-sidebar__select-custom">
+                            <div class="select__selected">Ребёнок</div>
+
+                            <div class="select__items">
+                              <div class="select__item">до 1 года</div>
+
+                              <div class="select__item">1 год</div>
+
+                              <div class="select__item">2 года</div>
+
+                              <div class="select__item">3 года</div>
+
+                              <div class="select__item">4 года</div>
+
+                              <div class="select__item">5 лет</div>
+
+                              <div class="select__item">6 лет</div>
+
+                              <div class="select__item">7 лет</div>
+
+                              <div class="select__item">8 лет</div>
+
+                              <div class="select__item">9 лет</div>
+
+                              <div class="select__item">10 лет</div>
+
+                              <div class="select__item">11 лет</div>
+
+                              <div class="select__item">12 лет</div>
+
+                              <div class="select__item">13 лет</div>
+
+                              <div class="select__item">14 лет</div>
+
+                              <div class="select__item">15 лет</div>
+
+                              <div class="select__item">16 лет</div>
+
+                              <div class="select__item">17 лет</div>
+                            </div>
+
+                            <svg class="icon icon--arrow-down select__arrow">
+                              <use xlink:href="/public/assets/sprites/sprite.svg#arrow-down"></use>
+                            </svg>
+                          </div>
+                        </div>
+
+                        <div class="search-bar__subitem-subrow counter" id="counter-9" data-counter-type="child">
+                          <button id="kids-decrement" class="decrement" type="button" data-action="decrement">
+                            <img src="/assets/images/icons/couneter-minus.svg" alt="minus" width="14" height="14">
+                          </button>
+
+                          <span id="kids-counter-value" class="counter-value"> 0 </span>
+
+                          <button id="kids-increment" class="increment" type="button" data-action="increment">
+                            <img src="/assets/images/icons/counter-plus.svg" alt="plus" width="14" height="14">
+                          </button>
+                        </div>
+                      </div>
+
+                      <svg class="icon icon--cross">
+                        <use xlink:href="/public/assets/sprites/sprite.svg#cross"></use>
+                      </svg>
+                    </li>
+
+                    <li class="hotel-card-sidebar__add-btn">
+                      <div class="hotel-card-sidebar__add-child">
+                        <svg class="icon icon--search-plus">
+                          <use xlink:href="/assets/sprites/sprite.svg#search-plus"></use>
+                        </svg>
+
+                        <span class="hotel-card-sidebar__add-child-text">Добавить ребенка</span>
+                      </div>
+                    </li>
+
+                    <li class="dropdown__item--guests">
+                      <button class="search-bar__guests-add main-btn" type="button">Добавить</button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <ul class="hotel-card-sidebar__first-block-counter">
+                <li class="hotel-card-sidebar__first-block-counter-item">
+                  <span class="hotel-card-sidebar__first-block-counter-text">Взрослых x2</span>
+                </li>
+
+                <li class="hotel-card-sidebar__first-block-counter-item">
+                  <span class="hotel-card-sidebar__first-block-counter-text">15 лет x1</span>
+                </li>
+
+                <li class="hotel-card-sidebar__first-block-counter-item">
+                  <span class="hotel-card-sidebar__first-block-counter-text">3 года x1</span>
+                </li>
+
+                <li class="hotel-card-sidebar__first-block-counter-item">
+                  <span class="hotel-card-sidebar__first-block-counter-text">10 лет х3</span>
+                </li>
+              </ul>
             </div>
 
             <h3 class="form__title">Длительность тура (дней)</h3>
 
             <div class="form__counter">
               <!-- каунтер -->
+
+              <div class="form__counter-wrapper" id="counter-10">
+                <button class="form__counter-decrement decrement" type="button" data-action="decrement">
+                  <img src="/assets/images/icons/couneter-minus.svg" alt="minus" width="14" height="14">
+                </button>
+
+                <span class="form__counter-value counter-value"> </span>
+
+                <button class="form__counter-increment increment" type="button" data-action="increment">
+                  <img src="/assets/images/icons/counter-plus.svg" alt="plus" width="14" height="14">
+                </button>
+              </div>
+
             </div>
 
             <button type="button" class="form__btn form__btn-first-state">дальше</button>
