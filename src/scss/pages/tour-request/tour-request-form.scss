@@ -307,7 +307,7 @@
     display: flex;
     height: 58px;
     border-radius: 9px 9px 0 0;
-    background: rgba(196, 196, 196, 0.2);
+    background: $slide-gray;
 
     @include respond-to($tablet) {
       background: #fff;
@@ -350,10 +350,6 @@
     }
   }
 
-  &___state {
-    min-height: 378px;
-  }
-
   &__title {
     margin: 0 0 5px 15px;
     font-size: 13px;
@@ -379,9 +375,12 @@
     }
 
     &-guests {
-      margin: 11px 0 7px;
-      border: 1px solid;
+      margin: 0;
       border: 1px solid $light-gray;
+    }
+
+    .form__dropdown-row {
+      padding: 0 13px 1px 11px;
     }
 
     &-hover {
@@ -436,7 +435,7 @@
 
         &:hover {
           @include respond-to($lap-top) {
-            border: 1px solid #f68521;
+            border: 1px solid $primary;
 
             span {
               opacity: 0.7;
@@ -457,50 +456,26 @@
 
   &__guests {
     width: 100%;
+    margin: 10px 0 0;
   }
 
-  &__counter {
+  &__guests-counter {
+    margin: -31px 0 0 3px;
+  }
+
+  &__title--tour {
+    margin-top: 53px;
+  }
+
+  &__counter-wrapper {
     align-items: center;
     justify-content: space-between;
     display: flex;
     width: 100%;
     height: 42px;
-    margin-top: 50px;
-    user-select: none;
-
-    &-btn {
-      cursor: pointer;
-      opacity: 0.5;
-      width: 30px;
-      height: 30px;
-      padding: 5px;
-      border-radius: 50%;
-      transition:
-        scale 100ms ease 0s,
-        opacity 300ms ease 0s;
-
-      &:active {
-        transform: scale(0.9);
-      }
-
-      &:hover {
-        @include respond-to($lap-top) {
-          opacity: 0.9;
-        }
-      }
-
-      svg {
-        width: 16px;
-        height: 16px;
-        margin: 0;
-        fill: #f68521;
-
-        @include respond-to($tablet) {
-          width: 20px;
-          height: 20px;
-        }
-      }
-    }
+    margin-top: 7px;
+    padding: 0 5px;
+    border: 1px solid $light-gray;
   }
 
   &__btn {
@@ -635,6 +610,7 @@
   }
 
   &__state {
+    min-height: 378px;
     animation: animation 500ms ease-in-out;
 
     &-first {
@@ -646,9 +622,7 @@
     }
 
     &-third {
-      opacity: 0;
-      pointer-events: none;
-      height: 0;
+      display: none;
     }
   }
 
@@ -694,7 +668,7 @@
     height: 100%;
     border: 1px solid #e2e2e2;
     border-radius: 6px;
-    font-family: Roboto;
+    font-family: $font-family-second;
     background: #fff;
     user-select: none;
 
@@ -797,6 +771,32 @@
       height: 28px;
     }
   }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 6px 0 0 6px;
+    background-color: $primary;
+
+    &:hover {
+      background-color: $primary;
+    }
+  }
+
+  ::-ms-scrollbar {
+    width: 8px;
+  }
+
+  ::-ms-scrollbar-thumb {
+    border-radius: 6px 0 0 6px;
+    background-color: $primary;
+
+    &:hover {
+      background-color: $primary;
+    }
+  }
 }
 
 .accordion {
@@ -819,24 +819,19 @@
       padding: 0 12px;
     }
 
-    svg {
-      fill: #a9a9a9;
-      transition: transform 300ms ease 0s;
+    &:hover {
+      border: 1px solid $primary;
 
-      @include respond-to($tablet) {
-        width: 28px;
-        height: 28px;
+      svg {
+        fill: $primary;
       }
     }
 
-    &:hover {
-      @include respond-to($tablet) {
-        border: 1px solid #f68521;
-
-        svg {
-          fill: #f68521;
-        }
-      }
+    .accordion__arrow {
+      width: 16px;
+      height: 16px;
+      fill: $icon-gray;
+      transition: transform 300ms ease 0s;
     }
   }
 
@@ -858,10 +853,8 @@
       transition: all 300ms ease 0s;
 
       &:hover {
-        @include respond-to($tablet) {
-          color: #fff;
-          background: #f68521;
-        }
+        color: #fff;
+        background: #f68521;
       }
     }
   }
@@ -885,6 +878,141 @@
             height: 45px;
           }
         }
+      }
+    }
+  }
+}
+
+.calendar {
+  position: relative;
+  height: 100%;
+
+  &__btn {
+    cursor: pointer;
+    position: relative;
+    align-items: center;
+    display: flex;
+    height: 100%;
+    border: 1px solid #e2e2e2;
+    border-radius: 6px;
+
+    &-info {
+      margin-left: 16px;
+      font-family: $font-family-second;
+    }
+  }
+}
+
+.form__tab.active {
+  color: $text;
+  background-color: $white;
+}
+
+.form__state {
+  display: none;
+}
+
+.form__state.active {
+  display: block;
+}
+
+.food {
+  position: relative;
+  height: 100%;
+
+  &__btn {
+    cursor: pointer;
+    position: relative;
+    align-items: center;
+    display: flex;
+    height: 100%;
+    border: 1px solid #e2e2e2;
+    border-radius: 6px;
+    user-select: none;
+    transition: border 300ms ease 0s;
+
+    &-info {
+      overflow: hidden;
+      max-width: 80%;
+      margin-left: 16px;
+      font-family: $font-family-second;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    svg {
+      position: absolute;
+      top: 50%;
+      right: 8px;
+      width: 12px;
+      height: 8px;
+      transform: translateY(-50%);
+      fill: #a9a9a9;
+      transition: transform 300ms ease 0s;
+    }
+  }
+
+  &__list {
+    overflow: auto;
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    max-height: 300px;
+    padding: 5px;
+    border: 1px solid #e2e2e2;
+    border-radius: 6px;
+    background: #fff;
+    transform: scaleY(0);
+    transform-origin: 0 0;
+    transition: all 300ms ease 0s;
+
+    li {
+      overflow: hidden;
+      cursor: pointer;
+      max-width: 100%;
+      height: 40px;
+      margin: 1px 0;
+      border-radius: 6px;
+      line-height: 40px;
+      text-align: center;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      transition: all 300ms ease 0s;
+
+      &:hover {
+        color: #fff;
+        background: #f68521;
+      }
+    }
+  }
+
+  &_active {
+    .food {
+      &__btn {
+        svg {
+          transform: translateY(-50%) rotate(180deg);
+        }
+      }
+
+      &__list {
+        transform: scaleY(1);
+      }
+    }
+  }
+
+  &__bottom {
+    .food {
+      &__list {
+        top: 43px;
+      }
+    }
+  }
+
+  &_top {
+    .food {
+      &__list {
+        bottom: 43px;
+        transform-origin: 100% 100%;
       }
     }
   }

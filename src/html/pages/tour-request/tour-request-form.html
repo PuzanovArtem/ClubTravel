@@ -83,7 +83,7 @@
         </div>
 
         <div class="form__main">
-          <form class="form__state form__state-first">
+          <form class="form__state form__state-first active">
 
             <h3 class="form__title">Направление</h3>
 
@@ -104,8 +104,8 @@
                     <div class="accordion__btn">
                       <div class="accordion__country">Египет</div>
 
-                      <svg class="accordion__arrow">
-                        <use xlink:href="#chevron-left"></use>
+                      <svg class="icon accordion__arrow">
+                        <use xlink:href="/assets/sprites/sprite.svg#arrow-down"></use>
                       </svg>
                     </div>
 
@@ -120,8 +120,8 @@
                     <div class="accordion__btn">
                       <div class="accordion__country">АОЭ</div>
 
-                      <svg>
-                        <use xlink:href="#chevron-left"></use>
+                      <svg class="icon accordion__arrow">
+                        <use xlink:href="/assets/sprites/sprite.svg#arrow-down"></use>
                       </svg>
                     </div>
 
@@ -136,8 +136,8 @@
                     <div class="accordion__btn">
                       <div class="accordion__country">Таиланд</div>
 
-                      <svg class="accordion__arrow">
-                        <use xlink:href="#chevron-left"></use>
+                      <svg class="icon accordion__arrow">
+                        <use xlink:href="/assets/sprites/sprite.svg#arrow-down"></use>
                       </svg>
                     </div>
 
@@ -152,8 +152,8 @@
                     <div class="accordion__btn">
                       <div class="accordion__country">Болгария</div>
 
-                      <svg>
-                        <use xlink:href="#chevron-left"></use>
+                      <svg class="icon accordion__arrow">
+                        <use xlink:href="/assets/sprites/sprite.svg#arrow-down"></use>
                       </svg>
                     </div>
                     <ul class="accordion__list">
@@ -171,8 +171,8 @@
                     <div class="accordion__btn">
                       <div class="accordion__country">Черногория</div>
 
-                      <svg class="accordion__arrow">
-                        <use xlink:href="#chevron-left"></use>
+                      <svg class="icon accordion__arrow">
+                        <use xlink:href="/assets/sprites/sprite.svg#arrow-down"></use>
                       </svg>
 
                     </div>
@@ -187,8 +187,8 @@
                     <div class="accordion__btn">
                       <div class="accordion__country">Индонезия</div>
 
-                      <svg>
-                        <use xlink:href="#chevron-left"></use>
+                      <svg class="icon accordion__arrow">
+                        <use xlink:href="/assets/sprites/sprite.svg#arrow-down"></use>
                       </svg>
                     </div>
 
@@ -202,8 +202,8 @@
                   <div class="accordion">
                     <div class="accordion__btn">
                       <div class="accordion__country">Грузия</div>
-                      <svg class="accordion__arrow">
-                        <use xlink:href="#chevron-left"></use>
+                      <svg class="icon accordion__arrow">
+                        <use xlink:href="/assets/sprites/sprite.svg#arrow-down"></use>
                       </svg>
                     </div>
                     <ul class="accordion__list">
@@ -215,8 +215,8 @@
                     <div class="accordion__btn">
                       <div class="accordion__country">Греция</div>
 
-                      <svg>
-                        <use xlink:href="#chevron-left"></use>
+                      <svg class="icon accordion__arrow">
+                        <use xlink:href="/assets/sprites/sprite.svg#arrow-down"></use>
                       </svg>
                     </div>
 
@@ -229,8 +229,8 @@
                     <div class="accordion__btn">
                       <div class="accordion__country">Турция</div>
 
-                      <svg class="accordion__arrow">
-                        <use xlink:href="#chevron-left"></use>
+                      <svg class="icon accordion__arrow">
+                        <use xlink:href="/assets/sprites/sprite.svg#arrow-down"></use>
                       </svg>
                     </div>
 
@@ -245,8 +245,8 @@
                     <div class="accordion__btn">
                       <div class="accordion__country">Кипр</div>
 
-                      <svg>
-                        <use xlink:href="#chevron-left"></use>
+                      <svg class="icon accordion__arrow">
+                        <use xlink:href="/assets/sprites/sprite.svg#arrow-down"></use>
                       </svg>
                     </div>
 
@@ -261,8 +261,8 @@
                     <div class="accordion__btn">
                       <div class="accordion__country">Тунис</div>
 
-                      <svg class="accordion__arrow">
-                        <use xlink:href="#chevron-left"></use>
+                      <svg class="icon accordion__arrow">
+                        <use xlink:href="/assets/sprites/sprite.svg#arrow-down"></use>
                       </svg>
                     </div>
 
@@ -275,8 +275,8 @@
                     <div class="accordion__btn">
                       <div class="accordion__country">Испания</div>
 
-                      <svg>
-                        <use xlink:href="#chevron-left"></use>
+                      <svg class="icon accordion__arrow">
+                        <use xlink:href="/assets/sprites/sprite.svg#arrow-down"></use>
                       </svg>
                     </div>
 
@@ -289,8 +289,8 @@
                     <div class="accordion__btn">
                       <div class="accordion__country">Украина</div>
 
-                      <svg class="accordion__arrow">
-                        <use xlink:href="#chevron-left"></use>
+                      <svg class="icon accordion__arrow">
+                        <use xlink:href="/assets/sprites/sprite.svg#arrow-down"></use>
                       </svg>
                     </div>
 
@@ -309,16 +309,28 @@
 
             <div class="form__drop">
               <!-- календарь-->
+              <div class="calendar">
+                <div class="calendar__btn">
+                  <span class="calendar__btn-info">
+                    <span id="start-date"></span> - <span id="final-date"></span>
+                  </span>
 
+                  <img src="/public/assets/images/icons/select-arrow.svg"
+                    class="icon__arrow-down drop-country__btn-arrow" alt="">
+                </div>
+                <div class="calendar__main">
+                  <div id="el"></div>
+                </div>
+              </div>
             </div>
 
             <h3 class="form__title">Гости</h3>
 
             <div class="form__drop form__drop-guests">
-              <!--Компонента Марты (щас не подключены стили )-->
+              <!--Компонента Марты -->
               <div class="search-bar__guests  form__guests">
-                <div class="dropdown">
-                  <div class="dropdown__row">
+                <div class="dropdown form__dropdown">
+                  <div class="dropdown__row form__dropdown-row">
                     <p class="dropdown__current">
                       <span class="search-bar__guests-adults">Взрослых:</span>
 
@@ -780,7 +792,7 @@
                 </div>
               </div>
 
-              <ul class="hotel-card-sidebar__first-block-counter">
+              <ul class="hotel-card-sidebar__first-block-counter form__guests-counter">
                 <li class="hotel-card-sidebar__first-block-counter-item">
                   <span class="hotel-card-sidebar__first-block-counter-text">Взрослых x2</span>
                 </li>
@@ -799,7 +811,7 @@
               </ul>
             </div>
 
-            <h3 class="form__title">Длительность тура (дней)</h3>
+            <h3 class="form__title form__title--tour">Длительность тура (дней)</h3>
 
             <div class="form__counter">
               <!-- каунтер -->
@@ -823,6 +835,115 @@
             <div class="form__btn-error"></div>
           </form>
 
+          <form id="form-state-two" class="form__state form__state-second">
+            <h3 class="form__title">Желаемая цена на одного человека (€)</h3>
+
+            <div class="form__input-wrap input-row">
+              <input type="text" id="input-price" aria-label="price" class="form__input">
+            </div>
+
+            <h3 class="form__title">Питание</h3>
+
+            <div class="form__drop form__drop-food">
+              <div class="food food__bottom">
+                <div class="food__btn">
+                  <span class="food__btn-info">Выбрать</span>
+
+                  <svg>
+                    <use xlink:href="/assets/sprites/sprite.svg#arrow-down"></use>
+                  </svg>
+                </div>
+
+                <ul class="food__list">
+                  <li>Завтрак</li>
+
+                  <li>Полу-люкс (полупансион и завтрак)</li>
+
+                  <li>Полный пансион</li>
+
+                  <li>Полупансион</li>
+
+                  <li>Без питания (RO - Room Only)</li>
+
+                  <li>Ужин включен</li>
+
+                  <li>Все включено</li>
+                </ul>
+              </div>
+
+            </div>
+
+            <h3 class="form__title">Категория отеля</h3>
+
+            <div class="form__drop form__stars">
+              <div data-num="1" class="form__stars-one-star">
+                <svg class="icon icon__star">
+                  <use xlink:href="/assets/sprites/sprite.svg#star"></use>
+                </svg>
+              </div>
+
+              <div data-num="2" class="form__stars-one-star">
+                <svg class="icon icon__star">
+                  <use xlink:href="/assets/sprites/sprite.svg#star"></use>
+                </svg>
+              </div>
+
+              <div data-num="3" class="form__stars-one-star">
+                <svg class="icon icon__star">
+                  <use xlink:href="/assets/sprites/sprite.svg#star"></use>
+                </svg>
+              </div>
+
+              <div data-num="4" class="form__stars-one-star">
+                <svg class="icon icon__star">
+                  <use xlink:href="/assets/sprites/sprite.svg#star"></use>
+                </svg>
+              </div>
+
+              <div data-num="5" class="form__stars-one-star">
+                <svg class="icon icon__star">
+                  <use xlink:href="/assets/sprites/sprite.svg#star"></use>
+                </svg>
+              </div>
+
+              <div data-num="6" class="form__stars-one-star">
+                <svg class="icon icon__star">
+                  <use xlink:href="/assets/sprites/sprite.svg#star"></use>
+                </svg>
+              </div>
+            </div>
+
+            <h3 class="form__title">Пожелания</h3>
+
+            <textarea class="form__textarea" cols="30" rows="12"></textarea>
+
+            <button class="form__btn form__btn-second-state" type="button">дальше</button>
+
+            <div class="form__btn-error"></div>
+          </form>
+
+          <form id="form-state-three" class="form__state form__state-third">
+            <h3 class="form__title">Имя</h3>
+
+            <div class="form__input-wrap">
+              <input type="text" id="input-name" aria-label="name" class="form__input" name="name">
+            </div>
+            <h3 class="form__title">Телефон</h3>
+
+            <div class="form__input-wrap form__phone">
+              <input type="text" id="input-tel" name="phone" aria-label="phone" class="form__input">
+            </div>
+
+            <h3 class="form__title">Эл. почта</h3>
+
+            <div class="form__input-wrap">
+              <input type="text" id="input-mail" class="form__input" aria-label="mail" name="email">
+            </div>
+
+            <button class="form__btn form__btn-three-state" type="button">подобрать тур</button>
+
+            <div class="form__btn-error"></div>
+          </form>
         </div>
       </div>
     </section>
