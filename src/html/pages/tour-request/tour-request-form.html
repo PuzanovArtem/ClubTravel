@@ -16,14 +16,16 @@
       <h2 class="adviser__title">Оставьте свой номер телефона и мы вам перезвоним</h2>
 
       <form id="adviser__form" class="adviser__row-input">
-        <div class="adviser__input input input-row">
-          <input name="phone" id="adviser-inp" type="tel" aria-label="phone" placeholder="Ваш номер телефона">
+        <div class="adviser__rov-wrapper">
+          <div class="adviser__input input input-row">
+            <input name="phone" id="adviser-inp" type="tel" aria-label="phone" placeholder="Ваш номер телефона">
+            
+            <div class="adviser__input-error"></div>
+          </div>
+  
+          <button type="button" class="adviser__btn main-btn ">перезвонить</button>
+  
         </div>
-
-        <!-- <div class="adviser__input-error"></div> -->
-
-        <button type="button" class="adviser__btn main-btn ">перезвонить</button>
-
         <a href="$" class="adviser__btn-form">заполнить форму</a>
       </form>
 
@@ -831,8 +833,6 @@
             </div>
 
             <button type="button" class="form__btn form__btn-first-state">дальше</button>
-
-            <div class="form__btn-error"></div>
           </form>
 
           <form id="form-state-two" class="form__state form__state-second">
@@ -877,37 +877,37 @@
 
             <div class="form__drop form__stars">
               <div data-num="1" class="form__stars-one-star">
-                <svg class="icon icon__star">
+                <svg class="icon icon--star">
                   <use xlink:href="/assets/sprites/sprite.svg#star"></use>
                 </svg>
               </div>
 
               <div data-num="2" class="form__stars-one-star">
-                <svg class="icon icon__star">
+                <svg class="icon icon--star">
                   <use xlink:href="/assets/sprites/sprite.svg#star"></use>
                 </svg>
               </div>
 
               <div data-num="3" class="form__stars-one-star">
-                <svg class="icon icon__star">
+                <svg class="icon icon--star">
                   <use xlink:href="/assets/sprites/sprite.svg#star"></use>
                 </svg>
               </div>
 
               <div data-num="4" class="form__stars-one-star">
-                <svg class="icon icon__star">
+                <svg class="icon icon--star">
                   <use xlink:href="/assets/sprites/sprite.svg#star"></use>
                 </svg>
               </div>
 
               <div data-num="5" class="form__stars-one-star">
-                <svg class="icon icon__star">
+                <svg class="icon icon--star">
                   <use xlink:href="/assets/sprites/sprite.svg#star"></use>
                 </svg>
               </div>
 
               <div data-num="6" class="form__stars-one-star">
-                <svg class="icon icon__star">
+                <svg class="icon icon--star">
                   <use xlink:href="/assets/sprites/sprite.svg#star"></use>
                 </svg>
               </div>
@@ -919,7 +919,6 @@
 
             <button class="form__btn form__btn-second-state" type="button">дальше</button>
 
-            <div class="form__btn-error"></div>
           </form>
 
           <form id="form-state-three" class="form__state form__state-third">
@@ -927,22 +926,24 @@
 
             <div class="form__input-wrap">
               <input type="text" id="input-name" aria-label="name" class="form__input" name="name">
+              <span id="tourNameError" class="form__error-message"></span>
             </div>
             <h3 class="form__title">Телефон</h3>
 
             <div class="form__input-wrap form__phone">
               <input type="text" id="input-tel" name="phone" aria-label="phone" class="form__input">
+              <span id="tourPhoneError" class="form__error-message"></span>
             </div>
 
             <h3 class="form__title">Эл. почта</h3>
 
             <div class="form__input-wrap">
               <input type="text" id="input-mail" class="form__input" aria-label="mail" name="email">
+              <span id="tourMailError" class="form__error-message"></span>
             </div>
 
             <button class="form__btn form__btn-three-state" type="button">подобрать тур</button>
 
-            <div class="form__btn-error"></div>
           </form>
         </div>
       </div>

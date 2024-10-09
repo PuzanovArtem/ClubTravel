@@ -61,6 +61,16 @@
   @include respond-to($tablet) {
     margin: 34px 0 24px;
   }
+  
+  &__rov-wrapper{
+    display: flex;
+    width: 100%;
+  }
+
+  &__input-error{
+    font-size: 12px;
+    color: red;
+  }
 
   &__main-title {
     margin-bottom: 15px;
@@ -914,6 +924,12 @@
 
 .form__state.active {
   display: block;
+}
+
+.form__stars-one-star.active {
+  .icon--star {
+    fill: $yellow;
+  }
 }
 
 .food {
