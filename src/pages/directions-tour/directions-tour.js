@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     checkboxFilter();
     initSearchBar();
 
-     new Counter({ selector: '#counter-1', initCount: 0, step: 1, displaySelector: '#adults-display' });
+    new Counter({ selector: '#counter-1', initCount: 0, step: 1, displaySelector: '#adults-display' });
     new Counter({
         selector: '#counter-2',
         initCount: 0,

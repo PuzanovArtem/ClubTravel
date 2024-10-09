@@ -3,7 +3,7 @@
     align-items: center;
     display: flex;
     width: 100%;
-    max-width: 1920px;
+    max-width: 1500px;
     height: 570px;
     margin: 0 auto;
     background-image: url('/public/assets/images/components/offer/offer-img.jpg');
@@ -152,10 +152,6 @@
   }
 
   @include respond-to($tablet) {
-    &__img {
-      height: 565px;
-    }
-
     &__wrapper {
       padding: 40px 15px;
     }

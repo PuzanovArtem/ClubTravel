@@ -71,7 +71,7 @@
     text-transform: uppercase;
   }
 
-  @include respond-to($l-tablet) {
+  @include respond-to($lap-top) {
     margin-top: 0;
   }
 
