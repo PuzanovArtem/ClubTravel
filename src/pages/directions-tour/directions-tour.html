@@ -13,13 +13,13 @@
 
     <main class="main">
       {{> banner}} 
-      {{> search }} 
+
+      {{> search title = "Направления" additionalClass="icon--search-title" }} 
+
       {{> directions-tour-list }}
     </main>
 
     {{> _footer }}
-
-    <script crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v11.0"></script>
 
     <script type="module" src="/src/pages/directions-tour/directions-tour.js"></script>
   </body>

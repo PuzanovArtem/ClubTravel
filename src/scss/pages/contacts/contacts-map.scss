@@ -1,21 +1,34 @@
 .contacts-map {
-    padding: 35px 0 100px;
+  padding: 35px 0 100px;
 
-    &__frame {
-        width: 100%;
-        height: 395px;
-        border-radius: 10px;
-    }
+  &__frame,
+  &__placeholder {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 10px;
+  }
 
-    @include respond-to($tablet) {
-        &__frame {
-            height: 295px;
-        }
-    }
+  &__container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: 395px;
+  }
 
-    @include respond-to($mobile) {
-        &__frame {
-            height: 192px;
-        }
+  @include respond-to($tablet) {
+    padding: 30px 0 60px;
+
+    &__container {
+      height: 295px;
     }
+  }
+
+  @include respond-to($mobile) {
+    padding: 25px 0 40px;
+
+    &__container {
+      height: 192px;
+    }
+  }
 }

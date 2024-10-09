@@ -310,9 +310,6 @@
   }
 }
 
-@include respond-to($lap-top) {
-}
-
 @include respond-to($l-tablet) {
   .main-tour {
     &__card-text {

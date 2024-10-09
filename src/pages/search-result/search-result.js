@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     cardSlider();
     accordion();
     calendarSearch();
-    select;
+    select();
     initSearchBar();
 
     new Counter({ selector: '#counter-1', initCount: 0, step: 1, displaySelector: '#adults-display' });

@@ -89,8 +89,6 @@
   }
 
   .icon--padlock {
-    width: 18px;
-    height: 18px;
     margin-right: 15px;
     fill: $gray-text;
   }
@@ -169,6 +167,16 @@
   .icon--cutlery,
   .icon--house {
     padding: 0;
+  }
+
+  .icon--calendar {
+    fill: $green;
+  }
+
+  .icon--clock {
+    width: 24px;
+    height: 24px;
+    fill: $green;
   }
 
   &__third-block {
@@ -256,12 +264,12 @@
     margin-bottom: 10px;
   }
 
-  .icon__search-plus {
+  .icon--search-plus {
     margin-right: 10px;
     fill: $primary;
   }
 
-  @include respond-to($l-tablet) {
+  @include respond-to($lap-top) {
     margin-top: 40px;
   }
 

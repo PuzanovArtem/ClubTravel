@@ -2,7 +2,7 @@ import { Counter, updateTotalChildren } from '../../js/modules/counter.js'
 import { hotelCardSlider, mainHotSlider } from '../../js/libs/swiper.js'
 import { changePlace } from '../../js/pages/hotel-card/hotel-card-sidebar.js'
 import { header } from '../../js/components/header.js'
-import { initSearchBar } from '../../js/components/search.js'
+import { initializeDropdowns } from '../../js/modules/search/dropdown.js'
 import { manageSelects } from '../../js/modules/manage-selects.js'
 import { select } from '../../js/components/select.js'
 
@@ -11,9 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
   hotelCardSlider();
   mainHotSlider();
   changePlace();
-  select
+  select();
   manageSelects();
-  initSearchBar();
+  initializeDropdowns();
   
   new Counter({ selector: '#counter-1', initCount: 0, step: 1, displaySelector: '#adults-display' })
 
