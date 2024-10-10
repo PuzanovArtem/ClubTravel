@@ -8,6 +8,16 @@
   display: none;
 }
 
+.card-hover {
+  transition: transform 0.3s ease;
+
+  @media (hover: hover) {
+    &:hover {
+       transform: scale(1.05);
+    }
+  }
+}
+
 .main-btn {
   border: 1px solid $primary;
   border-radius: 6px;
