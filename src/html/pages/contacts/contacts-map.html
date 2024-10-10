@@ -1,8 +1,18 @@
 <section class="contacts-map">
     <div class="container">
-        <iframe
+        <!-- <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5105.91353687975!2d24.021469850527183!3d49.84296369162567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add6cfe330bab%3A0x73a56de803231767!2z0IbRgtCw0LvRltC50YHRjNC60LUg0L_QvtC00LLRltGAJ9GP!5e0!3m2!1suk!2sua!4v1727380080754!5m2!1suk!2sua"
             style="border:0;" allowfullscreen="" loading="lazy" class="contacts-map__frame"
             referrerpolicy="no-referrer-when-downgrade" title="map"></iframe>
+            referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+            <div class="contacts-map__container"
+                data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5105.91353687975!2d24.021469850527183!3d49.84296369162567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add6cfe330bab%3A0x73a56de803231767!2z0IbRgtCw0LvRltC50YHRjNC60LUg0L_QvtC00LLRltGAJ9GP!5e0!3m2!1suk!2sua!4v1727380080754!5m2!1suk!2sua">
+                <picture>
+                    <!-- Оптимізовані джерела зображень для різних пристроїв -->
+                    <source media="(max-width: 575px)" srcset="/public/assets/images/map/map-mob.webp" type="image/webp">
+                    <source srcset="/public/assets/images/map/map.webp" type="image/webp">
+                    <img class="contacts-map__placeholder" src="/public/assets/images/map/map.jpg" alt="map">
+                </picture>
+            </div>
     </div>
 </section>

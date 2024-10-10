@@ -1,6 +1,6 @@
 .banner {
   position: relative;
-  max-width: 1920px;
+  max-width: 1500px;
   margin: 0 auto;
 
   &__img {
@@ -79,11 +79,14 @@
     display: flex;
   }
 
-  @include respond-to($l-tablet) {
-    &__card-img {
+  @include respond-to($lap-top) {
+    &__card-img,
+    &__img {
       clip-path: none;
     }
+  }
 
+  @include respond-to($l-tablet) {
     &__block {
       bottom: 35px;
       left: 35px;
@@ -94,7 +97,6 @@
     &__img,
     &__card-img {
       height: 191px;
-      clip-path: none;
     }
 
     &__block {
@@ -105,7 +107,7 @@
 
   @include respond-to($s-mobile) {
     &__block {
-      bottom: 14px;
+      bottom: 25px;
       left: 14px;
       width: 240px;
       height: 65px;

@@ -73,19 +73,21 @@ padding-bottom: 90px;
 
   &__tours {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(273px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(272px, 1fr));
     flex-grow: 1;
     gap: 30px;
+    height: fit-content;
   }
 
   .season-tours__card {
+    max-width: 272px;
     height: auto;
     padding-bottom: 16px;
   }
 
   .hero__bg-img {
     width: 100%;
-    height: 160px;
+    max-height: 160px;
   }
 
   &__btn {
@@ -145,15 +147,16 @@ padding-bottom: 90px;
   }
 
   @include respond-to($lap-top) {
-    &__sidebar {
-      margin-right: 50px;
-    }
+    .season-tours__card {
+    max-width: 372px;
+  }
+
   }
 
   @include respond-to($l-tablet) {
    &__wrapper {
       flex-direction: column;
-      margin-top: -30px;
+      margin-top: 20px;
     }
 
     &__sidebar {
@@ -168,8 +171,17 @@ padding-bottom: 90px;
     &__sidebar-title {
       font-size: 21px;
     }
-
   }
+
+   @include respond-to($calendar-mobile) {
+    .season-tours__card {
+    max-width: 100%;
+  }
+
+  .hero__bg-img {
+    max-height: 260px;
+  }
+   }
 
   @include respond-to($mobile) {
     &__wrapper {
@@ -204,5 +216,10 @@ padding-bottom: 90px;
     &__sidebar-title {
       font-size: 18px;
     }
+
+        .hero__bg-img {
+    max-height: 160px;
+  }
   }
 }
+

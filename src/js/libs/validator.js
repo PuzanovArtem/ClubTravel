@@ -133,3 +133,80 @@ export const contactValidator = () => {
     }
   })
 }
+
+export const tourValidator = () => {
+  const inputName = document.getElementById('input-name')
+  const nameErrorElement = document.getElementById('tourNameError')
+  const inputPhone = document.getElementById('input-tel')
+  const phoneErrorElement = document.getElementById('tourPhoneError')
+  const inputEmail = document.getElementById('input-mail')
+  const emailErrorElement = document.getElementById('tourMailError')
+
+  // Новый элемент для проверки телефона
+  const adviserInputPhone = document.getElementById('adviser-inp')
+  const adviserPhoneErrorElement = document.querySelector('.adviser__input-error')
+
+  // Обработчик клика по кнопке
+  const submitButton = document.querySelector('.form__btn-three-state')
+  submitButton.addEventListener('click', function () {
+    const name = inputName.value
+    const phone = inputPhone.value
+    const email = inputEmail.value
+    const adviserPhone = adviserInputPhone.value // Новое поле для ввода телефона
+    let isValid = true
+
+    // Валидация имени
+    if (validator.isEmpty(name)) {
+      nameErrorElement.textContent = 'Имя не может быть пустым.'
+      isValid = false
+    } else if (!validator.isLength(name, { min: 2, max: 50 })) {
+      nameErrorElement.textContent = 'Имя должно содержать от 2 до 50 символов.'
+      isValid = false
+    } else {
+      nameErrorElement.textContent = ''
+    }
+
+    // Валидация основного телефона
+    if (validator.isEmpty(phone)) {
+      phoneErrorElement.textContent = 'Телефон не может быть пустым.'
+      isValid = false
+    } else if (!validator.isMobilePhone(phone, 'any', { strictMode: false })) {
+      phoneErrorElement.textContent = 'Неверный формат телефона.'
+      isValid = false
+    } else {
+      phoneErrorElement.textContent = ''
+    }
+
+    // Валидация телефона советника
+    if (validator.isEmpty(adviserPhone)) {
+      adviserPhoneErrorElement.textContent = 'Телефон советника не может быть пустым.'
+      isValid = false
+    } else if (!validator.isMobilePhone(adviserPhone, 'any', { strictMode: false })) {
+      adviserPhoneErrorElement.textContent = 'Неверный формат телефона советника.'
+      isValid = false
+    } else {
+      adviserPhoneErrorElement.textContent = ''
+    }
+
+    // Валидация электронной почты
+    if (validator.isEmpty(email)) {
+      emailErrorElement.textContent = 'Эл. почта не может быть пустой.'
+      isValid = false
+    } else if (!validator.isEmail(email)) {
+      emailErrorElement.textContent = 'Неверный формат электронной почты.'
+      isValid = false
+    } else {
+      emailErrorElement.textContent = ''
+    }
+
+    if (isValid) {
+      alert('Заявка отправлена')
+
+      // Очистка полей формы
+      inputName.value = ''
+      inputPhone.value = ''
+      inputEmail.value = ''
+      adviserInputPhone.value = '' // Очистка поля советника
+    }
+  })
+}

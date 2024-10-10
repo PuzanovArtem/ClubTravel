@@ -69,6 +69,7 @@ export default defineConfig({
         resolve(__dirname, 'src/html/pages/forgot-password'),
         resolve(__dirname, 'src/html/pages/text__page'),
         resolve(__dirname, 'src/html/pages/errorPage'),
+        resolve(__dirname, 'src/html/pages/tour-request'),
       ],
     }),
   ],
@@ -89,6 +90,7 @@ export default defineConfig({
         forgotPassword: resolve(__dirname, 'src/pages/forgot-password/forgot-password.html'),
         textPage: resolve(__dirname, 'src/pages/text__page/text__page.html'),
         errorPage: resolve(__dirname, 'src/pages/errorPage/errorPage.html'),
+        tourRequest: resolve(__dirname, 'src/pages/tour-request/tour-request.html'),
       },
     },
     commonjsOptions: {

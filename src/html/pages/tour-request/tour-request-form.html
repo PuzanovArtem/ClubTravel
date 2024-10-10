@@ -1,0 +1,953 @@
+<section class="tour-request">
+  <div class="container tour-request__wrapper">
+    <section class="tour-request__column tour-request__column-one adviser">
+      <h1 class="adviser__main-title">Нет времени искать тур?</h1>
+
+      <p class="adviser__info">
+        Просто скажите нам как должен выглядеть отдых вашей мечты и мы найдём
+        лучший тур для вас!
+      </p>
+
+      <p class="adviser__info adviser__info-opacity">
+        Заполните короткую форму запроса на нашем сайте и мы свяжемся с вами в
+        течении 1 часа в рабочее время
+      </p>
+
+      <h2 class="adviser__title">Оставьте свой номер телефона и мы вам перезвоним</h2>
+
+      <form id="adviser__form" class="adviser__row-input">
+        <div class="adviser__rov-wrapper">
+          <div class="adviser__input input input-row">
+            <input name="phone" id="adviser-inp" type="tel" aria-label="phone" placeholder="Ваш номер телефона">
+            
+            <div class="adviser__input-error"></div>
+          </div>
+  
+          <button type="button" class="adviser__btn main-btn ">перезвонить</button>
+  
+        </div>
+        <a href="$" class="adviser__btn-form">заполнить форму</a>
+      </form>
+
+      <h3 class="adviser__title">Связаться с нашим консультантом</h3>
+      <div class="adviser__contacts">
+        <div class="adviser__contacts-image">
+          <picture>
+            <source srcset="/public/assets/images/offer-cons.webp" type="image/webp">
+            <img src="/public/assets/images/offer-cons.jpg" alt="Description of the image" width="3000" height="2000">
+          </picture>
+        </div>
+
+        <div class="adviser__contacts-main">
+          <h3 class="adviser__contacts-title">Марина Каасик</h3>
+
+          <p class="adviser__contacts-info">Специалист по подбору туров</p>
+
+          <ul class="adviser__contacts-list">
+            <li>
+              <svg class="icon icon--phone">
+                <use xlink:href="/assets/sprites/sprite.svg#phone"></use>
+              </svg>
+
+              <a href="tel:+3726130633">
+                +372 <span>61 30 633</span>
+              </a>
+            </li>
+
+            <li>
+              <svg class="icon icon--envelope">
+                <use xlink:href="/assets/sprites/sprite.svg#envelope"></use>
+              </svg>
+              <a href="mailto:contact@email.ee">contact@email.ee</a>
+            </li>
+
+            <li>
+              <svg class="icon icon--message">
+                <use xlink:href="/assets/sprites/sprite.svg#message"></use>
+              </svg>
+              <a href="mailto:contact@email.ee">Написать в Messenger</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="main-form" class="main-content__column form ">
+      <div class="form__wrapper">
+        <div class="form__tabs">
+          <button type="button" class="form__tab form__tab-one">Основное</button>
+
+          <button type="button" class="form__tab form__tab-two">Предпочтения</button>
+
+          <button type="button" class="form__tab form__tab-three">Контакты</button>
+
+          <div class="form__tabs-slider"></div>
+        </div>
+
+        <div class="form__main">
+          <form class="form__state form__state-first active">
+
+            <h3 class="form__title">Направление</h3>
+
+            <div class="form__drop">
+              <div class="drop-country drop-country--bottom">
+                <div class="drop-country__btn">
+                  <span class="drop-country__county">Страна</span>
+
+                  <span class="drop-country__arrow"></span>></span>
+
+                  <span class="drop-country__tour">Тур</span>
+
+                  <img src="/public/assets/images/icons/select-arrow.svg"
+                    class="icon__arrow-down drop-country__btn-arrow" alt="">
+                </div>
+                <div class="drop-country__accordions">
+                  <div class="accordion">
+                    <div class="accordion__btn">
+                      <div class="accordion__country">Египет</div>
+
+                      <svg class="icon accordion__arrow">
+                        <use xlink:href="/assets/sprites/sprite.svg#arrow-down"></use>
+                      </svg>
+                    </div>
+
+                    <ul class="accordion__list">
+                      <li>Шарм-эль-Шейх</li>
+
+                      <li>Хургада</li>
+                    </ul>
+                  </div>
+
+                  <div class="accordion">
+                    <div class="accordion__btn">
+                      <div class="accordion__country">АОЭ</div>
+
+                      <svg class="icon accordion__arrow">
+                        <use xlink:href="/assets/sprites/sprite.svg#arrow-down"></use>
+                      </svg>
+                    </div>
+
+                    <ul class="accordion__list">
+                      <li>Дубай</li>
+
+                      <li>Абу-Даби</li>
+                    </ul>
+                  </div>
+
+                  <div class="accordion">
+                    <div class="accordion__btn">
+                      <div class="accordion__country">Таиланд</div>
+
+                      <svg class="icon accordion__arrow">
+                        <use xlink:href="/assets/sprites/sprite.svg#arrow-down"></use>
+                      </svg>
+                    </div>
+
+                    <ul class="accordion__list">
+                      <li>Бангкок</li>
+
+                      <li>Хуахин</li>
+                    </ul>
+                  </div>
+
+                  <div class="accordion">
+                    <div class="accordion__btn">
+                      <div class="accordion__country">Болгария</div>
+
+                      <svg class="icon accordion__arrow">
+                        <use xlink:href="/assets/sprites/sprite.svg#arrow-down"></use>
+                      </svg>
+                    </div>
+                    <ul class="accordion__list">
+                      <li>Солнечный берег</li>
+
+                      <li>Золотые пески</li>
+
+                      <li>Банско</li>
+
+                      <li>Боровец</li>
+                    </ul>
+                  </div>
+
+                  <div class="accordion">
+                    <div class="accordion__btn">
+                      <div class="accordion__country">Черногория</div>
+
+                      <svg class="icon accordion__arrow">
+                        <use xlink:href="/assets/sprites/sprite.svg#arrow-down"></use>
+                      </svg>
+
+                    </div>
+                    <ul class="accordion__list">
+                      <li>Будва</li>
+
+                      <li>Свети-Стефан</li>
+                    </ul>
+                  </div>
+
+                  <div class="accordion">
+                    <div class="accordion__btn">
+                      <div class="accordion__country">Индонезия</div>
+
+                      <svg class="icon accordion__arrow">
+                        <use xlink:href="/assets/sprites/sprite.svg#arrow-down"></use>
+                      </svg>
+                    </div>
+
+                    <ul class="accordion__list">
+                      <li>Бали</li>
+
+                      <li>Батуми</li>
+                    </ul>
+                  </div>
+
+                  <div class="accordion">
+                    <div class="accordion__btn">
+                      <div class="accordion__country">Грузия</div>
+                      <svg class="icon accordion__arrow">
+                        <use xlink:href="/assets/sprites/sprite.svg#arrow-down"></use>
+                      </svg>
+                    </div>
+                    <ul class="accordion__list">
+                      <li>Золотые пески</li>
+                    </ul>
+                  </div>
+
+                  <div class="accordion">
+                    <div class="accordion__btn">
+                      <div class="accordion__country">Греция</div>
+
+                      <svg class="icon accordion__arrow">
+                        <use xlink:href="/assets/sprites/sprite.svg#arrow-down"></use>
+                      </svg>
+                    </div>
+
+                    <ul class="accordion__list">
+                      <li>Родос</li>
+                    </ul>
+                  </div>
+
+                  <div class="accordion">
+                    <div class="accordion__btn">
+                      <div class="accordion__country">Турция</div>
+
+                      <svg class="icon accordion__arrow">
+                        <use xlink:href="/assets/sprites/sprite.svg#arrow-down"></use>
+                      </svg>
+                    </div>
+
+                    <ul class="accordion__list">
+                      <li>Мармарис</li>
+
+                      <li>Улудаг</li>
+                    </ul>
+                  </div>
+
+                  <div class="accordion">
+                    <div class="accordion__btn">
+                      <div class="accordion__country">Кипр</div>
+
+                      <svg class="icon accordion__arrow">
+                        <use xlink:href="/assets/sprites/sprite.svg#arrow-down"></use>
+                      </svg>
+                    </div>
+
+                    <ul class="accordion__list">
+                      <li>Пафос</li>
+
+                      <li>Другой курорт</li>
+                    </ul>
+                  </div>
+
+                  <div class="accordion">
+                    <div class="accordion__btn">
+                      <div class="accordion__country">Тунис</div>
+
+                      <svg class="icon accordion__arrow">
+                        <use xlink:href="/assets/sprites/sprite.svg#arrow-down"></use>
+                      </svg>
+                    </div>
+
+                    <ul class="accordion__list">
+                      <li>Сус</li>
+                    </ul>
+                  </div>
+
+                  <div class="accordion">
+                    <div class="accordion__btn">
+                      <div class="accordion__country">Испания</div>
+
+                      <svg class="icon accordion__arrow">
+                        <use xlink:href="/assets/sprites/sprite.svg#arrow-down"></use>
+                      </svg>
+                    </div>
+
+                    <ul class="accordion__list">
+                      <li>Майорка</li>
+                    </ul>
+                  </div>
+
+                  <div class="accordion">
+                    <div class="accordion__btn">
+                      <div class="accordion__country">Украина</div>
+
+                      <svg class="icon accordion__arrow">
+                        <use xlink:href="/assets/sprites/sprite.svg#arrow-down"></use>
+                      </svg>
+                    </div>
+
+                    <ul class="accordion__list">
+                      <li>Буковель</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <input type="text" id="drop-country" class="form__drop-hover" aria-label="drop-country" name="dropCountry"
+                readonly>
+            </div>
+
+            <h3 class="form__title">Дата вылета</h3>
+
+            <div class="form__drop">
+              <!-- календарь-->
+              <div class="calendar">
+                <div class="calendar__btn">
+                  <span class="calendar__btn-info">
+                    <span id="start-date"></span> - <span id="final-date"></span>
+                  </span>
+
+                  <img src="/public/assets/images/icons/select-arrow.svg"
+                    class="icon__arrow-down drop-country__btn-arrow" alt="">
+                </div>
+                <div class="calendar__main">
+                  <div id="el"></div>
+                </div>
+              </div>
+            </div>
+
+            <h3 class="form__title">Гости</h3>
+
+            <div class="form__drop form__drop-guests">
+              <!--Компонента Марты -->
+              <div class="search-bar__guests  form__guests">
+                <div class="dropdown form__dropdown">
+                  <div class="dropdown__row form__dropdown-row">
+                    <p class="dropdown__current">
+                      <span class="search-bar__guests-adults">Взрослых:</span>
+
+                      <span id="adults-display-form" class="search-bar__guests-counter"> 0 </span>
+
+                      <span class="search-bar__guests-kids">Детей:</span>
+
+                      <span id="kids-display-form" class="search-bar__guests-sub-counter"> 0 </span>
+                    </p>
+
+                    <img src="/assets/images/icons/select-arrow.svg" class="icon__arrow-down" alt="">
+                  </div>
+
+                  <ul class="dropdown__list">
+                    <li class="dropdown__item--guests">
+                      <p class="item__guests--text">Добавьте необходимое кол-во гостей и укажите возраст</p>
+                    </li>
+
+                    <li class="dropdown__item--guests">
+                      <div class="search-bar__subitem">
+                        <p class="subitem__title">Взрослых</p>
+
+                        <div class="search-bar__subitem-subrow counter" id="counter-3">
+                          <button id="adults-decrement" class="decrement" type="button" data-action="decrement">
+                            <img src="/assets/images/icons/couneter-minus.svg" alt="minus" width="14" height="14">
+                          </button>
+
+                          <span id="adults-counter-value" class="counter-value"> 0 </span>
+
+                          <button id="adults-increment" class="increment" type="button" data-action="increment">
+                            <img src="/assets/images/icons/counter-plus.svg" alt="plus" width="14" height="14">
+                          </button>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="dropdown__item--guests hotel-card-sidebar__item--guests hidden">
+                      <div class="search-bar__subitem hotel-card-sidebar__subitem">
+                        <div class="select hotel-card-sidebar__select">
+                          <div class="select__custom hotel-card-sidebar__select-custom">
+                            <div class="select__selected">Ребёнок</div>
+
+                            <div class="select__items">
+                              <div class="select__item">до 1 года</div>
+
+                              <div class="select__item">1 год</div>
+
+                              <div class="select__item">2 года</div>
+
+                              <div class="select__item">3 года</div>
+
+                              <div class="select__item">4 года</div>
+
+                              <div class="select__item">5 лет</div>
+
+                              <div class="select__item">6 лет</div>
+
+                              <div class="select__item">7 лет</div>
+
+                              <div class="select__item">8 лет</div>
+
+                              <div class="select__item">9 лет</div>
+
+                              <div class="select__item">10 лет</div>
+
+                              <div class="select__item">11 лет</div>
+
+                              <div class="select__item">12 лет</div>
+
+                              <div class="select__item">13 лет</div>
+
+                              <div class="select__item">14 лет</div>
+
+                              <div class="select__item">15 лет</div>
+
+                              <div class="select__item">16 лет</div>
+
+                              <div class="select__item">17 лет</div>
+                            </div>
+
+                            <svg class="icon icon--arrow-down select__arrow">
+                              <use xlink:href="/public/assets/sprites/sprite.svg#arrow-down"></use>
+                            </svg>
+                          </div>
+                        </div>
+
+                        <div class="search-bar__subitem-subrow counter" id="counter-4" data-counter-type="child-form">
+                          <button class="decrement" type="button" data-action="decrement">
+                            <img src="/assets/images/icons/couneter-minus.svg" alt="minus" width="14" height="14">
+                          </button>
+
+                          <span class="counter-value"> 0 </span>
+
+                          <button class="increment" type="button" data-action="increment">
+                            <img src="/assets/images/icons/counter-plus.svg" alt="plus" width="14" height="14">
+                          </button>
+                        </div>
+                      </div>
+
+                      <svg class="icon icon--cross">
+                        <use xlink:href="/public/assets/sprites/sprite.svg#cross"></use>
+                      </svg>
+                    </li>
+
+                    <li class="dropdown__item--guests hotel-card-sidebar__item--guests hidden">
+                      <div class="search-bar__subitem hotel-card-sidebar__subitem">
+                        <div class="select hotel-card-sidebar__select">
+                          <div class="select__custom hotel-card-sidebar__select-custom">
+                            <div class="select__selected">Ребёнок</div>
+
+                            <div class="select__items">
+                              <div class="select__item">до 1 года</div>
+
+                              <div class="select__item">1 год</div>
+
+                              <div class="select__item">2 года</div>
+
+                              <div class="select__item">3 года</div>
+
+                              <div class="select__item">4 года</div>
+
+                              <div class="select__item">5 лет</div>
+
+                              <div class="select__item">6 лет</div>
+
+                              <div class="select__item">7 лет</div>
+
+                              <div class="select__item">8 лет</div>
+
+                              <div class="select__item">9 лет</div>
+
+                              <div class="select__item">10 лет</div>
+
+                              <div class="select__item">11 лет</div>
+
+                              <div class="select__item">12 лет</div>
+
+                              <div class="select__item">13 лет</div>
+
+                              <div class="select__item">14 лет</div>
+
+                              <div class="select__item">15 лет</div>
+
+                              <div class="select__item">16 лет</div>
+
+                              <div class="select__item">17 лет</div>
+                            </div>
+
+                            <svg class="icon icon--arrow-down select__arrow">
+                              <use xlink:href="/public/assets/sprites/sprite.svg#arrow-down"></use>
+                            </svg>
+                          </div>
+                        </div>
+
+                        <div class="search-bar__subitem-subrow counter" id="counter-5" data-counter-type="child-form">
+                          <button class="decrement" type="button" data-action="decrement">
+                            <img src="/assets/images/icons/couneter-minus.svg" alt="minus" width="14" height="14">
+                          </button>
+
+                          <span class="counter-value"> 0 </span>
+
+                          <button class="increment" type="button" data-action="increment">
+                            <img src="/assets/images/icons/counter-plus.svg" alt="plus" width="14" height="14">
+                          </button>
+                        </div>
+                      </div>
+
+                      <svg class="icon icon--cross">
+                        <use xlink:href="/public/assets/sprites/sprite.svg#cross"></use>
+                      </svg>
+                    </li>
+
+                    <li class="dropdown__item--guests hotel-card-sidebar__item--guests hidden">
+                      <div class="search-bar__subitem hotel-card-sidebar__subitem">
+                        <div class="select hotel-card-sidebar__select">
+                          <div class="select__custom hotel-card-sidebar__select-custom">
+                            <div class="select__selected">Ребёнок</div>
+
+                            <div class="select__items">
+                              <div class="select__item">до 1 года</div>
+
+                              <div class="select__item">1 год</div>
+
+                              <div class="select__item">2 года</div>
+
+                              <div class="select__item">3 года</div>
+
+                              <div class="select__item">4 года</div>
+
+                              <div class="select__item">5 лет</div>
+
+                              <div class="select__item">6 лет</div>
+
+                              <div class="select__item">7 лет</div>
+
+                              <div class="select__item">8 лет</div>
+
+                              <div class="select__item">9 лет</div>
+
+                              <div class="select__item">10 лет</div>
+
+                              <div class="select__item">11 лет</div>
+
+                              <div class="select__item">12 лет</div>
+
+                              <div class="select__item">13 лет</div>
+
+                              <div class="select__item">14 лет</div>
+
+                              <div class="select__item">15 лет</div>
+
+                              <div class="select__item">16 лет</div>
+
+                              <div class="select__item">17 лет</div>
+                            </div>
+
+                            <svg class="icon icon--arrow-down select__arrow">
+                              <use xlink:href="/public/assets/sprites/sprite.svg#arrow-down"></use>
+                            </svg>
+                          </div>
+                        </div>
+
+                        <div class="search-bar__subitem-subrow counter" id="counter-6" data-counter-type="child-form">
+                          <button class="decrement" type="button" data-action="decrement">
+                            <img src="/assets/images/icons/couneter-minus.svg" alt="minus" width="14" height="14">
+                          </button>
+
+                          <span class="counter-value"> 0 </span>
+
+                          <button class="increment" type="button" data-action="increment">
+                            <img src="/assets/images/icons/counter-plus.svg" alt="plus" width="14" height="14">
+                          </button>
+                        </div>
+                      </div>
+
+                      <svg class="icon icon--cross">
+                        <use xlink:href="/public/assets/sprites/sprite.svg#cross"></use>
+                      </svg>
+                    </li>
+
+                    <li class="dropdown__item--guests hotel-card-sidebar__item--guests hidden">
+                      <div class="search-bar__subitem hotel-card-sidebar__subitem">
+                        <div class="select hotel-card-sidebar__select">
+                          <div class="select__custom hotel-card-sidebar__select-custom">
+                            <div class="select__selected">Ребёнок</div>
+
+                            <div class="select__items">
+                              <div class="select__item">до 1 года</div>
+
+                              <div class="select__item">1 год</div>
+
+                              <div class="select__item">2 года</div>
+
+                              <div class="select__item">3 года</div>
+
+                              <div class="select__item">4 года</div>
+
+                              <div class="select__item">5 лет</div>
+
+                              <div class="select__item">6 лет</div>
+
+                              <div class="select__item">7 лет</div>
+
+                              <div class="select__item">8 лет</div>
+
+                              <div class="select__item">9 лет</div>
+
+                              <div class="select__item">10 лет</div>
+
+                              <div class="select__item">11 лет</div>
+
+                              <div class="select__item">12 лет</div>
+
+                              <div class="select__item">13 лет</div>
+
+                              <div class="select__item">14 лет</div>
+
+                              <div class="select__item">15 лет</div>
+
+                              <div class="select__item">16 лет</div>
+
+                              <div class="select__item">17 лет</div>
+                            </div>
+
+                            <svg class="icon icon--arrow-down select__arrow">
+                              <use xlink:href="/public/assets/sprites/sprite.svg#arrow-down"></use>
+                            </svg>
+                          </div>
+                        </div>
+
+                        <div class="search-bar__subitem-subrow counter" id="counter-7" data-counter-type="child-form">
+                          <button class="decrement" type="button" data-action="decrement">
+                            <img src="/assets/images/icons/couneter-minus.svg" alt="minus" width="14" height="14">
+                          </button>
+
+                          <span class="counter-value"> 0 </span>
+
+                          <button class="increment" type="button" data-action="increment">
+                            <img src="/assets/images/icons/counter-plus.svg" alt="plus" width="14" height="14">
+                          </button>
+                        </div>
+                      </div>
+
+                      <svg class="icon icon--cross">
+                        <use xlink:href="/public/assets/sprites/sprite.svg#cross"></use>
+                      </svg>
+                    </li>
+
+                    <li class="dropdown__item--guests hotel-card-sidebar__item--guests hidden">
+                      <div class="search-bar__subitem hotel-card-sidebar__subitem">
+                        <div class="select hotel-card-sidebar__select">
+                          <div class="select__custom hotel-card-sidebar__select-custom">
+                            <div class="select__selected">Ребёнок</div>
+
+                            <div class="select__items">
+                              <div class="select__item">до 1 года</div>
+
+                              <div class="select__item">1 год</div>
+
+                              <div class="select__item">2 года</div>
+
+                              <div class="select__item">3 года</div>
+
+                              <div class="select__item">4 года</div>
+
+                              <div class="select__item">5 лет</div>
+
+                              <div class="select__item">6 лет</div>
+
+                              <div class="select__item">7 лет</div>
+
+                              <div class="select__item">8 лет</div>
+
+                              <div class="select__item">9 лет</div>
+
+                              <div class="select__item">10 лет</div>
+
+                              <div class="select__item">11 лет</div>
+
+                              <div class="select__item">12 лет</div>
+
+                              <div class="select__item">13 лет</div>
+
+                              <div class="select__item">14 лет</div>
+
+                              <div class="select__item">15 лет</div>
+
+                              <div class="select__item">16 лет</div>
+
+                              <div class="select__item">17 лет</div>
+                            </div>
+
+                            <svg class="icon icon--arrow-down select__arrow">
+                              <use xlink:href="/public/assets/sprites/sprite.svg#arrow-down"></use>
+                            </svg>
+                          </div>
+                        </div>
+
+                        <div class="search-bar__subitem-subrow counter" id="counter-8" data-counter-type="child-form">
+                          <button class="decrement" type="button" data-action="decrement">
+                            <img src="/assets/images/icons/couneter-minus.svg" alt="minus" width="14" height="14">
+                          </button>
+
+                          <span class="counter-value"> 0 </span>
+
+                          <button class="increment" type="button" data-action="increment">
+                            <img src="/assets/images/icons/counter-plus.svg" alt="plus" width="14" height="14">
+                          </button>
+                        </div>
+                      </div>
+
+                      <svg class="icon icon--cross">
+                        <use xlink:href="/public/assets/sprites/sprite.svg#cross"></use>
+                      </svg>
+                    </li>
+
+                    <li class="dropdown__item--guests hotel-card-sidebar__item--guests hidden">
+                      <div class="search-bar__subitem hotel-card-sidebar__subitem">
+                        <div class="select hotel-card-sidebar__select">
+                          <div class="select__custom hotel-card-sidebar__select-custom">
+                            <div class="select__selected">Ребёнок</div>
+
+                            <div class="select__items">
+                              <div class="select__item">до 1 года</div>
+
+                              <div class="select__item">1 год</div>
+
+                              <div class="select__item">2 года</div>
+
+                              <div class="select__item">3 года</div>
+
+                              <div class="select__item">4 года</div>
+
+                              <div class="select__item">5 лет</div>
+
+                              <div class="select__item">6 лет</div>
+
+                              <div class="select__item">7 лет</div>
+
+                              <div class="select__item">8 лет</div>
+
+                              <div class="select__item">9 лет</div>
+
+                              <div class="select__item">10 лет</div>
+
+                              <div class="select__item">11 лет</div>
+
+                              <div class="select__item">12 лет</div>
+
+                              <div class="select__item">13 лет</div>
+
+                              <div class="select__item">14 лет</div>
+
+                              <div class="select__item">15 лет</div>
+
+                              <div class="select__item">16 лет</div>
+
+                              <div class="select__item">17 лет</div>
+                            </div>
+
+                            <svg class="icon icon--arrow-down select__arrow">
+                              <use xlink:href="/public/assets/sprites/sprite.svg#arrow-down"></use>
+                            </svg>
+                          </div>
+                        </div>
+
+                        <div class="search-bar__subitem-subrow counter" id="counter-9" data-counter-type="child">
+                          <button id="kids-decrement" class="decrement" type="button" data-action="decrement">
+                            <img src="/assets/images/icons/couneter-minus.svg" alt="minus" width="14" height="14">
+                          </button>
+
+                          <span id="kids-counter-value" class="counter-value"> 0 </span>
+
+                          <button id="kids-increment" class="increment" type="button" data-action="increment">
+                            <img src="/assets/images/icons/counter-plus.svg" alt="plus" width="14" height="14">
+                          </button>
+                        </div>
+                      </div>
+
+                      <svg class="icon icon--cross">
+                        <use xlink:href="/public/assets/sprites/sprite.svg#cross"></use>
+                      </svg>
+                    </li>
+
+                    <li class="hotel-card-sidebar__add-btn">
+                      <div class="hotel-card-sidebar__add-child">
+                        <svg class="icon icon--search-plus">
+                          <use xlink:href="/assets/sprites/sprite.svg#search-plus"></use>
+                        </svg>
+
+                        <span class="hotel-card-sidebar__add-child-text">Добавить ребенка</span>
+                      </div>
+                    </li>
+
+                    <li class="dropdown__item--guests">
+                      <button class="search-bar__guests-add main-btn" type="button">Добавить</button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <ul class="hotel-card-sidebar__first-block-counter form__guests-counter">
+                <li class="hotel-card-sidebar__first-block-counter-item">
+                  <span class="hotel-card-sidebar__first-block-counter-text">Взрослых x2</span>
+                </li>
+
+                <li class="hotel-card-sidebar__first-block-counter-item">
+                  <span class="hotel-card-sidebar__first-block-counter-text">15 лет x1</span>
+                </li>
+
+                <li class="hotel-card-sidebar__first-block-counter-item">
+                  <span class="hotel-card-sidebar__first-block-counter-text">3 года x1</span>
+                </li>
+
+                <li class="hotel-card-sidebar__first-block-counter-item">
+                  <span class="hotel-card-sidebar__first-block-counter-text">10 лет х3</span>
+                </li>
+              </ul>
+            </div>
+
+            <h3 class="form__title form__title--tour">Длительность тура (дней)</h3>
+
+            <div class="form__counter">
+              <!-- каунтер -->
+
+              <div class="form__counter-wrapper" id="counter-10">
+                <button class="form__counter-decrement decrement" type="button" data-action="decrement">
+                  <img src="/assets/images/icons/couneter-minus.svg" alt="minus" width="14" height="14">
+                </button>
+
+                <span class="form__counter-value counter-value"> </span>
+
+                <button class="form__counter-increment increment" type="button" data-action="increment">
+                  <img src="/assets/images/icons/counter-plus.svg" alt="plus" width="14" height="14">
+                </button>
+              </div>
+
+            </div>
+
+            <button type="button" class="form__btn form__btn-first-state">дальше</button>
+          </form>
+
+          <form id="form-state-two" class="form__state form__state-second">
+            <h3 class="form__title">Желаемая цена на одного человека (€)</h3>
+
+            <div class="form__input-wrap input-row">
+              <input type="text" id="input-price" aria-label="price" class="form__input">
+            </div>
+
+            <h3 class="form__title">Питание</h3>
+
+            <div class="form__drop form__drop-food">
+              <div class="food food__bottom">
+                <div class="food__btn">
+                  <span class="food__btn-info">Выбрать</span>
+
+                  <svg>
+                    <use xlink:href="/assets/sprites/sprite.svg#arrow-down"></use>
+                  </svg>
+                </div>
+
+                <ul class="food__list">
+                  <li>Завтрак</li>
+
+                  <li>Полу-люкс (полупансион и завтрак)</li>
+
+                  <li>Полный пансион</li>
+
+                  <li>Полупансион</li>
+
+                  <li>Без питания (RO - Room Only)</li>
+
+                  <li>Ужин включен</li>
+
+                  <li>Все включено</li>
+                </ul>
+              </div>
+
+            </div>
+
+            <h3 class="form__title">Категория отеля</h3>
+
+            <div class="form__drop form__stars">
+              <div data-num="1" class="form__stars-one-star">
+                <svg class="icon icon--star">
+                  <use xlink:href="/assets/sprites/sprite.svg#star"></use>
+                </svg>
+              </div>
+
+              <div data-num="2" class="form__stars-one-star">
+                <svg class="icon icon--star">
+                  <use xlink:href="/assets/sprites/sprite.svg#star"></use>
+                </svg>
+              </div>
+
+              <div data-num="3" class="form__stars-one-star">
+                <svg class="icon icon--star">
+                  <use xlink:href="/assets/sprites/sprite.svg#star"></use>
+                </svg>
+              </div>
+
+              <div data-num="4" class="form__stars-one-star">
+                <svg class="icon icon--star">
+                  <use xlink:href="/assets/sprites/sprite.svg#star"></use>
+                </svg>
+              </div>
+
+              <div data-num="5" class="form__stars-one-star">
+                <svg class="icon icon--star">
+                  <use xlink:href="/assets/sprites/sprite.svg#star"></use>
+                </svg>
+              </div>
+
+              <div data-num="6" class="form__stars-one-star">
+                <svg class="icon icon--star">
+                  <use xlink:href="/assets/sprites/sprite.svg#star"></use>
+                </svg>
+              </div>
+            </div>
+
+            <h3 class="form__title">Пожелания</h3>
+
+            <textarea class="form__textarea" cols="30" rows="12"></textarea>
+
+            <button class="form__btn form__btn-second-state" type="button">дальше</button>
+
+          </form>
+
+          <form id="form-state-three" class="form__state form__state-third">
+            <h3 class="form__title">Имя</h3>
+
+            <div class="form__input-wrap">
+              <input type="text" id="input-name" aria-label="name" class="form__input" name="name">
+              <span id="tourNameError" class="form__error-message"></span>
+            </div>
+            <h3 class="form__title">Телефон</h3>
+
+            <div class="form__input-wrap form__phone">
+              <input type="text" id="input-tel" name="phone" aria-label="phone" class="form__input">
+              <span id="tourPhoneError" class="form__error-message"></span>
+            </div>
+
+            <h3 class="form__title">Эл. почта</h3>
+
+            <div class="form__input-wrap">
+              <input type="text" id="input-mail" class="form__input" aria-label="mail" name="email">
+              <span id="tourMailError" class="form__error-message"></span>
+            </div>
+
+            <button class="form__btn form__btn-three-state" type="button">подобрать тур</button>
+
+          </form>
+        </div>
+      </div>
+    </section>
+  </div>
+
+</section>

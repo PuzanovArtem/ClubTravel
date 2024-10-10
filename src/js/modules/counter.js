@@ -61,6 +61,15 @@ export function updateTotalChildren() {
 }
 
 
+export function updateTotalChildrenForm() {
+  const counters = document.querySelectorAll('[data-counter-type="child-form"] span');
+  let totalChildren = 0;
 
+  counters.forEach(counter => {
+    totalChildren += parseInt(counter.textContent, 10);
+  });
+
+  document.getElementById('kids-display-form').textContent = totalChildren;
+}
 
 

@@ -5,17 +5,18 @@
   <meta name="description" content="travel club">
   <meta charset="UTF-8">
   <link rel="icon" type="image/svg+xml" href="./assets/images/icons/logo.svg">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Club Travel</title>
-  <script type="module" crossorigin src="./assets/main-BrTqdP3N.js"></script>
+  <script type="module" crossorigin src="./assets/main-sKl4DdhZ.js"></script>
   <link rel="modulepreload" crossorigin href="./assets/modulepreload-polyfill-B5Qt9EMX.js">
-  <link rel="modulepreload" crossorigin href="./assets/nouislider-Br1qz8gK.js">
+  <link rel="modulepreload" crossorigin href="./assets/dropdown-BcidGZfk.js">
   <link rel="modulepreload" crossorigin href="./assets/swiper-CBxkPMkq.js">
   <link rel="modulepreload" crossorigin href="./assets/header-CDcaaDmM.js">
-  <link rel="modulepreload" crossorigin href="./assets/search-BI9nIADM.js">
-  <link rel="stylesheet" crossorigin href="./assets/nouislider-C1qAeEgl.css">
+  <link rel="modulepreload" crossorigin href="./assets/search-D3bQpLpB.js">
   <link rel="stylesheet" crossorigin href="./assets/swiper-Du3mw4TU.css">
-  <link rel="stylesheet" crossorigin href="./assets/main-fa7QnitO.css">
+  <link rel="stylesheet" crossorigin href="./assets/search-C1qAeEgl.css">
+  <link rel="stylesheet" crossorigin href="./assets/main-Cj9IPKw5.css">
 </head>
 
 <body>
@@ -111,7 +112,7 @@
           </div>
   
           <div class="header__nav-item">
-            <a href="#" class="header__nav-link">Запрос тура</a>
+            <a href="/src/pages/tour-request/tour-request.html" class="header__nav-link">Запрос тура</a>
           </div>
   
           <div class="header__nav-item">
@@ -207,6 +208,9 @@
             <source media="(max-width:1023px)" srcset="./assets/banner-img-mob-CpCIhp3N.jpg">
           
             <img class='banner__img ' src="./assets/banner-img-O0ey2giV.jpg" width="1366" height="320" alt="banner">
+            <source srcset="./assets/banner-img-D7YMtw1c.webp" type="image/webp">
+            
+            <img class="banner__img " src="./assets/banner-img-O0ey2giV.jpg" alt="banner">
           </picture>
         </div>
     
@@ -230,6 +234,7 @@
     
               <li class="banner__star-item">
                 <svg class="icon icon--star">
+                  <use xlink:href="./assets/sprite-BP-qpDDo.svg#star"></use>
                   <use xlink:href="./assets/sprite-BP-qpDDo.svg#star"></use>
                 </svg>
               </li>
@@ -1066,7 +1071,7 @@
           <p class="main-tour__hotel-card-title ">ПОХОЖИЕ ОТЕЛИ</p>
     
           <div class="main-tour__wrapper main-hot__wrapper">
-            <div class="main-tour__swiper-button-prev main-hot__swiper-button-prev">
+            <div class="main-tour__swiper-button-prev main-hot__swiper-button-prev ">
               <div class="main-tour__swiper-round">
                 <svg class="icon icon__chevron main-tour__button-svg">
                   <use xlink:href="./assets/sprites/sprite.svg#mdi_chevron-left"></use>
@@ -1522,7 +1527,7 @@
               </div>
             </div>
     
-            <div class="main-tour__swiper-button-next main-hot__swiper-button-next">
+            <div class="main-tour__swiper-button-next main-hot__swiper-button-next ">
               <div class="main-tour__swiper-round">
                 <svg class="icon icon__chevron main-tour__button-svg">
                   <use xlink:href="./assets/sprites/sprite.svg#mdi_chevron-right"></use>
@@ -2329,7 +2334,8 @@
         <a href="#" class="footer__contact-link footer__contact-link--bottom">Политика использования</a>
       </div>
     </div>
-  </footer>
+  </footer>
+
 </body>
 
 </html>
