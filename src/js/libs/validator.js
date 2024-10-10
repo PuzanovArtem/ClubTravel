@@ -142,20 +142,17 @@ export const tourValidator = () => {
   const inputEmail = document.getElementById('input-mail')
   const emailErrorElement = document.getElementById('tourMailError')
 
-  // Новый элемент для проверки телефона
   const adviserInputPhone = document.getElementById('adviser-inp')
   const adviserPhoneErrorElement = document.querySelector('.adviser__input-error')
 
-  // Обработчик клика по кнопке
   const submitButton = document.querySelector('.form__btn-three-state')
   submitButton.addEventListener('click', function () {
     const name = inputName.value
     const phone = inputPhone.value
     const email = inputEmail.value
-    const adviserPhone = adviserInputPhone.value // Новое поле для ввода телефона
+    const adviserPhone = adviserInputPhone.value
     let isValid = true
 
-    // Валидация имени
     if (validator.isEmpty(name)) {
       nameErrorElement.textContent = 'Имя не может быть пустым.'
       isValid = false
@@ -166,7 +163,6 @@ export const tourValidator = () => {
       nameErrorElement.textContent = ''
     }
 
-    // Валидация основного телефона
     if (validator.isEmpty(phone)) {
       phoneErrorElement.textContent = 'Телефон не может быть пустым.'
       isValid = false
@@ -177,7 +173,6 @@ export const tourValidator = () => {
       phoneErrorElement.textContent = ''
     }
 
-    // Валидация телефона советника
     if (validator.isEmpty(adviserPhone)) {
       adviserPhoneErrorElement.textContent = 'Телефон советника не может быть пустым.'
       isValid = false
@@ -188,7 +183,6 @@ export const tourValidator = () => {
       adviserPhoneErrorElement.textContent = ''
     }
 
-    // Валидация электронной почты
     if (validator.isEmpty(email)) {
       emailErrorElement.textContent = 'Эл. почта не может быть пустой.'
       isValid = false
@@ -202,11 +196,10 @@ export const tourValidator = () => {
     if (isValid) {
       alert('Заявка отправлена')
 
-      // Очистка полей формы
       inputName.value = ''
       inputPhone.value = ''
       inputEmail.value = ''
-      adviserInputPhone.value = '' // Очистка поля советника
+      adviserInputPhone.value = ''
     }
   })
 }

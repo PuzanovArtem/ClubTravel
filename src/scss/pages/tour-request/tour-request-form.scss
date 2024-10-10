@@ -61,13 +61,13 @@
   @include respond-to($tablet) {
     margin: 34px 0 24px;
   }
-  
-  &__rov-wrapper{
+
+  &__rov-wrapper {
     display: flex;
     width: 100%;
   }
 
-  &__input-error{
+  &__input-error {
     font-size: 12px;
     color: red;
   }
@@ -475,6 +475,10 @@
 
   &__title--tour {
     margin-top: 53px;
+
+    @include respond-to(895px){
+      margin-top: 70px;
+    }
   }
 
   &__counter-wrapper {
@@ -681,10 +685,6 @@
     font-family: $font-family-second;
     background: #fff;
     user-select: none;
-
-    @include respond-to($tablet) {
-      height: auto;
-    }
   }
 
   &__county {
@@ -1030,6 +1030,40 @@
         bottom: 43px;
         transform-origin: 100% 100%;
       }
+    }
+  }
+}
+
+@include respond-to(875px) {
+  .search-bar {
+    &__guests {
+      border-bottom: none;
+    }
+  }
+}
+
+@include respond-to($tablet) {
+  .form {
+    &__guests-counter {
+      margin: -25px 0 0 3px;
+    }
+  }
+}
+
+@include respond-to($mobile) {
+  .form {
+    &__title--tour {
+      margin-top: 75px;
+    }
+  }
+}
+
+@include respond-to($s-mobile) {
+  .form {
+    &__dropdown-row {
+      width: 100%;
+      max-width: 308px;
+      padding: 0 0 1px 11px;
     }
   }
 }
