@@ -893,25 +893,25 @@
   }
 }
 
-.calendar {
-  position: relative;
-  height: 100%;
+// .calendar {
+//   position: relative;
+//   height: 100%;
 
-  &__btn {
-    cursor: pointer;
-    position: relative;
-    align-items: center;
-    display: flex;
-    height: 100%;
-    border: 1px solid #e2e2e2;
-    border-radius: 6px;
+//   &__btn {
+//     cursor: pointer;
+//     position: relative;
+//     align-items: center;
+//     display: flex;
+//     height: 100%;
+//     border: 1px solid #e2e2e2;
+//     border-radius: 6px;
 
-    &-info {
-      margin-left: 16px;
-      font-family: $font-family-second;
-    }
-  }
-}
+//     &-info {
+//       margin-left: 16px;
+//       font-family: $font-family-second;
+//     }
+//   }
+// }
 
 .form__tab.active {
   color: $text;
@@ -1064,6 +1064,107 @@
       width: 100%;
       max-width: 308px;
       padding: 0 0 1px 11px;
+    }
+  }
+}
+
+
+
+
+.calendar {
+  height: 100%;
+  position: relative;
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 100%;
+    border-radius: 6px;
+    border: 1px solid #e2e2e2;
+    transition: border 300ms ease 0s;
+    user-select: none;
+    cursor: pointer;
+
+    &-info {
+      font-family: Roboto;
+      margin-left: 16px;
+    }
+    
+    svg {
+      position: absolute;
+      right: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: transform 300ms ease 0s;
+      width: 24px;
+      height: 24px;
+      fill: #a9a9a9;
+    }
+  }
+
+  &__main {
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    border-radius: 6px;
+    height: 240px;
+    overflow: auto;
+    border: 1px solid #e2e2e2;
+    transform: scaleY(0);
+    transform-origin: 0 0;
+    transition: all 300ms ease 0s;
+    background: #fff;
+  }
+
+  &_active {
+    .calendar {
+      &__btn {
+        svg {
+          transform: translateY(-50%) rotate(180deg);
+        }
+      }
+      
+      &__main {
+        transform: scaleY(1);
+      }
+    }
+  }
+
+  &_bottom {
+    .calendar {
+      &__main {
+        top: 43px;
+      }
+    }
+  }
+  &_top {
+    .calendar {
+      &__main {
+        bottom: 43px;
+        transform-origin: 100% 100%;
+      }
+    }
+  }
+}
+
+.air-datepicker {
+  width: 100% !important;
+  border: none !important;
+  .air-datepicker-body--day-name {
+    color: #f68521;
+    font-family: "Open Sans", sans-serif;
+  }
+  .-selected- {
+    background: #f68521 !important;
+  }
+  .-in-range-{
+    background: #5e606446 !important;
+  }
+  .-current- {
+    color: #255296 !important;
+    &.-selected- {
+      color: #ffffff !important;
     }
   }
 }
