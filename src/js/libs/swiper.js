@@ -32,8 +32,6 @@ export const cardSlider = () => {
 export const mainCompanySlider = () => {
   const config = {
     loop: true,
-    preloadImages: false,
-    lazy: true,
     navigation: {
       nextEl: '.main-company__swiper-button-next',
       prevEl: '.main-company__swiper-button-prev',
@@ -46,18 +44,17 @@ export const mainCompanySlider = () => {
         slidesPerView: 1,
         spaceBetween: 20,
       },
-
-      804: {
+      576: {
         slidesPerView: 2,
         spaceBetween: 10,
       },
       991: {
         slidesPerView: 3,
-        spaceBetween: 15,
+        spaceBetween: 10,
       },
       1200: {
         slidesPerView: 3,
-        spaceBetween: 11,
+        spaceBetween: 10,
       },
     },
   }
