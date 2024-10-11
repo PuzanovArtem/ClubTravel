@@ -32,6 +32,8 @@ export const cardSlider = () => {
 export const mainCompanySlider = () => {
   const config = {
     loop: true,
+    preloadImages: false,
+    lazy: true,
     navigation: {
       nextEl: '.main-company__swiper-button-next',
       prevEl: '.main-company__swiper-button-prev',

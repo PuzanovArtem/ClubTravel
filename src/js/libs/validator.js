@@ -142,15 +142,11 @@ export const tourValidator = () => {
   const inputEmail = document.getElementById('input-mail')
   const emailErrorElement = document.getElementById('tourMailError')
 
-  const adviserInputPhone = document.getElementById('adviser-inp')
-  const adviserPhoneErrorElement = document.querySelector('.adviser__input-error')
-
   const submitButton = document.querySelector('.form__btn-three-state')
   submitButton.addEventListener('click', function () {
     const name = inputName.value
     const phone = inputPhone.value
     const email = inputEmail.value
-    const adviserPhone = adviserInputPhone.value
     let isValid = true
 
     if (validator.isEmpty(name)) {
@@ -173,16 +169,6 @@ export const tourValidator = () => {
       phoneErrorElement.textContent = ''
     }
 
-    if (validator.isEmpty(adviserPhone)) {
-      adviserPhoneErrorElement.textContent = 'Телефон советника не может быть пустым.'
-      isValid = false
-    } else if (!validator.isMobilePhone(adviserPhone, 'any', { strictMode: false })) {
-      adviserPhoneErrorElement.textContent = 'Неверный формат телефона советника.'
-      isValid = false
-    } else {
-      adviserPhoneErrorElement.textContent = ''
-    }
-
     if (validator.isEmpty(email)) {
       emailErrorElement.textContent = 'Эл. почта не может быть пустой.'
       isValid = false
@@ -199,7 +185,34 @@ export const tourValidator = () => {
       inputName.value = ''
       inputPhone.value = ''
       inputEmail.value = ''
-      adviserInputPhone.value = ''
     }
   })
+}
+
+export const phoneValidator = () => {
+  const adviserInputPhone = document.getElementById('adviser-inp');
+  const adviserPhoneErrorElement = document.querySelector('.adviser__input-error');
+  
+  const adviserSubmitButton = document.querySelector('.adviser__btn');
+  
+  adviserSubmitButton.addEventListener('click', function () {
+    const adviserPhone = adviserInputPhone.value;
+    let isValid = true;
+
+    if (validator.isEmpty(adviserPhone)) {
+      adviserPhoneErrorElement.textContent = 'Телефон не может быть пустым.';
+      isValid = false;
+    } else if (!validator.isMobilePhone(adviserPhone, 'any', { strictMode: false })) {
+      adviserPhoneErrorElement.textContent = 'Неверный формат телефона.';
+      isValid = false;
+    } else {
+      adviserPhoneErrorElement.textContent = '';
+    }
+
+    if (isValid) {
+      alert('Мы вам перезвоним!');
+      
+      adviserInputPhone.value = '';
+    }
+  });
 }

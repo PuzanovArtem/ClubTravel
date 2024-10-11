@@ -7,7 +7,7 @@ import { initializeDropCountry } from '/src/js/pages/tour-request/drop-country '
 import { initializeDropdowns } from '../../js/modules/search/dropdown.js'
 import { manageSelects } from '../../js/modules/manage-selects.js'
 import { select } from '../../js/components/select.js'
-import { tourValidator } from '../../js/libs/validator.js'
+import { phoneValidator, tourValidator } from '../../js/libs/validator.js'
 
 document.addEventListener('DOMContentLoaded', () => {
   header()
@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initTabs()
   initStarSelection()
   tourValidator()
+  phoneValidator()
   new Food()
   new Counter({ selector: '#counter-10', initCount: 0, step: 1 })
 

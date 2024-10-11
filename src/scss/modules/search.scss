@@ -209,6 +209,7 @@
     &:hover {
       background: $white;
     }
+
   }
 
   &-btn {
@@ -221,6 +222,10 @@
     color: $white;
     text-transform: uppercase;
     background: $dark-green;
+
+    &:hover{
+      background:$green ;
+    }
   }
 }
 
