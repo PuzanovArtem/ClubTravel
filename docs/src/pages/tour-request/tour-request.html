@@ -7,13 +7,16 @@
 	<link rel="icon" type="image/svg+xml" href="../../../assets/images/icons/logo.svg">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Club Travel</title>
-  <script type="module" crossorigin src="../../../assets/tourRequest-BTUEkQq8.js"></script>
+  <script type="module" crossorigin src="../../../assets/tourRequest-CSzP5QNU.js"></script>
   <link rel="modulepreload" crossorigin href="../../../assets/modulepreload-polyfill-B5Qt9EMX.js">
   <link rel="modulepreload" crossorigin href="../../../assets/dropdown-BcidGZfk.js">
   <link rel="modulepreload" crossorigin href="../../../assets/header-CDcaaDmM.js">
   <link rel="modulepreload" crossorigin href="../../../assets/manage-selects-CTHsAexo.js">
-  <link rel="modulepreload" crossorigin href="../../../assets/validator-T4HusQx-.js">
-  <link rel="stylesheet" crossorigin href="../../../assets/tourRequest-D7QwtaEW.css">
+  <link rel="modulepreload" crossorigin href="../../../assets/_commonjsHelpers-Cpj98o6Y.js">
+  <link rel="modulepreload" crossorigin href="../../../assets/validator-kAhhofT2.js">
+  <link rel="modulepreload" crossorigin href="../../../assets/air-datepicker-6mRFTA1V.js">
+  <link rel="stylesheet" crossorigin href="../../../assets/air-datepicker-Cz6DEdb5.css">
+  <link rel="stylesheet" crossorigin href="../../../assets/tourRequest-29aKC2S2.css">
 </head>
 
 <body>
@@ -66,7 +69,8 @@
 	            </svg>
 	          </div>
 	
-	          <a href="/ClubTravel/src/pages/user-account/user-account.html" class="header__personal-account" aria-label="user">
+	          <a href="/ClubTravel/src/pages/user-account/user-account.html" class="header__personal-account"
+	            aria-label="user">
 	            <svg class="icon icon--user">
 	              <use xlink:href="../../../assets/sprites/sprite.svg#user"></use>
 	            </svg>
@@ -136,7 +140,8 @@
 	          </div>
 	
 	          <div class="sidebar__list-item">
-	            <a href="/ClubTravel/src/pages/directions-tour/directions-tour.html" class="sidebar__list-link">Направления</a>
+	            <a href="/ClubTravel/src/pages/directions-tour/directions-tour.html"
+	              class="sidebar__list-link">Направления</a>
 	          </div>
 	
 	          <div class="sidebar__list-item">
@@ -144,7 +149,8 @@
 	          </div>
 	
 	          <div class="sidebar__list-item">
-	            <a href="/ClubTravel/src/pages/hot-offers/hot-offers.html" class="sidebar__list-link">Горящие предложения</a>
+	            <a href="/ClubTravel/src/pages/hot-offers/hot-offers.html" class="sidebar__list-link">Горящие
+	              предложения</a>
 	          </div>
 	
 	          <div class="sidebar__list-item">
@@ -366,12 +372,14 @@
 		            <p class="search-bar__title">Дата вылета</p>
 		
 		            <div class="dropdown">
-		              <div class="dropdown__row" id="date-picker">
-		                <p class="dropdown__current" id="selected-date">16.08.2024</p>
+		              <div class="dropdown__row dropdown__row--wrap" id="date-picker">
+		                <div class="dropdown__row-wrapper">
+		                  <p class="dropdown__current" id="selected-date">Выберите дату</p>
 		
-		                <svg class="icon icon--calendar" >
-		                  <use xlink:href="../../../assets/sprites/sprite.svg#calendar"></use>
-		                </svg>
+		                  <svg class="icon icon--calendar">
+		                    <use xlink:href="../../../assets/sprites/sprite.svg#calendar"></use>
+		                  </svg>
+		                </div>
 		              </div>
 		            </div>
 		          </div>
@@ -828,17 +836,18 @@
 		        <div class="adviser__rov-wrapper">
 		          <div class="adviser__input input input-row">
 		            <input name="phone" id="adviser-inp" type="tel" aria-label="phone" placeholder="Ваш номер телефона">
-		            
+		
 		            <div class="adviser__input-error"></div>
 		          </div>
-		  
+		
 		          <button type="button" class="adviser__btn main-btn ">перезвонить</button>
-		  
+		
 		        </div>
 		        <a href="$" class="adviser__btn-form">заполнить форму</a>
 		      </form>
 		
 		      <h3 class="adviser__title">Связаться с нашим консультантом</h3>
+		
 		      <div class="adviser__contacts">
 		        <div class="adviser__contacts-image">
 		          <picture>
@@ -867,6 +876,7 @@
 		              <svg class="icon icon--envelope">
 		                <use xlink:href="../../../assets/sprites/sprite.svg#envelope"></use>
 		              </svg>
+		
 		              <a href="mailto:contact@email.ee">contact@email.ee</a>
 		            </li>
 		
@@ -874,6 +884,7 @@
 		              <svg class="icon icon--message">
 		                <use xlink:href="../../../assets/sprites/sprite.svg#message"></use>
 		              </svg>
+		
 		              <a href="mailto:contact@email.ee">Написать в Messenger</a>
 		            </li>
 		          </ul>
@@ -910,6 +921,7 @@
 		                  <img src="data:image/svg+xml,%3csvg%20width='12'%20height='8'%20viewBox='0%200%2012%208'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M10.58%200.59L6%205.17L1.41%200.59L-2.62268e-07%202L6%208L12%202L10.58%200.59Z'%20fill='%23A9A9A9'/%3e%3c/svg%3e"
 		                    class="icon__arrow-down drop-country__btn-arrow" alt="">
 		                </div>
+		
 		                <div class="drop-country__accordions">
 		                  <div class="accordion">
 		                    <div class="accordion__btn">
@@ -967,6 +979,7 @@
 		                        <use xlink:href="../../../assets/sprites/sprite.svg#arrow-down"></use>
 		                      </svg>
 		                    </div>
+		
 		                    <ul class="accordion__list">
 		                      <li>Солнечный берег</li>
 		
@@ -987,6 +1000,7 @@
 		                      </svg>
 		
 		                    </div>
+		
 		                    <ul class="accordion__list">
 		                      <li>Будва</li>
 		
@@ -1013,10 +1027,12 @@
 		                  <div class="accordion">
 		                    <div class="accordion__btn">
 		                      <div class="accordion__country">Грузия</div>
+		
 		                      <svg class="icon accordion__arrow">
 		                        <use xlink:href="../../../assets/sprites/sprite.svg#arrow-down"></use>
 		                      </svg>
 		                    </div>
+		
 		                    <ul class="accordion__list">
 		                      <li>Золотые пески</li>
 		                    </ul>
@@ -1129,6 +1145,7 @@
 		                  <img src="data:image/svg+xml,%3csvg%20width='12'%20height='8'%20viewBox='0%200%2012%208'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M10.58%200.59L6%205.17L1.41%200.59L-2.62268e-07%202L6%208L12%202L10.58%200.59Z'%20fill='%23A9A9A9'/%3e%3c/svg%3e"
 		                    class="icon__arrow-down drop-country__btn-arrow" alt="">
 		                </div>
+		
 		                <div class="calendar__main">
 		                  <div id="el"></div>
 		                </div>
@@ -1230,7 +1247,8 @@
 		
 		                        <div class="search-bar__subitem-subrow counter" id="counter-4" data-counter-type="child-form">
 		                          <button class="decrement" type="button" data-action="decrement">
-		                            <img src="data:image/svg+xml,%3csvg%20width='14'%20height='14'%20viewBox='0%200%2014%2014'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20opacity='0.5'%20d='M7%200C3.13438%200%200%203.13438%200%207C0%2010.8656%203.13438%2014%207%2014C10.8656%2014%2014%2010.8656%2014%207C14%203.13438%2010.8656%200%207%200ZM10%207.375C10%207.44375%209.94375%207.5%209.875%207.5H4.125C4.05625%207.5%204%207.44375%204%207.375V6.625C4%206.55625%204.05625%206.5%204.125%206.5H9.875C9.94375%206.5%2010%206.55625%2010%206.625V7.375Z'%20fill='%23F68521'/%3e%3c/svg%3e" alt="minus" width="14" height="14">
+		                            <img src="data:image/svg+xml,%3csvg%20width='14'%20height='14'%20viewBox='0%200%2014%2014'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20opacity='0.5'%20d='M7%200C3.13438%200%200%203.13438%200%207C0%2010.8656%203.13438%2014%207%2014C10.8656%2014%2014%2010.8656%2014%207C14%203.13438%2010.8656%200%207%200ZM10%207.375C10%207.44375%209.94375%207.5%209.875%207.5H4.125C4.05625%207.5%204%207.44375%204%207.375V6.625C4%206.55625%204.05625%206.5%204.125%206.5H9.875C9.94375%206.5%2010%206.55625%2010%206.625V7.375Z'%20fill='%23F68521'/%3e%3c/svg%3e" alt="minus" width="14"
+		                              height="14">
 		                          </button>
 		
 		                          <span class="counter-value"> 0 </span>
@@ -1298,7 +1316,8 @@
 		
 		                        <div class="search-bar__subitem-subrow counter" id="counter-5" data-counter-type="child-form">
 		                          <button class="decrement" type="button" data-action="decrement">
-		                            <img src="data:image/svg+xml,%3csvg%20width='14'%20height='14'%20viewBox='0%200%2014%2014'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20opacity='0.5'%20d='M7%200C3.13438%200%200%203.13438%200%207C0%2010.8656%203.13438%2014%207%2014C10.8656%2014%2014%2010.8656%2014%207C14%203.13438%2010.8656%200%207%200ZM10%207.375C10%207.44375%209.94375%207.5%209.875%207.5H4.125C4.05625%207.5%204%207.44375%204%207.375V6.625C4%206.55625%204.05625%206.5%204.125%206.5H9.875C9.94375%206.5%2010%206.55625%2010%206.625V7.375Z'%20fill='%23F68521'/%3e%3c/svg%3e" alt="minus" width="14" height="14">
+		                            <img src="data:image/svg+xml,%3csvg%20width='14'%20height='14'%20viewBox='0%200%2014%2014'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20opacity='0.5'%20d='M7%200C3.13438%200%200%203.13438%200%207C0%2010.8656%203.13438%2014%207%2014C10.8656%2014%2014%2010.8656%2014%207C14%203.13438%2010.8656%200%207%200ZM10%207.375C10%207.44375%209.94375%207.5%209.875%207.5H4.125C4.05625%207.5%204%207.44375%204%207.375V6.625C4%206.55625%204.05625%206.5%204.125%206.5H9.875C9.94375%206.5%2010%206.55625%2010%206.625V7.375Z'%20fill='%23F68521'/%3e%3c/svg%3e" alt="minus" width="14"
+		                              height="14">
 		                          </button>
 		
 		                          <span class="counter-value"> 0 </span>
@@ -1366,7 +1385,8 @@
 		
 		                        <div class="search-bar__subitem-subrow counter" id="counter-6" data-counter-type="child-form">
 		                          <button class="decrement" type="button" data-action="decrement">
-		                            <img src="data:image/svg+xml,%3csvg%20width='14'%20height='14'%20viewBox='0%200%2014%2014'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20opacity='0.5'%20d='M7%200C3.13438%200%200%203.13438%200%207C0%2010.8656%203.13438%2014%207%2014C10.8656%2014%2014%2010.8656%2014%207C14%203.13438%2010.8656%200%207%200ZM10%207.375C10%207.44375%209.94375%207.5%209.875%207.5H4.125C4.05625%207.5%204%207.44375%204%207.375V6.625C4%206.55625%204.05625%206.5%204.125%206.5H9.875C9.94375%206.5%2010%206.55625%2010%206.625V7.375Z'%20fill='%23F68521'/%3e%3c/svg%3e" alt="minus" width="14" height="14">
+		                            <img src="data:image/svg+xml,%3csvg%20width='14'%20height='14'%20viewBox='0%200%2014%2014'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20opacity='0.5'%20d='M7%200C3.13438%200%200%203.13438%200%207C0%2010.8656%203.13438%2014%207%2014C10.8656%2014%2014%2010.8656%2014%207C14%203.13438%2010.8656%200%207%200ZM10%207.375C10%207.44375%209.94375%207.5%209.875%207.5H4.125C4.05625%207.5%204%207.44375%204%207.375V6.625C4%206.55625%204.05625%206.5%204.125%206.5H9.875C9.94375%206.5%2010%206.55625%2010%206.625V7.375Z'%20fill='%23F68521'/%3e%3c/svg%3e" alt="minus" width="14"
+		                              height="14">
 		                          </button>
 		
 		                          <span class="counter-value"> 0 </span>
@@ -1434,7 +1454,8 @@
 		
 		                        <div class="search-bar__subitem-subrow counter" id="counter-7" data-counter-type="child-form">
 		                          <button class="decrement" type="button" data-action="decrement">
-		                            <img src="data:image/svg+xml,%3csvg%20width='14'%20height='14'%20viewBox='0%200%2014%2014'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20opacity='0.5'%20d='M7%200C3.13438%200%200%203.13438%200%207C0%2010.8656%203.13438%2014%207%2014C10.8656%2014%2014%2010.8656%2014%207C14%203.13438%2010.8656%200%207%200ZM10%207.375C10%207.44375%209.94375%207.5%209.875%207.5H4.125C4.05625%207.5%204%207.44375%204%207.375V6.625C4%206.55625%204.05625%206.5%204.125%206.5H9.875C9.94375%206.5%2010%206.55625%2010%206.625V7.375Z'%20fill='%23F68521'/%3e%3c/svg%3e" alt="minus" width="14" height="14">
+		                            <img src="data:image/svg+xml,%3csvg%20width='14'%20height='14'%20viewBox='0%200%2014%2014'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20opacity='0.5'%20d='M7%200C3.13438%200%200%203.13438%200%207C0%2010.8656%203.13438%2014%207%2014C10.8656%2014%2014%2010.8656%2014%207C14%203.13438%2010.8656%200%207%200ZM10%207.375C10%207.44375%209.94375%207.5%209.875%207.5H4.125C4.05625%207.5%204%207.44375%204%207.375V6.625C4%206.55625%204.05625%206.5%204.125%206.5H9.875C9.94375%206.5%2010%206.55625%2010%206.625V7.375Z'%20fill='%23F68521'/%3e%3c/svg%3e" alt="minus" width="14"
+		                              height="14">
 		                          </button>
 		
 		                          <span class="counter-value"> 0 </span>
@@ -1502,7 +1523,8 @@
 		
 		                        <div class="search-bar__subitem-subrow counter" id="counter-8" data-counter-type="child-form">
 		                          <button class="decrement" type="button" data-action="decrement">
-		                            <img src="data:image/svg+xml,%3csvg%20width='14'%20height='14'%20viewBox='0%200%2014%2014'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20opacity='0.5'%20d='M7%200C3.13438%200%200%203.13438%200%207C0%2010.8656%203.13438%2014%207%2014C10.8656%2014%2014%2010.8656%2014%207C14%203.13438%2010.8656%200%207%200ZM10%207.375C10%207.44375%209.94375%207.5%209.875%207.5H4.125C4.05625%207.5%204%207.44375%204%207.375V6.625C4%206.55625%204.05625%206.5%204.125%206.5H9.875C9.94375%206.5%2010%206.55625%2010%206.625V7.375Z'%20fill='%23F68521'/%3e%3c/svg%3e" alt="minus" width="14" height="14">
+		                            <img src="data:image/svg+xml,%3csvg%20width='14'%20height='14'%20viewBox='0%200%2014%2014'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20opacity='0.5'%20d='M7%200C3.13438%200%200%203.13438%200%207C0%2010.8656%203.13438%2014%207%2014C10.8656%2014%2014%2010.8656%2014%207C14%203.13438%2010.8656%200%207%200ZM10%207.375C10%207.44375%209.94375%207.5%209.875%207.5H4.125C4.05625%207.5%204%207.44375%204%207.375V6.625C4%206.55625%204.05625%206.5%204.125%206.5H9.875C9.94375%206.5%2010%206.55625%2010%206.625V7.375Z'%20fill='%23F68521'/%3e%3c/svg%3e" alt="minus" width="14"
+		                              height="14">
 		                          </button>
 		
 		                          <span class="counter-value"> 0 </span>
@@ -1570,7 +1592,8 @@
 		
 		                        <div class="search-bar__subitem-subrow counter" id="counter-9" data-counter-type="child">
 		                          <button id="kids-decrement" class="decrement" type="button" data-action="decrement">
-		                            <img src="data:image/svg+xml,%3csvg%20width='14'%20height='14'%20viewBox='0%200%2014%2014'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20opacity='0.5'%20d='M7%200C3.13438%200%200%203.13438%200%207C0%2010.8656%203.13438%2014%207%2014C10.8656%2014%2014%2010.8656%2014%207C14%203.13438%2010.8656%200%207%200ZM10%207.375C10%207.44375%209.94375%207.5%209.875%207.5H4.125C4.05625%207.5%204%207.44375%204%207.375V6.625C4%206.55625%204.05625%206.5%204.125%206.5H9.875C9.94375%206.5%2010%206.55625%2010%206.625V7.375Z'%20fill='%23F68521'/%3e%3c/svg%3e" alt="minus" width="14" height="14">
+		                            <img src="data:image/svg+xml,%3csvg%20width='14'%20height='14'%20viewBox='0%200%2014%2014'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20opacity='0.5'%20d='M7%200C3.13438%200%200%203.13438%200%207C0%2010.8656%203.13438%2014%207%2014C10.8656%2014%2014%2010.8656%2014%207C14%203.13438%2010.8656%200%207%200ZM10%207.375C10%207.44375%209.94375%207.5%209.875%207.5H4.125C4.05625%207.5%204%207.44375%204%207.375V6.625C4%206.55625%204.05625%206.5%204.125%206.5H9.875C9.94375%206.5%2010%206.55625%2010%206.625V7.375Z'%20fill='%23F68521'/%3e%3c/svg%3e" alt="minus" width="14"
+		                              height="14">
 		                          </button>
 		
 		                          <span id="kids-counter-value" class="counter-value"> 0 </span>
@@ -1626,7 +1649,6 @@
 		
 		            <div class="form__counter">
 		              <!-- каунтер -->
-		
 		              <div class="form__counter-wrapper" id="counter-10">
 		                <button class="form__counter-decrement decrement" type="button" data-action="decrement">
 		                  <img src="data:image/svg+xml,%3csvg%20width='14'%20height='14'%20viewBox='0%200%2014%2014'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20opacity='0.5'%20d='M7%200C3.13438%200%200%203.13438%200%207C0%2010.8656%203.13438%2014%207%2014C10.8656%2014%2014%2010.8656%2014%207C14%203.13438%2010.8656%200%207%200ZM10%207.375C10%207.44375%209.94375%207.5%209.875%207.5H4.125C4.05625%207.5%204%207.44375%204%207.375V6.625C4%206.55625%204.05625%206.5%204.125%206.5H9.875C9.94375%206.5%2010%206.55625%2010%206.625V7.375Z'%20fill='%23F68521'/%3e%3c/svg%3e" alt="minus" width="14" height="14">
@@ -1758,7 +1780,6 @@
 		      </div>
 		    </section>
 		  </div>
-		
 		</section>	</main>
 	<footer class="footer">
 	  <div class="container">
