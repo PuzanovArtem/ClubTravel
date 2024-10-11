@@ -150,7 +150,8 @@
     font-size: 18px;
     font-weight: 400;
     text-overflow: ellipsis;
-    -webkit-line-clamp: 1;
+    word-break: break-all;
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
   }
 
@@ -368,6 +369,16 @@
   &__booking-table-container.active {
     max-height: 1000px;
     transition: max-height 0.5s ease-in;
+  }
+
+  &__hotel-location {
+    overflow: hidden;
+    display: -webkit-box;
+    width: 100%;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
   }
 
   &__booking-table {
@@ -983,7 +994,7 @@
       }
     }
 
-    &__hotel-location-mob {
+    &__hotel-location-mob-block {
       position: absolute;
       bottom: 10px;
       left: 10px;
@@ -997,11 +1008,13 @@
       background: rgba(0, 0, 0, 0.5);
     }
 
-    &__hotel-location {
+    &__hotel-location-mob {
       overflow: hidden;
       display: -webkit-box;
+      width: 100%;
       text-overflow: ellipsis;
-      -webkit-line-clamp: 1;
+      word-break: break-all;
+      -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
     }
 

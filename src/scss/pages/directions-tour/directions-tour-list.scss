@@ -80,6 +80,9 @@ padding-bottom: 90px;
   }
 
   .season-tours__card {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
     max-width: 272px;
     height: auto;
     padding-bottom: 16px;
@@ -102,7 +105,14 @@ padding-bottom: 90px;
 
   &__tour-city {
     font-size: 16px;
+    max-width: 140px;
     font-weight: 700;
+    word-break: break-all;
+    // display: -webkit-box;
+    //   -webkit-line-clamp: 1;
+    //   -webkit-box-orient: vertical;
+    //   overflow: hidden;
+    //   text-overflow: ellipsis;
   }
 
   &__tour-price {

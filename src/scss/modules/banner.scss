@@ -20,8 +20,8 @@
     bottom: 35px;
     left: 98px;
     display: none;
-    width: 304px;
-    height: 85px;
+    width: 311px;
+    min-height: 85px;
     padding: 12px 19px;
     border-radius: 8px;
     background: $white;
@@ -31,11 +31,27 @@
     }
   }
 
+  &__block-location-title {
+    overflow: hidden;
+    display: -webkit-box;
+    max-width: 250px;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+
   &__block-title {
+    overflow: hidden;
+    display: -webkit-box;
     margin-right: 15px;
     font-size: 26px;
     font-weight: 700;
     text-transform: uppercase;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
   }
 
   &__stars-list {
