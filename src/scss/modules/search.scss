@@ -66,8 +66,6 @@
     transition: transform 0.3s ease;
   }
 
-  
-
   .icon--magnifying-glass {
     width: 16px;
     height: 16px;
@@ -209,7 +207,6 @@
     &:hover {
       background: $white;
     }
-
   }
 
   &-btn {
@@ -223,8 +220,8 @@
     text-transform: uppercase;
     background: $dark-green;
 
-    &:hover{
-      background:$green ;
+    &:hover {
+      background: $green;
     }
   }
 }
@@ -239,6 +236,11 @@
     padding: 7px 13px 1px 8px;
     border-radius: 4px;
     background-color: $white;
+  }
+
+  &__row-wrapper {
+    @extend %display-jc-sb;
+    width: 100%;
   }
 
   &__current {
@@ -301,6 +303,7 @@
 .search-row {
   overflow: hidden;
   position: relative;
+  z-index: -10;
   width: 100%;
   padding: 0 32px 0 26px;
   border-radius: 0 0 10px 10px;
@@ -386,13 +389,6 @@
       text-shadow: none;
       background: none;
       box-shadow: none;
-    }
-
-    #date-picker {
-      width: 100%;
-      padding: 8px;
-      border: none;
-      font-size: 14px;
     }
 
     .noUi-target {
@@ -655,8 +651,16 @@
   }
 }
 
-.flatpickr-day.selected {
-  border-color: $primary !important;
+.dropdown__row--wrap.active {
+  display: block;
+}
+
+.air-datepicker-cell.-current- {
+  color: $primary !important;
+}
+
+.air-datepicker-cell.-selected- {
+  color: $white !important;
   background: $primary !important;
 }
 

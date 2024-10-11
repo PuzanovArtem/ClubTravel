@@ -69,7 +69,7 @@
 
   &__input-error {
     font-size: 12px;
-    color: red;
+    color: $red;
   }
 
   &__main-title {
@@ -131,7 +131,7 @@
       width: 100%;
       height: 100%;
       padding-left: 15px;
-      border: 1px solid #e2e2e2;
+      border: 1px solid $light-gray;
       border-radius: 6px 0 0 6px;
 
       &::placeholder {
@@ -167,11 +167,11 @@
     display: none;
     width: 100%;
     height: 42px;
-    border: 1px solid #f68521;
+    border: 1px solid $primary;
     border-radius: 6px;
     font-size: 16px;
-    color: #222;
-    background: #fff;
+    color: $text;
+    background: $white;
     transition: transform 300ms ease 0s;
 
     &:active {
@@ -243,7 +243,7 @@
   &__contacts-info {
     margin-bottom: 24px;
     font-size: 14px;
-    color: #555;
+    color: $gray;
 
     @include respond-to($l-tablet) {
       text-align: center;
@@ -260,18 +260,16 @@
       width: 24px;
       height: 24px;
       margin-right: 12px;
-      fill: #3e7739;
+      fill: $green;
     }
 
     a {
-      align-items: center;
-      display: flex;
-      color: #222;
+      @extend %display-center;
+      color: $text;
     }
 
     li {
-      align-items: center;
-      display: flex;
+      @extend %display-center;
       margin: 0 0 16px;
 
       @include respond-to($tablet) {
@@ -298,12 +296,12 @@
   }
 
   &__wrapper {
-    position: relative;
+    @extend %position-rel;
     z-index: 1;
     min-height: 544px;
-    border: 1px solid #e2e2e2;
+    border: 1px solid $light-gray;
     border-radius: 10px;
-    background: #fff;
+    background: $white;
     transform: translateY(-38px);
 
     @include respond-to($tablet) {
@@ -312,26 +310,24 @@
   }
 
   &__tabs {
+    @extend %position-rel;
     overflow: hidden;
-    position: relative;
     display: flex;
     height: 58px;
     border-radius: 9px 9px 0 0;
     background: $slide-gray;
 
     @include respond-to($tablet) {
-      background: #fff;
+      background: $white;
     }
   }
 
   &__tab {
+    @extend %position-rel;
+    @extend %display-center;
     cursor: pointer;
     opacity: 0.5;
-    position: relative;
-    align-items: center;
-    justify-content: center;
     z-index: 1;
-    display: flex;
     flex: 1 0 33%;
     font-size: 14px;
 
@@ -363,11 +359,11 @@
   &__title {
     margin: 0 0 5px 15px;
     font-size: 13px;
-    color: #888;
+    color: $gray-text;
   }
 
   &__drop {
-    position: relative;
+    @extend %position-rel;
     width: 100%;
     height: 42px;
     margin-bottom: 14px;
@@ -377,11 +373,11 @@
     }
 
     label {
-      position: absolute;
+      @extend %position-abs;
       top: -18px;
       right: 5px;
       font-size: 12px;
-      color: rgb(199, 41, 41);
+      color: $red;
     }
 
     &-guests {
@@ -412,24 +408,24 @@
       }
 
       li {
+        @extend %position-rel;
         cursor: default;
-        position: relative;
         height: 22px;
         padding: 3px 10px;
-        border: 1px solid #e2e2e2;
+        border: 1px solid $light-gray;
         border-radius: 6px;
         font-size: 12px;
         line-height: 16px;
-        color: #222;
-        background: #fff;
-        box-shadow: 0 2px 3px 0 rgb(0 0 0 / 0.1);
+        color: $text;
+        background: $white;
+        box-shadow: 0 2px 3px 0 $black-shadow-10;
         transition: border 200ms ease 0s;
 
         span {
+          @extend %position-abs;
           content: '+';
           cursor: pointer;
           opacity: 0;
-          position: absolute;
           top: -6px;
           right: -6px;
           width: 13px;
@@ -437,9 +433,9 @@
           border-radius: 50%;
           font-size: 15px;
           line-height: 12px;
-          color: #fff;
+          color: $white;
           text-align: center;
-          background-color: #f68521;
+          background-color: $primary;
           transform: rotate(-45deg);
         }
 
@@ -460,7 +456,7 @@
     }
 
     &-food {
-      position: relative;
+      @extend %position-rel;
     }
   }
 
@@ -476,15 +472,13 @@
   &__title--tour {
     margin-top: 53px;
 
-    @include respond-to(895px){
+    @include respond-to(895px) {
       margin-top: 70px;
     }
   }
 
   &__counter-wrapper {
-    align-items: center;
-    justify-content: space-between;
-    display: flex;
+    @extend %display-jc-sb;
     width: 100%;
     height: 42px;
     margin-top: 7px;
@@ -495,10 +489,10 @@
   &__btn {
     width: 100%;
     height: 42px;
-    border: 1px solid #f68521;
+    border: 1px solid $primary;
     border-radius: 6px;
     font-size: 16px;
-    color: #222;
+    color: $text;
     user-select: none;
     transition:
       color 300ms ease 0s,
@@ -506,14 +500,14 @@
       transform 300ms ease 0s;
 
     @include respond-to($tablet) {
-      color: #fff;
-      background-color: #f68521;
+      color: $white;
+      background-color: $primary;
     }
 
     &:hover {
       @include respond-to($lap-top) {
-        color: #fff;
-        background-color: #f68521;
+        color: $white;
+        background-color: $primary;
       }
     }
 
@@ -539,12 +533,12 @@
 
     &-three-state {
       margin-top: 154px;
-      color: #fff;
-      background: #f68521;
+      color: $white;
+      background: $primary;
 
       &:hover {
         @include respond-to($lap-top) {
-          background: rgb(246 133 33 / 0.9);
+          background: $primary;
         }
       }
 
@@ -559,30 +553,30 @@
     height: 42px;
     margin-bottom: 16px;
     padding-left: 18px;
-    border: 1px solid #e2e2e2;
+    border: 1px solid $light-gray;
     border-radius: 6px;
 
     &-wrap {
-      position: relative;
+      @extend %position-rel;
 
       label {
-        position: absolute;
+        @extend %position-abs;
         top: -18px;
         right: 5px;
         font-size: 12px;
-        color: rgb(199, 41, 41);
+        color: $red;
       }
     }
 
     &-for-validate {
+      @extend %position-abs;
       opacity: 0;
       pointer-events: none;
-      position: absolute;
       top: 0;
       z-index: -100;
       width: 100%;
       height: 0;
-      background-color: red;
+      background-color: $red;
     }
   }
 
@@ -601,7 +595,7 @@
         width: 18px;
         height: 18px;
         margin-left: 4px;
-        fill: #f5c213;
+        fill: $yellow;
       }
 
       &:hover {
@@ -618,7 +612,7 @@
     width: 100%;
     height: 100px;
     padding: 10px 15px;
-    border: 1px solid #e2e2e2;
+    border: 1px solid $light-gray;
     border-radius: 6px;
     resize: none;
   }
@@ -671,19 +665,19 @@
 }
 
 .drop-country {
-  position: relative;
+  @extend %position-rel;
   height: 100%;
 
   &__btn {
+    @extend %position-rel;
     cursor: pointer;
-    position: relative;
     align-items: center;
     display: flex;
     height: 100%;
-    border: 1px solid #e2e2e2;
+    border: 1px solid $light-gray;
     border-radius: 6px;
     font-family: $font-family-second;
-    background: #fff;
+    background: $white;
     user-select: none;
   }
 
@@ -704,7 +698,7 @@
   }
 
   &__btn-arrow {
-    position: absolute;
+    @extend %position-abs;
     top: 50%;
     right: 8px;
     transform: translateY(-50%);
@@ -716,15 +710,15 @@
   }
 
   &__accordions {
+    @extend %position-abs;
     overflow: auto;
-    position: absolute;
     z-index: 100;
     width: 100%;
     max-height: 380px;
     padding: 5px;
-    border: 1px solid #e2e2e2;
+    border: 1px solid $light-gray;
     border-radius: 6px;
-    background: #fff;
+    background: $white;
     transform: scaleY(0);
     transform-origin: 0 0;
     transition: all 300ms ease 0s;
@@ -774,7 +768,7 @@
   svg {
     width: 24px;
     height: 24px;
-    fill: #a9a9a9;
+    fill: $icon-gray;
 
     @include respond-to($tablet) {
       width: 28px;
@@ -813,15 +807,13 @@
   user-select: none;
 
   &__btn {
+    @extend %display-jc-sb;
     cursor: pointer;
-    align-items: center;
-    justify-content: space-between;
-    display: flex;
     height: 40px;
     padding: 0 10px;
-    border: 1px solid #e2e2e2;
+    border: 1px solid $light-gray;
     border-radius: 6px;
-    background: #fff;
+    background: $white;
     transition: border 300ms ease 0s;
 
     @include respond-to($tablet) {
@@ -851,11 +843,9 @@
     transition: all 300ms ease 0s;
 
     li {
+      @extend %display-center;
       cursor: pointer;
       opacity: 0;
-      align-items: center;
-      justify-content: center;
-      display: flex;
       width: 100%;
       height: 0;
       margin: 1px 0;
@@ -863,8 +853,8 @@
       transition: all 300ms ease 0s;
 
       &:hover {
-        color: #fff;
-        background: #f68521;
+        color: $white;
+        background: $primary;
       }
     }
   }
@@ -893,26 +883,6 @@
   }
 }
 
-// .calendar {
-//   position: relative;
-//   height: 100%;
-
-//   &__btn {
-//     cursor: pointer;
-//     position: relative;
-//     align-items: center;
-//     display: flex;
-//     height: 100%;
-//     border: 1px solid #e2e2e2;
-//     border-radius: 6px;
-
-//     &-info {
-//       margin-left: 16px;
-//       font-family: $font-family-second;
-//     }
-//   }
-// }
-
 .form__tab.active {
   color: $text;
   background-color: $white;
@@ -933,16 +903,15 @@
 }
 
 .food {
-  position: relative;
+  @extend %position-rel;
   height: 100%;
 
   &__btn {
+    @extend %position-rel;
+    @extend %display-flex;
     cursor: pointer;
-    position: relative;
-    align-items: center;
-    display: flex;
     height: 100%;
-    border: 1px solid #e2e2e2;
+    border: 1px solid $light-gray;
     border-radius: 6px;
     user-select: none;
     transition: border 300ms ease 0s;
@@ -957,27 +926,27 @@
     }
 
     svg {
-      position: absolute;
+      @extend %position-abs;
       top: 50%;
       right: 8px;
       width: 12px;
       height: 8px;
       transform: translateY(-50%);
-      fill: #a9a9a9;
+      fill: $icon-gray;
       transition: transform 300ms ease 0s;
     }
   }
 
   &__list {
+    @extend %position-abs;
     overflow: auto;
-    position: absolute;
     z-index: 100;
     width: 100%;
     max-height: 300px;
     padding: 5px;
-    border: 1px solid #e2e2e2;
+    border: 1px solid $light-gray;
     border-radius: 6px;
-    background: #fff;
+    background: $white;
     transform: scaleY(0);
     transform-origin: 0 0;
     transition: all 300ms ease 0s;
@@ -996,8 +965,8 @@
       transition: all 300ms ease 0s;
 
       &:hover {
-        color: #fff;
-        background: #f68521;
+        color: $white;
+        background: $primary;
       }
     }
   }
@@ -1068,53 +1037,49 @@
   }
 }
 
-
-
-
 .calendar {
+  @extend %position-rel;
   height: 100%;
-  position: relative;
 
   &__btn {
-    display: flex;
-    align-items: center;
-    position: relative;
-    height: 100%;
-    border-radius: 6px;
-    border: 1px solid #e2e2e2;
-    transition: border 300ms ease 0s;
-    user-select: none;
+    @extend %position-rel;
+    @extend %display-flex;
     cursor: pointer;
+    height: 100%;
+    border: 1px solid $light-gray;
+    border-radius: 6px;
+    user-select: none;
+    transition: border 300ms ease 0s;
 
     &-info {
-      font-family: Roboto;
       margin-left: 16px;
+      font-family: $font-family-second;
     }
-    
+
     svg {
-      position: absolute;
-      right: 8px;
+      @extend %position-abs;
       top: 50%;
-      transform: translateY(-50%);
-      transition: transform 300ms ease 0s;
+      right: 8px;
       width: 24px;
       height: 24px;
-      fill: #a9a9a9;
+      transform: translateY(-50%);
+      fill: $icon-gray;
+      transition: transform 300ms ease 0s;
     }
   }
 
   &__main {
-    position: absolute;
+    @extend %position-abs;
+    overflow: auto;
     z-index: 100;
     width: 100%;
-    border-radius: 6px;
     height: 240px;
-    overflow: auto;
-    border: 1px solid #e2e2e2;
+    border: 1px solid $light-gray;
+    border-radius: 6px;
+    background: $white;
     transform: scaleY(0);
     transform-origin: 0 0;
     transition: all 300ms ease 0s;
-    background: #fff;
   }
 
   &_active {
@@ -1124,7 +1089,7 @@
           transform: translateY(-50%) rotate(180deg);
         }
       }
-      
+
       &__main {
         transform: scaleY(1);
       }
@@ -1138,6 +1103,7 @@
       }
     }
   }
+
   &_top {
     .calendar {
       &__main {
@@ -1151,20 +1117,25 @@
 .air-datepicker {
   width: 100% !important;
   border: none !important;
+
   .air-datepicker-body--day-name {
-    color: #f68521;
-    font-family: "Open Sans", sans-serif;
+    font-family: $font-family-base;
+    color: $primary;
   }
+
   .-selected- {
-    background: #f68521 !important;
+    background: $primary !important;
   }
-  .-in-range-{
+
+  .-in-range- {
     background: #5e606446 !important;
   }
+
   .-current- {
-    color: #255296 !important;
+    color: $blue !important;
+
     &.-selected- {
-      color: #ffffff !important;
+      color: $white !important;
     }
   }
 }
