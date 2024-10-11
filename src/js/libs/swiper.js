@@ -44,18 +44,17 @@ export const mainCompanySlider = () => {
         slidesPerView: 1,
         spaceBetween: 20,
       },
-
-      804: {
+      576: {
         slidesPerView: 2,
         spaceBetween: 10,
       },
       991: {
         slidesPerView: 3,
-        spaceBetween: 15,
+        spaceBetween: 10,
       },
       1200: {
         slidesPerView: 3,
-        spaceBetween: 11,
+        spaceBetween: 10,
       },
     },
   }
