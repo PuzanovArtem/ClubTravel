@@ -145,8 +145,13 @@
   }
 
   &__hotel-title {
+    overflow: hidden;
+    display: -webkit-box;
     font-size: 18px;
     font-weight: 400;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
   }
 
   &__hotel-location-block {
@@ -211,8 +216,12 @@
     fill: $yellow;
   }
 
-  &__short-info-item:not(:last-child) {
-    margin: 0 0 24px;
+  &__short-info-item {
+    white-space: nowrap;
+
+    &:not(:last-child) {
+      margin: 0 0 24px;
+    }
   }
 
   &__hotel-star:not(:last-child) {
@@ -986,6 +995,14 @@
       border-radius: 6px;
       color: $white;
       background: rgba(0, 0, 0, 0.5);
+    }
+
+    &__hotel-location {
+      overflow: hidden;
+      display: -webkit-box;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
     }
 
     .icon--location {

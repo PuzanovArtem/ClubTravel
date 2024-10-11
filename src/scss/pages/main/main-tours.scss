@@ -189,8 +189,14 @@
   }
 
   .hot-deals__card-place {
+    overflow: hidden;
+    display: -webkit-box;
+    width: 100%;
     font-size: 14px;
     color: $white;
+    text-overflow: ellipsis;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
   }
 
   &__card-text {
@@ -373,6 +379,10 @@
     .main-hot__swiper {
       margin: 70px 0 22px;
     }
+
+         .secondary-arrow {
+           top: 10%;
+         }
   }
 }
 

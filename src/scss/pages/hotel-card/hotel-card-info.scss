@@ -41,7 +41,23 @@
   }
 
   .dropdown__row {
+    padding: 7px 13px 7px 8px;
     border: 1px solid $light-gray;
+  }
+
+  .dropdown--open .dropdown__row {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .dropdown--open .icon__arrow-down {
+    rotate: 180deg;
+  }
+
+  .dropdown__list {
+    top: 31px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
   }
 
   &__content-wrapper {
@@ -91,6 +107,7 @@
     width: 100%;
     margin-right: auto;
     margin-left: auto;
+    border-radius: 8px;
   }
 
   .gallery-thumbs__swiper-img,
@@ -120,9 +137,9 @@
   }
 
   @include respond-to($lap-top) {
-        .main-tour__swiper-button-prev, 
-        .main-tour__swiper-button-next {
-        top: 5%;
+    .main-tour__swiper-button-prev,
+    .main-tour__swiper-button-next {
+      top: 5%;
     }
   }
 
@@ -144,24 +161,24 @@
     }
 
     .hotel-card-sidebar__third-block-item:not(:last-child) {
-    margin-bottom: 8px;
-}
+      margin-bottom: 8px;
+    }
 
-.hotel-card-sidebar__guests-title {
-    margin: 23px 0 10px;
-}
+    .hotel-card-sidebar__guests-title {
+      margin: 23px 0 10px;
+    }
 
-.hotel-card-sidebar__first-block {
-    padding: 25px 20px;
-}
+    .hotel-card-sidebar__first-block {
+      padding: 25px 20px;
+    }
 
-      .icon--calendar,
-  .icon--airplane-takeoff,
-  .icon--cutlery,
-  .icon--house {
-    width: 18px;
-    height: 18px;
-  }
+    .icon--calendar,
+    .icon--airplane-takeoff,
+    .icon--cutlery,
+    .icon--house {
+      width: 18px;
+      height: 18px;
+    }
   }
 
   @include respond-to($mobile) {
