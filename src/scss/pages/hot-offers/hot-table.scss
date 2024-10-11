@@ -233,20 +233,13 @@
         color: $text;
         text-transform: uppercase;
 
-        span {
-          margin-right: 6px;
-          font-size: 10px;
-          transform: rotate(180deg);
-          transition: all 0.2s;
-        }
-
-        &_active {
-          span {
-            transform: rotate(0);
-          }
-        }
       }
     }
+  }
+
+  &__icon--rotated {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
   }
 
   &__dropdown {

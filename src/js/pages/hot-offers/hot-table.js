@@ -5,6 +5,7 @@ export const hotDeals = () => {
   const hotDealsAdditionRow = document.querySelectorAll('.hotDeals__addition-body-row')
   const hotDealsAdditionDropDown = document.querySelectorAll('.hot-deals__addition-body-dropdown')
   const hotDealsDropDown = document.querySelectorAll('.hot-deals__dropdown')
+  const hotDealsIcon = document.querySelectorAll('.hot-deals__icon--triangle-down') // Находим иконку
 
   const toggleActiveClassForHotDealsRow = index => {
     if (!hotDealsRow[index].classList.contains('hot-deals__body-row_active')) {
@@ -28,7 +29,7 @@ export const hotDeals = () => {
         elem.innerHTML = 'Открыть'
       })
       hotDealsBtn[index].classList.add('hot-deals__body-btn_active')
-      hotDealsBtn[index].innerHTML = 'закрыть'
+      hotDealsBtn[index].innerHTML = 'Закрыть'
     } else {
       hotDealsBtn[index].classList.remove('hot-deals__body-btn_active')
       hotDealsBtn[index].innerHTML = 'Открыть'
@@ -100,11 +101,20 @@ export const hotDeals = () => {
     }
   }
 
+  const toggleIconRotation = index => {
+    if (!hotDealsIcon[index].classList.contains('hot-deals__icon--rotated')) {
+      hotDealsIcon[index].classList.add('hot-deals__icon--rotated')
+    } else {
+      hotDealsIcon[index].classList.remove('hot-deals__icon--rotated')
+    }
+  }
+
   hotDealsAdditionDropDown.forEach((elem, index) => {
     elem.addEventListener('click', () => {
       toggleActiveClassForHotDealsAdditionDropDown(index)
       toggleActiveClassForHotDealsAdditionRow(index)
       toggleActiveClassForHotDealsDropDown(index)
+      toggleIconRotation(index) // Переворот стрелки
     })
   })
 }
