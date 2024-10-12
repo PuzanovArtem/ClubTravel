@@ -86,7 +86,7 @@ export const orderList = () => {
           <span class="account-orders__th">Сумма</span>
           <span class="account-orders__td">${order.amount}</span>
           <span class="account-orders__th">E-mail</span>
-          <span class="account-orders__td">${order.date}</span>
+          <span class="account-orders__td">${order.email}</span>
           <span class="account-orders__th">Cтатус</span>
           <span class="account-orders__td account-orders__status-mob ${statusClass}">${order.status}</span>
           <span class="account-orders__th">Дата</span>

@@ -102,6 +102,7 @@
       font-size: 24px;
       font-weight: 700;
       color: $green;
+      white-space: nowrap;
     }
   }
 
@@ -211,8 +212,11 @@
   }
 
   &__consultant-link-text {
+    width: 100%;
+    max-width: 350px;
     margin-left: 12px;
     font-size: 16px;
+    word-break: break-all;
 
     &--strong {
       font-weight: 700;
@@ -279,7 +283,7 @@
     }
   }
 
-  @include respond-to($tablet) {
+  @include respond-to($calendar-tablet) {
     &__first-block {
       margin: 0 -15px 32px;
       box-shadow: 0 5px 5px 0 $light-black;
