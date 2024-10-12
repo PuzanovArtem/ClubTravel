@@ -145,8 +145,14 @@
   }
 
   &__hotel-title {
+    overflow: hidden;
+    display: -webkit-box;
     font-size: 18px;
     font-weight: 400;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
   }
 
   &__hotel-location-block {
@@ -211,8 +217,12 @@
     fill: $yellow;
   }
 
-  &__short-info-item:not(:last-child) {
-    margin: 0 0 24px;
+  &__short-info-item {
+    white-space: nowrap;
+
+    &:not(:last-child) {
+      margin: 0 0 24px;
+    }
   }
 
   &__hotel-star:not(:last-child) {
@@ -359,6 +369,16 @@
   &__booking-table-container.active {
     max-height: 1000px;
     transition: max-height 0.5s ease-in;
+  }
+
+  &__hotel-location {
+    overflow: hidden;
+    display: -webkit-box;
+    width: 100%;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
   }
 
   &__booking-table {
@@ -974,7 +994,7 @@
       }
     }
 
-    &__hotel-location-mob {
+    &__hotel-location-mob-block {
       position: absolute;
       bottom: 10px;
       left: 10px;
@@ -986,6 +1006,16 @@
       border-radius: 6px;
       color: $white;
       background: rgba(0, 0, 0, 0.5);
+    }
+
+    &__hotel-location-mob {
+      overflow: hidden;
+      display: -webkit-box;
+      width: 100%;
+      text-overflow: ellipsis;
+      word-break: break-all;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
     }
 
     .icon--location {

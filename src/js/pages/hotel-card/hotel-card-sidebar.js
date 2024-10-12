@@ -11,7 +11,7 @@ export const changePlace = () => {
     }
   }
 
-  const mediaQuery = window.matchMedia('(max-width: 767px)')
+  const mediaQuery = window.matchMedia('(max-width: 900px)')
 
   mediaQuery.addEventListener('change', handleResize)
   handleResize(mediaQuery)

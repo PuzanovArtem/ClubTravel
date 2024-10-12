@@ -34,10 +34,15 @@
   }
 
   &__name {
+    overflow: hidden;
+    display: -webkit-box;
     margin-top: 25px;
     font-size: 26px;
     line-height: 1.3;
     text-align: center;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
   }
 
   &__menu {
@@ -286,7 +291,7 @@
 
   @include respond-to($lap-top) {
     &__td {
-      padding: 18px 10px;
+      padding: 18px 7px;
       font-size: 14px;
     }
   }
