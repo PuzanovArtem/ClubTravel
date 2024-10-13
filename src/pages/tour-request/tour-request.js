@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initializeDropCountry()
   manageSelects()
   initializeDropdowns()
-  select
+  select()
   initTabs()
   initStarSelection()
   tourValidator()
