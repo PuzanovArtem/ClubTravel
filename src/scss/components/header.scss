@@ -247,8 +247,8 @@
   }
 
   &__wrapper {
-    max-height: calc(100vh - 50px);
     overflow-y: auto;
+    max-height: calc(100vh - 50px);
   }
 
   &__logo-img {
@@ -257,18 +257,26 @@
   }
 
   &__list {
-    margin-top: 22px;
-    max-height: calc(100vh - 200px);
     overflow-y: auto;
+    max-height: calc(100vh - 200px);
+    margin-top: 22px;
+  }
 
-    &-item {
-      margin-bottom: 16px;
-      font-size: 16px;
-      line-height: 22px;
-      text-transform: uppercase;
+  &__list-item {
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 22px;
+    text-transform: uppercase;
+  }
 
-      &-link {
-        color: $blue;
+  &__list-link {
+    color: $blue;
+    transition: transform 0.3s ease;
+
+    @media (hover: hover) {
+      &:hover {
+        color: $primary;
+        transform: scale(1.05);
       }
     }
   }
@@ -326,6 +334,22 @@
       font-size: 16px;
       line-height: 22px;
       color: $text;
+    }
+  }
+
+  &__close {
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 5;
+    border: none;
+    background: none;
+
+    .icon--close {
+      width: 16px;
+      height: 16px;
+      fill: $icon-gray;
     }
   }
 }

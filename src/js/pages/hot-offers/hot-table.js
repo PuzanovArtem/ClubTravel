@@ -1,120 +1,57 @@
 export const hotDeals = () => {
-  const hotDealsRow = document.querySelectorAll('.hot-deals__body-row')
-  const hotDealsBtn = document.querySelectorAll('.hot-deals__body-btn')
-  const hotDealsAddition = document.querySelectorAll('.hot-deals__addition')
-  const hotDealsAdditionRow = document.querySelectorAll('.hotDeals__addition-body-row')
-  const hotDealsAdditionDropDown = document.querySelectorAll('.hot-deals__addition-body-dropdown')
-  const hotDealsDropDown = document.querySelectorAll('.hot-deals__dropdown')
-  const hotDealsIcon = document.querySelectorAll('.hot-deals__icon--triangle-down') // Находим иконку
+  const elements = {
+    hotDealsRow: document.querySelectorAll('.hot-deals__body-row'),
+    hotDealsBtn: document.querySelectorAll('.hot-deals__body-btn'),
+    hotDealsAddition: document.querySelectorAll('.hot-deals__addition'),
+    hotDealsAdditionRow: document.querySelectorAll('.hotDeals__addition-body-row'),
+    hotDealsAdditionDropDown: document.querySelectorAll('.hot-deals__addition-body-dropdown'),
+    hotDealsDropDown: document.querySelectorAll('.hot-deals__dropdown'),
+  }
 
-  const toggleActiveClassForHotDealsRow = index => {
-    if (!hotDealsRow[index].classList.contains('hot-deals__body-row_active')) {
-      hotDealsRow.forEach(elem => {
-        if (elem.classList.contains('hot-deals__body-row_active')) {
-          elem.classList.remove('hot-deals__body-row_active')
-        }
+  const toggleClass = (collection, index, activeClass) => {
+    if (collection[index]) {
+      collection.forEach((elem, i) => {
+        if (i !== index) elem.classList.remove(activeClass)
       })
-      hotDealsRow[index].classList.add('hot-deals__body-row_active')
-    } else {
-      hotDealsRow[index].classList.remove('hot-deals__body-row_active')
+      collection[index].classList.toggle(activeClass)
     }
   }
 
-  const toggleActiveClassForHotDealsBtn = index => {
-    if (!hotDealsBtn[index].classList.contains('hot-deals__body-btn_active')) {
-      hotDealsBtn.forEach(elem => {
-        if (elem.classList.contains('hot-deals__body-btn_active')) {
-          elem.classList.remove('hot-deals__body-btn_active')
-        }
-        elem.innerHTML = 'Открыть'
+  const toggleButtonState = index => {
+    if (elements.hotDealsBtn[index]) {
+      elements.hotDealsBtn.forEach((btn, i) => {
+        btn.innerHTML = i === index && !btn.classList.contains('hot-deals__body-btn_active') ? 'Закрыть' : 'Открыть'
       })
-      hotDealsBtn[index].classList.add('hot-deals__body-btn_active')
-      hotDealsBtn[index].innerHTML = 'Закрыть'
-    } else {
-      hotDealsBtn[index].classList.remove('hot-deals__body-btn_active')
-      hotDealsBtn[index].innerHTML = 'Открыть'
     }
   }
 
-  const toggleActiveClassForHotDealsAddition = index => {
-    if (!hotDealsAddition[index].classList.contains('hot-deals__addition_active')) {
-      hotDealsAddition.forEach(elem => {
-        if (elem.classList.contains('hot-deals__addition_active')) {
-          elem.classList.remove('hot-deals__addition_active')
-        }
-      })
-      hotDealsAddition[index].classList.add('hot-deals__addition_active')
-    } else {
-      hotDealsAddition[index].classList.remove('hot-deals__addition_active')
+  const updateDropdownText = index => {
+    const dropdown = elements.hotDealsAdditionDropDown[index]
+    if (dropdown) {
+      const textElement = dropdown.firstElementChild
+      if (textElement) {
+        textElement.textContent = !dropdown.classList.contains('hot-deals__addition-body-dropdown_active')
+          ? 'скрыть предложения'
+          : 'открыть предложения'
+      }
     }
   }
 
-  hotDealsBtn.forEach((elem, index) => {
-    elem.addEventListener('click', () => {
-      toggleActiveClassForHotDealsRow(index)
-      toggleActiveClassForHotDealsBtn(index)
-      toggleActiveClassForHotDealsAddition(index)
+  elements.hotDealsBtn.forEach((btn, index) => {
+    btn.addEventListener('click', () => {
+      toggleClass(elements.hotDealsRow, index, 'hot-deals__body-row_active')
+      toggleClass(elements.hotDealsBtn, index, 'hot-deals__body-btn_active')
+      toggleClass(elements.hotDealsAddition, index, 'hot-deals__addition_active')
+      toggleButtonState(index)
     })
   })
 
-  const toggleActiveClassForHotDealsAdditionDropDown = index => {
-    if (!hotDealsAdditionDropDown[index].classList.contains('hot-deals__addition-body-dropdown_active')) {
-      hotDealsAdditionDropDown.forEach(elem => {
-        if (elem.classList.contains('hot-deals__addition-body-dropdown_active')) {
-          elem.classList.remove('hot-deals__addition-body-dropdown_active')
-          elem.childNodes[0].textContent = 'открыть предложения'
-        }
-      })
-      hotDealsAdditionDropDown[index].classList.add('hot-deals__addition-body-dropdown_active')
-      hotDealsAdditionDropDown[index].childNodes[0].textContent = 'скрыть предложения'
-    } else {
-      hotDealsAdditionDropDown[index].classList.remove('hot-deals__addition-body-dropdown_active')
-      hotDealsAdditionDropDown[index].childNodes[0].textContent = 'открыть предложения'
-    }
-  }
-
-  const toggleActiveClassForHotDealsAdditionRow = index => {
-    if (
-      !hotDealsAdditionDropDown[index].parentNode.parentNode.classList.contains('hot-deals__addition-body-row_active')
-    ) {
-      hotDealsAdditionRow.forEach(elem => {
-        if (elem.classList.contains('hot-deals__addition-body-row_active')) {
-          elem.classList.remove('hot-deals__addition-body-row_active')
-        }
-      })
-      hotDealsAdditionDropDown[index].parentNode.parentNode.classList.add('hot-deals__addition-body-row_active')
-    } else {
-      hotDealsAdditionDropDown[index].parentNode.parentNode.classList.remove('hot-deals__addition-body-row_active')
-    }
-  }
-
-  const toggleActiveClassForHotDealsDropDown = index => {
-    if (!hotDealsDropDown[index].classList.contains('hot-deals__dropdown_active')) {
-      hotDealsDropDown.forEach(elem => {
-        if (elem.classList.contains('hot-deals__dropdown_active')) {
-          elem.classList.remove('hot-deals__dropdown_active')
-        }
-      })
-      hotDealsDropDown[index].classList.add('hot-deals__dropdown_active')
-    } else {
-      hotDealsDropDown[index].classList.remove('hot-deals__dropdown_active')
-    }
-  }
-
-  const toggleIconRotation = index => {
-    if (!hotDealsIcon[index].classList.contains('hot-deals__icon--rotated')) {
-      hotDealsIcon[index].classList.add('hot-deals__icon--rotated')
-    } else {
-      hotDealsIcon[index].classList.remove('hot-deals__icon--rotated')
-    }
-  }
-
-  hotDealsAdditionDropDown.forEach((elem, index) => {
-    elem.addEventListener('click', () => {
-      toggleActiveClassForHotDealsAdditionDropDown(index)
-      toggleActiveClassForHotDealsAdditionRow(index)
-      toggleActiveClassForHotDealsDropDown(index)
-      toggleIconRotation(index) // Переворот стрелки
+  elements.hotDealsAdditionDropDown.forEach((dropdown, index) => {
+    dropdown.addEventListener('click', () => {
+      toggleClass(elements.hotDealsAdditionDropDown, index, 'hot-deals__addition-body-dropdown_active')
+      toggleClass(elements.hotDealsAdditionRow, index, 'hot-deals__addition-body-row_active')
+      toggleClass(elements.hotDealsDropDown, index, 'hot-deals__dropdown_active')
+      updateDropdownText(index)
     })
   })
 }

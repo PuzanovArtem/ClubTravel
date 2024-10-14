@@ -195,16 +195,20 @@
     font-size: 14px;
     color: $white;
     text-overflow: ellipsis;
-      -webkit-line-clamp: 1;
-      -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
   }
 
   &__card-text {
+    display: -webkit-box;
     height: 75px;
     padding: 19px 5px 5px 21px;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 1.5px;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
   }
 
   .hot-deals__card-wrappers {
@@ -380,9 +384,9 @@
       margin: 70px 0 22px;
     }
 
-         .secondary-arrow {
-           top: 10%;
-         }
+    .secondary-arrow {
+      top: 10%;
+    }
   }
 }
 

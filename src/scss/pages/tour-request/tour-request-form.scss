@@ -269,7 +269,7 @@
     }
 
     li {
-      @extend %display-center;
+      @extend %display-flex;
       margin: 0 0 16px;
 
       @include respond-to($tablet) {
@@ -1085,14 +1085,15 @@
   &_active {
     .calendar {
       &__btn {
-        svg {
-          transform: translateY(-50%) rotate(180deg);
-        }
       }
 
       &__main {
         transform: scaleY(1);
       }
+    }
+
+    .icon__arrow-down {
+      transform: translateY(-50%) rotate(180deg);
     }
   }
 
@@ -1111,6 +1112,12 @@
         transform-origin: 100% 100%;
       }
     }
+  }
+}
+
+.dropdown--open {
+  .icon__arrow-down {
+    transform: rotate(180deg);
   }
 }
 
