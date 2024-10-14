@@ -8,10 +8,10 @@ export const accordion = () => {
       const card = this.closest('.search-content__hotel-offer-card')
 
       if (tableContainer && card) {
-        const isActive = tableContainer.classList.toggle('active');
-        card.classList.toggle('active', isActive);
-        this.innerText = isActive ? 'ЗАКРЫТЬ' : 'ОТКРЫТЬ';
-        this.classList.toggle('active', isActive);
+        const isActive = tableContainer.classList.toggle('active')
+        card.classList.toggle('active', isActive)
+        this.innerText = isActive ? 'ЗАКРЫТЬ' : 'ОТКРЫТЬ'
+        this.classList.toggle('active', isActive)
       }
     })
   })

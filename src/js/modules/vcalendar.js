@@ -69,9 +69,9 @@ export const calendarSearch = () => {
       dateClick: function (info) {
         const previouslySelected = document.querySelector('.fc-day-selected')
 
-         if (info.dayEl.classList.contains('fc-day-disabled')) {
-    return;
-  }
+        if (info.dayEl.classList.contains('fc-day-disabled')) {
+          return
+        }
 
         if (previouslySelected) {
           previouslySelected.classList.remove('fc-day-selected')
@@ -110,8 +110,8 @@ export const calendarSearch = () => {
         })
 
         if (!hasEvent) {
-          info.el.classList.add('fc-no-event');
-          info.el.classList.add('fc-day-disabled');
+          info.el.classList.add('fc-no-event')
+          info.el.classList.add('fc-day-disabled')
         }
       },
     })

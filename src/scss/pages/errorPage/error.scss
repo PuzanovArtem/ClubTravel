@@ -44,5 +44,9 @@
     color: $white;
     text-align: center;
     text-decoration-line: underline;
+
+    &:hover {
+      color: $primary;
+    }
   }
 }

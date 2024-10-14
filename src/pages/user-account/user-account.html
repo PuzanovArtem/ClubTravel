@@ -1,27 +1,29 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta name="description" content="travel club">
-    <meta charset="UTF-8"/>
-    <link rel="icon" type="image/svg+xml" href="/assets/images/icons/logo.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="/src/pages/user-account/user-account.scss">
-    <title>Club Travel</title>
-  </head>
-  <body>
-    {{> header }}
+<head>
+  <meta name="description" content="travel club">
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="/assets/images/icons/logo.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <main class="main">
-      {{> banner }}
+  <link rel="stylesheet" href="/src/pages/user-account/user-account.scss">
+  <title>Club Travel</title>
+</head>
 
-      {{> account-content }}
+<body>
+  {{> header }}
 
-    </main>
+  <main class="main">
+    {{> banner }}
 
-    {{> _footer }}
-   
+    {{> account-content }}
 
-    <script type="module" src="/src/pages/user-account/user-account.js"></script>
-  </body>
+  </main>
+
+  {{> _footer }}
+
+  <script type="module" src="/src/pages/user-account/user-account.js"></script>
+</body>
+
 </html>

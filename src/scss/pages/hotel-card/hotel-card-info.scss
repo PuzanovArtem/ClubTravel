@@ -142,7 +142,6 @@
       top: 5%;
     }
   }
-  
 
   @include respond-to($calendar-tablet) {
     flex-direction: column;

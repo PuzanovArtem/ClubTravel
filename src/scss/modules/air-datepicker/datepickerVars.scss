@@ -3,26 +3,23 @@
    ------------------------------------------------- */
 
 .air-datepicker {
-  --adp-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --adp-font-family: -apple-system, blinkmacsystemfont, 'Segoe UI', roboto, helvetica, arial, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   --adp-font-size: 14px;
   --adp-width: 246px; // Day cell width will be equal to 34px
   --adp-z-index: 100;
   --adp-padding: 4px;
-  --adp-grid-areas:
-    'nav'
-    'body'
-    'timepicker'
-    'buttons';
+  --adp-grid-areas: 'nav' 'body' 'timepicker' 'buttons';
 
-  --adp-transition-duration: .3s;
+  --adp-transition-duration: 0.3s;
   --adp-transition-ease: ease-out;
   --adp-transition-offset: 8px;
 
   --adp-background-color: #fff;
   --adp-background-color-hover: #f0f0f0;
   --adp-background-color-active: #eaeaea;
-  --adp-background-color-in-range: rgba(92, 196, 239, .1);
-  --adp-background-color-in-range-focused: rgba(92, 196, 239, .2);
+  --adp-background-color-in-range: rgba(92, 196, 239, 0.1);
+  --adp-background-color-in-range-focused: rgba(92, 196, 239, 0.2);
   --adp-background-color-selected-other-month-focused: #8ad5f4;
   --adp-background-color-selected-other-month: #a2ddf6;
 
@@ -88,8 +85,8 @@
 }
 
 .air-datepicker-overlay {
-  --adp-overlay-background-color: rgba(0, 0, 0, .3);
-  --adp-overlay-transition-duration: .3s;
+  --adp-overlay-background-color: rgba(0, 0, 0, 0.3);
+  --adp-overlay-transition-duration: 0.3s;
   --adp-overlay-transition-ease: ease-out;
   --adp-overlay-z-index: 99;
 }

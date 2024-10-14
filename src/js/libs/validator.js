@@ -190,29 +190,29 @@ export const tourValidator = () => {
 }
 
 export const phoneValidator = () => {
-  const adviserInputPhone = document.getElementById('adviser-inp');
-  const adviserPhoneErrorElement = document.querySelector('.adviser__input-error');
-  
-  const adviserSubmitButton = document.querySelector('.adviser__btn');
-  
+  const adviserInputPhone = document.getElementById('adviser-inp')
+  const adviserPhoneErrorElement = document.querySelector('.adviser__input-error')
+
+  const adviserSubmitButton = document.querySelector('.adviser__btn')
+
   adviserSubmitButton.addEventListener('click', function () {
-    const adviserPhone = adviserInputPhone.value;
-    let isValid = true;
+    const adviserPhone = adviserInputPhone.value
+    let isValid = true
 
     if (validator.isEmpty(adviserPhone)) {
-      adviserPhoneErrorElement.textContent = 'Телефон не может быть пустым.';
-      isValid = false;
+      adviserPhoneErrorElement.textContent = 'Телефон не может быть пустым.'
+      isValid = false
     } else if (!validator.isMobilePhone(adviserPhone, 'any', { strictMode: false })) {
-      adviserPhoneErrorElement.textContent = 'Неверный формат телефона.';
-      isValid = false;
+      adviserPhoneErrorElement.textContent = 'Неверный формат телефона.'
+      isValid = false
     } else {
-      adviserPhoneErrorElement.textContent = '';
+      adviserPhoneErrorElement.textContent = ''
     }
 
     if (isValid) {
-      alert('Мы вам перезвоним!');
-      
-      adviserInputPhone.value = '';
+      alert('Мы вам перезвоним!')
+
+      adviserInputPhone.value = ''
     }
-  });
+  })
 }

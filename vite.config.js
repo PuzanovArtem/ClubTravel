@@ -50,7 +50,7 @@ export default defineConfig({
         quality: 100,
       },
     }),
-    commonjs(), // Добавлен плагин CommonJS для поддержки CommonJS-зависимостей
+    commonjs(),
     handlebars({
       partialDirectory: [
         resolve(__dirname, 'src/html/components'),
@@ -94,7 +94,7 @@ export default defineConfig({
       },
     },
     commonjsOptions: {
-      include: /node_modules/, // Обрабатывает CommonJS модули из node_modules
+      include: /node_modules/,
     },
   },
   resolve: {
@@ -103,6 +103,6 @@ export default defineConfig({
     },
   },
   optimizeDeps: {
-    include: ['some-dependency'], // Добавь сюда любые пакеты, которые могут требовать предобработки
+    include: ['some-dependency'],
   },
 })

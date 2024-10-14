@@ -1,7 +1,7 @@
-import { header } from '../../js/components/header.js';
-import { orderList } from '../../js/pages/user-account/pagination.js';
+import { header } from '../../js/components/header.js'
+import { orderList } from '../../js/pages/user-account/pagination.js'
 
 document.addEventListener('DOMContentLoaded', () => {
-    header();
-    orderList();
+  header()
+  orderList()
 })

@@ -1,26 +1,29 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta name="description" content="travel club" />
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/assets/images/icons/logo.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/src/pages/directions-tour/directions-tour.scss" />
-    <title>Club Travel</title>
-  </head>
-  <body>
-    {{> header }}
 
-    <main class="main">
-      {{> banner}} 
+<head>
+  <meta name="description" content="travel club">
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="/assets/images/icons/logo.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/src/pages/directions-tour/directions-tour.scss">
+  <title>Club Travel</title>
+</head>
 
-      {{> search title = "Направления" additionalClass="icon--search-title" }} 
+<body>
+  {{> header }}
 
-      {{> directions-tour-list }}
-    </main>
+  <main class="main">
+    {{> banner}}
 
-    {{> _footer }}
+    {{> search title = "Направления" additionalClass="icon--search-title" }}
 
-    <script type="module" src="/src/pages/directions-tour/directions-tour.js"></script>
-  </body>
+    {{> directions-tour-list }}
+  </main>
+
+  {{> _footer }}
+
+  <script type="module" src="/src/pages/directions-tour/directions-tour.js"></script>
+</body>
+
 </html>

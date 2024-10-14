@@ -1,186 +1,183 @@
 .authorization {
-    &__container {
-        max-width: 1950px;
-        padding: 0;
+  &__container {
+    max-width: 1950px;
+    padding: 0;
+  }
+
+  &__wrapper {
+    width: 100%;
+    height: 800px;
+    padding-top: 119px;
+    background-image: url('/public/assets/images/components/authorization/authorization-bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__form {
+    width: 427px;
+    margin: 0 auto;
+    padding: 32px;
+    border-radius: 6px;
+    background: $white;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  &__form-text {
+    margin-bottom: 32px;
+    color: $gray;
+    text-align: center;
+  }
+
+  &__soc-btn {
+    position: relative;
+    width: 100%;
+    padding: 11px;
+    border-radius: 6px;
+    text-align: center;
+    background: $white;
+    box-shadow: 0 1px 5px 0 #00000026;
+    transition: opacity 0.3s ease;
+
+    &--facebook {
+      margin-bottom: 16px;
+      color: $white;
+      background: $facebook;
     }
 
-    &__wrapper {
-        width: 100%;
-        height: 800px;
-        padding-top: 119px;
-        background-image: url('/public/assets/images/components/authorization/authorization-bg.jpg');
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
+    @media (hover: hover) {
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+  }
+
+  &__soc-icon {
+    position: absolute;
+    top: 50%;
+    left: 11px;
+    transform: translateY(-50%);
+  }
+
+  &__or-block {
+    position: relative;
+    margin: 32px 0;
+    color: $gray-text;
+    text-align: center;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 60%;
+      left: 34px;
+      width: 50%;
+      max-width: 124px;
+      height: 1px;
+      background: $gray-text;
+      transform: translateY(-50%);
     }
 
+    &::before {
+      content: '';
+      position: absolute;
+      top: 60%;
+      right: 34px;
+      width: 50%;
+      max-width: 124px;
+      height: 1px;
+      background: $gray-text;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__link-wrapper {
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+  }
+
+  &__link {
+    font-size: 13px;
+    color: $blue;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+
+    @media (hover: hover) {
+      &:hover {
+        color: $facebook;
+      }
+    }
+  }
+
+  &__btn-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 19px;
+    margin-top: 16px;
+  }
+
+  &__submit-btn {
+    padding: 11px;
+
+    &--sec {
+      color: $text;
+      background: $white;
+
+      @media (hover: hover) {
+        &:hover {
+          color: $white;
+          background: $primary;
+        }
+      }
+    }
+  }
+
+  &__policy {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+  }
+
+  &__policy-link {
+    margin-bottom: 6px;
+    color: $white;
+    text-align: center;
+    text-decoration: underline;
+    transition: opacity 0.3s ease;
+
+    @media (hover: hover) {
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  @include respond-to($mobile) {
     &__form {
-        width: 427px;
-        margin: 0 auto;
-        padding: 32px;
-        border-radius: 6px;
-        background: $white;
-        box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
-
-    }
-
-    &__form-text {
-        margin-bottom: 32px;
-        color: $gray;
-        text-align: center;
-    }
-
-    &__soc-btn {
-        position: relative;
-        width: 100%;
-        padding: 11px;
-        border-radius: 6px;
-        text-align: center;
-        background: $white;
-        box-shadow: 0 1px 5px 0 #00000026;
-        transition: opacity 0.3s ease;
-
-        &--facebook {
-            margin-bottom: 16px;
-            color: $white;
-            background: $facebook;
-        }
-
-        @media (hover: hover) {
-          &:hover {
-            opacity: 0.9;
-          }
-        }
-    }
-
-    &__soc-icon {
-        position: absolute;
-        top: 50%;
-        left: 11px;
-        transform: translateY(-50%);
-        
+      width: 100%;
+      padding: 15px;
     }
 
     &__or-block {
-        position: relative;
-        margin: 32px 0;
-        color: $gray-text;
-        text-align: center;
+      &::after {
+        max-width: 94px;
+      }
 
-        &::after {
-            content: '';
-            position: absolute;
-            top: 60%;
-            left: 34px;
-            width: 50%;
-            max-width: 124px;
-            height: 1px;
-            background: $gray-text;
-            transform: translateY(-50%);
-        }
-
-        &::before {
-            content: '';
-            position: absolute;
-            top: 60%;
-            right: 34px;
-            width: 50%;
-            max-width: 124px;
-            height: 1px;
-            background: $gray-text;
-            transform: translateY(-50%);
-        }
+      &::before {
+        max-width: 94px;
+      }
     }
+  }
 
-    &__link-wrapper {
-        align-items: center;
-        justify-content: space-between;
-        display: flex;
+  @include respond-to($s-mobile) {
+    &__or-block {
+      &::after {
+        left: 15px;
+      }
+
+      &::before {
+        right: 15px;
+      }
     }
-
-    &__link {
-        font-size: 13px;
-        color: $blue;
-        text-decoration: underline;
-        transition: color 0.3s ease;
-
-        @media (hover: hover) {
-          &:hover {
-            color: $facebook;
-          }
-        }
-    }
-
-    &__btn-wrapper {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 19px;
-        margin-top: 16px;
-    }
-
-    &__submit-btn {
-        padding: 11px;
-
-        &--sec {
-            color: $text;
-            background: $white;
-
-            @media (hover: hover) {
-              &:hover {
-                  color: $white;
-                background: $primary;
-              }
-            }
-        }
-    }
-
-    &__policy {
-        display: flex;
-        flex-direction: column;
-        margin-top: 16px;
-    } 
-
-    &__policy-link {
-        margin-bottom: 6px;
-        color: $white;
-        text-align: center;
-        text-decoration: underline;
-        transition: opacity 0.3s ease;
-
-        @media (hover: hover) {
-          &:hover {
-            opacity: 0.6;
-          }
-        }
-    }
-
-    @include respond-to($mobile) {
-        &__form {
-            width: 100%;
-            padding: 15px;
-        }
-
-        &__or-block {
-        &::after {
-            max-width: 94px;
-        }
-
-        &::before {
-            max-width: 94px;
-        }
-    }
-    }
-
-    @include respond-to($s-mobile) {
-        &__or-block {
-        &::after {
-            left: 15px;
-        }
-
-        &::before {
-            right: 15px;
-        }
-    
-    }
-}
+  }
 }

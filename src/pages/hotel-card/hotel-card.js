@@ -7,14 +7,14 @@ import { manageSelects } from '../../js/modules/manage-selects.js'
 import { select } from '../../js/components/select.js'
 
 document.addEventListener('DOMContentLoaded', () => {
-  header();
-  hotelCardSlider();
-  mainHotSlider();
-  changePlace();
-  select();
-  manageSelects();
-  initializeDropdowns();
-  
+  header()
+  hotelCardSlider()
+  mainHotSlider()
+  changePlace()
+  select()
+  manageSelects()
+  initializeDropdowns()
+
   new Counter({ selector: '#counter-1', initCount: 0, step: 1, displaySelector: '#adults-display' })
 
   for (let i = 2; i <= 7; i++) {
