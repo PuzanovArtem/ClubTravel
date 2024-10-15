@@ -655,6 +655,10 @@
   display: block;
 }
 
+.air-datepicker{
+  margin-left: -8px  !important;
+}
+
 .air-datepicker-cell.-current- {
   color: $primary !important;
 }
