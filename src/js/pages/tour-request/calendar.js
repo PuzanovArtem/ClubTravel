@@ -41,7 +41,7 @@ export class TourCalendar {
     const context = this
     const maxDate = new Date().setFullYear(new Date().getFullYear() + 5)
 
-    this.datepicker = new AirDatepicker('#el', {
+    this.datepicker = new AirDatepicker('#', {
       range: true,
       toggleSelected: true,
       multipleDatesSeparator: ' - ',
